@@ -11,6 +11,7 @@ var plumber = require("gulp-plumber");//コンパイルエラーが起きても 
 var rename = require("gulp-rename");//ファイル名の置き換えを行う
 var twig = require("gulp-twig");//Twigテンプレートエンジン
 var browserify = require("gulp-browserify");//NodeJSのコードをブラウザ向けコードに変換
+var styleguide = require('sc5-styleguide');//generating styleguide
 var packageJson = require(__dirname+'/package.json');
 var _tasks = [
 	'.html',
@@ -18,7 +19,10 @@ var _tasks = [
 	'.css',
 	'.css.scss',
 	'.js',
-	'copy'
+	'copy',
+	'styleguide:generate',
+	'styleguide:applystyles',
+	'styleguide:applyimages'
 ];
 
 
@@ -82,6 +86,31 @@ gulp.task(".html.twig", function() {
 	;
 });
 
+
+gulp.task('styleguide:generate', function() {
+  return gulp.src('src/**/*.css.scss')
+    .pipe(styleguide.generate({
+        title: 'Pickles 2 CSS Components.',
+        server: true,
+        rootPath: 'styleguide',
+        overviewPath: 'README.md'
+      }))
+    .pipe(gulp.dest('styleguide'));
+});
+
+gulp.task('styleguide:applystyles', function() {
+  return gulp.src('src/**/*.css.scss')
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest('styleguide'));
+});
+
+gulp.task('styleguide:applyimages', function() {
+  return gulp.src('src/images/**/*')
+    .pipe(gulp.dest('styleguide/images'));
+});
 
 // src 中のすべての拡張子を監視して処理
 gulp.task("watch", function() {

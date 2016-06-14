@@ -1,0 +1,31 @@
+.px2-btn.pseudo-class-focus,
+.px2-btn.pseudo-class-hover {
+  background-color: #222;
+  color: #eee;
+  outline: none;
+}
+
+.px2-btn.pseudo-class-focus {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.px2-btn.px2-btn--primary.pseudo-class-focus,
+.px2-btn.px2-btn--primary.pseudo-class-hover {
+  background: linear-gradient(#219ebc, #1985aa);
+}
+
+.px2-btn.px2-btn--secondary.pseudo-class-focus,
+.px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background: linear-gradient(#f8f8f8, #e0e0e0);
+  color: #3394c4;
+}
+
+.px2-btn.px2-btn--danger.pseudo-class-focus,
+.px2-btn.px2-btn--danger.pseudo-class-hover {
+  background: linear-gradient(#d34f45, #c74339);
+}
+
+.px2-btn.px2-btn--download.pseudo-class-focus,
+.px2-btn.px2-btn--download.pseudo-class-hover {
+  background: linear-gradient(#33be36, #29b12c);
+}
