@@ -32,3 +32,11 @@
   background: #4ad64d;
   color: #fff;
 }
+
+.px2-btn[disabled].pseudo-class-focus,
+.px2-btn[disabled].pseudo-class-hover {
+  border-color: #ddd;
+  background-color: #f9f9f9;
+  color: #ddd;
+  cursor: default;
+}
