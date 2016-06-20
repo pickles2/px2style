@@ -77,6 +77,7 @@
 
     &.px2-btn--primary{
         border-color: #00a0e6;
+        background-color: rgba(0,160,230,0.05);
         color: #00a0e6;
         &:focus,
         &:hover{
@@ -95,6 +96,7 @@
     }
     &.px2-btn--danger{
         border-color: #e86a60;
+        background-color: rgba(232,106,96,0.05);
         color: #e86a60;
         &:focus,
         &:hover{
@@ -104,6 +106,7 @@
     }
     &.px2-btn--download{
         border-color: #4ad64d;
+        background-color: rgba(74,214,77,0.05);
         color: #4ad64d;
         &:focus,
         &:hover{
