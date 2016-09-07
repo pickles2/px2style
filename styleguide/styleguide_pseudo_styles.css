@@ -1,34 +1,71 @@
 .px2-btn.pseudo-class-focus,
 .px2-btn.pseudo-class-hover {
-  background-color: #666;
-  color: #eee;
+  background-color: #f9f9f9;
   outline: none;
 }
 
+.px2-btn.pseudo-class-hover {
+  background-color: #f0f0f0;
+}
+
 .px2-btn.pseudo-class-active {
+  background-color: #333;
+  color: #fff;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .px2-btn.px2-btn--primary.pseudo-class-focus,
 .px2-btn.px2-btn--primary.pseudo-class-hover {
+  background: rgba(0, 160, 230, 0.1);
+}
+
+.px2-btn.px2-btn--primary.pseudo-class-hover {
+  background: rgba(0, 160, 230, 0.15);
+}
+
+.px2-btn.px2-btn--primary.pseudo-class-active {
   background: #00a0e6;
   color: #fff;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background: #999;
+  background: #f9f9f9;
+}
+
+.px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background: #f0f0f0;
+}
+
+.px2-btn.px2-btn--secondary.pseudo-class-active {
+  background: #333;
   color: #fff;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
 .px2-btn.px2-btn--danger.pseudo-class-hover {
+  background: rgba(232, 106, 96, 0.1);
+}
+
+.px2-btn.px2-btn--danger.pseudo-class-hover {
+  background: rgba(232, 106, 96, 0.15);
+}
+
+.px2-btn.px2-btn--danger.pseudo-class-active {
   background: #e86a60;
   color: #fff;
 }
 
 .px2-btn.px2-btn--download.pseudo-class-focus,
 .px2-btn.px2-btn--download.pseudo-class-hover {
+  background: rgba(74, 214, 77, 0.1);
+}
+
+.px2-btn.px2-btn--download.pseudo-class-hover {
+  background: rgba(74, 214, 77, 0.15);
+}
+
+.px2-btn.px2-btn--download.pseudo-class-active {
   background: #4ad64d;
   color: #fff;
 }
