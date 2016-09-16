@@ -1,6 +1,6 @@
 {
   "name": "px2style",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0",
   "description": "Pickles 2 CSS Components.",
   "scripts": {
     "test": "gulp; mocha --ui tdd ./tests/"
