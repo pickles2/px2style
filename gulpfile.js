@@ -88,28 +88,33 @@ gulp.task(".html.twig", function() {
 
 
 gulp.task('styleguide:generate', function() {
-  return gulp.src('src/**/*.css.scss')
-    .pipe(styleguide.generate({
-        title: 'Pickles 2 CSS Components.',
-        server: true,
-        rootPath: 'styleguide',
-        overviewPath: 'README.md'
-      }))
-    .pipe(gulp.dest('styleguide'));
+	gulp.watch(["src/**/*"], _tasks);
+	gulp.src(['src/**/*.css.scss'])
+		.pipe(styleguide.generate({
+			title: 'Pickles 2 CSS Components.',
+			server: true,
+			port: 3000,
+			rootPath: 'styleguide',
+			overviewPath: 'README.md'
+		}))
+		.pipe(gulp.dest('styleguide'))
+	;
+	require('child_process').spawn('open',['http://127.0.0.1:3000/']);
 });
 
 gulp.task('styleguide:applystyles', function() {
-  return gulp.src('src/**/*.css.scss')
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest('styleguide'));
+	gulp.src('src/**/*.css.scss')
+		.pipe(sass({
+		  errLogToConsole: true
+		}))
+		.pipe(styleguide.applyStyles())
+		.pipe(gulp.dest('styleguide'))
+	;
 });
 
 gulp.task('styleguide:applyimages', function() {
   return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('styleguide/images'));
+	.pipe(gulp.dest('styleguide/images'));
 });
 
 // src 中のすべての拡張子を監視して処理

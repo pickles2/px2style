@@ -3,7 +3,7 @@
   "version": "2.0.1-alpha.1+nb",
   "description": "Pickles 2 CSS Components.",
   "scripts": {
-    "start": "gulp watch;",
+    "start": "gulp styleguide:generate;",
     "test": "gulp; mocha --ui tdd ./tests/"
   },
   "author": "Tomoya Koyanagi",
