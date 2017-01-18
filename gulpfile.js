@@ -30,6 +30,7 @@ var _tasks = [
 gulp.task('copy', function(){
 	gulp.src(["src/**/*.svg"])
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
@@ -41,6 +42,7 @@ gulp.task('.css.scss', function(){
 		.pipe(autoprefixer())
 		.pipe(rename({extname: ''}))
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
@@ -49,6 +51,7 @@ gulp.task('.css', function(){
 	gulp.src("src/**/*.css")
 		.pipe(plumber())
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
@@ -60,6 +63,7 @@ gulp.task(".js", function() {
 		}))
 		// .pipe(uglify())
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
@@ -68,6 +72,7 @@ gulp.task(".html", function() {
 	gulp.src(["src/**/*.html", "src/**/*.htm"])
 		.pipe(plumber())
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
@@ -83,23 +88,26 @@ gulp.task(".html.twig", function() {
 		}))
 		.pipe(rename({extname: ''}))
 		.pipe(gulp.dest( './dist/' ))
+		.pipe(gulp.dest( './styleguide/dist/' ))
 	;
 });
 
 
 gulp.task('styleguide:generate', function() {
-	gulp.watch(["src/**/*"], _tasks);
 	gulp.src(['src/**/*.css.scss'])
 		.pipe(styleguide.generate({
 			title: 'Pickles 2 CSS Components.',
 			server: true,
 			port: 3000,
 			rootPath: 'styleguide',
-			overviewPath: 'README.md'
+			overviewPath: 'README.md',
+			extraHead: [
+				'<script src="/dist/scripts.js"></script>',
+				'<link rel="stylesheet" href="/dist/styles.css" />'
+			],
 		}))
 		.pipe(gulp.dest('styleguide'))
 	;
-	require('child_process').spawn('open',['http://127.0.0.1:3000/']);
 });
 
 gulp.task('styleguide:applystyles', function() {
@@ -120,6 +128,11 @@ gulp.task('styleguide:applyimages', function() {
 // src 中のすべての拡張子を監視して処理
 gulp.task("watch", function() {
 	gulp.watch(["src/**/*"], _tasks);
+});
+
+// ブラウザでプレビュー
+gulp.task("preview", function() {
+	require('child_process').spawn('open',['http://127.0.0.1:3000/']);
 });
 
 // src 中のすべての拡張子を処理(default)

@@ -16,64 +16,64 @@
 
 .px2-btn.px2-btn--primary.pseudo-class-focus,
 .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background: rgba(0, 160, 230, 0.1);
+  background-color: #d9f1fb;
 }
 
 .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background: rgba(0, 160, 230, 0.15);
+  background-color: #ccecfa;
 }
 
 .px2-btn.px2-btn--primary.pseudo-class-active {
-  background: #00a0e6;
+  background-color: #00a0e6;
   color: #fff;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
-  background: #333;
+  background-color: #333;
   color: #fff;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
 .px2-btn.px2-btn--danger.pseudo-class-hover {
-  background: rgba(232, 106, 96, 0.1);
+  background-color: #fce9e7;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-hover {
-  background: rgba(232, 106, 96, 0.15);
+  background-color: #fae1df;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-active {
-  background: #e86a60;
+  background-color: #e86a60;
   color: #fff;
 }
 
 .px2-btn.px2-btn--download.pseudo-class-focus,
 .px2-btn.px2-btn--download.pseudo-class-hover {
-  background: rgba(74, 214, 77, 0.1);
+  background-color: #e4f9e4;
 }
 
 .px2-btn.px2-btn--download.pseudo-class-hover {
-  background: rgba(74, 214, 77, 0.15);
+  background-color: #dbf7db;
 }
 
 .px2-btn.px2-btn--download.pseudo-class-active {
-  background: #4ad64d;
+  background-color: #4ad64d;
   color: #fff;
 }
 
 .px2-btn[disabled].pseudo-class-focus,
 .px2-btn[disabled].pseudo-class-hover {
   border-color: #ddd;
-  background-color: #f9f9f9;
+  background-color: rgba(153, 153, 153, 0.05);
   color: #ddd;
   cursor: default;
 }
