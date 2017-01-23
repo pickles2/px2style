@@ -46,9 +46,12 @@ module.exports = function(Px2style){
 			$body.append( options.body );
 
 			var $footer = $modal.find('.px2-modal__footer');
+			var $footerUl = $('<ul>');
 			for( var i in options.buttons ){
-				$footer.append( options.buttons[i] );
+				var $li = $('<li>').append(options.buttons[i]);
+				$footerUl.append( $li );
 			}
+			$footer.append($footerUl);
 
 			$target = $(options.target);
 			$target.append($modal);
