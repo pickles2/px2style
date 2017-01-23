@@ -9816,16 +9816,16 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 (function(){
-    var Px2 = function(){};
-    var px2 = window.px2 = new Px2;
-    var modal = require('./modal/_modal.js')(Px2);
+    var Px2style = function(){};
+    var px2style = window.px2style = new Px2style;
+    var modal = require('./modal/_modal.js')(Px2style);
 })();
 
 },{"./modal/_modal.js":3}],3:[function(require,module,exports){
 /**
  * modal.js
  */
-module.exports = function(Px2){
+module.exports = function(Px2style){
 	var $ = require('jquery');
 	var $modal,
 		$target;
@@ -9833,7 +9833,7 @@ module.exports = function(Px2){
 	/**
 	 * Open modal dialog.
 	 */
-	Px2.prototype.modal = function(options, callback){
+	Px2style.prototype.modal = function(options, callback){
 		var _this = this;
 		callback = callback||function(){};
 
@@ -9870,9 +9870,12 @@ module.exports = function(Px2){
 			$body.append( options.body );
 
 			var $footer = $modal.find('.px2-modal__footer');
+			var $footerUl = $('<ul>');
 			for( var i in options.buttons ){
-				$footer.append( options.buttons[i] );
+				var $li = $('<li>').append(options.buttons[i]);
+				$footerUl.append( $li );
 			}
+			$footer.append($footerUl);
 
 			$target = $(options.target);
 			$target.append($modal);
@@ -9897,7 +9900,7 @@ module.exports = function(Px2){
 	/**
 	 * Close modal dialog.
 	 */
-	Px2.prototype.closeModal = function(callback){
+	Px2style.prototype.closeModal = function(callback){
 		callback = callback||function(){};
 		try {
 			$modal.remove();

@@ -119,9 +119,16 @@
   .px2-modal__footer {
     border-top: 1px solid #00a0e6;
     margin: 10px 0 0 0;
-    padding: 10px 0 0 0;
-    display: flex;
-    justify-content: flex-end; }
+    padding: 10px 0 0 0; }
+    .px2-modal__footer > ul {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0; }
+      .px2-modal__footer > ul > li {
+        list-style-type: none;
+        margin: 0 0 0 5px;
+        padding: 0; }
 
 .px2-editor-type__html {
   display: inline-block;
