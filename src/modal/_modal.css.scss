@@ -73,24 +73,24 @@
 //
 // Markup:
 // <ul>
-//  <li><a href="javascript:px2.modal(
+//  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',
 //              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
 //              buttons: [
-//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2.closeModal();&quot;>OK</button>'
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
 //              ]
 //          },
 //          function(){
 //              console.log('done.');
 //          }
 //      );">Open normal modal dialog.</a></li>
-//  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2.modal(
+//  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',
 //              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
 //              buttons: [
-//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2.closeModal();&quot;>OK</button>'
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
 //              ],
 //              target: document.querySelectorAll('div.view-section')[0]
 //          },

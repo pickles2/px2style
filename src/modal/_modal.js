@@ -1,7 +1,7 @@
 /**
  * modal.js
  */
-module.exports = function(Px2){
+module.exports = function(Px2style){
 	var $ = require('jquery');
 	var $modal,
 		$target;
@@ -9,7 +9,7 @@ module.exports = function(Px2){
 	/**
 	 * Open modal dialog.
 	 */
-	Px2.prototype.modal = function(options, callback){
+	Px2style.prototype.modal = function(options, callback){
 		var _this = this;
 		callback = callback||function(){};
 
@@ -73,7 +73,7 @@ module.exports = function(Px2){
 	/**
 	 * Close modal dialog.
 	 */
-	Px2.prototype.closeModal = function(callback){
+	Px2style.prototype.closeModal = function(callback){
 		callback = callback||function(){};
 		try {
 			$modal.remove();

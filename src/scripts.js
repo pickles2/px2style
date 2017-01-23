@@ -1,5 +1,5 @@
 (function(){
-    var Px2 = function(){};
-    var px2 = window.px2 = new Px2;
-    var modal = require('./modal/_modal.js')(Px2);
+    var Px2style = function(){};
+    var px2style = window.px2style = new Px2style;
+    var modal = require('./modal/_modal.js')(Px2style);
 })();
