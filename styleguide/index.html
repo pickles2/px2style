@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="sgApp">
+<html lang="en" ng-app="sgApp" route-css-class>
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    var _styleguideConfig = {"title":"Pickles 2 CSS Components.","disableEncapsulation":false,"disableHtml5Mode":false,"sideNav":false};
+    var _styleguideConfig = {"title":"Pickles 2 CSS Components.","disableEncapsulation":false,"disableHtml5Mode":false,"sideNav":false,"showMarkupSection":false,"hideSubsectionsOnMainSection":false,"additionalNgDependencies":false};
     (function() {
       'use strict';
       var userStyleFiles = [
@@ -43,7 +43,8 @@
     </style>
   </script>
   <title ng-bind-html="$root.pageTitle | unsafe">Pickles 2 CSS Components.</title>
-  
+  <script src="/dist/scripts.js"></script>
+<link rel="stylesheet" href="/dist/styles.css" />
   <script type="text/javascript">
     var filesConfig = [];
   </script>

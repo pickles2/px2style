@@ -1,8 +1,10 @@
 {
   "name": "px2style",
-  "version": "2.0.0",
+  "version": "2.0.1-alpha.1+nb",
   "description": "Pickles 2 CSS Components.",
   "scripts": {
+    "start": "gulp styleguide:generate;",
+    "preview": "gulp preview;",
     "test": "gulp; mocha --ui tdd ./tests/"
   },
   "author": "Tomoya Koyanagi",

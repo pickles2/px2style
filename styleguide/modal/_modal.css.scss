@@ -1,0 +1,112 @@
+// Modal Dialog
+//
+// Modal Dialog.
+//
+// Markup:
+// <div style="width: 100%; height: 400px;">
+// <div class="px2-modal">
+//  <div class="px2-modal__dialog">
+//   <div class="px2-modal__header">
+//       <div class="px2-modal__title">Dialog Title</div>
+//   </div>
+//   <div class="px2-modal__body">
+//      <p>Dialog Content.</p>
+//   </div>
+//   <div class="px2-modal__footer">
+//      <ul>
+//          <li><button class="px2-btn">Cancel</button></li>
+//          <li><button class="px2-btn px2-btn--primary">OK</button></li>
+//      </ul>
+//   </div>
+//  </div>
+// </div>
+// </div>
+//
+// Styleguide 4.0
+.px2-modal{
+    display: block;
+    background: rgba(0,0,0,0.5);
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+
+    &__dialog{
+        position: relative;
+        top: 0; left: 0;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 20px auto;
+        width: calc(100% - 40px);
+        max-width: 700px;
+        max-height: calc(100% - 40px);
+        overflow: auto;
+        height: auto;
+    }
+
+    &__header{
+        border-bottom: 1px solid #00a0e6;
+    }
+
+    &__body{
+        position: relative;
+        top: 0; left: 0;
+    }
+
+    &__title{
+        font-weight: bold;
+    }
+
+    &__footer{
+        border-top: 1px solid #00a0e6;
+        margin: 10px 0 0 0;
+        padding: 10px 0 0 0;
+        >ul{
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+            >li{
+                list-style-type: none;
+                margin: 0 0 0 5px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+// Opening Modal Dialog
+//
+// Opening Modal Dialog from JavaScript.
+//
+// Markup:
+// <ul>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );">Open normal modal dialog.</a></li>
+//  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              target: document.querySelectorAll('div.view-section')[0]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );">Open modal dialog to target DIV element.</a></li>
+// </ul>
+//
+// Styleguide 4.1
