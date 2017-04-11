@@ -2,6 +2,33 @@
 Pickles 2 CSS components.
 
 
+## Install
+
+Install with npm.
+
+```bash
+$ npm install --save px2style
+```
+
+Install with composer.
+
+```bash
+$ composer require pickles2/px2style
+```
+
+
+## Change log
+
+### px2style@2.0.1 (2017/??/??)
+
+- ボタンの背景色を不透過にした。
+- `px2-modal` を追加。
+- JavaScriptオブジェクト名を `window.px2style` に変更。
+
+### px2style@2.0.0 (2016/09/17)
+
+- Initial Release.
+
 ## License
 
 MIT License
