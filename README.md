@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style@2.0.1 (2017/??/??)
+### px2style@2.0.1 (2017/04/11)
 
 - ボタンの背景色を不透過にした。
 - `px2-modal` を追加。
