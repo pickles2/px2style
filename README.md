@@ -26,6 +26,7 @@ $ composer require pickles2/px2style
 - `.px2-p` を追加。
 - `.px2-slim` を追加。
 - `.px2-responsive` を追加。
+- `px2style.modal()` に、オプション `width` を追加。
 
 ### px2style@2.0.1 (2017/04/11)
 

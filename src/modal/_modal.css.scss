@@ -33,13 +33,14 @@
 
     &__dialog{
         position: relative;
+        display: flex;
+        flex-direction: column;
         top: 0; left: 0;
         background-color: #fff;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 10px 0;
         margin: 20px auto;
         width: calc(100% - 40px);
-        max-width: 700px;
         max-height: calc(100% - 40px);
         overflow: auto;
         height: auto;
@@ -47,21 +48,25 @@
 
     &__header{
         border-bottom: 1px solid #00a0e6;
+        padding: 0 20px;
     }
 
     &__body{
         position: relative;
         top: 0; left: 0;
+        padding: 0 20px;
+        overflow: auto;
     }
 
     &__title{
         font-weight: bold;
+        font-size: large;
     }
 
     &__footer{
         border-top: 1px solid #00a0e6;
         margin: 10px 0 0 0;
-        padding: 10px 0 0 0;
+        padding: 10px 20px 0 20px;
         >ul{
             display: flex;
             justify-content: flex-end;
@@ -85,7 +90,7 @@
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',
-//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
 //              buttons: [
 //                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
 //              ]
@@ -94,6 +99,19 @@
 //              console.log('done.');
 //          }
 //      );">Open normal modal dialog.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog 700px.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              width: 700
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );">Open normal modal dialog with 700px width.</a></li>
 //  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',

@@ -32,7 +32,7 @@ module.exports = function(Px2style){
 			tpl += '  <div class="px2-modal__header">';
 			tpl += '      <div class="px2-modal__title"></div>';
 			tpl += '  </div>';
-			tpl += '  <div class="px2-modal__body"></div>';
+			tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
 			tpl += '  <div class="px2-modal__footer"></div>';
 			tpl += ' </div>';
 			tpl += '</div>';
@@ -42,7 +42,7 @@ module.exports = function(Px2style){
 			var $title = $modal.find('.px2-modal__title');
 			$title.append( options.title );
 
-			var $body = $modal.find('.px2-modal__body');
+			var $body = $modal.find('.px2-modal__body-inner');
 			$body.append( options.body );
 
 			var $footer = $modal.find('.px2-modal__footer');
@@ -64,6 +64,12 @@ module.exports = function(Px2style){
 			}else{
 				$modal.css({
 					"height": $target.outerHeight()
+				});
+			}
+
+			if( options.width ){
+				$modal.find('.px2-modal__dialog').css({
+					"max-width": options.width
 				});
 			}
 
@@ -95,6 +101,11 @@ module.exports = function(Px2style){
 					"height": $target.outerHeight()
 				});
 			}
+			var $header = $modal.find('.px2-modal__header');
+			var $footer = $modal.find('.px2-modal__footer');
+			$modal.find('.px2-modal__body').css({
+				"height": $modal.outerHeight() - $header.outerHeight() - $footer.outerHeight()
+			});
 		} catch (e) {}
 	});
 }
