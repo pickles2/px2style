@@ -19,6 +19,15 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style@2.0.2 (2017/??/??)
+
+- `.px2-table` を追加。
+- `.px2-document` を追加。
+- `.px2-p` を追加。
+- `.px2-slim` を追加。
+- `.px2-responsive` を追加。
+- `px2style.modal()` に、オプション `width` を追加。
+
 ### px2style@2.0.1 (2017/04/11)
 
 - ボタンの背景色を不透過にした。

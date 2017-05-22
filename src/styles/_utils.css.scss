@@ -2,7 +2,7 @@
 //
 // 各種ユーティリティ。
 //
-// Styleguide 2.0
+// Styleguide 3.0
 
 // Editor Type Badge
 //
@@ -19,7 +19,7 @@
 // <p><code>.px2-editor-type--fullwidth</code> を付加して最大幅にできます。</p>
 // <span class="px2-editor-type__html-gui px2-editor-type--fullwidth"></span>
 //
-// Styleguide 2.1
+// Styleguide 3.1
 @mixin px2-editor-type{
 	display: inline-block;
 	font-size: 12px;
@@ -88,7 +88,7 @@
 // Markup:
 // <div class="px2-loading"></div>
 //
-// Styleguide 2.2
+// Styleguide 3.2
 
 .px2-loading{
 	clear: both;
@@ -111,4 +111,180 @@
 			100% { transform: rotate(720deg) scale(0,0); }
 		}
 	}
+}
+
+// Simple Document
+//
+// Markup:
+// <div class="px2-document">
+// 	<h1>Header 1</h1>
+// 	<p>
+// 		標準的なドキュメントのための要素を記述します。<br />
+// 		Markdown などで描画された標準的なHTML要素によって構成されたドキュメントに、標準的なスタイルを適用します。<br />
+// 	</p>
+// 	<h2>Header 2</h2>
+// 	<ul>
+// 		<li>List Item 1</li>
+// 		<li>List Item 2
+// 			<ul>
+// 				<li>List Item 1</li>
+// 				<li>List Item 2
+// 				</li>
+// 				<li>List Item 3</li>
+// 			</ul>
+// 		</li>
+// 		<li>List Item 3
+// 			<ol>
+// 				<li>List Item 1</li>
+// 				<li>List Item 2
+// 				</li>
+// 				<li>List Item 3</li>
+// 			</ol>
+// 		</li>
+// 	</ul>
+// 	<h3>Header 3</h3>
+// 	<h4>Header 4</h4>
+// 	<h5>Header 5</h5>
+// 	<h6>Header 6</h6>
+// 	<ol>
+// 		<li>List Item 1</li>
+// 		<li>List Item 2
+// 			<ol>
+// 				<li>List Item 1</li>
+// 				<li>List Item 2
+// 				</li>
+// 				<li>List Item 3</li>
+// 			</ol>
+// 		</li>
+// 		<li>List Item 3
+// 			<ul>
+// 				<li>List Item 1</li>
+// 				<li>List Item 2
+// 				</li>
+// 				<li>List Item 3</li>
+// 			</ul>
+// 		</li>
+// 	</ol>
+// 	<div class="px2-p">
+// 		<table class="px2-table">
+// 			<tbody>
+// 				<tr>
+// 					<th>th</th>
+// 					<td>td</td>
+// 				</tr>
+// 			</tbody>
+// 		</table>
+// 	</div>
+// 	<p class="px2-p">Slim Paragraph.</p>
+// </div>
+//
+// Styleguide 3.3
+.px2-document{
+	font-size: medium;
+	line-height: 1.5;
+
+	// paragraph
+	p{
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	// headers
+	h1{
+		font-weight:bold;
+		margin-top: 2em;
+		margin-bottom: 0.5em;
+	}
+	h2, h3, h4, h5, h6{
+		font-weight:bold;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+	}
+	h1{font-size: 240%;}
+	h2{font-size: 180%;}
+	h3{font-size: 160%;}
+	h4{font-size: 130%;}
+	h5{font-size: 120%;}
+	h6{font-size: 110%;}
+
+	// lists
+	ul, ol {
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding-left: 40px;
+		ul, ol {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Paragraph
+//
+// Markup:
+// <div class="px2-p">
+// 	前後に、p要素と同等のマージンを付加します。
+// </div>
+//
+// Styleguide 3.4
+.px2-p{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+// Slimize
+//
+// Markup:
+// <h1 class="px2-slim">Header 1</h1>
+// <h2 class="px2-slim">Header 2</h2>
+// <h3 class="px2-slim">Header 3</h3>
+// <h4 class="px2-slim">Header 4</h4>
+// <h5 class="px2-slim">Header 5</h5>
+// <h6 class="px2-slim">Header 6</h6>
+// <p class="px2-slim">
+// 	margin と padding を 0 にします。
+// </p>
+// <ul class="px2-slim">
+// 	<li>margin と padding を 0 にします。</li>
+// </ul>
+// <ol class="px2-slim">
+// 	<li>margin と padding を 0 にします。</li>
+// </ol>
+//
+// Styleguide 3.5
+.px2-slim{
+	margin: 0;
+	padding: 0;
+}
+
+// Responsive Block
+//
+// Markup:
+// <div class="px2-responsive">
+// 	<table class="px2-table">
+// 		<tbody>
+// 			<tr>
+// 				<th>th</th>
+// 				<td>1000000000</td>
+// 				<td>2000000000</td>
+// 				<td>3000000000</td>
+// 				<td>4000000000</td>
+// 				<td>5000000000</td>
+// 				<td>6000000000</td>
+// 				<td>7000000000</td>
+// 				<td>8000000000</td>
+// 				<td>9000000000</td>
+// 				<td>10000000000</td>
+// 				<td>11000000000</td>
+// 				<td>12000000000</td>
+// 				<td>13000000000</td>
+// 			</tr>
+// 		</tbody>
+// 	</table>
+// </div>
+//
+// Styleguide 3.6
+.px2-responsive{
+	overflow: auto;
 }
