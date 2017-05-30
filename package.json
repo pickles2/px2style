@@ -1,7 +1,8 @@
 {
   "name": "px2style",
-  "version": "2.0.2",
+  "version": "2.0.3-alpha.1+nb",
   "description": "Pickles 2 CSS Components.",
+  "private": true,
   "scripts": {
     "start": "gulp styleguide:generate;",
     "preview": "gulp preview;",
