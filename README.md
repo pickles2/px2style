@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style@2.0.2 (2017/??/??)
+### px2style@2.0.2 (2017/05/30)
 
 - `.px2-table` を追加。
 - `.px2-document` を追加。
