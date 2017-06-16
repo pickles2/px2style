@@ -1,0 +1,23 @@
+// Links
+//
+// Markup:
+// <a href="..." class="px2-link">Default Link</a>
+//
+// Styleguide 1.0
+.px2-link{}
+
+// Burette Link
+//
+// Markup:
+// <a href="..." class="px2-link px2-link--burette">Burette Link</a>
+//
+// Styleguide 1.1
+.px2-link.px2-link--burette{
+    &::before{
+        width: 0.8em;
+        height: 0.8em;
+        margin-right: 0.2em;
+        content: url('./images/burette1.svg');
+        overflow: hidden;
+    }
+}
