@@ -92,12 +92,17 @@
       color: #ddd;
       cursor: default; }
 
-.px2-link.px2-link--burette::before {
-  width: 0.8em;
-  height: 0.8em;
+.px2-link.px2-link--burette:before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  display: inline-block;
   margin-right: 0.2em;
-  content: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIKCSB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzLjMgMy43IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzLjMgMy43IiB3aWR0aD0iMTJweCIgaGVpZ2h0PSI5cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjMDBhMGU2IiBwb2ludHM9IjMuMiwxLjggMCwwIDAsMy43ICIvPgo8L3N2Zz4K);
-  overflow: hidden; }
+  border-width: 0.35em 0 0.35em 0.6em;
+  border-style: solid;
+  border-color: #00a0e6;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
 
 .px2-table {
   border: none;
