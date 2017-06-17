@@ -1,0 +1,89 @@
+// Lists
+//
+// Markup:
+// <ul class="px2-list">
+// 	<li>list item 1</li>
+// 	<li>list item 2</li>
+// 	<li>list item 3</li>
+// </ul>
+//
+// Styleguide 3.0
+.px2-list{
+	padding: 0 0 0 40px;
+	li{
+		list-style-type: disc;
+	}
+}
+
+// Horizontal List
+//
+// Markup:
+// <ul class="px2-horizontal-list">
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 1</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 2</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 3</a></li>
+// </ul>
+//
+// Styleguide 3.1
+.px2-horizontal-list{
+	padding: 0;
+	li{
+		display: inline-block;
+		list-style-type: none;
+		margin: 0.1em 0.3em;
+	}
+}
+
+// Horizontal List
+//
+// Markup:
+// <ul class="px2-horizontal-list px2-horizontal-list--left">
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 1</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 2</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 3</a></li>
+// </ul>
+// <ul class="px2-horizontal-list px2-horizontal-list--center">
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 1</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 2</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 3</a></li>
+// </ul>
+// <ul class="px2-horizontal-list px2-horizontal-list--right">
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 1</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 2</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 3</a></li>
+// </ul>
+//
+// Styleguide 3.1.1
+.px2-horizontal-list{
+	&--left{
+		text-align: left;
+	}
+	&--center{
+		text-align: center;
+	}
+	&--right{
+		text-align: right;
+	}
+}
+
+// Ordered Lists
+//
+// Markup:
+// <ol class="px2-ordered-list">
+// 	<li>list item 1</li>
+// 	<li>list item 2</li>
+// 	<li>list item 3</li>
+// </ol>
+// <ol class="px2-ordered-list" start="4">
+// 	<li>list item 4</li>
+// 	<li>list item 5</li>
+// 	<li>list item 6</li>
+// </ol>
+//
+// Styleguide 3.2
+.px2-ordered-list{
+	padding: 0 0 0 40px;
+	li{
+		list-style-type: decimal;
+	}
+}

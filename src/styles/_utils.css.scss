@@ -2,7 +2,7 @@
 //
 // 各種ユーティリティ。
 //
-// Styleguide 5.0
+// Styleguide 6.0
 
 // Editor Type Badge
 //
@@ -19,7 +19,7 @@
 // <p><code>.px2-editor-type--fullwidth</code> を付加して最大幅にできます。</p>
 // <span class="px2-editor-type__html-gui px2-editor-type--fullwidth"></span>
 //
-// Styleguide 5.1
+// Styleguide 6.1
 @mixin px2-editor-type{
 	display: inline-block;
 	font-size: 12px;
@@ -88,7 +88,7 @@
 // Markup:
 // <div class="px2-loading"></div>
 //
-// Styleguide 5.2
+// Styleguide 6.2
 
 .px2-loading{
 	clear: both;
@@ -178,7 +178,7 @@
 // 	<p class="px2-p">Slim Paragraph.</p>
 // </div>
 //
-// Styleguide 5.3
+// Styleguide 6.3
 .px2-document{
 	font-size: medium;
 	line-height: 1.5;
@@ -227,7 +227,7 @@
 // 	前後に、p要素と同等のマージンを付加します。
 // </div>
 //
-// Styleguide 5.4
+// Styleguide 6.4
 .px2-p{
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -251,11 +251,22 @@
 // <ol class="px2-slim">
 // 	<li>margin と padding を 0 にします。</li>
 // </ol>
+// <div class="px2-slim px2-slim--r">
+// 	<p>子要素も含めて、margin と padding を再帰的に 0 にします。</p>
+// 	<ul>
+// 		<li>子要素も含めて、margin と padding を再帰的に 0 にします。</li>
+// 	</ul>
+// </div>
 //
-// Styleguide 5.5
+// Styleguide 6.5
 .px2-slim{
 	margin: 0;
 	padding: 0;
+
+	&--r *{
+		margin: 0;
+		padding: 0;
+	}
 }
 
 // Responsive Block
@@ -284,7 +295,7 @@
 // 	</table>
 // </div>
 //
-// Styleguide 5.6
+// Styleguide 6.6
 .px2-responsive{
 	overflow: auto;
 }
