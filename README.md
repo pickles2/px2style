@@ -19,6 +19,11 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style@2.0.3 (20??/??/??)
+
+- `.px2-link` を追加。
+- `.px2-link.px2-link--burette` を追加。
+
 ### px2style@2.0.2 (2017/05/30)
 
 - `.px2-table` を追加。

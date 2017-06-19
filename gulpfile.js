@@ -4,6 +4,8 @@ console.log(conf);
 var path = require('path');
 var gulp = require('gulp');
 var sass = require('gulp-sass');//CSSコンパイラ
+var base64 = require('gulp-base64');//CSS中のurlをbase64+dataschemeに置き換える
+var inline_base64 = require('gulp-inline-base64')
 var autoprefixer = require("gulp-autoprefixer");//CSSにベンダープレフィックスを付与してくれる
 var uglify = require("gulp-uglify");//JavaScriptファイルの圧縮ツール
 var concat = require('gulp-concat');//ファイルの結合ツール
@@ -39,6 +41,10 @@ gulp.task('.css.scss', function(){
 	gulp.src(["src/**/*.css.scss", "!src/**/_*.css.scss", ])
 		.pipe(plumber())
 		.pipe(sass())
+		.pipe(inline_base64({
+			baseDir: 'src/',
+			debug: true
+		}))
 		.pipe(autoprefixer())
 		.pipe(rename({extname: ''}))
 		.pipe(gulp.dest( './dist/' ))
@@ -113,7 +119,11 @@ gulp.task('styleguide:generate', function() {
 gulp.task('styleguide:applystyles', function() {
 	gulp.src('src/**/*.css.scss')
 		.pipe(sass({
-		  errLogToConsole: true
+			errLogToConsole: true
+		}))
+		.pipe(inline_base64({
+			baseDir: 'src/',
+			debug: true
 		}))
 		.pipe(styleguide.applyStyles())
 		.pipe(gulp.dest('styleguide'))
