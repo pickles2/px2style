@@ -73,6 +73,11 @@ module.exports = function(Px2style){
 				});
 			}
 
+			$(window).on('resize.px2-modal', function(){
+				onWindowResize();
+			});
+			onWindowResize();
+
 			callback();
 		});
 
@@ -87,6 +92,7 @@ module.exports = function(Px2style){
 		try {
 			$modal.remove();
 		} catch (e) {}
+		$(window).off('resize.px2-modal');
 		callback();
 		return;
 	}
@@ -94,7 +100,8 @@ module.exports = function(Px2style){
 	/**
 	 * Window Resize Event
 	 */
-	$(window).on('resize', function(){
+	function onWindowResize(){
+		console.log('---- resize.px2-modal ----');
 		try {
 			if( $target.get(0).tagName.toLowerCase() != 'body' ){
 				$modal.css({
@@ -107,5 +114,6 @@ module.exports = function(Px2style){
 				"height": $modal.outerHeight() - $header.outerHeight() - $footer.outerHeight()
 			});
 		} catch (e) {}
-	});
+	}
+
 }
