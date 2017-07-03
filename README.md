@@ -23,6 +23,8 @@ $ composer require pickles2/px2style
 
 - `.px2-link` を追加。
 - `.px2-link.px2-link--burette` を追加。
+- List カテゴリを追加。
+- ボタンアクションに "押した感触" を追加。
 
 ### px2style@2.0.2 (2017/05/30)
 
