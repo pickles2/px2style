@@ -9,15 +9,16 @@
 // 編集モードを表示します。
 //
 // Markup:
-// <span class="px2-editor-type__not-exists"></span>
-// <span class="px2-editor-type__page-not-exists"></span>
-// <span class="px2-editor-type__html"></span>
-// <span class="px2-editor-type__html-gui"></span>
-// <span class="px2-editor-type__txt"></span>
-// <span class="px2-editor-type__md"></span>
-// <span class="px2-editor-type__jade"></span>
+// <span class="px2-editor-type px2-editor-type--not-exists"></span>
+// <span class="px2-editor-type px2-editor-type--page-not-exists"></span>
+// <span class="px2-editor-type px2-editor-type--alias"></span>
+// <span class="px2-editor-type px2-editor-type--html"></span>
+// <span class="px2-editor-type px2-editor-type--html-gui"></span>
+// <span class="px2-editor-type px2-editor-type--txt"></span>
+// <span class="px2-editor-type px2-editor-type--md"></span>
+// <span class="px2-editor-type px2-editor-type--jade"></span>
 // <p><code>.px2-editor-type--fullwidth</code> を付加して最大幅にできます。</p>
-// <span class="px2-editor-type__html-gui px2-editor-type--fullwidth"></span>
+// <span class="px2-editor-type px2-editor-type--html-gui px2-editor-type--fullwidth"></span>
 //
 // Styleguide 6.1
 @mixin px2-editor-type{
@@ -28,59 +29,78 @@
 	text-align: center;
 	color: #fff;
 }
-.px2-editor-type__html{
+.px2-editor-type{
 	@include px2-editor-type;
-	background-color: #4a8a98;
-	&:before{
-		content: "HTML";
+
+	&__html, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--html{
+		@include px2-editor-type;
+		background-color: #4a8a98;
+		&:before{
+			content: "HTML";
+		}
 	}
-}
-.px2-editor-type__html-gui{
-	@include px2-editor-type;
-	background-color: #9f5b75;
-	&:before{
-		content: "GUI";
+	&__html-gui, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--html-gui{
+		@include px2-editor-type;
+		background-color: #9f5b75;
+		&:before{
+			content: "GUI";
+		}
 	}
-}
-.px2-editor-type__txt{
-	@include px2-editor-type;
-	background-color: #999;
-	&:before{
-		content: "TEXT";
+	&__txt, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--txt{
+		@include px2-editor-type;
+		background-color: #999;
+		&:before{
+			content: "TEXT";
+		}
 	}
-}
-.px2-editor-type__md{
-	@include px2-editor-type;
-	background-color: #ae9b59;
-	&:before{
-		content: "Markdown";
+	&__md, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--md{
+		@include px2-editor-type;
+		background-color: #ae9b59;
+		&:before{
+			content: "Markdown";
+		}
 	}
-}
-.px2-editor-type__jade{
-	@include px2-editor-type;
-	background-color: #999;
-	&:before{
-		content: "Jade";
+	&__jade, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--jade{
+		@include px2-editor-type;
+		background-color: #999;
+		&:before{
+			content: "Jade";
+		}
 	}
-}
-.px2-editor-type__not-exists{
-	@include px2-editor-type;
-	background-color: #c3c3c3;
-	&:before{
-		content: "未作成";
+	&__not-exists, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--not-exists{
+		@include px2-editor-type;
+		background-color: #c3c3c3;
+		&:before{
+			content: "未作成";
+		}
 	}
-}
-.px2-editor-type__page-not-exists{
-	@include px2-editor-type;
-	background-color: #c3c3c3;
-	&:before{
-		content: "ページ未作成";
+	&__page-not-exists, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--page-not-exists{
+		@include px2-editor-type;
+		background-color: #c3c3c3;
+		&:before{
+			content: "ページ未作成";
+		}
 	}
-}
-.px2-editor-type--fullwidth{
-	width: auto;
-	display: block;
-	float:none;
+	&__alias, // <- deprecated (古い書き方ですが、後方互換のために残します)
+	&--alias{
+		@include px2-editor-type;
+		background-color: #c3c3c3;
+		&:before{
+			content: "ALIAS";
+		}
+	}
+	&--fullwidth{
+		width: auto;
+		display: block;
+		float:none;
+	}
 }
 
 // Loading
