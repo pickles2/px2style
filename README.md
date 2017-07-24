@@ -23,6 +23,8 @@ $ composer require pickles2/px2style
 
 - `.px2-link` を追加。
 - `.px2-link.px2-link--burette` を追加。
+- `.px2-editor-type` に `alias` を追加。
+- `.px2-editor-type__***` を `.px2-editor-type.px2-editor-type--***` に変更。(ただし古い書き方も互換性維持のため残します)
 - List カテゴリを追加。
 - ボタンアクションに "押した感触" を追加。
 
