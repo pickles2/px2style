@@ -5,7 +5,7 @@
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    var _styleguideConfig = {"title":"Pickles 2 CSS Components.","disableEncapsulation":false,"disableHtml5Mode":false,"sideNav":false,"showMarkupSection":false,"hideSubsectionsOnMainSection":false,"additionalNgDependencies":false};
+    var _styleguideConfig = {"title":"Pickles 2 CSS Components.","disableEncapsulation":false,"disableHtml5Mode":false,"sideNav":false,"showReferenceNumbers":false,"showMarkupSection":false,"hideSubsectionsOnMainSection":false,"additionalNgDependencies":false};
     (function() {
       'use strict';
       var userStyleFiles = [
@@ -26,13 +26,14 @@
         head.appendChild(link);
       }
 
+      addCssLink('/styleguide_at_rules.css');
+      addCssLink('/styleguide-app.css', {noReload: true});
+
       // Use Shadow DOM but fallback to global styles if shadow DOM is not supported
       if (typeof head.createShadowRoot !== 'function' || _styleguideConfig.disableEncapsulation) {
         userStyleFiles.forEach(addCssLink);
       }
 
-      addCssLink('/styleguide_at_rules.css');
-      addCssLink('/styleguide-app.css', {noReload: true});
     }());
   </script>
   <script type="text/ng-template" id="userStyles.html">

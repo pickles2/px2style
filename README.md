@@ -27,6 +27,7 @@ $ composer require pickles2/px2style
 - `.px2-editor-type__***` を `.px2-editor-type.px2-editor-type--***` に変更。(ただし古い書き方も互換性維持のため残します)
 - List カテゴリを追加。
 - ボタンアクションに "押した感触" を追加。
+- `px2-modal` に `form` オプションを追加。
 
 ### px2style@2.0.2 (2017/05/30)
 

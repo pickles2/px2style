@@ -133,6 +133,12 @@ angular.module('sgApp', deps)
       }
     };
 
+    $rootScope.$on('$stateNotFound', function(event, unfoundState) {
+      if (unfoundState.to === '-') {
+        event.preventDefault(); return;
+      }
+    });
+
     $rootScope.$on('$stateChangeSuccess',function(event, toState){
         $rootScope.viewClass = toState.viewClass;
     });
@@ -427,6 +433,10 @@ angular.module('sgApp')
       return $scope.toggleMenu;
     };
 
+    $scope.isMainSectionNavigable = function() {
+      return $scope.config.data.hideSubsectionsOnMainSection ? '-' : 'app.index.section({section: section.reference})';
+    };
+
     $scope.isSideNav = function() {
       if ($scope.config.data && $scope.config.data.sideNav) {
         return 'sideNav';
@@ -491,7 +501,6 @@ angular.module('sgApp')
   .controller('SectionsCtrl', ["$scope", "$stateParams", "$location", "$state", "$rootScope", "Styleguide", function($scope, $stateParams, $location, $state, $rootScope, Styleguide) {
 
     $scope.config = Styleguide.config;
-
 
     if ($stateParams.section) {
       $scope.currentSection = $stateParams.section;
@@ -966,10 +975,10 @@ angular.module('sgApp')
       return $http({
         method: 'GET',
         url: 'styleguide.json'
-      }).success(function(response) {
-        _this.config.data = response.config;
-        _this.variables.data = response.variables;
-        _this.sections.data = response.sections;
+      }).then(function(response) {
+        _this.config.data = response.data.config;
+        _this.variables.data = response.data.variables;
+        _this.sections.data = response.data.sections;
 
         if (!Socket.isConnected()) {
           Socket.connect();
