@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style@2.0.3 (20??/??/??)
+### px2style@2.0.3 (2019/01/13)
 
 - `.px2-link` を追加。
 - `.px2-link.px2-link--burette` を追加。
@@ -27,6 +27,7 @@ $ composer require pickles2/px2style
 - `.px2-editor-type__***` を `.px2-editor-type.px2-editor-type--***` に変更。(ただし古い書き方も互換性維持のため残します)
 - List カテゴリを追加。
 - ボタンアクションに "押した感触" を追加。
+- `px2-modal` に `form` オプションを追加。
 
 ### px2style@2.0.2 (2017/05/30)
 
@@ -55,5 +56,5 @@ MIT License
 ## Author
 
 - Tomoya Koyanagi <tomk79@gmail.com>
-- website: <http://www.pxt.jp/>
-- Twitter: @tomk79 <http://twitter.com/tomk79/>
+- website: <https://www.pxt.jp/>
+- Twitter: @tomk79 <https://twitter.com/tomk79/>
