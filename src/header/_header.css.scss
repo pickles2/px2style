@@ -12,17 +12,19 @@
 //         <div class="px2-header__px2logo">
 //             <a href="javascript:px2style.header.init({'current':''});"><img src="https://okuden-labo.com/images/5/a/3/d/d/5a3dd3a06d3d74537be8f8a82fd58140f62dfc45-150x150.png" alt="" /></a>
 //         </div>
-//         <div class="px2-header__id">
-//             <span>Pickles 2</span>
-//         </div>
-//         <div class="px2-header__global-menu">
-//             <ul>
-//                 <li><a href="javascript:px2style.header.init({'current':''});" data-name="">HOME</a></li>
-//                 <li><a href="javascript:px2style.header.init({'current':'sitemap'});" data-name="sitemap">Sitemap</a></li>
-//                 <li><a href="javascript:px2style.header.init({'current':'theme'});" data-name="theme">Theme</a></li>
-//                 <li><a href="javascript:px2style.header.init({'current':'contents'});" data-name="contents">Contents</a></li>
-//                 <li><a href="javascript:px2style.header.init({'current':'publish'});" data-name="publish">Publish</a></li>
-//             </ul>
+//         <div class="px2-header__block">
+//             <div class="px2-header__id">
+//                 <span>Pickles 2</span>
+//             </div>
+//             <div class="px2-header__global-menu">
+//                 <ul>
+//                     <li><a href="javascript:px2style.header.init({'current':''});" data-name="">HOME</a></li>
+//                     <li><a href="javascript:px2style.header.init({'current':'sitemap'});" data-name="sitemap">Sitemap</a></li>
+//                     <li><a href="javascript:px2style.header.init({'current':'theme'});" data-name="theme">Theme</a></li>
+//                     <li><a href="javascript:px2style.header.init({'current':'contents'});" data-name="contents">Contents</a></li>
+//                     <li><a href="javascript:px2style.header.init({'current':'publish'});" data-name="publish">Publish</a></li>
+//                 </ul>
+//             </div>
 //         </div>
 //         <div class="px2-header__shoulder-menu">
 //             <button>≡</button>
@@ -76,7 +78,6 @@
 		transition: min-width 0.3s ease-out 0s , width 0.3s ease-out 0s , height 0.3s ease-out 0s;
 		position: relative;
 		left: 0px; top: 0px;
-		z-index: 1000;
 		padding: 6px;
 		margin-left: 6px;
 		width: 45px; height: auto;
@@ -96,6 +97,13 @@
 			}
 		}
 	} // px2logo
+
+	&__block{
+		display: flex;
+		flex-wrap: wrap;
+		flex-grow: 100;
+		justify-content: space-between;
+	}
 
 	&__id{
 		width: auto;
@@ -127,7 +135,6 @@
 		margin-right: 35px;
 		margin-bottom: -3px;
 		line-height: 1;
-		flex-grow: 100;
 
 		ul{
 			display:flex;
@@ -158,6 +165,19 @@
 						font-weight: bold;
 						border-bottom-color: rgba(255, 255, 255, 0.85);
 						color:#00a0e6;
+						padding-left: 1em;
+						&:before{
+							content:' ';
+							width:0;
+							height:0;
+							display: inline-block;
+							margin-right: 0.5em;
+							border-width:0.3em 0 0.3em 0.5em;
+							border-style:solid;
+							border-color:#00a0e6;
+							border-top-color:transparent;
+							border-bottom-color:transparent;
+						}
 					}
 				}
 				span{
