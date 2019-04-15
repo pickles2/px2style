@@ -21,7 +21,7 @@ $ composer require pickles2/px2style
 
 ### px2style@2.0.4 (リリース日未定)
 
- - `.px2-app-frame` を追加。
+ - `.px2-header` を追加。
 
 ### px2style@2.0.3 (2019/01/13)
 

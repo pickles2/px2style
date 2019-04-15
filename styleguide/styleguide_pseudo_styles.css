@@ -81,3 +81,22 @@
   color: #ddd;
   cursor: default;
 }
+
+.px2-header a.pseudo-class-hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.px2-header__global-menu ul li a.pseudo-class-hover,
+.px2-header__global-menu ul li span.pseudo-class-hover {
+  color: #00a0e6;
+}
+
+.px2-header__shoulder-menu ul li.pseudo-class-last-child {
+  border: none;
+}
+
+.px2-header__shoulder-menu ul li a.pseudo-class-hover {
+  background-color: #444;
+  color: #fff;
+}
