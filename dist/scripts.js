@@ -9835,6 +9835,9 @@ module.exports = function(Px2style){
 	var Header = function(){};
 
 	Px2style.prototype.header = new Header();
+	window.addEventListener('resize', function(){
+		window.px2style.header.init(options);
+	});
 
 	Header.prototype.init = function(_options){
 		options = _options || {};
@@ -9891,12 +9894,12 @@ module.exports = function(Px2style){
 
 		$shoulderMenu.find('button')
 			.css({
-				'height': $header.outerHeight()
+				'height': $header.height()
 			})
 		;
 		$shoulderMenuUl.css({
 			'top': $header.height() ,
-			'height': $(window).height()-$header.outerHeight()
+			'height': $(window).height()-$header.height()
 		});
 
 
@@ -9915,12 +9918,20 @@ module.exports = function(Px2style){
 		}
 
 		if( options.current === '' ){
-			$('.px2-header__px2logo').css({
+			$header.find('.px2-header__px2logo').css({
+				"min-width": 70,
+				"width": 70
+			});
+			$header.find('.px2-header__px2logo a').css({
 				"width": 70,
 				"height": 70
 			});
 		}else{
-			$('.px2-header__px2logo').css({
+			$header.find('.px2-header__px2logo').css({
+				"min-width": 45,
+				"width": 45
+			});
+			$header.find('.px2-header__px2logo a').css({
 				"width": 45,
 				"height": 45
 			});
@@ -9928,6 +9939,7 @@ module.exports = function(Px2style){
 
 		$header.find('[data-name]').removeClass('current');
 		$header.find('[data-name="'+options.current+'"]').addClass('current');
+		$('.px2-header').css({"height":$header.outerHeight()});
 
 	}
 

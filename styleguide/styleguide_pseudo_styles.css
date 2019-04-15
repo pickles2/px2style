@@ -87,6 +87,11 @@
   text-decoration: none;
 }
 
+.px2-header__id a.pseudo-class-hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .px2-header__global-menu ul li a.pseudo-class-hover,
 .px2-header__global-menu ul li span.pseudo-class-hover {
   color: #00a0e6;
