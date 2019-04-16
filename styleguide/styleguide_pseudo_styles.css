@@ -97,11 +97,16 @@
   color: #00a0e6;
 }
 
-.px2-header__shoulder-menu ul li.pseudo-class-last-child {
+.px2-header__shoulder-menu > ul li.pseudo-class-last-child {
   border: none;
 }
 
-.px2-header__shoulder-menu ul li a.pseudo-class-hover {
+.px2-header__shoulder-menu > ul li a.pseudo-class-hover {
   background-color: #444;
+  color: #fff;
+}
+
+.px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
+  background-color: #666;
   color: #fff;
 }

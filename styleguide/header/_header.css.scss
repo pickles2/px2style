@@ -29,6 +29,23 @@
 //         <div class="px2-header__shoulder-menu">
 //             <button>≡</button>
 //             <ul>
+//                 <li><a href="javascript:px2style.header.init({'current':'menu-a'});" data-name="menu-a">Menu A</a></li>
+//                 <li><a href="javascript:px2style.header.init({'current':'menu-b'});" data-name="menu-b">Menu B</a></li>
+//                 <li><a href="javascript:px2style.header.init({'current':'menu-c'});" data-name="menu-c">Menu C</a></li>
+//                 <li><a href="javascript:;">Group A</a>
+//                     <ul>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-a-a'});" data-name="menu-a-a">Menu A-A</a></li>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-a-b'});" data-name="menu-a-b">Menu A-B</a></li>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-a-c'});" data-name="menu-a-c">Menu A-C</a></li>
+//                     </ul>
+//                 </li>
+//                 <li><a href="javascript:;">Group B</a>
+//                     <ul>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-b-a'});" data-name="menu-b-a">Menu B-A</a></li>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-b-b'});" data-name="menu-b-b">Menu B-B</a></li>
+//                         <li><a href="javascript:px2style.header.init({'current':'menu-b-c'});" data-name="menu-b-c">Menu B-C</a></li>
+//                     </ul>
+//                 </li>
 //                 <li><a href="javascript:px2style.header.init({'current':'quit'});" data-name="quit">Quit</a></li>
 //             </ul>
 //         </div>
@@ -193,7 +210,7 @@
 		position: fixed; top: 0; right: 0;
 		padding: 0; margin: 0;
 		overflow: hidden;
-		button{
+		>button{
 			background: #f9f9f9;
 			border: none;
 			border-radius: 0;
@@ -204,7 +221,7 @@
 			box-sizing: border-box;
 			cursor: pointer;
 		}
-		ul{
+		>ul{
 			position: absolute;
 			top: 30px; right: 0;
 			display: none;
@@ -242,6 +259,45 @@
 					}
 				}
 			}
+			li.px2-header__shoulder-menu-group{
+				>a::after{
+					content:' ';
+					width:0;
+					height:0;
+					display: inline-block;
+					margin-left: 1em;
+					border-width:0.3em 0 0.3em 0.5em;
+					border-style:solid;
+					border-color:#eee;
+					border-top-color:transparent;
+					border-bottom-color:transparent;
+					transition: transform 0.2s ease-in;
+				}
+				ul{
+					padding: 0 0 0 15px;
+					display:none;
+					li{
+						list-style-type: none;
+						a{
+							background-color: #555;
+							color: #ddd;
+							&:hover{
+								background-color: #666;
+								color: #fff;
+							}
+							&.current{
+								font-weight: bold;
+								background-color:#00a0e6;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+			li.px2-header__shoulder-menu-group-opened > a::after{
+				transform: rotate(90deg);
+			}
+
 		}
 	} // shoulder-menu
 }
