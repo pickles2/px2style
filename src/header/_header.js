@@ -4,6 +4,8 @@
 module.exports = function(Px2style){
 	var $ = require('jquery');
 	var $header,
+		$globalMenu,
+		$globalMenuUl,
 		$shoulderMenu,
 		$shoulderMenuUl;
 	var options = {};
@@ -11,16 +13,37 @@ module.exports = function(Px2style){
 
 	Px2style.prototype.header = new Header();
 	window.addEventListener('resize', function(){
+		if(!$header){return;}
 		window.px2style.header.init(options);
+	});
+	window.addEventListener('click', function(){
+		if(!$header){return;}
+		closeDropdownMenus();
 	});
 
 	Header.prototype.init = function(_options){
 		options = _options || {};
 		options.current = options.current || '';
 		$header = $('.px2-header__inner');
+		$globalMenu = $('.px2-header__global-menu');
+		$globalMenuUl = $globalMenu.find('>ul');
 		$shoulderMenu = $('.px2-header__shoulder-menu');
-
 		$shoulderMenuUl = $shoulderMenu.find('>ul');
+
+		$globalMenuUl.find('li').removeClass('px2-header__global-menu-group');
+		$globalMenuUl.find('li:has(>ul)').addClass('px2-header__global-menu-group')
+		$globalMenuUl.find('li:has(>ul) > a').off().on('click', function(e){
+			e.stopPropagation();
+			var $ul = $(this).parent().find('>ul');
+			if( $ul.is(':visible') ){
+				$ul.hide();
+				$(this).parent().removeClass('px2-header__global-menu-group-opened');
+			}else{
+				$ul.show();
+				$(this).parent().addClass('px2-header__global-menu-group-opened');
+			}
+		});
+
 		$shoulderMenu
 			.css({
 				'width': 50,
@@ -43,6 +66,7 @@ module.exports = function(Px2style){
 			.off()
 			.on('click', function(e){
 				e.stopPropagation();
+				closeDropdownMenus();
 				if( $shoulderMenuUl.css('display') == 'block' ){
 					$shoulderMenuUl.hide();
 					$shoulderMenu
@@ -77,21 +101,21 @@ module.exports = function(Px2style){
 			'height': $(window).height()-$header.height()
 		});
 
-		$shoulderMenuUl.find('*').removeClass('px2-header__shoulder-menu-group');
+		$shoulderMenuUl.find('li').removeClass('px2-header__shoulder-menu-group');
 		$shoulderMenuUl.find('li:has(>ul)').addClass('px2-header__shoulder-menu-group')
 		$shoulderMenuUl.find('li:has(>ul) > a').off().on('click', function(e){
 			e.stopPropagation();
 			var $ul = $(this).parent().find('>ul');
-			if( $ul.css('display') == 'block' ){
+			if( $ul.is(':visible') ){
 				$ul.hide();
 				$(this).parent().removeClass('px2-header__shoulder-menu-group-opened');
 			}else{
 				$ul.show();
 				$(this).parent().addClass('px2-header__shoulder-menu-group-opened');
 			}
-		})
+		});
 
-		if( $shoulderMenuUl.css('display') == 'block' ){
+		if( $shoulderMenuUl.is(':visible') ){
 			$shoulderMenu.css({
 				width: '100%' ,
 				height: $(window).height()
@@ -130,4 +154,11 @@ module.exports = function(Px2style){
 
 	}
 
+	/**
+	 * ドロップダウンメニューを全て閉じる
+	 */
+	function closeDropdownMenus(){
+		$globalMenuUl.find('li').removeClass('px2-header__global-menu-group-opened');
+		$globalMenuUl.find('ul').hide();
+	}
 }

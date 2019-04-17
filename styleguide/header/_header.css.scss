@@ -22,7 +22,12 @@
 //                     <li><a href="javascript:px2style.header.init({'current':'sitemap'});" data-name="sitemap">Sitemap</a></li>
 //                     <li><a href="javascript:px2style.header.init({'current':'theme'});" data-name="theme">Theme</a></li>
 //                     <li><a href="javascript:px2style.header.init({'current':'contents'});" data-name="contents">Contents</a></li>
-//                     <li><a href="javascript:px2style.header.init({'current':'publish'});" data-name="publish">Publish</a></li>
+//                     <li><a href="javascript:;">Profile</a>
+//                         <ul>
+//                             <li><a href="javascript:px2style.header.init({'current':'profile'});" data-name="profile">Profile</a></li>
+//                             <li><a href="javascript:px2style.header.init({'current':'logout'});" data-name="logout">Logout</a></li>
+//                         </ul>
+//                     </li>
 //                 </ul>
 //             </div>
 //         </div>
@@ -164,6 +169,7 @@
 				padding: 0;
 				list-style-type: none;
 				font-size: 13px;
+				position: relative;
 
 				a,span{
 					display: block;
@@ -201,6 +207,60 @@
 					padding-left: 0;
 					padding-right: 0;
 				}
+			}
+			ul{
+				display: none;
+				position: absolute;
+				right: 0; top: 100%;
+			}
+
+			li.px2-header__global-menu-group{
+				>a::after{
+					content:' ';
+					width:0;
+					height:0;
+					display: inline-block;
+					margin-left: 0.3em;
+					border-width:0.3em 0 0.3em 0.5em;
+					border-style:solid;
+					border-color:#666;
+					border-top-color:transparent;
+					border-bottom-color:transparent;
+					transition: transform 0.2s ease-in;
+					transform: rotate(90deg);
+				}
+				ul{
+					padding: 0;
+					background-color: #999;
+
+					li{
+						list-style-type: none;
+						a{
+							font-weight: normal;
+							padding: 0.8em 2em;
+							color: #eee;
+							background-color: #333;
+							text-decoration: none;
+							&:hover{
+								background-color: #666;
+								color: #fff;
+							}
+							&.current{
+								font-weight: bold;
+								padding: 0.8em 2em;
+								background-color:#00a0e6;
+								color: #fff;
+								border: none;
+								&:before{
+									content:none;
+								}
+							}
+						}
+					}
+				}
+			}
+			li.px2-header__global-menu-group-opened > a::after{
+				transform: rotate(90deg);
 			}
 		}
 	} // global-menu
