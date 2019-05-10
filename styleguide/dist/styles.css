@@ -320,19 +320,20 @@
     display: block;
     text-align: center;
     content: ' ';
-    background-color: #000;
+    background-color: #999;
     width: 150px;
-    height: 1px;
+    height: 4px;
+    border-radius: 2px;
     margin: 0 auto;
-    animation: broccoli--progress 1.4s infinite normal ease; }
+    animation: broccoli--progress 2s infinite normal ease-in; }
 
 @keyframes broccoli--progress {
   0% {
     transform: rotate(0deg) scale(0, 0); }
-  30% {
-    transform: rotate(270deg) scale(1, 1); }
+  50% {
+    transform: rotate(735deg) scale(1, 1); }
   100% {
-    transform: rotate(720deg) scale(0, 0); } }
+    transform: rotate(450deg) scale(0, 0); } }
 
 .px2-document {
   font-size: medium;
