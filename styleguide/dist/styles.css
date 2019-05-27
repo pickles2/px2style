@@ -311,12 +311,11 @@
     float: none; }
 
 @keyframes px2-loading {
-  50% {
-    opacity: 0.3;
-    transform: scale(0.4); }
+  0% {
+    transform: scale(0); }
   100% {
-    opacity: 1;
-    transform: scale(1); } }
+    transform: scale(1);
+    opacity: 0; } }
 
 .px2-loading {
   clear: both;
@@ -329,50 +328,19 @@
       align-content: center;
   text-align: center;
   padding: 80px; }
-  .px2-loading > div {
-    position: relative;
-    top: -10px;
-    left: -10px; }
-    .px2-loading > div > *:nth-child(1) {
-      top: 25px;
-      left: 0;
-      animation: px2-loading 1s -0.96s infinite linear; }
-    .px2-loading > div > *:nth-child(2) {
-      top: 17.04545px;
-      left: 17.04545px;
-      animation: px2-loading 1s -0.84s infinite linear; }
-    .px2-loading > div > *:nth-child(3) {
-      top: 0;
-      left: 25px;
-      animation: px2-loading 1s -0.72s infinite linear; }
-    .px2-loading > div > *:nth-child(4) {
-      top: -17.04545px;
-      left: 17.04545px;
-      animation: px2-loading 1s -0.6s infinite linear; }
-    .px2-loading > div > *:nth-child(5) {
-      top: -25px;
-      left: 0;
-      animation: px2-loading 1s -0.48s infinite linear; }
-    .px2-loading > div > *:nth-child(6) {
-      top: -17.04545px;
-      left: -17.04545px;
-      animation: px2-loading 1s -0.36s infinite linear; }
-    .px2-loading > div > *:nth-child(7) {
-      top: 0;
-      left: -25px;
-      animation: px2-loading 1s -0.24s infinite linear; }
-    .px2-loading > div > *:nth-child(8) {
-      top: 17.04545px;
-      left: -17.04545px;
-      animation: px2-loading 1s -0.12s infinite linear; }
-    .px2-loading > div > * {
-      background-color: var(--px2-main-color);
-      width: 15px;
-      height: 15px;
-      border-radius: 100%;
-      margin: 2px;
-      animation-fill-mode: both;
-      position: absolute; }
+  .px2-loading::before {
+    display: block;
+    content: "";
+    background-color: #999;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    animation-fill-mode: both;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    animation: px2-loading 1s 0s ease-in-out infinite; }
 
 .px2-document {
   font-size: medium;
