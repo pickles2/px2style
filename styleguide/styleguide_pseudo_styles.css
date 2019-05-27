@@ -94,7 +94,7 @@
 
 .px2-header__global-menu ul li a.pseudo-class-hover,
 .px2-header__global-menu ul li span.pseudo-class-hover {
-  color: var(--main-color);
+  color: var(--px2-main-color);
 }
 
 .px2-header__global-menu ul li.px2-header__global-menu-group ul li a.pseudo-class-hover {
