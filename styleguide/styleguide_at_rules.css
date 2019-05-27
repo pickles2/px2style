@@ -1,13 +1,11 @@
-@keyframes broccoli--progress {
-  0% {
-    transform: rotate(0deg) scale(0, 0);
-  }
-
+@keyframes px2-loading {
   50% {
-    transform: rotate(735deg) scale(1, 1);
+    opacity: 0.3;
+    transform: scale(0.4);
   }
 
   100% {
-    transform: rotate(450deg) scale(0, 0);
+    opacity: 1;
+    transform: scale(1);
   }
 }

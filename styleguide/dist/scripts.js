@@ -10133,6 +10133,7 @@ module.exports = function(Px2style){
 module.exports = function(Px2style){
 	var $ = require('jquery');
 	var $loading,
+		$message,
 		$target;
 
 	/**
@@ -10152,19 +10153,34 @@ module.exports = function(Px2style){
 			tpl += '</div>';
 
 			$loading = $(tpl);
+			$message = $('<div>');
+			$message.css({
+				"clear": "both",
+				"font-size": "0.8rem",
+				"text-align": "center",
+				"color": "#999"
+			});
 
 			$target = $(options.target);
 			$target.append($loading);
+			$loading.append($message);
 
 			if( $target.get(0).tagName.toLowerCase() == 'body' ){
 				// body に挿入する場合は、 fixed に。
 				$loading.css({
-					"position": "fixed"
+					"position": "fixed",
+					"left": 0,
+					"top": 0
 				});
 			}
 			$loading.css({
 				"width": '100%',
-				"height": '100%'
+				"height": '100%',
+				"display": "flex",
+				"justify-content": "center",
+				"flex-direction": "column",
+				"align-items": "center",
+				"z-index": 1000000
 			});
 
 			$(window).on('resize.px2-loading', function(){
@@ -10175,6 +10191,14 @@ module.exports = function(Px2style){
 			callback();
 		});
 
+		return;
+	}
+
+	/**
+	 * Update loading message.
+	 */
+	Px2style.prototype.message = function(message){
+		$message.text(message);
 		return;
 	}
 

@@ -104,36 +104,109 @@
 }
 
 // Loading
+// Thanks: https://github.com/ConnorAtherton/loaders.css
 //
 // Markup:
-// <div class="px2-loading"></div>
+// <div class="px2-loading"><div>
+// <div></div>
+// <div></div>
+// <div></div>
+// <div></div>
+// <div></div>
+// <div></div>
+// <div></div>
+// <div></div>
+// </div></div>
 // <a href="javascript:px2style.loading();">loading</a>
 //
 // Styleguide 6.2
 
-.px2-loading{
-	clear: both;
-	float: none;
-	display: block;
-	text-align:center;
-	padding:80px;
-	&:before{
-		display: block;
-		text-align: center;
-		content: ' ';
-		background-color: #999;
-		width: 150px; height: 4px;
-		border-radius: 2px;
-		margin: 0 auto;
+$primary-color: #999 !default;
+$ball-size: 15px !default;
+$margin: 2px !default;
+$line-height: 35px !default;
+$line-width: 4px !default;
+$radius: 25px;
 
-		animation: broccoli--progress 2s infinite normal ease-in;
-		@keyframes broccoli--progress {
-			0% { transform: rotate(0deg) scale(0,0); }
-			50% { transform: rotate(735deg) scale(1,1); }
-			100% { transform: rotate(450deg) scale(0,0); }
+@function delay($interval, $count, $index) {
+  @return ($index * $interval) - ($interval * $count);
+}
+
+@keyframes px2-loading {
+	50% {
+		opacity: 0.3;
+		transform: scale(0.4);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@mixin px2-loading($n:8, $start:1) {
+	@for $i from $start through $n {
+		> *:nth-child(#{$i}) {
+			$iter: 360 / $n;
+			$quarter: ($radius / 2) + ($radius / 5.5);
+
+			@if $i == 1 {
+				top: $radius;
+				left: 0;
+			} @else if $i == 2 {
+				top: $quarter;
+				left: $quarter;
+			} @else if $i == 3 {
+				top: 0;
+				left: $radius;
+			} @else if $i == 4 {
+				top: -$quarter;
+				left: $quarter;
+			} @else if $i == 5 {
+				top: -$radius;
+				left: 0;
+			} @else if $i == 6 {
+				top: -$quarter;
+				left: -$quarter;
+			} @else if $i == 7 {
+				top: 0;
+				left: -$radius;
+			} @else if $i == 8 {
+				top: $quarter;
+				left: -$quarter;
+			}
+
+			animation: px2-loading 1s delay(0.12s, $n, $i - 1) infinite linear;
 		}
 	}
 }
+.px2-loading{
+	clear: both;
+	float: none;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align:center;
+	padding:80px;
+
+	> div{
+		@include px2-loading();
+
+		position: relative;
+		top: -10px;
+		left: -10px;
+
+		> * {
+			background-color: var(--px2-main-color);
+			width: $ball-size;
+			height: $ball-size;
+			border-radius: 100%;
+			margin: $margin;
+			animation-fill-mode: both;
+			position: absolute;
+		}
+	}
+}
+
 
 // Simple Document
 //
