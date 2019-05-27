@@ -113,13 +113,6 @@
 //
 // Styleguide 6.2
 
-$primary-color: #999 !default;
-$ball-size: 15px !default;
-$margin: 2px !default;
-$line-height: 35px !default;
-$line-width: 4px !default;
-$radius: 25px;
-
 @keyframes px2-loading {
 	0% {
 		transform: scale(0.0);
@@ -143,11 +136,11 @@ $radius: 25px;
 		display: block;
 		content: "";
 
-		background-color: $primary-color;
-		width: $ball-size;
-		height: $ball-size;
+		background-color: var(--px2-main-color);
+		width: 15px;
+		height: 15px;
 		border-radius: 100%;
-		margin: $margin;
+		margin: 2px;
 		animation-fill-mode: both;
 
 		display: inline-block;
