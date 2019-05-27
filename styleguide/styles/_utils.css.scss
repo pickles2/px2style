@@ -109,7 +109,20 @@
 //
 // Markup:
 // <div class="px2-loading"></div>
-// <a href="javascript:px2style.loading();">loading</a>
+// 
+// <a href="javascript:loadingDEMO();">loadingDEMO</a>
+// <script>
+// function loadingDEMO(){
+// 	px2style.loading();
+// 	px2style.loadingMessage('Loading Message 1...');
+// 	setTimeout(function(){
+// 		px2style.loadingMessage('Loading Message 2...');
+// 		setTimeout(function(){
+// 			px2style.closeLoading();
+// 		}, 5000);
+// 	}, 5000);
+// }
+// </script>
 //
 // Styleguide 6.2
 
