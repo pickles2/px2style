@@ -113,12 +113,12 @@
 // <a href="javascript:loadingDEMO();">loadingDEMO</a>
 // <script>
 // function loadingDEMO(){
-// 	px2style.loading();
-// 	px2style.loadingMessage('Loading Message 1...');
+// 	px2style.loading(); // Display Loading animation.
+// 	px2style.loadingMessage('Loading Message 1...'); // Update Loading message.
 // 	setTimeout(function(){
-// 		px2style.loadingMessage('Loading Message 2...');
+// 		px2style.loadingMessage('Loading Message 2...'); // Update Loading message.
 // 		setTimeout(function(){
-// 			px2style.closeLoading();
+// 			px2style.closeLoading(); // Remove Loading animation.
 // 		}, 5000);
 // 	}, 5000);
 // }
