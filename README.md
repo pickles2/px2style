@@ -19,6 +19,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.6 (リリース日未定)
+
+- ??????????????????????
+
 ### px2style v2.0.5 (2019/05/28)
 
 - `px2style.message()` を `px2style.loadingMessage()` に改名した。
