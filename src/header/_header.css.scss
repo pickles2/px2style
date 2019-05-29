@@ -22,10 +22,16 @@
 //                     <li><a href="javascript:px2style.header.init({'current':'sitemap'});" data-name="sitemap">Sitemap</a></li>
 //                     <li><a href="javascript:px2style.header.init({'current':'theme'});" data-name="theme">Theme</a></li>
 //                     <li><a href="javascript:px2style.header.init({'current':'contents'});" data-name="contents">Contents</a></li>
-//                     <li><a href="javascript:;">Profile</a>
+//                     <li><a href="javascript:;">Profile 1</a>
 //                         <ul>
-//                             <li><a href="javascript:px2style.header.init({'current':'profile'});" data-name="profile">Profile</a></li>
-//                             <li><a href="javascript:px2style.header.init({'current':'logout'});" data-name="logout">Logout</a></li>
+//                             <li><a href="javascript:px2style.header.init({'current':'profile1'});" data-name="profile1">Profile</a></li>
+//                             <li><a href="javascript:px2style.header.init({'current':'logout1'});" data-name="logout1">Logout</a></li>
+//                         </ul>
+//                     </li>
+//                     <li><a href="javascript:;">Profile 2</a>
+//                         <ul>
+//                             <li><a href="javascript:px2style.header.init({'current':'profile'2});" data-name="profile2">Profile</a></li>
+//                             <li><a href="javascript:px2style.header.init({'current':'logout2'});" data-name="logout2">Logout</a></li>
 //                         </ul>
 //                     </li>
 //                 </ul>
@@ -258,6 +264,9 @@
 						}
 					}
 				}
+			}
+			li.px2-header__global-menu-group-opened {
+				z-index: 10000;
 			}
 			li.px2-header__global-menu-group-opened > a::after{
 				transform: rotate(90deg);

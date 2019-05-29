@@ -9862,9 +9862,9 @@ module.exports = function(Px2style){
 			e.stopPropagation();
 			var $ul = $(this).parent().find('>ul');
 			if( $ul.is(':visible') ){
-				$ul.hide();
-				$(this).parent().removeClass('px2-header__global-menu-group-opened');
+				closeDropdownMenus();
 			}else{
+				closeDropdownMenus();
 				$ul.show();
 				$(this).parent().addClass('px2-header__global-menu-group-opened');
 			}
