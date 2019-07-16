@@ -163,6 +163,7 @@
 		margin-right: 35px;
 		margin-bottom: -3px;
 		line-height: 1;
+		min-height: calc(12px + 5px + 1em);
 
 		ul{
 			display:flex;
@@ -392,6 +393,19 @@
 	&__hamburger:after {
 		bottom: 6px;
 		width: 100%;
+	}
+
+	// Small Screen
+	.px2-header__shoulder-global-menu{
+		display: none;
+	}
+	@media all and (max-width: 640px){
+		&__global-menu ul{
+			display: none;
+		}
+		.px2-header__shoulder-global-menu{
+			display: block;
+		}
 	}
 
 }
