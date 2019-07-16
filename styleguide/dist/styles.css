@@ -584,6 +584,7 @@
       height: 30px;
       width: 30px;
       box-sizing: border-box;
+      padding: 0.5em;
       cursor: pointer; }
     .px2-header__shoulder-menu > ul {
       position: absolute;
@@ -648,3 +649,18 @@
               color: #fff; }
       .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group-opened > a::after {
         transform: rotate(90deg); }
+  .px2-header__hamburger, .px2-header__hamburger:before, .px2-header__hamburger:after {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 1em);
+    border-radius: 1px;
+    margin: 0 auto;
+    background: var(--px2-main-color);
+    content: ''; }
+  .px2-header__hamburger:before {
+    bottom: -6px;
+    width: 100%; }
+  .px2-header__hamburger:after {
+    bottom: 6px;
+    width: 100%; }

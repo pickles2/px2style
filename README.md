@@ -22,6 +22,7 @@ $ composer require pickles2/px2style
 ### px2style v2.0.6 (リリース日未定)
 
 - `.px2-header` で、サブメニューの開閉制御に関わる問題を修正。
+- ハンバーガーメニューのスタイルを修正。
 
 ### px2style v2.0.5 (2019/05/28)
 
