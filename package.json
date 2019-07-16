@@ -1,6 +1,6 @@
 {
   "name": "px2style",
-  "version": "2.0.6-alpha.1+dev",
+  "version": "2.0.6",
   "description": "Pickles 2 CSS Components.",
   "private": true,
   "scripts": {

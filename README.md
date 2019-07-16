@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.6 (リリース日未定)
+### px2style v2.0.6 (2019/07/17)
 
 - `.px2-header` で、サブメニューの開閉制御に関わる問題を修正。
 - `.px2-header` が、小さい画面のときを考慮してスタイルが変化するようになった。
