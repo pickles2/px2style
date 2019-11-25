@@ -145,7 +145,7 @@
 
 .px2-horizontal-list--left {
   -ms-flex-pack: start;
-      justify-content: start; }
+      justify-content: flex-start; }
 
 .px2-horizontal-list--center {
   -ms-flex-pack: center;
@@ -153,7 +153,7 @@
 
 .px2-horizontal-list--right {
   -ms-flex-pack: end;
-      justify-content: end; }
+      justify-content: flex-end; }
 
 .px2-vertical-list,
 .px2-vertical-list > ul {

@@ -141,13 +141,13 @@
       margin: 0; }
 
 .px2-horizontal-list--left {
-  justify-content: start; }
+  justify-content: flex-start; }
 
 .px2-horizontal-list--center {
   justify-content: center; }
 
 .px2-horizontal-list--right {
-  justify-content: end; }
+  justify-content: flex-end; }
 
 .px2-vertical-list,
 .px2-vertical-list > ul {
