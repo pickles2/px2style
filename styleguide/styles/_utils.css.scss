@@ -285,6 +285,60 @@
 	margin-bottom: 1em;
 }
 
+// 文字組み
+// 
+// Markup:
+// <div class="px2-text-align-left">
+// 	左寄せ
+// </div>
+// <div class="px2-text-align-center">
+// 	中央寄せ
+// </div>
+// <div class="px2-text-align-right">
+// 	右寄せ
+// </div>
+//
+// Styleguide 6.5
+.px2-text-align-left{
+	text-align: left;
+}
+.px2-text-align-center{
+	text-align: center;
+}
+.px2-text-align-right{
+	text-align: right;
+}
+
+// 文字サイズ
+// 
+// Markup:
+// <div class="px2-font-size-ss">
+// 	最も小さい文字サイズ
+// </div>
+// <div class="px2-font-size-s">
+// 	小さい文字サイズ
+// </div>
+// <div class="px2-font-size-l">
+// 	大きい文字サイズ
+// </div>
+// <div class="px2-font-size-ll">
+// 	最も大きい文字サイズ
+// </div>
+//
+// Styleguide 6.6
+.px2-font-size-ss{
+	font-size: 74%;
+}
+.px2-font-size-s{
+	font-size: 88%;
+}
+.px2-font-size-l{
+	font-size: 112%;
+}
+.px2-font-size-ll{
+	font-size: 136%;
+}
+
 // Slimize
 //
 // Markup:
@@ -310,7 +364,7 @@
 // 	</ul>
 // </div>
 //
-// Styleguide 6.5
+// Styleguide 6.7
 .px2-slim{
 	margin: 0;
 	padding: 0;
@@ -347,7 +401,7 @@
 // 	</table>
 // </div>
 //
-// Styleguide 6.6
+// Styleguide 6.8
 .px2-responsive{
 	overflow: auto;
 }

@@ -25,16 +25,26 @@
 // </ul>
 //
 // Styleguide 3.1
-.px2-horizontal-list{
-	padding: 0;
-	li{
-		display: inline-block;
+.px2-horizontal-list,
+.px2-horizontal-list>ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 0;
+
+	>ul>li ,
+	>li {
 		list-style-type: none;
-		margin: 0.1em 0.3em;
+		padding-left: 0;
+		padding-right: 1em;
+		>p{
+			margin: 0;
+		}
 	}
 }
 
-// Horizontal List
+// Horizontal List aligning
 //
 // Markup:
 // <ul class="px2-horizontal-list px2-horizontal-list--left">
@@ -56,13 +66,42 @@
 // Styleguide 3.1.1
 .px2-horizontal-list{
 	&--left{
-		text-align: left;
+		justify-content: start;
 	}
 	&--center{
-		text-align: center;
+		justify-content: center;
 	}
 	&--right{
-		text-align: right;
+		justify-content: end;
+	}
+}
+
+// Vertical List
+//
+// Markup:
+// <ul class="px2-vertical-list">
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 1</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 2</a></li>
+// 	<li><a href="#" class="px2-link px2-link--burette">list item 3</a></li>
+// </ul>
+//
+// Styleguide 3.2
+.px2-vertical-list,
+.px2-vertical-list>ul{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	padding-left: 0;
+
+	>ul>li ,
+	>li {
+		list-style-type: none;
+		padding-left: 0;
+		>p{
+			margin: 0;
+		}
 	}
 }
 
@@ -80,7 +119,7 @@
 // 	<li>list item 6</li>
 // </ol>
 //
-// Styleguide 3.2
+// Styleguide 3.3
 .px2-ordered-list{
 	padding: 0 0 0 40px;
 	li{
