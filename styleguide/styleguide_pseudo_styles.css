@@ -115,3 +115,7 @@
   background-color: #666;
   color: #fff;
 }
+
+.px2-header__shoulder-menu > ul > li.pseudo-class-last-child {
+  margin-bottom: 30px;
+}

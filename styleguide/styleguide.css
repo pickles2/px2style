@@ -686,6 +686,8 @@
               color: #fff; }
       .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group-opened > a::after {
         transform: rotate(90deg); }
+      .px2-header__shoulder-menu > ul > li:last-child {
+        margin-bottom: 30px; }
   .px2-header__hamburger, .px2-header__hamburger:before, .px2-header__hamburger:after {
     display: block;
     position: absolute;
