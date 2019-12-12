@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.7 (リリース日未定)
+### px2style v2.0.7 (2019/12/13)
 
 - `.px2-btn` が、 macOS Catalina で適切なフォントで表示されない問題を修正。
 - ユーティリティ `.px2-font-size-ll`, `.px2-font-size-l`, `.px2-font-size-s`, `.px2-font-size-ss` を追加。
