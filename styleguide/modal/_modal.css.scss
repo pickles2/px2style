@@ -200,6 +200,21 @@
 //              console.log('done.');
 //          }
 //      );">Open modal dialog to target DIV element.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Form Dialog.',
+//              body: '<div><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              buttonsSecondary: [
+//                  document.createElement('button')
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );">Open normal modal dialog with secondary button.</a></li>
 // </ul>
 //
 // Styleguide 5.1
