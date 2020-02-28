@@ -19,6 +19,11 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.8 (リリース日未定)
+
+- `.px2-modal` のスタイリングを改善。
+- `px2style.modal()` に、オプション `buttonsSecondary` を追加。
+
 ### px2style v2.0.7 (2019/12/13)
 
 - `.px2-btn` が、 macOS Catalina で適切なフォントで表示されない問題を修正。
