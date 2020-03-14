@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.8 (リリース日未定)
+### px2style v2.0.8 (2020/03/14)
 
 - `.px2-modal` のスタイリングを改善。
 - `px2style.modal()` に、オプション `buttonsSecondary` を追加。
