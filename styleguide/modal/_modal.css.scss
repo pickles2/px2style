@@ -5,12 +5,36 @@
 // Markup:
 // <div style="width: 100%; height: 400px;">
 // <div class="px2-modal">
-//  <div class="px2-modal__dialog">
+//  <article class="px2-modal__dialog">
 //   <div class="px2-modal__header">
-//       <div class="px2-modal__title">Dialog Title</div>
+//       <h1 class="px2-modal__title">Dialog Title</h1>
 //   </div>
 //   <div class="px2-modal__body">
 //      <p>Dialog Content.</p>
+//      <h2>Heading h2</h2>
+//      <h3>Heading h3</h3>
+//      <h4>Heading h4</h4>
+//      <h5>Heading h5</h5>
+//      <ul>
+//          <li>List 1</li>
+//          <li>List 2
+//              <ul>
+//                  <li>List 2-1</li>
+//                  <li>List 2-2</li>
+//              </ul>
+//          </li>
+//          <li>List 3</li>
+//      </ul>
+//      <ol>
+//          <li>List 1</li>
+//          <li>List 2
+//              <ol>
+//                  <li>List 2-1</li>
+//                  <li>List 2-2</li>
+//              </ol>
+//          </li>
+//          <li>List 3</li>
+//      </ol>
 //   </div>
 //   <div class="px2-modal__footer">
 //      <div class="px2-modal__footer-primary"><ul>
@@ -20,7 +44,7 @@
 //          <li><button class="px2-btn">Cancel</button></li>
 //      </ul></div>
 //   </div>
-//  </div>
+//  </article>
 // </div>
 // </div>
 //
@@ -59,10 +83,21 @@
 		padding: 10px 0;
 		margin: 20px auto;
 		width: calc(100% - 40px);
-		max-width: 400px;
+		max-width: 520px;
 		height: auto;
 		max-height: calc(100% - 40px);
 		overflow: auto;
+		font-size: medium;
+		h1{ font-size: 124%; margin: 0; font-weight: bold; }
+		h2{ font-size: 124%; margin: 2em 0 0.5em 0; font-weight: bold; }
+		h3{ font-size: 112%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h4{ font-size: 104%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h5{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h6{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+
+		h2{
+			border-bottom: 1px solid var(--px2-main-color);
+		}
 	}
 
 	&__header{
@@ -81,7 +116,6 @@
 
 	&__title{
 		font-weight: bold;
-		font-size: large;
 	}
 
 	&__footer{
