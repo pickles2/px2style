@@ -1,4 +1,7 @@
 @charset "UTF-8";
+:root {
+  --px2-main-color: #00a0e6; }
+
 .px2-btn {
   display: inline-block;
   border-radius: 3px;

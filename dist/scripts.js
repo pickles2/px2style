@@ -10182,11 +10182,15 @@ module.exports = function(Px2style){
 			options.message = message;
 		}
 		options.message = options.message||'';
+		options.type = options.type||'';
 		options.target = options.target||$('body');
 
 		$target = options.target;
 
 		var $notice = $('<div class="px2-notice">').append(options.message);
+		if( options.type ){
+			$notice.addClass('px2-notice--'+options.type);
+		}
 
 		appendToFlashArea($notice);
 		setTimeout(function(){
