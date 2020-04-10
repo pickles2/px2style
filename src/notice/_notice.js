@@ -22,99 +22,57 @@ module.exports = function(Px2style){
 		options.message = options.message||'';
 		options.target = options.target||$('body');
 
-		alert(options.message);callback();return;
+		$target = options.target;
 
-		var tpl = '';
-		tpl += '<div class="px2-modal">';
-		if(options.form){
-			tpl += '<form>';
-		}
-		tpl += ' <article class="px2-modal__dialog">';
-		tpl += '  <div class="px2-modal__header">';
-		tpl += '      <h1 class="px2-modal__title"></h1>';
-		tpl += '  </div>';
-		tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
-		tpl += '  <div class="px2-modal__footer"><div class="px2-modal__footer-primary"></div><div class="px2-modal__footer-secondary"></div></div>';
-		tpl += ' </article>';
-		if(options.form){
-			tpl += '</form>';
-		}
-		tpl += '</div>';
+		var $notice = $('<div class="px2-notice">').append(options.message);
 
-		$flashmessage = $(tpl);
+		appendToFlashArea($notice);
+		setTimeout(function(){
 
-		if(options.form){
-			$flashmessage.find('form').attr({
-				'action': options.form.action || 'javascript:;',
-				'method': options.form.method || 'post'
-			}).on('submit', options.form.submit || function(){
-				_this.closeModal();
-			});
-		}
+			$notice
+				.animate({
+					"font-size": 0 ,
+					"opacity": 0.5 ,
+					"width": '30%' ,
+					"height": 0 ,
+					'padding': 0,
+					'margin-bottom': 0
+				}, {
+					duration: "slow",
+					easing: "linear",
+					complete: function(){
+						$notice.remove();
+						cleaningToFlashArea();
+						callback();
+					}
+				})
+			;
 
-		var $title = $flashmessage.find('.px2-modal__title');
-		$title.append( options.title );
-
-		var $body = $flashmessage.find('.px2-modal__body-inner');
-		$body.append( options.body );
-
-		function generateBtn(btnSetting){
-			btnSetting = btnSetting || {};
-			var $li = $('<li>');
-			var $btn = $(btnSetting);
-			$li.append($btn);
-			if( !$btn.attr('class') ){
-				$btn.attr({'class':'px2-btn'});
-			}
-			if( !$btn.text() ){
-				$btn.text('button');
-			}
-			return $li;
-		}
-
-		var $footer = $flashmessage.find('.px2-modal__footer-primary');
-		var $footerUl = $('<ul>');
-		for( var i in options.buttons ){
-			$footerUl.append( generateBtn(options.buttons[i]) );
-		}
-		$footer.append($footerUl);
-
-		var $footer2 = $flashmessage.find('.px2-modal__footer-secondary');
-		var $footer2Ul = $('<ul>');
-		for( var i in options.buttonsSecondary ){
-			$footer2Ul.append( generateBtn(options.buttonsSecondary[i]) );
-		}
-		$footer2.append($footer2Ul);
-
-		$target = $(options.target);
-		$target.append($flashmessage);
-
-
-		if( $target.get(0).tagName.toLowerCase() == 'body' ){
-			// body に挿入する場合は、 fixed に。
-			$flashmessage.css({
-				"position": "fixed"
-			});
-		}else{
-			$flashmessage.css({
-				"height": $target.outerHeight()
-			});
-		}
-
-		if( options.width ){
-			$flashmessage.find('.px2-modal__dialog').css({
-				"max-width": options.width
-			});
-		}
-
-		$(window).on('resize.px2-modal', function(){
-			onWindowResize();
-		});
-		onWindowResize();
-
-		callback();
-
+		}, 3000);
 		return;
 	}
 
+	function appendToFlashArea(elm){
+		if( !$flashmessage ){
+			$flashmessage = $('<div>');
+			$flashmessage.css({
+				'position': 'fixed',
+				'left': 0,
+				'top': 0,
+				'width': '100%',
+				'pointer-events': 'none',
+				'padding': '5px 40px',
+				'box-sizing': 'border-box'
+			});
+			$target.append($flashmessage);
+		}
+		$flashmessage.append(elm);
+	}
+
+	function cleaningToFlashArea(){
+		if( !$flashmessage.find('*').length ){
+			$flashmessage.remove();
+			$flashmessage = undefined;
+		}
+	}
 }
