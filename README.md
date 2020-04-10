@@ -21,6 +21,8 @@ $ composer require pickles2/px2style
 
 ### px2style v2.0.9 (リリース日未定)
 
+- `.px2-notice` を追加。
+- `px2style.flashMessage()` を追加。
 - `.px2-modal` のスタイリングを改善。
 
 ### px2style v2.0.8 (2020/03/14)
