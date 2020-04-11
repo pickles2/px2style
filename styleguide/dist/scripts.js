@@ -10192,29 +10192,35 @@ module.exports = function(Px2style){
 			$notice.addClass('px2-notice--'+options.type);
 		}
 
+		$notice.hide();
+
 		appendToFlashArea($notice);
-		setTimeout(function(){
 
-			$notice
-				.animate({
-					"font-size": 0 ,
-					"opacity": 0.5 ,
-					"width": '30%' ,
-					"height": 0 ,
-					'padding': 0,
-					'margin-bottom': 0
-				}, {
-					duration: "slow",
-					easing: "linear",
-					complete: function(){
-						$notice.remove();
-						cleaningToFlashArea();
-						callback();
-					}
-				})
-			;
+		$notice
+			.fadeIn('slow', function(){
+				setTimeout(function(){
 
-		}, 3000);
+					$notice
+						.animate({
+							"font-size": 0 ,
+							"opacity": 0.5 ,
+							"width": '30%' ,
+							"height": 0 ,
+							'padding': 0,
+							'margin-bottom': 0
+						}, {
+							duration: "slow",
+							easing: "linear",
+							complete: function(){
+								$notice.remove();
+								cleaningToFlashArea();
+								callback();
+							}
+						})
+					;
+
+				}, 3000);
+			});
 		return;
 	}
 
