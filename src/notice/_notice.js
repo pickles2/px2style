@@ -66,7 +66,8 @@ module.exports = function(Px2style){
 				'width': '100%',
 				'pointer-events': 'none',
 				'padding': '5px 40px',
-				'box-sizing': 'border-box'
+				'box-sizing': 'border-box',
+				'z-index': 1000000
 			});
 			$target.append($flashmessage);
 		}
