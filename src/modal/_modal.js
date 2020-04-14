@@ -3,8 +3,7 @@
  */
 module.exports = function(Px2style){
 	var $ = require('jquery');
-	var $modal,
-		$target;
+	var modalLayers = [];
 
 	/**
 	 * Open modal dialog.
@@ -13,7 +12,7 @@ module.exports = function(Px2style){
 		var _this = this;
 		callback = callback||function(){};
 
-		this.closeModal(function(){
+		// this.closeModal(function(){
 			options = options||{};
 			options.title = options.title||'';
 			options.body = options.body||$('<div>');
@@ -26,6 +25,7 @@ module.exports = function(Px2style){
 			];
 			options.buttonsSecondary = options.buttonsSecondary||[];
 			options.target = options.target||$('body');
+			options.onclose = options.onclose||function(){};
 			options.form = options.form||false;
 
 			var tpl = '';
@@ -45,7 +45,7 @@ module.exports = function(Px2style){
 			}
 			tpl += '</div>';
 
-			$modal = $(tpl);
+			var $modal = $(tpl);
 
 			if(options.form){
 				$modal.find('form').attr({
@@ -90,57 +90,80 @@ module.exports = function(Px2style){
 			}
 			$footer2.append($footer2Ul);
 
-			$target = $(options.target);
-			$target.append($modal);
+			var objModal = new classModal(_this, $modal, options);
+			modalLayers.push(objModal);
+
+			callback();
+		// });
+
+		return;
+	}
+
+	function classModal(_this, $modal, options){
+		this.$modal = $modal;
+		this.options = options;
+
+		var $target = $(this.options.target);
+		$target.append($modal);
 
 
-			if( $target.get(0).tagName.toLowerCase() == 'body' ){
-				// body に挿入する場合は、 fixed に。
-				$modal.css({
-					"position": "fixed"
-				});
-			}else{
-				$modal.css({
-					"height": $target.outerHeight()
-				});
-			}
+		if( $target.get(0).tagName.toLowerCase() == 'body' ){
+			// body に挿入する場合は、 fixed に。
+			this.$modal.css({
+				"position": "fixed"
+			});
+		}else{
+			this.$modal.css({
+				"height": $target.outerHeight()
+			});
+		}
 
-			if( options.width ){
-				$modal.find('.px2-modal__dialog').css({
-					"max-width": options.width
-				});
-			}
+		if( this.options.width ){
+			this.$modal.find('.px2-modal__dialog').css({
+				"max-width": this.options.width
+			});
+		}
 
+		if(!modalLayers.length){
 			$(window).on('resize.px2-modal', function(){
 				onWindowResize();
 			});
-			onWindowResize();
-
-			tabkeyControl($modal);
-
 			$(window).on('keydown.px2-modal', function(e){
 				if( e.keyCode == 27 ){ // ESC
 					_this.closeModal(function(){});
 				}
 			});
+		}
 
+		onWindowResize();
+		tabkeyControl(this.$modal);
+
+
+
+		this.close = function(callback){
+			callback = callback||function(){};
+			try {
+				this.$modal.remove();
+			} catch (e) {}
+			if(!modalLayers.length){
+				$(window).off('resize.px2-modal');
+				$(window).off('keydown.px2-modal');
+			}
 			callback();
-		});
+			this.options.onclose();
+		}
 
-		return;
 	}
 
 	/**
 	 * Close modal dialog.
 	 */
 	Px2style.prototype.closeModal = function(callback){
+		// console.log('---- px2style.closeModal() ----');
 		callback = callback||function(){};
-		try {
-			$modal.remove();
-		} catch (e) {}
-		$(window).off('resize.px2-modal');
-		$(window).off('keydown.px2-modal');
-		callback();
+		var lastModal = modalLayers.pop();
+		lastModal.close(callback);
+		lastModal = undefined;
 		return;
 	}
 
@@ -149,18 +172,6 @@ module.exports = function(Px2style){
 	 */
 	function onWindowResize(){
 		// console.log('---- resize.px2-modal ----');
-		try {
-			// if( $target.get(0).tagName.toLowerCase() != 'body' ){
-			// 	$modal.css({
-			// 		"height": $target.outerHeight()
-			// 	});
-			// }
-			// var $header = $modal.find('.px2-modal__header');
-			// var $footer = $modal.find('.px2-modal__footer');
-			// $modal.find('.px2-modal__body').css({
-			// 	"height": $modal.outerHeight() - $header.outerHeight() - $footer.outerHeight()
-			// });
-		} catch (e) {}
 	}
 
 	/**

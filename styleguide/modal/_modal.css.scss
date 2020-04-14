@@ -243,7 +243,8 @@
 //              ],
 //              buttonsSecondary: [
 //                  document.createElement('button')
-//              ]
+//              ],
+//              onclose: function(){alert('closed');}
 //          },
 //          function(){
 //              console.log('done.');
