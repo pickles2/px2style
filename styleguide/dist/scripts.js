@@ -10121,6 +10121,12 @@ module.exports = function(Px2style){
 
 			tabkeyControl($modal);
 
+			$(window).on('keydown.px2-modal', function(e){
+				if( e.keyCode == 27 ){ // ESC
+					_this.closeModal(function(){});
+				}
+			});
+
 			callback();
 		});
 
@@ -10136,6 +10142,7 @@ module.exports = function(Px2style){
 			$modal.remove();
 		} catch (e) {}
 		$(window).off('resize.px2-modal');
+		$(window).off('keydown.px2-modal');
 		callback();
 		return;
 	}
