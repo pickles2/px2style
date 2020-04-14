@@ -24,6 +24,7 @@ $ composer require pickles2/px2style
 - `.px2-notice` を追加。
 - `px2style.flashMessage()` を追加。
 - `.px2-modal` のスタイリングを改善。
+- `px2style.modal()` で、タブキー操作に関する制御を改善。
 
 ### px2style v2.0.8 (2020/03/14)
 
