@@ -10015,89 +10015,87 @@ module.exports = function(Px2style){
 		var _this = this;
 		callback = callback||function(){};
 
-		// this.closeModal(function(){
-			options = options||{};
-			options.title = options.title||'';
-			options.body = options.body||$('<div>');
-			options.buttons = options.buttons||[
-				$('<button type="submit" class="px2-btn px2-btn--primary">')
-					.text('OK')
-					.on('click', function(e){
-						_this.closeModal();
-					})
-			];
-			options.buttonsSecondary = options.buttonsSecondary||[];
-			options.target = options.target||$('body');
-			options.onclose = options.onclose||function(){};
-			options.form = options.form||false;
-
-			var tpl = '';
-			tpl += '<div class="px2-modal">';
-			if(options.form){
-				tpl += '<form>';
-			}
-			tpl += ' <article class="px2-modal__dialog">';
-			tpl += '  <div class="px2-modal__header">';
-			tpl += '      <h1 class="px2-modal__title"></h1>';
-			tpl += '  </div>';
-			tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
-			tpl += '  <div class="px2-modal__footer"><div class="px2-modal__footer-primary"></div><div class="px2-modal__footer-secondary"></div></div>';
-			tpl += ' </article>';
-			if(options.form){
-				tpl += '</form>';
-			}
-			tpl += '</div>';
-
-			var $modal = $(tpl);
-
-			if(options.form){
-				$modal.find('form').attr({
-					'action': options.form.action || 'javascript:;',
-					'method': options.form.method || 'post'
-				}).on('submit', options.form.submit || function(){
+		options = options||{};
+		options.title = options.title||'';
+		options.body = options.body||$('<div>');
+		options.buttons = options.buttons||[
+			$('<button type="submit" class="px2-btn px2-btn--primary">')
+				.text('OK')
+				.on('click', function(e){
 					_this.closeModal();
-				});
+				})
+		];
+		options.buttonsSecondary = options.buttonsSecondary||[];
+		options.target = options.target||$('body');
+		options.onclose = options.onclose||function(){};
+		options.form = options.form||false;
+
+		var tpl = '';
+		tpl += '<div class="px2-modal">';
+		if(options.form){
+			tpl += '<form>';
+		}
+		tpl += ' <article class="px2-modal__dialog">';
+		tpl += '  <div class="px2-modal__header">';
+		tpl += '      <h1 class="px2-modal__title"></h1>';
+		tpl += '  </div>';
+		tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
+		tpl += '  <div class="px2-modal__footer"><div class="px2-modal__footer-primary"></div><div class="px2-modal__footer-secondary"></div></div>';
+		tpl += ' </article>';
+		if(options.form){
+			tpl += '</form>';
+		}
+		tpl += '</div>';
+
+		var $modal = $(tpl);
+
+		if(options.form){
+			$modal.find('form').attr({
+				'action': options.form.action || 'javascript:;',
+				'method': options.form.method || 'post'
+			}).on('submit', options.form.submit || function(){
+				_this.closeModal();
+			});
+		}
+
+		var $title = $modal.find('.px2-modal__title');
+		$title.append( options.title );
+
+		var $body = $modal.find('.px2-modal__body-inner');
+		$body.append( options.body );
+
+		function generateBtn(btnSetting){
+			btnSetting = btnSetting || {};
+			var $li = $('<li>');
+			var $btn = $(btnSetting);
+			$li.append($btn);
+			if( !$btn.attr('class') ){
+				$btn.attr({'class':'px2-btn'});
 			}
-
-			var $title = $modal.find('.px2-modal__title');
-			$title.append( options.title );
-
-			var $body = $modal.find('.px2-modal__body-inner');
-			$body.append( options.body );
-
-			function generateBtn(btnSetting){
-				btnSetting = btnSetting || {};
-				var $li = $('<li>');
-				var $btn = $(btnSetting);
-				$li.append($btn);
-				if( !$btn.attr('class') ){
-					$btn.attr({'class':'px2-btn'});
-				}
-				if( !$btn.text() ){
-					$btn.text('button');
-				}
-				return $li;
+			if( !$btn.text() ){
+				$btn.text('button');
 			}
+			return $li;
+		}
 
-			var $footer = $modal.find('.px2-modal__footer-primary');
-			var $footerUl = $('<ul>');
-			for( var i in options.buttons ){
-				$footerUl.append( generateBtn(options.buttons[i]) );
-			}
-			$footer.append($footerUl);
+		var $footer = $modal.find('.px2-modal__footer-primary');
+		var $footerUl = $('<ul>');
+		for( var i in options.buttons ){
+			$footerUl.append( generateBtn(options.buttons[i]) );
+		}
+		$footer.append($footerUl);
 
-			var $footer2 = $modal.find('.px2-modal__footer-secondary');
-			var $footer2Ul = $('<ul>');
-			for( var i in options.buttonsSecondary ){
-				$footer2Ul.append( generateBtn(options.buttonsSecondary[i]) );
-			}
-			$footer2.append($footer2Ul);
+		var $footer2 = $modal.find('.px2-modal__footer-secondary');
+		var $footer2Ul = $('<ul>');
+		for( var i in options.buttonsSecondary ){
+			$footer2Ul.append( generateBtn(options.buttonsSecondary[i]) );
+		}
+		$footer2.append($footer2Ul);
 
-			var objModal = new classModal(_this, $modal, options);
-			modalLayers.push(objModal);
+		var objModal = new classModal(_this, $modal, options);
+		modalLayers.push(objModal);
 
-			callback();
-		// });
+		callback();
 
 		return;
 	}
@@ -10105,6 +10103,7 @@ module.exports = function(Px2style){
 	function classModal(_this, $modal, options){
 		this.$modal = $modal;
 		this.options = options;
+		this.focusBackTo = document.activeElement;
 
 		var $target = $(this.options.target);
 		$target.append($modal);
@@ -10145,6 +10144,9 @@ module.exports = function(Px2style){
 
 		this.close = function(callback){
 			callback = callback||function(){};
+			try {
+				this.focusBackTo.focus();
+			} catch (e) {}
 			try {
 				this.$modal.remove();
 			} catch (e) {}
