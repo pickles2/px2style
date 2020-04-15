@@ -27,6 +27,7 @@ $ composer require pickles2/px2style
 - `px2style.modal()` で、タブキー操作に関する制御を改善。
 - `px2style.modal()` が、ESCキーで閉じるようになった。
 - `px2style.modal()` に、オプション `onclose` を追加。
+- `px2style.modal()` が、多重に開けるようになった。
 
 ### px2style v2.0.8 (2020/03/14)
 

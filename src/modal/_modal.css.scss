@@ -237,14 +237,21 @@
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Form Dialog.',
-//              body: '<div><p>Sample Content.</p></div>',
+//              body: '<div><p>Sample Content. <button type=\'button\' onclick=\''+
+//                  'px2style.modal({'+
+//                  '    title: &quot;2nd layer&quot;,'+
+//                  '    body: &quot;<div><p>Sample Content on 2nd layer.</p></div>&quot;'+
+//                  '}, function(){'+
+//                  '    console.log(&quot;done2.&quot;);'+
+//                  '});'+
+//                  '\'>open new layer</button></p></div>',
 //              buttons: [
 //                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
 //              ],
 //              buttonsSecondary: [
 //                  document.createElement('button')
 //              ],
-//              onclose: function(){alert('closed');}
+//              onclose: function(){alert('onclose event');}
 //          },
 //          function(){
 //              console.log('done.');
