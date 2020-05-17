@@ -19,6 +19,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.10 (リリース日未定)
+
+- `.px2-btn--toggle-on` を追加。
+
 ### px2style v2.0.9 (2020/05/10)
 
 - `.px2-notice` を追加。

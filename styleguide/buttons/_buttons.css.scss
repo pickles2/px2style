@@ -71,11 +71,11 @@
 //     <div><small>Pickles 2 @2.0.0-beta.14</small></div>
 //     <div><small>for macOS</small></div>
 // </button></p>
-// <p><button class="px2-btn" disabled>Default Button</button></p>
-// <p><button class="px2-btn px2-btn--primary" disabled>Default Button</button></p>
-// <p><button class="px2-btn px2-btn--secondary" disabled>Default Button</button></p>
-// <p><button class="px2-btn px2-btn--danger" disabled>Default Button</button></p>
-// <p><button class="px2-btn px2-btn--download" disabled>Default Button</button></p>
+// <p><button class="px2-btn" disabled>Disabled Default Button</button></p>
+// <p><button class="px2-btn px2-btn--primary" disabled>Disabled Primary Button</button></p>
+// <p><button class="px2-btn px2-btn--secondary" disabled>Disabled Secondary Button</button></p>
+// <p><button class="px2-btn px2-btn--danger" disabled>Disabled Danger Button</button></p>
+// <p><button class="px2-btn px2-btn--download" disabled>Disabled Download Button</button></p>
 //
 // Styleguide 2.2
 .px2-btn{
@@ -161,6 +161,31 @@
 	}
 }
 
+
+// Toggle ON
+//
+// Markup:
+// <p><button class="px2-btn px2-btn--toggle-on">Default Button</button></p>
+// <p><button class="px2-btn px2-btn--primary px2-btn--toggle-on">Primary Button</button></p>
+// <p><button class="px2-btn px2-btn--secondary px2-btn--toggle-on">Secondary Button</button></p>
+// <p><button class="px2-btn px2-btn--danger px2-btn--toggle-on">Danger Button</button></p>
+// <p><button class="px2-btn px2-btn--download px2-btn--toggle-on">Download Button</button></p>
+// <hr />
+// <p><button class="px2-btn px2-btn--toggle-on" disabled>Default Button</button></p>
+// <p><button class="px2-btn px2-btn--primary px2-btn--toggle-on" disabled>Primary Button</button></p>
+// <p><button class="px2-btn px2-btn--secondary px2-btn--toggle-on" disabled>Secondary Button</button></p>
+// <p><button class="px2-btn px2-btn--danger px2-btn--toggle-on" disabled>Danger Button</button></p>
+// <p><button class="px2-btn px2-btn--download px2-btn--toggle-on" disabled>Download Button</button></p>
+//
+// Styleguide 2.3
+.px2-btn{
+	&--toggle-on{
+		box-shadow: inset 0 3px 15px rgba(0,0,0,0.15);
+		transform: translateY(1px);
+		// transform: translateY(1px) scale(1.04, 1.04);
+	}
+}
+
 // Sizing
 //
 // Markup:
@@ -171,7 +196,7 @@
 // <p><button class="px2-btn px2-btn--block">Default Button</button></p>
 // <p><button class="px2-btn px2-btn--block px2-btn--lg">Default Button</button></p>
 //
-// Styleguide 2.3
+// Styleguide 2.4
 .px2-btn{
 
 	&--sm{
