@@ -6,6 +6,10 @@
   background-color: #f9f9f9;
 }
 
+.px2-btn.pseudo-class-focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 .px2-btn.pseudo-class-hover {
   background-color: #f0f0f0;
 }
@@ -117,4 +121,44 @@
 
 .px2-header__shoulder-menu > ul > li.pseudo-class-last-child {
   margin-bottom: 30px;
+}
+
+input[type=text].px2-input.pseudo-class-focus,
+input[type=password].px2-input.pseudo-class-focus,
+input[type=number].px2-input.pseudo-class-focus,
+input[type=search].px2-input.pseudo-class-focus,
+input[type=tel].px2-input.pseudo-class-focus,
+input[type=url].px2-input.pseudo-class-focus,
+input[type=email].px2-input.pseudo-class-focus,
+input[type=datetime].px2-input.pseudo-class-focus,
+input[type=date].px2-input.pseudo-class-focus,
+input[type=month].px2-input.pseudo-class-focus,
+input[type=week].px2-input.pseudo-class-focus,
+input[type=time].px2-input.pseudo-class-focus,
+input[type=color].px2-input.pseudo-class-focus,
+input[type=datetime-local].px2-input.pseudo-class-focus,
+textarea.px2-input.pseudo-class-focus,
+select.px2-input.pseudo-class-focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.px2-input-group > .pseudo-class-first-child,
+.px2-input-group > input.pseudo-class-first-child.px2-input,
+.px2-input-group > select.pseudo-class-first-child.px2-input,
+.px2-input-group > textarea.pseudo-class-first-child.px2-input,
+.px2-input-group > .pseudo-class-first-child.px2-btn {
+  border-radius: .25rem 0 0 .25rem / .25rem 0 0 .25rem;
+}
+
+.px2-input-group > .pseudo-class-last-child,
+.px2-input-group > input.pseudo-class-last-child.px2-input,
+.px2-input-group > select.pseudo-class-last-child.px2-input,
+.px2-input-group > textarea.pseudo-class-last-child.px2-input,
+.px2-input-group > .pseudo-class-last-child.px2-btn {
+  border-right-width: 1px;
+  border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
 }

@@ -1,0 +1,137 @@
+// Form Elements
+//
+// General input elements.
+//
+// Markup:
+// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
+// <button class="px2-btn">OK</button>
+// <hr />
+// <input type="password" name="password" value="password" class="px2-input" />
+// <input type="number" name="input-number" value="200" class="px2-input" />
+// <input type="search" name="input-search" value="Search Keyword" class="px2-input" />
+// <input type="tel" name="input-tel" value="090-0000-0000" class="px2-input" />
+// <input type="url" name="input-url" value="https://pickles2.pxt.jp/" class="px2-input" />
+// <input type="email" name="input-email" value="pickles2@example.com" class="px2-input" />
+// <input type="datetime" name="input-datetime" value="" class="px2-input" />
+// <input type="date" name="input-date" value="" class="px2-input" />
+// <input type="month" name="input-month" value="" class="px2-input" />
+// <input type="week" name="input-week" value="" class="px2-input" />
+// <input type="time" name="input-time" value="" class="px2-input" />
+// <input type="datetime-local" name="input-datetime-local" value="" class="px2-input" />
+// <input type="color" name="input-color" value="" class="px2-input" />
+// <select name="input-select" class="px2-input"><option value="1">Select Option 1</option></select>
+// <hr />
+// <textarea name="input-textarea" class="px2-input">Text Area</textarea>
+// <hr />
+// Readonly:
+// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" readonly />
+// <hr />
+// Disabled:
+// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" disabled />
+//
+// Styleguide 6.0
+input[type=text].px2-input,
+input[type=password].px2-input,
+input[type=number].px2-input,
+input[type=search].px2-input,
+input[type=tel].px2-input,
+input[type=url].px2-input,
+input[type=email].px2-input,
+input[type=datetime].px2-input,
+input[type=date].px2-input,
+input[type=month].px2-input,
+input[type=week].px2-input,
+input[type=time].px2-input,
+input[type=color].px2-input,
+input[type=datetime-local].px2-input,
+textarea.px2-input,
+select.px2-input{
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 50px;
+    max-width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    &:focus{
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
+    &[readonly]{
+        background-color: #eee;
+    }
+    &[disabled]{
+        color: #8e959c;
+        background-color: #eee;
+    }
+}
+
+// Input Group
+//
+// Markup:
+// <div class="px2-p">
+// <div class="px2-input-group">
+// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
+// <button class="px2-btn">OK</button>
+// </div>
+// </div>
+// <div class="px2-p">
+// <div class="px2-input-group">
+// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
+// <span class="px2-input-group__text">px</span>
+// <button class="px2-btn">OK</button>
+// </div>
+// </div>
+//
+// Styleguide 6.1
+.px2-input-group{
+    display: inline-flex;
+    border-radius: 0px;
+
+    &__text {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #333;
+        background-color: #f9f9f9;
+        border: 1px solid #ced4da;
+    }
+
+    >*,
+    >input.px2-input,
+    >select.px2-input,
+    >textarea.px2-input,
+    >.px2-btn{
+        border-right-width: 0px;
+    }
+
+    >:first-child,
+    >input:first-child.px2-input,
+    >select:first-child.px2-input,
+    >textarea:first-child.px2-input,
+    >:first-child.px2-btn{
+        border-radius: .25rem 0 0 .25rem / .25rem 0 0 .25rem;
+    }
+    >:last-child,
+    >input:last-child.px2-input,
+    >select:last-child.px2-input,
+    >textarea:last-child.px2-input,
+    >:last-child.px2-btn{
+        border-right-width: 1px;
+        border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
+    }
+}
