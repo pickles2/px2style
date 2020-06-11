@@ -8,6 +8,7 @@
     "preview": "gulp preview;",
     "test": "gulp; mocha --ui tdd ./tests/"
   },
+  "start": "index.js",
   "author": "Tomoya Koyanagi",
   "license": "MIT",
   "dependencies": {},
