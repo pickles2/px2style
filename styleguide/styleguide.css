@@ -117,7 +117,8 @@
   width: 100%; }
 
 .px2-a:before,
-.px2-link.px2-link--burette:before {
+.px2-link.px2-link--burette:before,
+.px2-link.px2-link--bullet:before {
   content: ' ';
   width: 0;
   height: 0;

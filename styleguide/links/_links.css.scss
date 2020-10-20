@@ -6,18 +6,19 @@
 // Styleguide 1.0
 .px2-link{}
 
-// Burette Link
+// Bullet Link
 //
 // Markup:
-// <a href="#" class="px2-link px2-link--burette">Burette Link</a>
-// <div style="font-size: 130%;"><a href="#" class="px2-link px2-link--burette">Burette Link</a></div>
-// <div style="font-size: 160%;"><a href="#" class="px2-link px2-link--burette">Burette Link</a></div>
-// <div style="font-size: 220%;"><a href="#" class="px2-link px2-link--burette">Burette Link</a></div>
-// <a href="#" class="px2-a">Burette Link</a>
+// <a href="#" class="px2-link px2-link--bullet">Bullet Link</a>
+// <div style="font-size: 130%;"><a href="#" class="px2-link px2-link--bullet">Bullet Link</a></div>
+// <div style="font-size: 160%;"><a href="#" class="px2-link px2-link--bullet">Bullet Link</a></div>
+// <div style="font-size: 220%;"><a href="#" class="px2-link px2-link--bullet">Bullet Link</a></div>
+// <a href="#" class="px2-a">Bullet Link</a>
 //
 // Styleguide 1.1
 .px2-a,
-.px2-link.px2-link--burette{
+.px2-link.px2-link--burette, // スペル誤り
+.px2-link.px2-link--bullet{ // 2.0.11 にて修正
 	&:before{
 		content:' ';
 		width:0;

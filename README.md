@@ -23,6 +23,7 @@ $ composer require pickles2/px2style
 
 - `.px2-note-list` を追加。
 - `.px2-btn` で disabled が有効なとき、マウス操作に反応して見える問題を修正。
+- スペルミスの修正: `burette` -> `bullet`
 
 ### px2style v2.0.10 (2020/08/12)
 
