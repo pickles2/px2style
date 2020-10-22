@@ -11432,6 +11432,7 @@ module.exports = function(Px2style){
 	 */
 	Px2style.prototype.loading = function(options, callback){
 		var _this = this;
+		var additionalClassName = this.getConfig('additionalClassName');
 		callback = callback||function(){};
 
 		this.closeLoading(function(){
@@ -11444,7 +11445,6 @@ module.exports = function(Px2style){
 			tpl += '</div>';
 
 			$loading = $(tpl);
-			var additionalClassName = this.getConfig('additionalClassName');
 			if( additionalClassName ){
 				$loading.addClass(additionalClassName);
 			}
