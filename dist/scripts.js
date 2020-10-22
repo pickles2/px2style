@@ -11358,7 +11358,7 @@ module.exports = function(Px2style){
 
 		var additionalClassName = this.getConfig('additionalClassName');
 
-		appendToFlashArea($notice);
+		appendToFlashArea($notice, additionalClassName);
 
 		$notice
 			.fadeIn('slow', function(){
