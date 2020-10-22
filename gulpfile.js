@@ -97,8 +97,8 @@ gulp.task('styleguide:generate', function() {
 			rootPath: 'styleguide',
 			overviewPath: 'README.md',
 			extraHead: [
-				'<script src="/dist/scripts.js"></script>',
-				'<link rel="stylesheet" href="/dist/styles.css" />'
+				'<script src="/dist/px2style.js"></script>',
+				'<link rel="stylesheet" href="/dist/px2style.css" />'
 			],
 		}))
 		.pipe(gulp.dest('styleguide'))

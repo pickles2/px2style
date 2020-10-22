@@ -2,6 +2,7 @@
  * notice.js
  */
 module.exports = function(Px2style){
+
 	var $ = require('jquery');
 	var $flashmessage,
 		$target;
@@ -31,6 +32,8 @@ module.exports = function(Px2style){
 		}
 
 		$notice.hide();
+
+		var additionalClassName = this.getConfig('additionalClassName');
 
 		appendToFlashArea($notice);
 
@@ -62,9 +65,12 @@ module.exports = function(Px2style){
 		return;
 	}
 
-	function appendToFlashArea(elm){
+	function appendToFlashArea(elm, additionalClassName){
 		if( !$flashmessage ){
 			$flashmessage = $('<div>');
+			if( additionalClassName ){
+				$flashmessage.addClass(additionalClassName);
+			}
 			$flashmessage.css({
 				'position': 'fixed',
 				'left': 0,

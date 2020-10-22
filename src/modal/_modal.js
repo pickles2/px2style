@@ -44,7 +44,22 @@ module.exports = function(Px2style){
 		}
 		tpl += '</div>';
 
-		var $modal = $(tpl);
+		var $modal = $('<div>')
+			.css({
+				'display': 'flex',
+				'position': 'absolute',
+				'top': 0,
+				'left': 0,
+				'width': '100%',
+				'height': '100%',
+				'z-index': 1000000,
+			})
+		;
+		var additionalClassName = this.getConfig('additionalClassName');
+		if( additionalClassName ){
+			$modal.addClass(additionalClassName);
+		}
+		$modal.append(tpl);
 
 		if(options.form){
 			$modal.find('form').attr({

@@ -4,6 +4,7 @@
 module.exports = function(){
 }
 
+require('./src/config/_config.js')(module.exports);
 require('./src/modal/_modal.js')(module.exports);
 require('./src/notice/_notice.js')(module.exports);
 require('./src/styles/_loading.js')(module.exports);

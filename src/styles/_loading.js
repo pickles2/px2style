@@ -24,6 +24,10 @@ module.exports = function(Px2style){
 			tpl += '</div>';
 
 			$loading = $(tpl);
+			var additionalClassName = this.getConfig('additionalClassName');
+			if( additionalClassName ){
+				$loading.addClass(additionalClassName);
+			}
 			$message = $('<div>');
 			$message.css({
 				"clear": "both",

@@ -24,6 +24,8 @@ $ composer require pickles2/px2style
 - `.px2-note-list` を追加。
 - `.px2-btn` で disabled が有効なとき、マウス操作に反応して見える問題を修正。
 - スペルミスの修正: `burette` -> `bullet`
+- JavaScriptの初期化オプションに `additionalClassName` を追加。
+- ファイル名を変更: `styles.css` -> `px2style.css`, `scripts.js` -> `px2style.js`
 
 ### px2style v2.0.10 (2020/08/12)
 

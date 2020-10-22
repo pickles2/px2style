@@ -414,8 +414,6 @@ angular.module('sgApp')
     $scope.status = Styleguide.status;
     $scope.variables = Variables.variables;
     $scope.toggleMenu = true;
-    $scope.toggleMenu = false;
-    $scope.isNavCollapsed = false;
     $scope.markupSection = {isVisible: ''};
 
     $scope.$watch('config.data', function() {
