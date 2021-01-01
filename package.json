@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "start": "gulp styleguide:generate;",
-    "preview": "gulp preview;",
+    "preview": "open http://127.0.0.1:3000/;",
     "test": "gulp; mocha --ui tdd ./tests/"
   },
   "start": "index.js",

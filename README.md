@@ -19,6 +19,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.12 (リリース日未定)
+
+- `.px2-grid` を追加。
+
 ### px2style v2.0.11 (2020/12/10)
 
 - `.px2-note-list` を追加。
