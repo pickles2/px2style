@@ -44,6 +44,7 @@
 //          <li><button class="px2-btn">Cancel</button></li>
 //      </ul></div>
 //   </div>
+//   <div class="px2-modal__close"><button></button></div>
 //  </article>
 // </div>
 // </div>
@@ -59,6 +60,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: $px2-font-family;
 
 	> form{
 		// display: inline;
@@ -70,6 +72,29 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__close {
+		position: absolute;
+		right: -0.5em;
+		top: -0.5em;
+		width: 1.4em; height: 1.4em;
+		button {
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: block;
+			width: 100%; height: 100%;
+			padding: 0;
+			margin: 0;
+			border-radius: 50%;
+			border: 1px solid #999;
+			background-color: #eee;
+			color: #999;
+			&::before {
+				content: "×";
+			}
+		}
 	}
 
 	&__dialog{
@@ -86,7 +111,7 @@
 		max-width: 520px;
 		height: auto;
 		max-height: calc(100% - 40px);
-		overflow: auto;
+		overflow: visible;
 		font-size: medium;
 		h1{ font-size: 124%; margin: 0; font-weight: bold; }
 		h2{ font-size: 124%; margin: 2em 0 0.5em 0; font-weight: bold; }

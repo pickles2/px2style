@@ -22,6 +22,7 @@ $ composer require pickles2/px2style
 ### px2style v2.0.12 (リリース日未定)
 
 - `.px2-grid` を追加。
+- `.px2-modal` に閉じるボタンを追加。
 
 ### px2style v2.0.11 (2020/12/10)
 
@@ -104,6 +105,7 @@ $ composer require pickles2/px2style
 ### px2style v2.0.0 (2016/09/17)
 
 - Initial Release.
+
 
 ## License
 
