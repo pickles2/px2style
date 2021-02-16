@@ -133,6 +133,29 @@
   margin-bottom: 30px;
 }
 
+.px2-darkmode .px2-header a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode .px2-header__id a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode .px2-header__global-menu ul li.px2-header__global-menu-group ul li a.pseudo-class-hover {
+  background-color: #999;
+  color: #000;
+}
+
+.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
+  background-color: #bbb;
+  color: #000;
+}
+
+.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
+  background-color: #999;
+  color: #000;
+}
+
 input[type=text].px2-input.pseudo-class-focus,
 input[type=password].px2-input.pseudo-class-focus,
 input[type=number].px2-input.pseudo-class-focus,
@@ -304,6 +327,29 @@ select.px2-input.pseudo-class-focus {
 
 .px2-header__shoulder-menu > ul > li.pseudo-class-last-child {
   margin-bottom: 30px;
+}
+
+.px2-darkmode .px2-header a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode .px2-header__id a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode .px2-header__global-menu ul li.px2-header__global-menu-group ul li a.pseudo-class-hover {
+  background-color: #999;
+  color: #000;
+}
+
+.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
+  background-color: #bbb;
+  color: #000;
+}
+
+.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
+  background-color: #999;
+  color: #000;
 }
 
 input[type=text].px2-input.pseudo-class-focus,

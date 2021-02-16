@@ -57,3 +57,33 @@
 		background: #eeeeee;
 	}
 }
+
+/**
+ * Darkmode
+ */
+.px2-darkmode {
+	.px2-table{
+		color: $darkmode-text-color;
+
+		th,
+		td {
+			border-color: #666;
+			background: #000;
+		}
+
+		th {
+			background: #222;
+		}
+
+		thead th,
+		tfoot th {
+			background: #333;
+		}
+
+		thead td,
+		tfoot td {
+			background: #111;
+		}
+	}
+
+}
