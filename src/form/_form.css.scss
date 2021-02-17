@@ -55,8 +55,8 @@ select.px2-input{
     font-size: 1em;
     font-weight: normal;
     line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    color: $text-color;
+    background-color: $background-color;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
@@ -93,11 +93,21 @@ select.px2-input{
 // <button class="px2-btn">OK</button>
 // </div>
 // </div>
+// <div class="px2-p">
+// <p>Fluid</p>
+// <div class="px2-input-group px2-input-group--fluid">
+// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
+// <span class="px2-input-group__text">px</span>
+// <button class="px2-btn">OK</button>
+// </div>
+// </div>
 //
 // Styleguide 6.1
 .px2-input-group{
     display: inline-flex;
+    box-sizing: border-box;
     border-radius: 0px;
+    max-width: 100%;
 
     &__text {
         display: inline-block;
@@ -106,8 +116,8 @@ select.px2-input{
         font-size: 1rem;
         font-weight: normal;
         line-height: 1.5;
-        color: #333;
-        background-color: #f9f9f9;
+        color: $text-color;
+        background-color: $background-color;
         border: 1px solid #ced4da;
     }
 
@@ -117,6 +127,7 @@ select.px2-input{
     >textarea.px2-input,
     >.px2-btn{
         border-right-width: 0px;
+        flex-grow: 1;
     }
 
     >:first-child,
@@ -134,4 +145,10 @@ select.px2-input{
         border-right-width: 1px;
         border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
     }
+
+    &--fluid {
+        display: flex;
+        width: 100%;
+    }
+
 }

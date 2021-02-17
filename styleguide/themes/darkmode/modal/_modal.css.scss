@@ -1,0 +1,19 @@
+// Modal Dialog
+.px2-darkmode.px2-modal,
+.px2-darkmode .px2-modal{
+	background: rgba(223,223,223,0.5);
+
+	&__close {
+		button {
+			border-color: #666;
+			background-color: #111;
+			color: #666;
+		}
+	}
+
+	&__dialog{
+		color: $darkmode-text-color;
+		background-color: $darkmode-background-color;
+	}
+
+}

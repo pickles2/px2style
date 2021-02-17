@@ -1,0 +1,27 @@
+/**
+ * Table
+ */
+.px2-darkmode.px2-table,
+.px2-darkmode .px2-table{
+	color: $darkmode-text-color;
+
+	th,
+	td {
+		border-color: #666;
+		background: $darkmode-background-color;
+	}
+
+	th {
+		background: #222;
+	}
+
+	thead th,
+	tfoot th {
+		background: #333;
+	}
+
+	thead td,
+	tfoot td {
+		background: #111;
+	}
+}

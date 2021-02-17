@@ -1,0 +1,126 @@
+.px2-darkmode.px2-btn,
+.px2-darkmode .px2-btn{
+	background-color: $darkmode-background-color;
+	color: $darkmode-text-color;
+	border: 1px solid $darkmode-text-color;
+	box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
+
+	&:focus,
+	&:hover{
+		color: #999;
+		background-color: #0c0c0c;
+	}
+	&:focus{
+		box-shadow: 0 0 0 .2rem rgba(123,230,255,.25);
+	}
+	&:hover{
+		background-color: #0f0f0f;
+	}
+	&:active{
+		background-color: $darkmode-text-color;
+		color: $darkmode-background-color;
+		box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.3);
+	}
+}
+
+// Elements
+.px2-darkmode.px2-btn,
+.px2-darkmode .px2-btn{
+
+	&.px2-btn--primary{
+		border-color: #00a0e6;
+		background-color: #f5fbfe; // rgba(0,160,230,0.05);
+		color: #00a0e6;
+		&:focus,
+		&:hover{
+			background-color: #d9f1fb; // rgba(0,160,230,0.15);
+		}
+		&:hover{
+			background-color: #ccecfa; // rgba(0,160,230,0.3);
+		}
+		&:active{
+			background-color: #00a0e6;
+			color: #fff;
+		}
+	}
+	&.px2-btn--secondary{
+		border-color: $darkmode-text-color;
+		background: $darkmode-background-color;
+		color: $darkmode-text-color;
+		&:focus,
+		&:hover{
+			background-color: #0c0c0c;
+		}
+		&:hover{
+			background-color: #0f0f0f;
+		}
+		&:active{
+			background-color: $darkmode-text-color;
+			color: $darkmode-background-color;
+		}
+	}
+	&.px2-btn--danger{
+		border-color: #e86a60;
+		background-color: #fdf8f8; // rgba(232,106,96,0.05);
+		color: #e86a60;
+		&:focus,
+		&:hover{
+			background-color: #fce9e7; // rgba(232,106,96,0.15);
+		}
+		&:hover{
+			background-color: #fae1df; // rgba(232,106,96,0.3);
+		}
+		&:active{
+			background-color: #e86a60;
+			color: #fff;
+		}
+	}
+	&.px2-btn--download{
+		border-color: #4ad64d;
+		background-color: #f7fcf7; // rgba(74,214,77,0.05);
+		color: #4ad64d;
+		&:focus,
+		&:hover{
+			background-color: #e4f9e4; // rgba(74,214,77,0.15);
+		}
+		&:hover{
+			background-color: #dbf7db; // rgba(74,214,77,0.3);
+		}
+		&:active{
+			background-color: #4ad64d;
+			color: #fff;
+		}
+	}
+
+	&[disabled]{
+		border-color: #444;
+		background-color: rgba(153,153,153,0.05);
+		color: #444;
+		&:focus,
+		&:hover,
+		&:active{
+			border-color: #444;
+			background-color: rgba(153,153,153,0.05);
+			color: #444;
+			box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
+		}
+	}
+}
+
+
+// Toggle ON
+.px2-darkmode.px2-btn,
+.px2-darkmode .px2-btn{
+	&--toggle-on{
+		box-shadow: inset 0 3px 15px rgba(255, 255, 255,0.15);
+
+		&[disabled]{
+			box-shadow: inset 0 3px 15px rgba(255, 255, 255,0.15);
+			&:focus,
+			&:hover,
+			&:active{
+				box-shadow: inset 0 3px 15px rgba(255, 255, 255,0.15);
+			}
+		}
+	}
+}

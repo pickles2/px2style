@@ -23,7 +23,7 @@ $ composer require pickles2/px2style
 
 - `.px2-grid` を追加。
 - `.px2-modal` に閉じるボタンを追加。
-- 一部のモジュールで試験的にダークモード対応を追加。
+- ダークモード対応 `body.px2-darkmode` を追加。
 
 ### px2style v2.0.11 (2020/12/10)
 

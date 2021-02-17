@@ -91,6 +91,7 @@
 			border: 1px solid #999;
 			background-color: #eee;
 			color: #999;
+			cursor: pointer;
 			&::before {
 				content: "×";
 			}
@@ -103,7 +104,8 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
-		background-color: #fff;
+		color: $text-color;
+		background-color: $background-color;
 		box-sizing: border-box;
 		padding: 10px 0;
 		margin: 20px auto;

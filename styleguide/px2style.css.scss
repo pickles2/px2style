@@ -7,6 +7,7 @@ $darkmode-background-color: #010101;
 :root {
 	--px2-main-color: #00a0e6;
 }
+
 @import './buttons/_buttons.css.scss';
 @import './links/_links.css.scss';
 @import './lists/_lists.css.scss';
@@ -17,3 +18,4 @@ $darkmode-background-color: #010101;
 @import './header/_header.css.scss';
 @import './form/_form.css.scss';
 @import './layouts/_grid.css.scss';
+@import './themes/darkmode/_darkmode.css.scss';

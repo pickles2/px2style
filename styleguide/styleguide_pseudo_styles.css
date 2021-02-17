@@ -3,7 +3,7 @@
   text-decoration: none;
   font-weight: normal;
   color: #666;
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
 }
 
 .px2-btn.pseudo-class-focus {
@@ -16,7 +16,7 @@
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #fff;
+  color: #fefefe;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -37,7 +37,7 @@
 
 .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
@@ -46,7 +46,7 @@
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #fff;
+  color: #fefefe;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -133,29 +133,6 @@
   margin-bottom: 30px;
 }
 
-.px2-darkmode .px2-header a.pseudo-class-hover {
-  color: #fff;
-}
-
-.px2-darkmode .px2-header__id a.pseudo-class-hover {
-  color: #fff;
-}
-
-.px2-darkmode .px2-header__global-menu ul li.px2-header__global-menu-group ul li a.pseudo-class-hover {
-  background-color: #999;
-  color: #000;
-}
-
-.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
-  background-color: #bbb;
-  color: #000;
-}
-
-.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
-  background-color: #999;
-  color: #000;
-}
-
 input[type=text].px2-input.pseudo-class-focus,
 input[type=password].px2-input.pseudo-class-focus,
 input[type=number].px2-input.pseudo-class-focus,
@@ -194,12 +171,178 @@ select.px2-input.pseudo-class-focus {
 .px2-input-group > .pseudo-class-last-child.px2-btn {
   border-right-width: 1px;
   border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
+}
+
+.px2-darkmode.px2-header a.pseudo-class-hover,
+.px2-darkmode .px2-header a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode.px2-header__id a.pseudo-class-hover,
+.px2-darkmode .px2-header__id a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-focus,
+.px2-darkmode.px2-btn.pseudo-class-hover,
+.px2-darkmode .px2-btn.pseudo-class-focus,
+.px2-darkmode .px2-btn.pseudo-class-hover {
+  color: #999;
+  background-color: #0c0c0c;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-focus,
+.px2-darkmode .px2-btn.pseudo-class-focus {
+  box-shadow: 0 0 0 0.2rem rgba(123, 230, 255, 0.25);
+}
+
+.px2-darkmode.px2-btn.pseudo-class-hover,
+.px2-darkmode .px2-btn.pseudo-class-hover {
+  background-color: #0f0f0f;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-active,
+.px2-darkmode .px2-btn.pseudo-class-active {
+  background-color: #ccc;
+  color: #010101;
+  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.3);
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
+  background-color: #d9f1fb;
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
+  background-color: #ccecfa;
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-active {
+  background-color: #00a0e6;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background-color: #0c0c0c;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background-color: #0f0f0f;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-active {
+  background-color: #ccc;
+  color: #010101;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-hover {
+  background-color: #fce9e7;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-hover {
+  background-color: #fae1df;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-active {
+  background-color: #e86a60;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-hover {
+  background-color: #e4f9e4;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-hover {
+  background-color: #dbf7db;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-active {
+  background-color: #4ad64d;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn[disabled].pseudo-class-focus,
+.px2-darkmode.px2-btn[disabled].pseudo-class-hover,
+.px2-darkmode.px2-btn[disabled].pseudo-class-active,
+.px2-darkmode .px2-btn[disabled].pseudo-class-focus,
+.px2-darkmode .px2-btn[disabled].pseudo-class-hover,
+.px2-darkmode .px2-btn[disabled].pseudo-class-active {
+  border-color: #444;
+  background-color: rgba(153, 153, 153, 0.05);
+  color: #444;
+  box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
+}
+
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-focus,
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-hover,
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-active,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-focus,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-hover,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-active {
+  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15);
+}
+
+input[type=text].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=password].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=number].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=search].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=tel].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=url].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=email].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=datetime].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=date].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=month].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=week].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=time].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=color].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=datetime-local].px2-input.px2-darkmode.pseudo-class-focus,
+textarea.px2-input.px2-darkmode.pseudo-class-focus,
+select.px2-input.px2-darkmode.pseudo-class-focus,
+.px2-darkmode input[type=text].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=password].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=number].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=search].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=tel].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=url].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=email].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=datetime].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=date].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=month].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=week].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=time].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=color].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
+.px2-darkmode textarea.px2-input.pseudo-class-focus,
+.px2-darkmode select.px2-input.pseudo-class-focus {
+  color: #999;
+  background-color: #000;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }.px2-btn.pseudo-class-focus,
 .px2-btn.pseudo-class-hover {
   text-decoration: none;
   font-weight: normal;
   color: #666;
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
 }
 
 .px2-btn.pseudo-class-focus {
@@ -212,7 +355,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #fff;
+  color: #fefefe;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -233,7 +376,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-hover {
@@ -242,7 +385,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #fff;
+  color: #fefefe;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -329,29 +472,6 @@ select.px2-input.pseudo-class-focus {
   margin-bottom: 30px;
 }
 
-.px2-darkmode .px2-header a.pseudo-class-hover {
-  color: #fff;
-}
-
-.px2-darkmode .px2-header__id a.pseudo-class-hover {
-  color: #fff;
-}
-
-.px2-darkmode .px2-header__global-menu ul li.px2-header__global-menu-group ul li a.pseudo-class-hover {
-  background-color: #999;
-  color: #000;
-}
-
-.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
-  background-color: #bbb;
-  color: #000;
-}
-
-.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
-  background-color: #999;
-  color: #000;
-}
-
 input[type=text].px2-input.pseudo-class-focus,
 input[type=password].px2-input.pseudo-class-focus,
 input[type=number].px2-input.pseudo-class-focus,
@@ -390,4 +510,170 @@ select.px2-input.pseudo-class-focus {
 .px2-input-group > .pseudo-class-last-child.px2-btn {
   border-right-width: 1px;
   border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
+}
+
+.px2-darkmode.px2-header a.pseudo-class-hover,
+.px2-darkmode .px2-header a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode.px2-header__id a.pseudo-class-hover,
+.px2-darkmode .px2-header__id a.pseudo-class-hover {
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-focus,
+.px2-darkmode.px2-btn.pseudo-class-hover,
+.px2-darkmode .px2-btn.pseudo-class-focus,
+.px2-darkmode .px2-btn.pseudo-class-hover {
+  color: #999;
+  background-color: #0c0c0c;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-focus,
+.px2-darkmode .px2-btn.pseudo-class-focus {
+  box-shadow: 0 0 0 0.2rem rgba(123, 230, 255, 0.25);
+}
+
+.px2-darkmode.px2-btn.pseudo-class-hover,
+.px2-darkmode .px2-btn.pseudo-class-hover {
+  background-color: #0f0f0f;
+}
+
+.px2-darkmode.px2-btn.pseudo-class-active,
+.px2-darkmode .px2-btn.pseudo-class-active {
+  background-color: #ccc;
+  color: #010101;
+  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.3);
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
+  background-color: #d9f1fb;
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
+  background-color: #ccecfa;
+}
+
+.px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-active {
+  background-color: #00a0e6;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background-color: #0c0c0c;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
+  background-color: #0f0f0f;
+}
+
+.px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-active {
+  background-color: #ccc;
+  color: #010101;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-hover {
+  background-color: #fce9e7;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-hover {
+  background-color: #fae1df;
+}
+
+.px2-darkmode.px2-btn.px2-btn--danger.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--danger.pseudo-class-active {
+  background-color: #e86a60;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-focus,
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-focus,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-hover {
+  background-color: #e4f9e4;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-hover,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-hover {
+  background-color: #dbf7db;
+}
+
+.px2-darkmode.px2-btn.px2-btn--download.pseudo-class-active,
+.px2-darkmode .px2-btn.px2-btn--download.pseudo-class-active {
+  background-color: #4ad64d;
+  color: #fff;
+}
+
+.px2-darkmode.px2-btn[disabled].pseudo-class-focus,
+.px2-darkmode.px2-btn[disabled].pseudo-class-hover,
+.px2-darkmode.px2-btn[disabled].pseudo-class-active,
+.px2-darkmode .px2-btn[disabled].pseudo-class-focus,
+.px2-darkmode .px2-btn[disabled].pseudo-class-hover,
+.px2-darkmode .px2-btn[disabled].pseudo-class-active {
+  border-color: #444;
+  background-color: rgba(153, 153, 153, 0.05);
+  color: #444;
+  box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
+}
+
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-focus,
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-hover,
+.px2-darkmode.px2-btn--toggle-on[disabled].pseudo-class-active,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-focus,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-hover,
+.px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-active {
+  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15);
+}
+
+input[type=text].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=password].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=number].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=search].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=tel].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=url].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=email].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=datetime].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=date].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=month].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=week].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=time].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=color].px2-input.px2-darkmode.pseudo-class-focus,
+input[type=datetime-local].px2-input.px2-darkmode.pseudo-class-focus,
+textarea.px2-input.px2-darkmode.pseudo-class-focus,
+select.px2-input.px2-darkmode.pseudo-class-focus,
+.px2-darkmode input[type=text].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=password].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=number].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=search].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=tel].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=url].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=email].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=datetime].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=date].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=month].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=week].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=time].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=color].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
+.px2-darkmode textarea.px2-input.pseudo-class-focus,
+.px2-darkmode select.px2-input.pseudo-class-focus {
+  color: #999;
+  background-color: #000;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

@@ -1,0 +1,63 @@
+// Form Elements
+input[type=text].px2-input.px2-darkmode,
+input[type=password].px2-input.px2-darkmode,
+input[type=number].px2-input.px2-darkmode,
+input[type=search].px2-input.px2-darkmode,
+input[type=tel].px2-input.px2-darkmode,
+input[type=url].px2-input.px2-darkmode,
+input[type=email].px2-input.px2-darkmode,
+input[type=datetime].px2-input.px2-darkmode,
+input[type=date].px2-input.px2-darkmode,
+input[type=month].px2-input.px2-darkmode,
+input[type=week].px2-input.px2-darkmode,
+input[type=time].px2-input.px2-darkmode,
+input[type=color].px2-input.px2-darkmode,
+input[type=datetime-local].px2-input.px2-darkmode,
+textarea.px2-input.px2-darkmode,
+select.px2-input.px2-darkmode,
+
+.px2-darkmode input[type=text].px2-input,
+.px2-darkmode input[type=password].px2-input,
+.px2-darkmode input[type=number].px2-input,
+.px2-darkmode input[type=search].px2-input,
+.px2-darkmode input[type=tel].px2-input,
+.px2-darkmode input[type=url].px2-input,
+.px2-darkmode input[type=email].px2-input,
+.px2-darkmode input[type=datetime].px2-input,
+.px2-darkmode input[type=date].px2-input,
+.px2-darkmode input[type=month].px2-input,
+.px2-darkmode input[type=week].px2-input,
+.px2-darkmode input[type=time].px2-input,
+.px2-darkmode input[type=color].px2-input,
+.px2-darkmode input[type=datetime-local].px2-input,
+.px2-darkmode textarea.px2-input,
+.px2-darkmode select.px2-input
+{
+    color: $darkmode-text-color;
+    background-color: $darkmode-background-color;
+    border: 1px solid #555;
+    &:focus{
+        color: #999;
+        background-color: #000;
+        border-color: #80bdff;
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
+    &[readonly]{
+        background-color: #111;
+    }
+    &[disabled]{
+        color: #8e959c;
+        background-color: #111;
+    }
+}
+
+// Input Group
+.px2-darkmode.px2-input-group,
+.px2-darkmode .px2-input-group{
+
+    &__text {
+        color: #ccc;
+        background-color: #060606;
+        border: 1px solid #222;
+    }
+}
