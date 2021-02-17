@@ -939,6 +939,24 @@ select.px2-input {
   select.px2-input[disabled] {
     color: #8e959c;
     background-color: #eee; }
+  input[type=text].px2-input--block,
+  input[type=password].px2-input--block,
+  input[type=number].px2-input--block,
+  input[type=search].px2-input--block,
+  input[type=tel].px2-input--block,
+  input[type=url].px2-input--block,
+  input[type=email].px2-input--block,
+  input[type=datetime].px2-input--block,
+  input[type=date].px2-input--block,
+  input[type=month].px2-input--block,
+  input[type=week].px2-input--block,
+  input[type=time].px2-input--block,
+  input[type=color].px2-input--block,
+  input[type=datetime-local].px2-input--block,
+  textarea.px2-input--block,
+  select.px2-input--block {
+    display: block;
+    width: 100%; }
 
 .px2-input-group {
   display: inline-flex;
@@ -2474,6 +2492,24 @@ select.px2-input {
   select.px2-input[disabled] {
     color: #8e959c;
     background-color: #eee; }
+  input[type=text].px2-input--block,
+  input[type=password].px2-input--block,
+  input[type=number].px2-input--block,
+  input[type=search].px2-input--block,
+  input[type=tel].px2-input--block,
+  input[type=url].px2-input--block,
+  input[type=email].px2-input--block,
+  input[type=datetime].px2-input--block,
+  input[type=date].px2-input--block,
+  input[type=month].px2-input--block,
+  input[type=week].px2-input--block,
+  input[type=time].px2-input--block,
+  input[type=color].px2-input--block,
+  input[type=datetime-local].px2-input--block,
+  textarea.px2-input--block,
+  select.px2-input--block {
+    display: block;
+    width: 100%; }
 
 .px2-input-group {
   display: inline-flex;

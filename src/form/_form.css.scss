@@ -28,6 +28,11 @@
 // <hr />
 // Disabled:
 // <input type="text" name="input-text" value="Form Element: text input" class="px2-input" disabled />
+// <hr />
+// Block:
+// <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--block" /></p>
+// <p><textarea name="input-text" class="px2-input px2-input--block">Form Element: text input</textarea></p>
+// <p><select name="input-select" class="px2-input px2-input--block"><option value="1">Select Option 1</option></select></p>
 //
 // Styleguide 6.0
 input[type=text].px2-input,
@@ -74,6 +79,10 @@ select.px2-input{
     &[disabled]{
         color: #8e959c;
         background-color: #eee;
+    }
+    &--block{
+        display: block;
+        width: 100%;
     }
 }
 
