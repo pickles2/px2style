@@ -7,7 +7,7 @@
 
 	&:focus,
 	&:hover{
-		color: #999;
+		color: #eee;
 		background-color: #0c0c0c;
 	}
 	&:focus{
@@ -49,6 +49,7 @@
 		color: $darkmode-text-color;
 		&:focus,
 		&:hover{
+			color: #eee;
 			background-color: #0c0c0c;
 		}
 		&:hover{

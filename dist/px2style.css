@@ -1316,7 +1316,7 @@ select.px2-input {
   .px2-darkmode.px2-btn:focus, .px2-darkmode.px2-btn:hover,
   .px2-darkmode .px2-btn:focus,
   .px2-darkmode .px2-btn:hover {
-    color: #999;
+    color: #eee;
     background-color: #0c0c0c; }
   .px2-darkmode.px2-btn:focus,
   .px2-darkmode .px2-btn:focus {
@@ -1355,6 +1355,7 @@ select.px2-input {
   .px2-darkmode.px2-btn.px2-btn--secondary:focus, .px2-darkmode.px2-btn.px2-btn--secondary:hover,
   .px2-darkmode .px2-btn.px2-btn--secondary:focus,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
+    color: #eee;
     background-color: #0c0c0c; }
   .px2-darkmode.px2-btn.px2-btn--secondary:hover,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
