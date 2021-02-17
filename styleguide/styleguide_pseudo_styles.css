@@ -183,6 +183,18 @@ select.px2-input.pseudo-class-focus {
   color: #fff;
 }
 
+.px2-darkmode.px2-header__shoulder-menu > ul li a.pseudo-class-hover,
+.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
+  background-color: #444;
+  color: #eee;
+}
+
+.px2-darkmode.px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover,
+.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
+  background-color: #444;
+  color: #eee;
+}
+
 .px2-darkmode.px2-btn.pseudo-class-focus,
 .px2-darkmode.px2-btn.pseudo-class-hover,
 .px2-darkmode .px2-btn.pseudo-class-focus,
@@ -520,6 +532,18 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode.px2-header__id a.pseudo-class-hover,
 .px2-darkmode .px2-header__id a.pseudo-class-hover {
   color: #fff;
+}
+
+.px2-darkmode.px2-header__shoulder-menu > ul li a.pseudo-class-hover,
+.px2-darkmode .px2-header__shoulder-menu > ul li a.pseudo-class-hover {
+  background-color: #444;
+  color: #eee;
+}
+
+.px2-darkmode.px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover,
+.px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
+  background-color: #444;
+  color: #eee;
 }
 
 .px2-darkmode.px2-btn.pseudo-class-focus,
