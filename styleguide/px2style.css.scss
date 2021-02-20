@@ -18,4 +18,8 @@ $darkmode-background-color: #0d0d0d;
 @import './header/_header.css.scss';
 @import './form/_form.css.scss';
 @import './layouts/_grid.css.scss';
-@import './themes/darkmode/_darkmode.css.scss';
+
+// Darkmode
+.px2-darkmode {
+	@import './themes/darkmode/_darkmode.css.scss';
+}

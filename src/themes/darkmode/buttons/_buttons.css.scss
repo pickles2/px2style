@@ -1,5 +1,4 @@
-.px2-darkmode.px2-btn,
-.px2-darkmode .px2-btn{
+.px2-btn{
 	background-color: $darkmode-background-color;
 	color: $darkmode-text-color;
 	border: 3px solid $darkmode-text-color;
@@ -24,8 +23,7 @@
 }
 
 // Elements
-.px2-darkmode.px2-btn,
-.px2-darkmode .px2-btn{
+.px2-btn{
 
 	&.px2-btn--primary{
 		border-color: #00a0e6;
@@ -110,8 +108,7 @@
 
 
 // Toggle ON
-.px2-darkmode.px2-btn,
-.px2-darkmode .px2-btn{
+.px2-btn{
 	&--toggle-on{
 		box-shadow: inset 0 3px 15px rgba(255, 255, 255,0.15);
 

@@ -1,37 +1,20 @@
 // Form Elements
-input[type=text].px2-input.px2-darkmode,
-input[type=password].px2-input.px2-darkmode,
-input[type=number].px2-input.px2-darkmode,
-input[type=search].px2-input.px2-darkmode,
-input[type=tel].px2-input.px2-darkmode,
-input[type=url].px2-input.px2-darkmode,
-input[type=email].px2-input.px2-darkmode,
-input[type=datetime].px2-input.px2-darkmode,
-input[type=date].px2-input.px2-darkmode,
-input[type=month].px2-input.px2-darkmode,
-input[type=week].px2-input.px2-darkmode,
-input[type=time].px2-input.px2-darkmode,
-input[type=color].px2-input.px2-darkmode,
-input[type=datetime-local].px2-input.px2-darkmode,
-textarea.px2-input.px2-darkmode,
-select.px2-input.px2-darkmode,
-
-.px2-darkmode input[type=text].px2-input,
-.px2-darkmode input[type=password].px2-input,
-.px2-darkmode input[type=number].px2-input,
-.px2-darkmode input[type=search].px2-input,
-.px2-darkmode input[type=tel].px2-input,
-.px2-darkmode input[type=url].px2-input,
-.px2-darkmode input[type=email].px2-input,
-.px2-darkmode input[type=datetime].px2-input,
-.px2-darkmode input[type=date].px2-input,
-.px2-darkmode input[type=month].px2-input,
-.px2-darkmode input[type=week].px2-input,
-.px2-darkmode input[type=time].px2-input,
-.px2-darkmode input[type=color].px2-input,
-.px2-darkmode input[type=datetime-local].px2-input,
-.px2-darkmode textarea.px2-input,
-.px2-darkmode select.px2-input
+input[type=text].px2-input,
+input[type=password].px2-input,
+input[type=number].px2-input,
+input[type=search].px2-input,
+input[type=tel].px2-input,
+input[type=url].px2-input,
+input[type=email].px2-input,
+input[type=datetime].px2-input,
+input[type=date].px2-input,
+input[type=month].px2-input,
+input[type=week].px2-input,
+input[type=time].px2-input,
+input[type=color].px2-input,
+input[type=datetime-local].px2-input,
+textarea.px2-input,
+select.px2-input
 {
     color: $darkmode-text-color;
     background-color: $darkmode-background-color;
@@ -52,8 +35,7 @@ select.px2-input.px2-darkmode,
 }
 
 // Input Group
-.px2-darkmode.px2-input-group,
-.px2-darkmode .px2-input-group{
+.px2-input-group{
 
     &__text {
         color: #ccc;
