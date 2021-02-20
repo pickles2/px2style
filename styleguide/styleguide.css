@@ -1268,19 +1268,19 @@ select.px2-input {
 .px2-darkmode .px2-btn {
   background-color: #0d0d0d;
   color: #ccc;
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1); }
   .px2-darkmode.px2-btn:focus, .px2-darkmode.px2-btn:hover,
   .px2-darkmode .px2-btn:focus,
   .px2-darkmode .px2-btn:hover {
     color: #eee;
-    background-color: #0c0c0c; }
+    background-color: #222; }
   .px2-darkmode.px2-btn:focus,
   .px2-darkmode .px2-btn:focus {
     box-shadow: 0 0 0 0.2rem rgba(123, 230, 255, 0.25); }
   .px2-darkmode.px2-btn:hover,
   .px2-darkmode .px2-btn:hover {
-    background-color: #0f0f0f; }
+    background-color: #292929; }
   .px2-darkmode.px2-btn:active,
   .px2-darkmode .px2-btn:active {
     background-color: #ccc;
@@ -1290,15 +1290,15 @@ select.px2-input {
 .px2-darkmode.px2-btn.px2-btn--primary,
 .px2-darkmode .px2-btn.px2-btn--primary {
   border-color: #00a0e6;
-  background-color: #f5fbfe;
+  background-color: #d9f1fb;
   color: #00a0e6; }
   .px2-darkmode.px2-btn.px2-btn--primary:focus, .px2-darkmode.px2-btn.px2-btn--primary:hover,
   .px2-darkmode .px2-btn.px2-btn--primary:focus,
   .px2-darkmode .px2-btn.px2-btn--primary:hover {
-    background-color: #d9f1fb; }
+    background-color: #ccecfa; }
   .px2-darkmode.px2-btn.px2-btn--primary:hover,
   .px2-darkmode .px2-btn.px2-btn--primary:hover {
-    background-color: #ccecfa; }
+    background-color: #f5fbfe; }
   .px2-darkmode.px2-btn.px2-btn--primary:active,
   .px2-darkmode .px2-btn.px2-btn--primary:active {
     background-color: #00a0e6;
@@ -1313,10 +1313,10 @@ select.px2-input {
   .px2-darkmode .px2-btn.px2-btn--secondary:focus,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
     color: #eee;
-    background-color: #0c0c0c; }
+    background-color: #222; }
   .px2-darkmode.px2-btn.px2-btn--secondary:hover,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
-    background-color: #0f0f0f; }
+    background-color: #292929; }
   .px2-darkmode.px2-btn.px2-btn--secondary:active,
   .px2-darkmode .px2-btn.px2-btn--secondary:active {
     background-color: #ccc;
@@ -2822,19 +2822,19 @@ select.px2-input {
 .px2-darkmode .px2-btn {
   background-color: #0d0d0d;
   color: #ccc;
-  border: 1px solid #ccc;
+  border: 3px solid #ccc;
   box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1); }
   .px2-darkmode.px2-btn:focus, .px2-darkmode.px2-btn:hover,
   .px2-darkmode .px2-btn:focus,
   .px2-darkmode .px2-btn:hover {
     color: #eee;
-    background-color: #0c0c0c; }
+    background-color: #222; }
   .px2-darkmode.px2-btn:focus,
   .px2-darkmode .px2-btn:focus {
     box-shadow: 0 0 0 0.2rem rgba(123, 230, 255, 0.25); }
   .px2-darkmode.px2-btn:hover,
   .px2-darkmode .px2-btn:hover {
-    background-color: #0f0f0f; }
+    background-color: #292929; }
   .px2-darkmode.px2-btn:active,
   .px2-darkmode .px2-btn:active {
     background-color: #ccc;
@@ -2844,15 +2844,15 @@ select.px2-input {
 .px2-darkmode.px2-btn.px2-btn--primary,
 .px2-darkmode .px2-btn.px2-btn--primary {
   border-color: #00a0e6;
-  background-color: #f5fbfe;
+  background-color: #d9f1fb;
   color: #00a0e6; }
   .px2-darkmode.px2-btn.px2-btn--primary:focus, .px2-darkmode.px2-btn.px2-btn--primary:hover,
   .px2-darkmode .px2-btn.px2-btn--primary:focus,
   .px2-darkmode .px2-btn.px2-btn--primary:hover {
-    background-color: #d9f1fb; }
+    background-color: #ccecfa; }
   .px2-darkmode.px2-btn.px2-btn--primary:hover,
   .px2-darkmode .px2-btn.px2-btn--primary:hover {
-    background-color: #ccecfa; }
+    background-color: #f5fbfe; }
   .px2-darkmode.px2-btn.px2-btn--primary:active,
   .px2-darkmode .px2-btn.px2-btn--primary:active {
     background-color: #00a0e6;
@@ -2867,10 +2867,10 @@ select.px2-input {
   .px2-darkmode .px2-btn.px2-btn--secondary:focus,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
     color: #eee;
-    background-color: #0c0c0c; }
+    background-color: #222; }
   .px2-darkmode.px2-btn.px2-btn--secondary:hover,
   .px2-darkmode .px2-btn.px2-btn--secondary:hover {
-    background-color: #0f0f0f; }
+    background-color: #292929; }
   .px2-darkmode.px2-btn.px2-btn--secondary:active,
   .px2-darkmode .px2-btn.px2-btn--secondary:active {
     background-color: #ccc;

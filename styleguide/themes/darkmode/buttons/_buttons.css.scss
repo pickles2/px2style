@@ -2,19 +2,19 @@
 .px2-darkmode .px2-btn{
 	background-color: $darkmode-background-color;
 	color: $darkmode-text-color;
-	border: 1px solid $darkmode-text-color;
+	border: 3px solid $darkmode-text-color;
 	box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
 
 	&:focus,
 	&:hover{
 		color: #eee;
-		background-color: #0c0c0c;
+		background-color: #222;
 	}
 	&:focus{
 		box-shadow: 0 0 0 .2rem rgba(123,230,255,.25);
 	}
 	&:hover{
-		background-color: #0f0f0f;
+		background-color: #292929;
 	}
 	&:active{
 		background-color: $darkmode-text-color;
@@ -29,14 +29,14 @@
 
 	&.px2-btn--primary{
 		border-color: #00a0e6;
-		background-color: #f5fbfe; // rgba(0,160,230,0.05);
+		background-color: #d9f1fb;
 		color: #00a0e6;
 		&:focus,
 		&:hover{
-			background-color: #d9f1fb; // rgba(0,160,230,0.15);
+			background-color: #ccecfa;
 		}
 		&:hover{
-			background-color: #ccecfa; // rgba(0,160,230,0.3);
+			background-color: #f5fbfe;
 		}
 		&:active{
 			background-color: #00a0e6;
@@ -50,10 +50,10 @@
 		&:focus,
 		&:hover{
 			color: #eee;
-			background-color: #0c0c0c;
+			background-color: #222;
 		}
 		&:hover{
-			background-color: #0f0f0f;
+			background-color: #292929;
 		}
 		&:active{
 			background-color: $darkmode-text-color;

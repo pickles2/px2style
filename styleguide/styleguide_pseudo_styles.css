@@ -200,7 +200,7 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode .px2-btn.pseudo-class-focus,
 .px2-darkmode .px2-btn.pseudo-class-hover {
   color: #eee;
-  background-color: #0c0c0c;
+  background-color: #222;
 }
 
 .px2-darkmode.px2-btn.pseudo-class-focus,
@@ -210,7 +210,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-darkmode.px2-btn.pseudo-class-hover,
 .px2-darkmode .px2-btn.pseudo-class-hover {
-  background-color: #0f0f0f;
+  background-color: #292929;
 }
 
 .px2-darkmode.px2-btn.pseudo-class-active,
@@ -224,12 +224,12 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-focus,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background-color: #d9f1fb;
+  background-color: #ccecfa;
 }
 
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background-color: #ccecfa;
+  background-color: #f5fbfe;
 }
 
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-active,
@@ -243,12 +243,12 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
   color: #eee;
-  background-color: #0c0c0c;
+  background-color: #222;
 }
 
 .px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background-color: #0f0f0f;
+  background-color: #292929;
 }
 
 .px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-active,
@@ -552,7 +552,7 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode .px2-btn.pseudo-class-focus,
 .px2-darkmode .px2-btn.pseudo-class-hover {
   color: #eee;
-  background-color: #0c0c0c;
+  background-color: #222;
 }
 
 .px2-darkmode.px2-btn.pseudo-class-focus,
@@ -562,7 +562,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-darkmode.px2-btn.pseudo-class-hover,
 .px2-darkmode .px2-btn.pseudo-class-hover {
-  background-color: #0f0f0f;
+  background-color: #292929;
 }
 
 .px2-darkmode.px2-btn.pseudo-class-active,
@@ -576,12 +576,12 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-focus,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background-color: #d9f1fb;
+  background-color: #ccecfa;
 }
 
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--primary.pseudo-class-hover {
-  background-color: #ccecfa;
+  background-color: #f5fbfe;
 }
 
 .px2-darkmode.px2-btn.px2-btn--primary.pseudo-class-active,
@@ -595,12 +595,12 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-focus,
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
   color: #eee;
-  background-color: #0c0c0c;
+  background-color: #222;
 }
 
 .px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-hover,
 .px2-darkmode .px2-btn.px2-btn--secondary.pseudo-class-hover {
-  background-color: #0f0f0f;
+  background-color: #292929;
 }
 
 .px2-darkmode.px2-btn.px2-btn--secondary.pseudo-class-active,
