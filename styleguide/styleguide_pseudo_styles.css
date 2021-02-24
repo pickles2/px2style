@@ -16,7 +16,7 @@
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #f3f3f3;
+  color: #f9f9f9;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -46,7 +46,7 @@
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #f3f3f3;
+  color: #f9f9f9;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -149,7 +149,7 @@ input[type=color].px2-input.pseudo-class-focus,
 input[type=datetime-local].px2-input.pseudo-class-focus,
 textarea.px2-input.pseudo-class-focus,
 select.px2-input.pseudo-class-focus {
-  color: #495057;
+  color: #333;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
@@ -361,7 +361,7 @@ select.px2-input[readonly].pseudo-class-focus {
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #f3f3f3;
+  color: #f9f9f9;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -391,7 +391,7 @@ select.px2-input[readonly].pseudo-class-focus {
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #f3f3f3;
+  color: #f9f9f9;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -494,7 +494,7 @@ input[type=color].px2-input.pseudo-class-focus,
 input[type=datetime-local].px2-input.pseudo-class-focus,
 textarea.px2-input.pseudo-class-focus,
 select.px2-input.pseudo-class-focus {
-  color: #495057;
+  color: #333;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
