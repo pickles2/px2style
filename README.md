@@ -19,6 +19,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.13 (リリース日未定)
+
+- ダークモードのコントラストをやや下げた。
+
 ### px2style v2.0.12 (2021/02/21)
 
 - `.px2-grid` を追加。
