@@ -16,7 +16,7 @@
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #e9e9e9;
+  color: #f3f3f3;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -46,7 +46,7 @@
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #e9e9e9;
+  color: #f3f3f3;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -154,6 +154,26 @@ select.px2-input.pseudo-class-focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type=text].px2-input[readonly].pseudo-class-focus,
+input[type=password].px2-input[readonly].pseudo-class-focus,
+input[type=number].px2-input[readonly].pseudo-class-focus,
+input[type=search].px2-input[readonly].pseudo-class-focus,
+input[type=tel].px2-input[readonly].pseudo-class-focus,
+input[type=url].px2-input[readonly].pseudo-class-focus,
+input[type=email].px2-input[readonly].pseudo-class-focus,
+input[type=datetime].px2-input[readonly].pseudo-class-focus,
+input[type=date].px2-input[readonly].pseudo-class-focus,
+input[type=month].px2-input[readonly].pseudo-class-focus,
+input[type=week].px2-input[readonly].pseudo-class-focus,
+input[type=time].px2-input[readonly].pseudo-class-focus,
+input[type=color].px2-input[readonly].pseudo-class-focus,
+input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
+textarea.px2-input[readonly].pseudo-class-focus,
+select.px2-input[readonly].pseudo-class-focus {
+  border-color: #ced4da;
+  box-shadow: none;
 }
 
 .px2-input-group > .pseudo-class-first-child,
@@ -299,10 +319,30 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
 .px2-darkmode textarea.px2-input.pseudo-class-focus,
 .px2-darkmode select.px2-input.pseudo-class-focus {
-  color: #999;
+  color: #f3f3f3;
   background-color: #000;
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.px2-darkmode input[type=text].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=password].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=number].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=search].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=tel].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=url].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=email].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=datetime].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=date].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=month].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=week].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=time].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=color].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode textarea.px2-input[readonly].pseudo-class-focus,
+.px2-darkmode select.px2-input[readonly].pseudo-class-focus {
+  border-color: #555;
+  box-shadow: none;
 }.px2-btn.pseudo-class-focus,
 .px2-btn.pseudo-class-hover {
   text-decoration: none;
@@ -321,7 +361,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-btn.pseudo-class-active {
   background-color: #333;
-  color: #e9e9e9;
+  color: #f3f3f3;
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -351,7 +391,7 @@ select.px2-input.pseudo-class-focus {
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
   background-color: #333;
-  color: #e9e9e9;
+  color: #f3f3f3;
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -459,6 +499,26 @@ select.px2-input.pseudo-class-focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type=text].px2-input[readonly].pseudo-class-focus,
+input[type=password].px2-input[readonly].pseudo-class-focus,
+input[type=number].px2-input[readonly].pseudo-class-focus,
+input[type=search].px2-input[readonly].pseudo-class-focus,
+input[type=tel].px2-input[readonly].pseudo-class-focus,
+input[type=url].px2-input[readonly].pseudo-class-focus,
+input[type=email].px2-input[readonly].pseudo-class-focus,
+input[type=datetime].px2-input[readonly].pseudo-class-focus,
+input[type=date].px2-input[readonly].pseudo-class-focus,
+input[type=month].px2-input[readonly].pseudo-class-focus,
+input[type=week].px2-input[readonly].pseudo-class-focus,
+input[type=time].px2-input[readonly].pseudo-class-focus,
+input[type=color].px2-input[readonly].pseudo-class-focus,
+input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
+textarea.px2-input[readonly].pseudo-class-focus,
+select.px2-input[readonly].pseudo-class-focus {
+  border-color: #ced4da;
+  box-shadow: none;
 }
 
 .px2-input-group > .pseudo-class-first-child,
@@ -604,8 +664,28 @@ select.px2-input.pseudo-class-focus {
 .px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
 .px2-darkmode textarea.px2-input.pseudo-class-focus,
 .px2-darkmode select.px2-input.pseudo-class-focus {
-  color: #999;
+  color: #f3f3f3;
   background-color: #000;
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.px2-darkmode input[type=text].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=password].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=number].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=search].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=tel].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=url].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=email].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=datetime].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=date].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=month].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=week].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=time].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=color].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode textarea.px2-input[readonly].pseudo-class-focus,
+.px2-darkmode select.px2-input[readonly].pseudo-class-focus {
+  border-color: #555;
+  box-shadow: none;
 }

@@ -75,6 +75,10 @@ select.px2-input{
     }
     &[readonly]{
         background-color: #eee;
+        &:focus{
+            border-color: #ced4da;
+            box-shadow: none;
+        }
     }
     &[disabled]{
         color: #8e959c;

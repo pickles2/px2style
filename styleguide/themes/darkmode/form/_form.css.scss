@@ -20,17 +20,22 @@ select.px2-input
     background-color: $darkmode-background-color;
     border: 1px solid #555;
     &:focus{
-        color: #999;
+        color: #f3f3f3;
         background-color: #000;
         border-color: #80bdff;
         box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
     }
     &[readonly]{
-        background-color: #111;
+        color: $darkmode-text-color;
+        background-color: $darkmode-background-color;;
+        &:focus{
+            border-color: #555;
+            box-shadow: none;
+        }
     }
     &[disabled]{
         color: #8e959c;
-        background-color: #111;
+        background-color: #333;
     }
 }
 
@@ -39,7 +44,7 @@ select.px2-input
 
     &__text {
         color: #ccc;
-        background-color: #060606;
-        border: 1px solid #222;
+        background-color: #333;
+        border: 1px solid #555;
     }
 }
