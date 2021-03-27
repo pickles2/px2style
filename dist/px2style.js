@@ -11216,11 +11216,12 @@ module.exports = function(Px2style){
 	}
 
 	function classModal(_this, $modal, options){
+		var _this = this;
 		this.$modal = $modal;
 		this.options = options;
 		this.focusBackTo = document.activeElement;
 
-		var isClosable = false;
+		var isClosable = true;
 		var $target = $(this.options.target);
 		$target.append($modal);
 
@@ -11258,6 +11259,12 @@ module.exports = function(Px2style){
 
 		this.closable = function( toggle ){
 			isClosable = !!toggle;
+			var closeBtn = this.$modal.find('.px2-modal__close');
+			if( isClosable ){
+				closeBtn.css({'display':'block'});
+			}else{
+				closeBtn.css({'display':'none'});
+			}
 			return;
 		}
 		this.isClosable = function(){
