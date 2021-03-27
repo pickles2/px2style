@@ -11216,7 +11216,6 @@ module.exports = function(Px2style){
 	}
 
 	function classModal(_this, $modal, options){
-		var _this = this;
 		this.$modal = $modal;
 		this.options = options;
 		this.focusBackTo = document.activeElement;
