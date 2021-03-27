@@ -113,7 +113,7 @@ module.exports = function(Px2style){
 		var objModal = new classModal(_this, $modal, options);
 		modalLayers.push(objModal);
 
-		callback();
+		callback( objModal );
 
 		return;
 	}
