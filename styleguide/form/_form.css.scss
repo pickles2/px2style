@@ -33,6 +33,11 @@
 // <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--block" /></p>
 // <p><textarea name="input-text" class="px2-input px2-input--block">Form Element: text input</textarea></p>
 // <p><select name="input-select" class="px2-input px2-input--block"><option value="1">Select Option 1</option></select></p>
+// <hr />
+// Errored:
+// <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--error" /></p>
+// <p><textarea name="input-text" class="px2-input px2-input--error">Form Element: text input</textarea></p>
+// <p><select name="input-select" class="px2-input px2-input--error"><option value="1">Select Option 1</option></select></p>
 //
 // Styleguide 6.0
 input[type=text].px2-input,
@@ -87,6 +92,12 @@ select.px2-input{
     &--block{
         display: block;
         width: 100%;
+    }
+
+    &--error {
+        border-color: #721c24;
+        color: #721c24;
+        background-color: #f8d7da;
     }
 }
 
@@ -164,4 +175,116 @@ select.px2-input{
         width: 100%;
     }
 
+}
+
+
+// Form input list
+//
+// <div class="px2-form-input-list">
+//  <ul class="px2-form-input-list__ul">
+// 	    <li class="px2-form-input-list__li">
+// 	        <div class="px2-form-input-list__label"><label for="input-text">Input Label</label></div>
+// 	        <div class="px2-form-input-list__input"><input type="text" id="input-text" name="input-text" value="Form Element: text input" class="px2-input" /></div>
+// 	    </li>
+//  </ul>
+// </div>
+//
+// Styleguide 6.2
+
+.px2-form-input-list{
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	ul.px2-form-input-list__ul{
+		display: table;
+		border-collapse: collapse;
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px solid #dee2e6;
+		margin: 0;
+		padding: 0;
+
+		li.px2-form-input-list__li{
+			display: table-row;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			.px2-form-input-list__label{
+				display: table-cell;
+				background-color: #f9f9f9;
+				font-weight: bold;
+				padding: 0.4em 1em;
+				width: 30%;
+				border: 1px solid #dee2e6;
+			}
+			.px2-form-input-list__input{
+				display: table-cell;
+				padding: 0.4em 1em;
+				width: 70%;
+				border: 1px solid #dee2e6;
+			}
+		}
+	}
+
+	@media all and (max-width: 544px){
+		ul.px2-form-input-list__ul{
+			display: block;
+			border-bottom: 0 none;
+
+			li.px2-form-input-list__li{
+				display: block;
+
+				.px2-form-input-list__label{
+					display: block;
+					border-left: 0 none;
+					border-top: 0 none;
+					border-right: 0 none;
+					padding: 0.4em 1em;
+					width: auto;
+				}
+				.px2-form-input-list__input{
+					display: block;
+					border-left: 0 none;
+					border-top: 0 none;
+					border-right: 0 none;
+					padding: 0.4em 1em;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+
+// Form submit buttons
+//
+// Markup:
+// <div class="px2-form-submit-area">
+// <div class="px2-form-submit-area__btns">
+// <button class="px2-btn px2-btn--primary">OK 1</button>
+// <button class="px2-btn px2-btn--primary">OK 2</button>
+// </div>
+// <div class="px2-form-submit-area__backward-btns">
+// <button class="px2-btn px2-btn--secondary">Back 1</button>
+// <button class="px2-btn px2-btn--secondary">Back 2</button>
+// </div>
+// </div>
+//
+// Styleguide 6.3
+
+.px2-form-submit-area {
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &__btns {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &__backward-btns {
+        display: flex;
+    }
 }

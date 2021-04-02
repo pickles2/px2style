@@ -23,6 +23,9 @@ $ composer require pickles2/px2style
 
 - ダークモードのコントラストをやや下げた。
 - `.px2-modal` に、一時的に閉じれなくする機能を追加。
+- `.px2-input` に、エラー表現 `.px2-input--error` を追加。
+- フォームの入力リストモジュール `.px2-form-input-list` を追加。
+- フォームの送信エリアモジュール `.px2-form-submit-area` を追加。
 - その他いくつかの細かい修正。
 
 ### px2style v2.0.12 (2021/02/21)
