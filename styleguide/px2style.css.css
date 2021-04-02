@@ -1062,6 +1062,17 @@ select.px2-input {
         padding: 0.4em 1em;
         width: 70%;
         border: 1px solid #dee2e6; }
+      .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li--required .px2-form-input-list__label::after {
+        content: "*";
+        color: #e11;
+        font-weight: bold;
+        margin: 0 0 0 0.7em; }
+      .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li--error .px2-form-input-list__label {
+        color: #721c24; }
+        .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li--error .px2-form-input-list__label::before {
+          content: "!!!";
+          color: #e11;
+          margin: 0 0.7em 0 0; }
   @media all and (max-width: 544px) {
     .px2-form-input-list ul.px2-form-input-list__ul {
       display: block;
@@ -1093,7 +1104,8 @@ select.px2-input {
     display: flex;
     flex-direction: row-reverse; }
   .px2-form-submit-area__backward-btns {
-    display: flex; }
+    display: flex;
+    flex-direction: row-reverse; }
 
 .px2-grid {
   display: flex;
