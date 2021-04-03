@@ -295,14 +295,14 @@ select.px2-input{
 //
 // Markup:
 // <div class="px2-form-submit-area">
-// <div class="px2-form-submit-area__btns">
-// <button class="px2-btn px2-btn--primary">OK 1</button>
-// <button class="px2-btn px2-btn--primary">OK 2</button>
-// </div>
-// <div class="px2-form-submit-area__backward-btns">
-// <button class="px2-btn px2-btn--secondary">Back 1</button>
-// <button class="px2-btn px2-btn--secondary">Back 2</button>
-// </div>
+// <ul class="px2-form-submit-area__btns">
+// <li><button class="px2-btn px2-btn--primary">OK 1</button></li>
+// <li><button class="px2-btn px2-btn--primary">OK 2</button></li>
+// </ul>
+// <ul class="px2-form-submit-area__backward-btns">
+// <li><button class="px2-btn px2-btn--secondary">Back 1</button></li>
+// <li><button class="px2-btn px2-btn--secondary">Back 2</button></li>
+// </ul>
 // </div>
 //
 // Styleguide 6.3
@@ -314,12 +314,35 @@ select.px2-input{
     flex-direction: row-reverse;
     justify-content: space-between;
 
-    &__btns {
-        display: flex;
-        flex-direction: row-reverse;
-    }
+    &__btns,
     &__backward-btns {
         display: flex;
         flex-direction: row-reverse;
+        margin: 0;
+        padding: 0;
+        > li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    }
+
+	@media all and (max-width: 544px){
+        flex-direction: column;
+
+        &__btns,
+        &__backward-btns {
+            flex-direction: column;
+            > li {
+                margin: 0.2em auto;
+            }
+        }
+
+        &__backward-btns {
+            margin-top: 1em;
+            > li {
+                margin: 0.2em auto 0.2em 0;
+            }
+        }
     }
 }
