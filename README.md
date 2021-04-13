@@ -19,6 +19,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.14 (リリース日未定)
+
+- `.px2-modal` に、一時的にフォーム操作をできなくする機能を追加。
+
 ### px2style v2.0.13 (2021/04/04)
 
 - ダークモードのコントラストをやや下げた。
