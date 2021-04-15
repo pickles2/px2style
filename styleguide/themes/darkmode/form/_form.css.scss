@@ -12,6 +12,7 @@ input[type=month].px2-input,
 input[type=week].px2-input,
 input[type=time].px2-input,
 input[type=color].px2-input,
+input[type=file].px2-input,
 input[type=datetime-local].px2-input,
 textarea.px2-input,
 select.px2-input
@@ -53,4 +54,22 @@ select.px2-input
         background-color: #333;
         border: 1px solid #555;
     }
+}
+
+// Input List
+.px2-form-input-list{
+	color: $darkmode-text-color;
+
+	ul.px2-form-input-list__ul{
+
+		li.px2-form-input-list__li{
+
+			.px2-form-input-list__label{
+				background-color: #191919;
+			}
+			.px2-form-input-list__input{
+                background-color: $darkmode-background-color;
+			}
+		}
+	}
 }

@@ -146,6 +146,7 @@ input[type=month].px2-input.pseudo-class-focus,
 input[type=week].px2-input.pseudo-class-focus,
 input[type=time].px2-input.pseudo-class-focus,
 input[type=color].px2-input.pseudo-class-focus,
+input[type=file].px2-input.pseudo-class-focus,
 input[type=datetime-local].px2-input.pseudo-class-focus,
 textarea.px2-input.pseudo-class-focus,
 select.px2-input.pseudo-class-focus {
@@ -169,6 +170,7 @@ input[type=month].px2-input[readonly].pseudo-class-focus,
 input[type=week].px2-input[readonly].pseudo-class-focus,
 input[type=time].px2-input[readonly].pseudo-class-focus,
 input[type=color].px2-input[readonly].pseudo-class-focus,
+input[type=file].px2-input[readonly].pseudo-class-focus,
 input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
 textarea.px2-input[readonly].pseudo-class-focus,
 select.px2-input[readonly].pseudo-class-focus {
@@ -316,6 +318,7 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode input[type=week].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=time].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=color].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=file].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
 .px2-darkmode textarea.px2-input.pseudo-class-focus,
 .px2-darkmode select.px2-input.pseudo-class-focus {
@@ -338,6 +341,7 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode input[type=week].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=time].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=color].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=file].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode textarea.px2-input[readonly].pseudo-class-focus,
 .px2-darkmode select.px2-input[readonly].pseudo-class-focus {
@@ -491,6 +495,7 @@ input[type=month].px2-input.pseudo-class-focus,
 input[type=week].px2-input.pseudo-class-focus,
 input[type=time].px2-input.pseudo-class-focus,
 input[type=color].px2-input.pseudo-class-focus,
+input[type=file].px2-input.pseudo-class-focus,
 input[type=datetime-local].px2-input.pseudo-class-focus,
 textarea.px2-input.pseudo-class-focus,
 select.px2-input.pseudo-class-focus {
@@ -514,6 +519,7 @@ input[type=month].px2-input[readonly].pseudo-class-focus,
 input[type=week].px2-input[readonly].pseudo-class-focus,
 input[type=time].px2-input[readonly].pseudo-class-focus,
 input[type=color].px2-input[readonly].pseudo-class-focus,
+input[type=file].px2-input[readonly].pseudo-class-focus,
 input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
 textarea.px2-input[readonly].pseudo-class-focus,
 select.px2-input[readonly].pseudo-class-focus {
@@ -661,6 +667,7 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode input[type=week].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=time].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=color].px2-input.pseudo-class-focus,
+.px2-darkmode input[type=file].px2-input.pseudo-class-focus,
 .px2-darkmode input[type=datetime-local].px2-input.pseudo-class-focus,
 .px2-darkmode textarea.px2-input.pseudo-class-focus,
 .px2-darkmode select.px2-input.pseudo-class-focus {
@@ -683,6 +690,7 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode input[type=week].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=time].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=color].px2-input[readonly].pseudo-class-focus,
+.px2-darkmode input[type=file].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode input[type=datetime-local].px2-input[readonly].pseudo-class-focus,
 .px2-darkmode textarea.px2-input[readonly].pseudo-class-focus,
 .px2-darkmode select.px2-input[readonly].pseudo-class-focus {

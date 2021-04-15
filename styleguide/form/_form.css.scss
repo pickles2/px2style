@@ -17,8 +17,9 @@
 // <input type="month" name="input-month" value="" class="px2-input" />
 // <input type="week" name="input-week" value="" class="px2-input" />
 // <input type="time" name="input-time" value="" class="px2-input" />
-// <input type="datetime-local" name="input-datetime-local" value="" class="px2-input" />
 // <input type="color" name="input-color" value="" class="px2-input" />
+// <input type="file" name="input-file" value="" class="px2-input" />
+// <input type="datetime-local" name="input-datetime-local" value="" class="px2-input" />
 // <select name="input-select" class="px2-input"><option value="1">Select Option 1</option></select>
 // <hr />
 // <textarea name="input-textarea" class="px2-input">Text Area</textarea>
@@ -53,6 +54,7 @@ input[type=month].px2-input,
 input[type=week].px2-input,
 input[type=time].px2-input,
 input[type=color].px2-input,
+input[type=file].px2-input,
 input[type=datetime-local].px2-input,
 textarea.px2-input,
 select.px2-input{
@@ -221,7 +223,7 @@ select.px2-input{
 
 			.px2-form-input-list__label{
 				display: table-cell;
-				background-color: #f9f9f9;
+				background-color: #e7e7e7;
 				font-weight: bold;
 				padding: 0.4em 1em;
 				width: 30%;
@@ -229,6 +231,7 @@ select.px2-input{
 			}
 			.px2-form-input-list__input{
 				display: table-cell;
+                background-color: $background-color;
 				padding: 0.4em 1em;
 				width: 70%;
 				border: 1px solid #dee2e6;
