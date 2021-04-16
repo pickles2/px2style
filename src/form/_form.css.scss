@@ -211,7 +211,7 @@ select.px2-input{
 		border-collapse: collapse;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #dee2e6;
+		border: 1px solid #999999;
 		margin: 0;
 		padding: 0;
 
@@ -227,14 +227,14 @@ select.px2-input{
 				font-weight: bold;
 				padding: 0.4em 1em;
 				width: 30%;
-				border: 1px solid #dee2e6;
+				border: 1px solid #999999;
 			}
 			.px2-form-input-list__input{
 				display: table-cell;
                 background-color: $background-color;
 				padding: 0.4em 1em;
 				width: 70%;
-				border: 1px solid #dee2e6;
+				border: 1px solid #999999;
 			}
 
             &--required {

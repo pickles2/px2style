@@ -1049,7 +1049,7 @@ select.px2-input {
     border-collapse: collapse;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #dee2e6;
+    border: 1px solid #999999;
     margin: 0;
     padding: 0; }
     .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li {
@@ -1063,13 +1063,13 @@ select.px2-input {
         font-weight: bold;
         padding: 0.4em 1em;
         width: 30%;
-        border: 1px solid #dee2e6; }
+        border: 1px solid #999999; }
       .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
         display: table-cell;
         background-color: #f9f9f9;
         padding: 0.4em 1em;
         width: 70%;
-        border: 1px solid #dee2e6; }
+        border: 1px solid #999999; }
       .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li--required .px2-form-input-list__label::after {
         content: "*";
         color: #e11;
@@ -1588,10 +1588,14 @@ select.px2-input {
     border: 1px solid #555; }
   .px2-darkmode .px2-form-input-list {
     color: #ccc; }
-    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
-      background-color: #191919; }
-    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
-      background-color: #242424; }
+    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul {
+      border: 1px solid #666; }
+      .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
+        background-color: #191919;
+        border: 1px solid #666; }
+      .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
+        background-color: #242424;
+        border: 1px solid #666; }
 @charset "UTF-8";
 :root {
   --px2-main-color: #00a0e6; }
@@ -2643,7 +2647,7 @@ select.px2-input {
     border-collapse: collapse;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #dee2e6;
+    border: 1px solid #999999;
     margin: 0;
     padding: 0; }
     .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li {
@@ -2657,13 +2661,13 @@ select.px2-input {
         font-weight: bold;
         padding: 0.4em 1em;
         width: 30%;
-        border: 1px solid #dee2e6; }
+        border: 1px solid #999999; }
       .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
         display: table-cell;
         background-color: #f9f9f9;
         padding: 0.4em 1em;
         width: 70%;
-        border: 1px solid #dee2e6; }
+        border: 1px solid #999999; }
       .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li--required .px2-form-input-list__label::after {
         content: "*";
         color: #e11;
@@ -3182,7 +3186,11 @@ select.px2-input {
     border: 1px solid #555; }
   .px2-darkmode .px2-form-input-list {
     color: #ccc; }
-    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
-      background-color: #191919; }
-    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
-      background-color: #242424; }
+    .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul {
+      border: 1px solid #666; }
+      .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
+        background-color: #191919;
+        border: 1px solid #666; }
+      .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
+        background-color: #242424;
+        border: 1px solid #666; }
