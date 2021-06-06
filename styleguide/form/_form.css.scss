@@ -67,8 +67,8 @@ select.px2-input{
     font-size: 1em;
     font-weight: normal;
     line-height: 1.5;
-    color: --px2-text-color;
-    background-color: --px2-background-color;
+    color: var(--px2-text-color);
+    background-color: var(--px2-background-color);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
@@ -142,8 +142,8 @@ select.px2-input{
         font-size: 1rem;
         font-weight: normal;
         line-height: 1.5;
-        color: --px2-text-color;
-        background-color: --px2-background-color;
+        color: var(--px2-text-color);
+        background-color: var(--px2-background-color);
         border: 1px solid #ced4da;
     }
 
@@ -233,7 +233,7 @@ select.px2-input{
 			.px2-form-input-list__input{
 				display: table-cell;
                 vertical-align: top;
-                background-color: --px2-background-color;
+                background-color: var(--px2-background-color);
 				padding: 0.4em 1em;
 				width: 70%;
 				border: 1px solid #999999;

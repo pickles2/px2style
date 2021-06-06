@@ -104,8 +104,8 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
-		color: --px2-text-color;
-		background-color: --px2-background-color;
+		color: var(--px2-text-color);
+		background-color: var(--px2-background-color);
 		box-sizing: border-box;
 		padding: 10px 0;
 		margin: 20px auto;

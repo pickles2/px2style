@@ -15,8 +15,8 @@
 }
 
 .px2-btn.pseudo-class-active {
-  background-color: --px2-text-color;
-  color: --px2-background-color;
+  background-color: var(--px2-text-color);
+  color: var(--px2-background-color);
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -45,8 +45,8 @@
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
-  background-color: --px2-text-color;
-  color: --px2-background-color;
+  background-color: var(--px2-text-color);
+  color: var(--px2-background-color);
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
@@ -364,8 +364,8 @@ select.px2-input[readonly].pseudo-class-focus {
 }
 
 .px2-btn.pseudo-class-active {
-  background-color: --px2-text-color;
-  color: --px2-background-color;
+  background-color: var(--px2-text-color);
+  color: var(--px2-background-color);
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }
@@ -394,8 +394,8 @@ select.px2-input[readonly].pseudo-class-focus {
 }
 
 .px2-btn.px2-btn--secondary.pseudo-class-active {
-  background-color: --px2-text-color;
-  color: --px2-background-color;
+  background-color: var(--px2-text-color);
+  color: var(--px2-background-color);
 }
 
 .px2-btn.px2-btn--danger.pseudo-class-focus,
