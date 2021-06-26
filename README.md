@@ -19,7 +19,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.15 (リリース日未定)
+### px2style v2.0.15 (2021/06/26)
 
 - `--px2-text-color`、 `--px2-background-color` を追加。
 
