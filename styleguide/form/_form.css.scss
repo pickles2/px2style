@@ -238,6 +238,10 @@ select.px2-input{
 				width: 70%;
 				border: 1px solid #999999;
 			}
+			p, .px2-p {
+				margin-top: 0.2em;
+				margin-bottom: 0.2em;
+			}
 
             &--required {
                 .px2-form-input-list__label{
