@@ -145,6 +145,7 @@
 	align-content: center;
 	text-align:center;
 	padding:80px;
+	z-index: 1010000;
 
 	&::before{
 		display: block;

@@ -23,6 +23,7 @@ $ composer require pickles2/px2style
 
 - `.px2-header` で、スモールスクリーンのときにショルダーメニューに収められるグローバルメニューの下に仕切り線を追加した。
 - `.px2-editor-type--html-gui` のラベルを GUI から Block に変更。
+- `.px2-loading` は `.px2-modal` よりも手前に表示されるようになった。
 
 ### px2style v2.0.15 (2021/06/26)
 
