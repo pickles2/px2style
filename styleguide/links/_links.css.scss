@@ -32,3 +32,23 @@
 		border-bottom-color:transparent;
 	}
 }
+
+// Open in new window
+//
+// Markup:
+// <p><a href="#"><span class="px2-open-in-new-window">Open in new window</span></a></p>
+// <p><a href="#" class="px2-a"><span class="px2-open-in-new-window">Open in new window</span></a></p>
+//
+// Styleguide 1.2
+.px2-open-in-new-window {
+	&:after {
+		content: '';
+		background-image: url("links/resources/link.png");
+		width: 0.8em;
+		height: 0.8em;
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 0.3em;
+	}
+}
