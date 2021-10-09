@@ -26,6 +26,7 @@ $ composer require pickles2/px2style
 - `.px2-loading` は `.px2-modal` よりも手前に表示されるようになった。
 - `.px2-open-in-new-window` を追加。
 - `.px2-modal` のスタイル改善。
+- `.px2-notice` のダークモード対応を追加。
 
 ### px2style v2.0.15 (2021/06/26)
 

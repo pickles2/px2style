@@ -1,0 +1,26 @@
+// Notice
+.px2-notice {
+	color: #91b4da;
+	background-color: #1f456e;
+	border: 1px solid #3c6794;
+}
+.px2-notice.px2-notice--success{
+	color: #98c4a2;
+	background-color: #1b5c2a;
+	border-color: #458052;
+}
+.px2-notice.px2-notice--warning{
+	color: #d6c9a3;
+	background-color: #68561c;
+	border-color: #948b6c;
+}
+.px2-notice.px2-notice--danger{
+	color: #dfc7ca;
+	background-color: #5e1319;
+	border-color: #91595f;
+}
+.px2-notice.px2-notice--info{
+	color: #bbe1e7;
+	background-color: #144b55;
+	border-color: #5b868d;
+}

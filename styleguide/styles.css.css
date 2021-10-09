@@ -1420,25 +1420,6 @@ select.px2-input {
           color: #eee; }
         .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.current {
           color: #eee; }
-  .px2-darkmode .px2-modal {
-    background: rgba(223, 223, 223, 0.5); }
-    .px2-darkmode .px2-modal__close button {
-      border-color: #999;
-      background-color: #111;
-      color: #999; }
-      .px2-darkmode .px2-modal__close button::before, .px2-darkmode .px2-modal__close button::after {
-        border-bottom: 1px solid #999; }
-      .px2-darkmode .px2-modal__close button:hover {
-        border: 1px solid #ccc;
-        background-color: #000; }
-        .px2-darkmode .px2-modal__close button:hover::before, .px2-darkmode .px2-modal__close button:hover::after {
-          border-bottom: 1px solid #ccc; }
-    .px2-darkmode .px2-modal__dialog {
-      color: #ccc;
-      background-color: #242424; }
-    .px2-darkmode .px2-modal__header {
-      border-bottom: 1px solid #999;
-      box-shadow: 0 5px 12px -5px rgba(255, 255, 255, 0.4); }
   .px2-darkmode .px2-btn {
     background-color: #242424;
     color: #ccc;
@@ -1515,6 +1496,45 @@ select.px2-input {
       box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15); }
       .px2-darkmode .px2-btn--toggle-on[disabled]:focus, .px2-darkmode .px2-btn--toggle-on[disabled]:hover, .px2-darkmode .px2-btn--toggle-on[disabled]:active {
         box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15); }
+  .px2-darkmode .px2-modal {
+    background: rgba(223, 223, 223, 0.5); }
+    .px2-darkmode .px2-modal__close button {
+      border-color: #999;
+      background-color: #111;
+      color: #999; }
+      .px2-darkmode .px2-modal__close button::before, .px2-darkmode .px2-modal__close button::after {
+        border-bottom: 1px solid #999; }
+      .px2-darkmode .px2-modal__close button:hover {
+        border: 1px solid #ccc;
+        background-color: #000; }
+        .px2-darkmode .px2-modal__close button:hover::before, .px2-darkmode .px2-modal__close button:hover::after {
+          border-bottom: 1px solid #ccc; }
+    .px2-darkmode .px2-modal__dialog {
+      color: #ccc;
+      background-color: #242424; }
+    .px2-darkmode .px2-modal__header {
+      border-bottom: 1px solid #999;
+      box-shadow: 0 5px 12px -5px rgba(255, 255, 255, 0.4); }
+  .px2-darkmode .px2-notice {
+    color: #91b4da;
+    background-color: #1f456e;
+    border: 1px solid #3c6794; }
+  .px2-darkmode .px2-notice.px2-notice--success {
+    color: #98c4a2;
+    background-color: #1b5c2a;
+    border-color: #458052; }
+  .px2-darkmode .px2-notice.px2-notice--warning {
+    color: #d6c9a3;
+    background-color: #68561c;
+    border-color: #948b6c; }
+  .px2-darkmode .px2-notice.px2-notice--danger {
+    color: #dfc7ca;
+    background-color: #5e1319;
+    border-color: #91595f; }
+  .px2-darkmode .px2-notice.px2-notice--info {
+    color: #bbe1e7;
+    background-color: #144b55;
+    border-color: #5b868d; }
   .px2-darkmode .px2-table {
     color: #ccc; }
     .px2-darkmode .px2-table th,

@@ -2,8 +2,9 @@ $darkmode-text-color: #ccc;
 $darkmode-background-color: #242424;
 
 @import './header/_header.css.scss';
-@import './modal/_modal.css.scss';
 @import './buttons/_buttons.css.scss';
+@import './modal/_modal.css.scss';
+@import './notice/_notice.css.scss';
 @import './tables/_tables.css.scss';
 @import './form/_form.css.scss';
 

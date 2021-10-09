@@ -223,16 +223,6 @@ select.px2-input[readonly].pseudo-class-focus {
   color: #eee;
 }
 
-.px2-darkmode .px2-modal__close button.pseudo-class-hover {
-  border: 1px solid #ccc;
-  background-color: #000;
-}
-
-.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
-.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
-  border-bottom: 1px solid #ccc;
-}
-
 .px2-darkmode .px2-btn.pseudo-class-focus,
 .px2-darkmode .px2-btn.pseudo-class-hover {
   color: #eee;
@@ -323,6 +313,16 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-hover,
 .px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-active {
   box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15);
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #ccc;
 }
 
 .px2-darkmode input[type=text].px2-input.pseudo-class-focus,
@@ -592,16 +592,6 @@ select.px2-input[readonly].pseudo-class-focus {
   color: #eee;
 }
 
-.px2-darkmode .px2-modal__close button.pseudo-class-hover {
-  border: 1px solid #ccc;
-  background-color: #000;
-}
-
-.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
-.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
-  border-bottom: 1px solid #ccc;
-}
-
 .px2-darkmode .px2-btn.pseudo-class-focus,
 .px2-darkmode .px2-btn.pseudo-class-hover {
   color: #eee;
@@ -692,6 +682,16 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-hover,
 .px2-darkmode .px2-btn--toggle-on[disabled].pseudo-class-active {
   box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15);
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #ccc;
 }
 
 .px2-darkmode input[type=text].px2-input.pseudo-class-focus,
