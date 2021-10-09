@@ -1,3 +1,15 @@
+@keyframes px2-modal--initial {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes px2-loading {
   0% {
     transform: scale(0);
@@ -7,7 +19,19 @@
     transform: scale(1);
     opacity: 0;
   }
-}@keyframes px2-loading {
+}@keyframes px2-modal--initial {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes px2-loading {
   0% {
     transform: scale(0);
   }

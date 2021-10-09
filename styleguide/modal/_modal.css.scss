@@ -118,6 +118,17 @@
 		}
 	}
 
+    @keyframes px2-modal--initial {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
 	&__dialog{
 		position: relative;
 		top: 0; left: 0;
@@ -143,6 +154,10 @@
 		h5{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
 		h6{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
 
+		animation: px2-modal--initial .3s ease 0s 1 normal none running;
+		&--closed {
+			animation: px2-modal--initial .3s ease 0s 1 reverse forwards running;
+		}
 	}
 
 	&__header{

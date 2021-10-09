@@ -350,6 +350,14 @@
         background-color: #f9f9f9; }
         .px2-modal__close button:hover::before, .px2-modal__close button:hover::after {
           border-bottom: 1px solid #666; }
+
+@keyframes px2-modal--initial {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
   .px2-modal__dialog {
     position: relative;
     top: 0;
@@ -371,7 +379,8 @@
     max-height: calc(100% - 40px);
     overflow: visible;
     border-radius: 5px;
-    font-size: medium; }
+    font-size: medium;
+    animation: px2-modal--initial .3s ease 0s 1 normal none running; }
     .px2-modal__dialog h1 {
       font-size: 124%;
       margin: 0;
@@ -396,6 +405,8 @@
       font-size: 100%;
       margin: 1em 0 0.5em 0;
       font-weight: bold; }
+    .px2-modal__dialog--closed {
+      animation: px2-modal--initial .3s ease 0s 1 reverse forwards running; }
   .px2-modal__header {
     border-bottom: 1px solid #999;
     padding: 8px 20px;
@@ -1462,12 +1473,22 @@ select.px2-input {
   .px2-darkmode .px2-modal {
     background: rgba(223, 223, 223, 0.5); }
     .px2-darkmode .px2-modal__close button {
-      border-color: #666;
+      border-color: #999;
       background-color: #111;
-      color: #666; }
+      color: #999; }
+      .px2-darkmode .px2-modal__close button::before, .px2-darkmode .px2-modal__close button::after {
+        border-bottom: 1px solid #999; }
+      .px2-darkmode .px2-modal__close button:hover {
+        border: 1px solid #ccc;
+        background-color: #000; }
+        .px2-darkmode .px2-modal__close button:hover::before, .px2-darkmode .px2-modal__close button:hover::after {
+          border-bottom: 1px solid #ccc; }
     .px2-darkmode .px2-modal__dialog {
       color: #ccc;
       background-color: #242424; }
+    .px2-darkmode .px2-modal__header {
+      border-bottom: 1px solid #999;
+      box-shadow: 0 5px 12px -5px rgba(255, 255, 255, 0.4); }
   .px2-darkmode .px2-btn {
     background-color: #242424;
     color: #ccc;

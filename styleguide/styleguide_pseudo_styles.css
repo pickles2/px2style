@@ -223,6 +223,16 @@ select.px2-input[readonly].pseudo-class-focus {
   color: #eee;
 }
 
+.px2-darkmode .px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #ccc;
+}
+
 .px2-darkmode .px2-btn.pseudo-class-focus,
 .px2-darkmode .px2-btn.pseudo-class-hover {
   color: #eee;
@@ -580,6 +590,16 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.pseudo-class-hover {
   background-color: #444;
   color: #eee;
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::before,
+.px2-darkmode .px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #ccc;
 }
 
 .px2-darkmode .px2-btn.pseudo-class-focus,
