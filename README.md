@@ -25,6 +25,7 @@ $ composer require pickles2/px2style
 - `.px2-editor-type--html-gui` のラベルを GUI から Block に変更。
 - `.px2-loading` は `.px2-modal` よりも手前に表示されるようになった。
 - `.px2-open-in-new-window` を追加。
+- `.px2-modal` のスタイル改善。
 
 ### px2style v2.0.15 (2021/06/26)
 

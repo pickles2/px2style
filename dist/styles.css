@@ -334,8 +334,22 @@
       background-color: #eee;
       color: #999;
       cursor: pointer; }
+      .px2-modal__close button::before, .px2-modal__close button::after {
+        content: "";
+        border-bottom: 1px solid #999;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 15%; }
       .px2-modal__close button::before {
-        content: "×"; }
+        transform: rotate(45deg); }
+      .px2-modal__close button::after {
+        transform: rotate(-45deg); }
+      .px2-modal__close button:hover {
+        border: 1px solid #666;
+        background-color: #f9f9f9; }
+        .px2-modal__close button:hover::before, .px2-modal__close button:hover::after {
+          border-bottom: 1px solid #666; }
   .px2-modal__dialog {
     position: relative;
     top: 0;
@@ -356,6 +370,7 @@
     height: auto;
     max-height: calc(100% - 40px);
     overflow: visible;
+    border-radius: 5px;
     font-size: medium; }
     .px2-modal__dialog h1 {
       font-size: 124%;
@@ -381,12 +396,11 @@
       font-size: 100%;
       margin: 1em 0 0.5em 0;
       font-weight: bold; }
-    .px2-modal__dialog h2 {
-      border-bottom: 1px solid var(--px2-main-color); }
   .px2-modal__header {
-    border-bottom: 1px solid var(--px2-main-color);
-    padding: 0 20px;
-    margin-bottom: 0.5em; }
+    border-bottom: 1px solid #999;
+    padding: 8px 20px;
+    margin-bottom: 0.5em;
+    box-shadow: 0 5px 12px -5px rgba(0, 0, 0, 0.1); }
   .px2-modal__body {
     position: relative;
     top: 0;
@@ -398,7 +412,7 @@
   .px2-modal__title {
     font-weight: bold; }
   .px2-modal__footer {
-    border-top: 1px solid var(--px2-main-color);
+    border-top: 1px solid #999;
     margin: 10px 0 0 0;
     padding: 10px 20px 0 20px;
     display: -ms-flexbox;

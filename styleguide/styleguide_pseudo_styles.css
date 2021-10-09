@@ -95,6 +95,16 @@
   transform: translateY(1px);
 }
 
+.px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #666;
+  background-color: #f9f9f9;
+}
+
+.px2-modal__close button.pseudo-class-hover::before,
+.px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #666;
+}
+
 .px2-header a.pseudo-class-hover {
   color: #000;
   text-decoration: none;
@@ -442,6 +452,16 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-btn--toggle-on[disabled].pseudo-class-active {
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.15);
   transform: translateY(1px);
+}
+
+.px2-modal__close button.pseudo-class-hover {
+  border: 1px solid #666;
+  background-color: #f9f9f9;
+}
+
+.px2-modal__close button.pseudo-class-hover::before,
+.px2-modal__close button.pseudo-class-hover::after {
+  border-bottom: 1px solid #666;
 }
 
 .px2-header a.pseudo-class-hover {
