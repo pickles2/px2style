@@ -135,7 +135,9 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
+		color: #333; // fallback
 		color: var(--px2-text-color);
+		background-color: #fff; // fallback
 		background-color: var(--px2-background-color);
 		box-sizing: border-box;
 		padding: 10px 0;

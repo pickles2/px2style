@@ -84,12 +84,15 @@
 		width: 100%;
 		min-height: 10px;
 		z-index: 100;
+		border-bottom: 3px solid #000; // fallback
 		border-bottom: 3px solid var(--px2-main-color);
 		box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
 		color: #666;
 		line-height: 1;
 		box-sizing: border-box;
+		border-bottom-color: #000; // fallback
 		border-bottom-color: var(--px2-main-color);
+		color: #000; // fallback
 		color: var(--px2-main-color);
 	}
 
@@ -141,14 +144,16 @@
 		font-size: 13px;
 		transition: opacity 0.5s ease 0;
 		*{
-			color:var(--px2-main-color);
-			margin:0 0.5em;
+			color: #000; // fallback
+			color: var(--px2-main-color);
+			margin: 0 0.5em;
 			display: inline-block;
 			text-shadow: none;
 			font-weight: normal;
 		}
 		a{
-			color:var(--px2-main-color);
+			color: #000; // fallback
+			color: var(--px2-main-color);
 			text-decoration: none;
 			&:hover{
 				color: #000;
@@ -190,24 +195,27 @@
 					border-bottom: 3px solid transparent;
 
 					&:hover{
-						color:var(--px2-main-color);
+						color: #000; // fallback
+						color: var(--px2-main-color);
 					}
 					&.current{
 						font-weight: bold;
 						border-bottom-color: rgba(255, 255, 255, 0.85);
-						color:var(--px2-main-color);
+						color: #000; // fallback
+						color: var(--px2-main-color);
 						padding-left: 1em;
 						&:before{
-							content:' ';
-							width:0;
-							height:0;
+							content: ' ';
+							width: 0;
+							height: 0;
 							display: inline-block;
 							margin-right: 0.5em;
-							border-width:0.3em 0 0.3em 0.5em;
-							border-style:solid;
-							border-color:var(--px2-main-color);
-							border-top-color:transparent;
-							border-bottom-color:transparent;
+							border-width: 0.3em 0 0.3em 0.5em;
+							border-style: solid;
+							border-color: #000; // fallback
+							border-color: var(--px2-main-color);
+							border-top-color: transparent;
+							border-bottom-color: transparent;
 						}
 					}
 				}
@@ -256,7 +264,8 @@
 							&.current{
 								font-weight: bold;
 								padding: 0.8em 2em;
-								background-color:var(--px2-main-color);
+								background-color: #000; // fallback
+								background-color: var(--px2-main-color);
 								color: #fff;
 								border: none;
 								&:before{
@@ -285,6 +294,7 @@
 			background: #f9f9f9;
 			border: none;
 			border-radius: 0;
+			border-left: 1px solid #000; // fallback
 			border-left: 1px solid var(--px2-main-color);
 			position: absolute; top:0; right:0;
 			height: 30px;
@@ -327,7 +337,8 @@
 					}
 					&.current{
 						font-weight: bold;
-						background-color:var(--px2-main-color);
+						background-color: #000; // fallback
+						background-color: var(--px2-main-color);
 						color: #fff;
 					}
 				}
@@ -361,7 +372,8 @@
 							}
 							&.current{
 								font-weight: bold;
-								background-color:var(--px2-main-color);
+								background-color: #000; // fallback
+								background-color: var(--px2-main-color);
 								color: #fff;
 							}
 						}
@@ -387,7 +399,7 @@
 		width: calc(100% - 1em);
 		border-radius: 1px;
 		margin: 0 auto;
-		// background: #555;
+		background: #000; // fallback
 		background: var(--px2-main-color);
 		content: '';
 	}

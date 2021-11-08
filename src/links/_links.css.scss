@@ -21,15 +21,16 @@
 .px2-link.px2-link--bullet{ // 2.0.11 にて修正
 	&:before{
 		content:' ';
-		width:0;
-		height:0;
+		width: 0;
+		height: 0;
 		display: inline-block;
 		margin-right: 0.2em;
-		border-width:0.35em 0 0.35em 0.6em;
-		border-style:solid;
-		border-color:var(--px2-main-color);
-		border-top-color:transparent;
-		border-bottom-color:transparent;
+		border-width: 0.35em 0 0.35em 0.6em;
+		border-style: solid;
+		border-color: #000; // fallback
+		border-color: var(--px2-main-color);
+		border-top-color: transparent;
+		border-bottom-color: transparent;
 	}
 }
 
