@@ -39,8 +39,8 @@
 	td {
 		vertical-align: top;
 		border: 1px solid #999999;
-		background: #fff; // fallback
-		background: var(--px2-background-color);
+		background: $px2-background-color; // fallback
+		background: var(--px2-background-color, $px2-background-color);
 		padding: 10px;
 	}
 

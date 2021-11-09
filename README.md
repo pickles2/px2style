@@ -16,6 +16,15 @@ Install with composer.
 $ composer require pickles2/px2style
 ```
 
+## Custom Properties
+
+```
+:root {
+	--px2-main-color: #00a0e6;
+	--px2-text-color: #333;
+	--px2-background-color: #f9f9f9;
+}
+```
 
 ## Change log
 
@@ -27,6 +36,7 @@ $ composer require pickles2/px2style
 - `.px2-open-in-new-window` を追加。
 - `.px2-modal` のスタイル改善。
 - `.px2-notice` のダークモード対応を追加。
+- カスタムプロパティが設定されていない場合に、デフォルトの値が適用されるようになった。
 - その他いくつかの細かい修正。
 
 ### px2style v2.0.15 (2021/06/26)

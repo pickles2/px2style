@@ -151,8 +151,8 @@
 		display: block;
 		content: "";
 
-		background-color: #000; // fallback
-		background-color: var(--px2-main-color);
+		background-color: $px2-main-color; // fallback
+		background-color: var(--px2-main-color, $px2-main-color);
 		width: 15px;
 		height: 15px;
 		border-radius: 100%;
