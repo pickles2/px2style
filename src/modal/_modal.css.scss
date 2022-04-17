@@ -160,8 +160,10 @@
 		h6{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
 
 		animation: px2-modal--initial .3s ease 0s 1 normal none running;
+		transition: transform .3s, opacity .3s;
 		&--closed {
-			animation: px2-modal--initial .3s ease 0s 1 reverse forwards running;
+			transform: translateY(-10px);
+			opacity: 0;
 		}
 	}
 

@@ -11307,7 +11307,7 @@ module.exports = function(Px2style){
 		this.close = function(callback){
 			var _this = this;
 			callback = callback||function(){};
-			_this.$modal.addClass('px2-modal__dialog--closed');
+			_this.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
 
 			setTimeout(function(){
 				try {
