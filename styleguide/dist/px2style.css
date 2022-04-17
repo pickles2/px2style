@@ -357,6 +357,8 @@
         background-color: #f9f9f9; }
         .px2-modal__close button:hover::before, .px2-modal__close button:hover::after {
           border-bottom: 1px solid #666; }
+      .px2-modal__close button[data-px2-modal-locked] {
+        visibility: hidden; }
 
 @keyframes px2-modal--initial {
   0% {

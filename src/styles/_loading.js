@@ -58,11 +58,6 @@ module.exports = function(Px2style){
 				"z-index": 1010000
 			});
 
-			$(window).on('resize.px2-loading', function(){
-				onWindowResize();
-			});
-			onWindowResize();
-
 			callback();
 		});
 
@@ -85,16 +80,8 @@ module.exports = function(Px2style){
 		try {
 			$loading.remove();
 		} catch (e) {}
-		$(window).off('resize.px2-loading');
 		callback();
 		return;
-	}
-
-	/**
-	 * Window Resize Event
-	 */
-	function onWindowResize(){
-		console.log('---- resize.px2-loading ----');
 	}
 
 }

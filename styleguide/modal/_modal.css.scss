@@ -115,6 +115,9 @@
 					border-bottom: 1px solid #666;
 				}
 			}
+			&[data-px2-modal-locked] {
+				visibility: hidden;
+			}
 		}
 	}
 

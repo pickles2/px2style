@@ -11126,7 +11126,7 @@ module.exports = function(Px2style){
 		options.buttons = options.buttons||[
 			$('<button type="submit" class="px2-btn px2-btn--primary">')
 				.text('OK')
-				.on('click', function(e){
+				.on('click.px2-modal', function(e){
 					_this.closeModal();
 				})
 		];
@@ -11175,7 +11175,7 @@ module.exports = function(Px2style){
 			$modal.find('form').attr({
 				'action': options.form.action || 'javascript:;',
 				'method': options.form.method || 'post'
-			}).on('submit', options.form.submit || function(){
+			}).on('submit.px2-modal', options.form.submit || function(){
 				_this.closeModal();
 			});
 		}
@@ -11184,7 +11184,7 @@ module.exports = function(Px2style){
 		$title.append( options.title );
 
 		var $closeBtn = $modal.find('.px2-modal__close button');
-		$closeBtn.on('click', function(){
+		$closeBtn.on('click.px2-modal', function(){
 			_this.closeModal();
 		});
 
@@ -11363,7 +11363,7 @@ module.exports = function(Px2style){
 		var $start = $tabTargets.eq(0);
 		var $end = $tabTargets.eq(-1);
 		$start
-			.on('keydown', function(e){
+			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 && e.originalEvent.shiftKey) {
 					$end.focus();
 					e.preventDefault();
@@ -11373,7 +11373,7 @@ module.exports = function(Px2style){
 			})
 		;
 		$end
-			.on('keydown', function(e){
+			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 && !e.originalEvent.shiftKey) {
 					$start.focus();
 					e.preventDefault();
@@ -11544,11 +11544,6 @@ module.exports = function(Px2style){
 				"z-index": 1010000
 			});
 
-			$(window).on('resize.px2-loading', function(){
-				onWindowResize();
-			});
-			onWindowResize();
-
 			callback();
 		});
 
@@ -11571,16 +11566,8 @@ module.exports = function(Px2style){
 		try {
 			$loading.remove();
 		} catch (e) {}
-		$(window).off('resize.px2-loading');
 		callback();
 		return;
-	}
-
-	/**
-	 * Window Resize Event
-	 */
-	function onWindowResize(){
-		console.log('---- resize.px2-loading ----');
 	}
 
 }

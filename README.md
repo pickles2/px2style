@@ -28,6 +28,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.17 (リリース日未定)
+
+- `.px2-modal` で、フォームロック中に閉じるボタンを隠すようになった。
+
 ### px2style v2.0.16 (2021/11/26)
 
 - `.px2-header` で、スモールスクリーンのときにショルダーメニューに収められるグローバルメニューの下に仕切り線を追加した。
