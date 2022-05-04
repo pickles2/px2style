@@ -38,7 +38,7 @@ module.exports = function(Px2style){
 		tpl += '  </div>';
 		tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
 		tpl += '  <div class="px2-modal__footer"><div class="px2-modal__footer-primary"></div><div class="px2-modal__footer-secondary"></div></div>';
-		tpl += '  <div class="px2-modal__close"><button></button></div>';
+		tpl += '  <div class="px2-modal__close"><button type="button"></button></div>';
 		tpl += ' </article>';
 		if(options.form){
 			tpl += '</form>';
@@ -76,7 +76,8 @@ module.exports = function(Px2style){
 		$title.append( options.title );
 
 		var $closeBtn = $modal.find('.px2-modal__close button');
-		$closeBtn.on('click.px2-modal', function(){
+		$closeBtn.on('click.px2-modal', function(e){
+			e.preventDefault();
 			_this.closeModal();
 		});
 

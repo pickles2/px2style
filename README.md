@@ -28,6 +28,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.18 (リリース日未定)
+
+- `.px2-modal` で、閉じるボタンクリック時にフォームを送信してしまうことがある問題を修正。
+
 ### px2style v2.0.17 (2022/05/02)
 
 - `.px2-modal` で、フォームロック中に閉じるボタンを隠すようになった。
