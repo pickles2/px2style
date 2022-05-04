@@ -117,7 +117,7 @@ module.exports = function(Px2style){
 
 		callback( objModal );
 
-		return;
+		return objModal;
 	}
 
 	function classModal(_this, $modal, options){
