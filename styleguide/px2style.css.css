@@ -413,7 +413,8 @@
     overflow: auto;
     flex-grow: 1; }
   .px2-modal__title {
-    font-weight: bold; }
+    font-weight: bold;
+    outline: none; }
   .px2-modal__footer {
     border-top: 1px solid #999;
     margin: 10px 0 0 0;

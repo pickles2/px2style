@@ -7,7 +7,7 @@
 // <div class="px2-modal">
 //  <article class="px2-modal__dialog">
 //   <div class="px2-modal__header">
-//       <h1 class="px2-modal__title">Dialog Title</h1>
+//       <h1 class="px2-modal__title" tabindex="-1">Dialog Title</h1>
 //   </div>
 //   <div class="px2-modal__body">
 //      <p>Dialog Content.</p>
@@ -184,6 +184,7 @@
 
 	&__title{
 		font-weight: bold;
+		outline: none;
 	}
 
 	&__footer{

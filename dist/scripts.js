@@ -11384,8 +11384,7 @@ module.exports = function(Px2style){
 				}
 			})
 		;
-console.log($title);
-		// $title.focus();
+		$title.focus();
 	}
 }
 
