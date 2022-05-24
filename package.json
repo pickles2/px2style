@@ -4,9 +4,10 @@
   "description": "Pickles 2 CSS Components.",
   "private": false,
   "scripts": {
-    "start": "gulp styleguide:generate;",
+    "start": "gulp styleguide:generate",
     "preview": "open http://127.0.0.1:3000/;",
-    "test": "gulp; mocha --ui tdd ./tests/"
+    "test": "gulp; mocha --ui tdd ./tests/",
+    "watch": "gulp watch"
   },
   "start": "index.js",
   "author": "Tomoya Koyanagi",

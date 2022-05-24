@@ -34,7 +34,7 @@ module.exports = function(Px2style){
 		}
 		tpl += ' <article class="px2-modal__dialog">';
 		tpl += '  <div class="px2-modal__header">';
-		tpl += '      <h1 class="px2-modal__title"></h1>';
+		tpl += '      <h1 class="px2-modal__title" tabindex="-1"></h1>';
 		tpl += '  </div>';
 		tpl += '  <div class="px2-modal__body"><div class="px2-modal__body-inner"></div></div>';
 		tpl += '  <div class="px2-modal__footer"><div class="px2-modal__footer-primary"></div><div class="px2-modal__footer-secondary"></div></div>';
@@ -255,6 +255,7 @@ module.exports = function(Px2style){
 		var $tabTargets = $target.find('a, input, textarea, select, button');
 		var $start = $tabTargets.eq(0);
 		var $end = $tabTargets.eq(-1);
+		var $title = $target.find('.px2-modal__title');
 		$start
 			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 && e.originalEvent.shiftKey) {
@@ -275,6 +276,7 @@ module.exports = function(Px2style){
 				}
 			})
 		;
-		$start.focus();
+console.log($title);
+		// $title.focus();
 	}
 }

@@ -28,6 +28,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v2.0.19 (リリース日未定)
+
+- `px2style.modal()` で、モーダルを開いた直後に、モーダルのタイトルにフォーカスするようになった。
+
 ### px2style v2.0.18 (2022/05/06)
 
 - `.px2-modal` で、閉じるボタンクリック時にフォームを送信してしまうことがある問題を修正。
