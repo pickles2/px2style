@@ -39,6 +39,10 @@
 // <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--error" /></p>
 // <p><textarea name="input-text" class="px2-input px2-input--error">Form Element: text input</textarea></p>
 // <p><select name="input-select" class="px2-input px2-input--error"><option value="1">Select Option 1</option></select></p>
+// <p class="px2-error">Error message.</p>
+// <hr />
+// Note:
+// <p class="px2-note">Note message.</p>
 //
 // Styleguide 6.0
 input[type=text].px2-input,
@@ -103,6 +107,12 @@ select.px2-input{
         color: #721c24;
         background-color: #f8d7da;
     }
+}
+.px2-error {
+    color: #e00;
+}
+.px2-note {
+    color: #999;
 }
 
 // Input Group
@@ -195,11 +205,17 @@ select.px2-input{
 // 	    </li>
 // 	    <li class="px2-form-input-list__li px2-form-input-list__li--required">
 // 	        <div class="px2-form-input-list__label"><label for="input-text-002">Input Label</label></div>
-// 	        <div class="px2-form-input-list__input"><input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input" /></div>
+// 	        <div class="px2-form-input-list__input">
+// 	            <p class="px2-note">Note.</p>
+// 	            <input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input" />
+// 	        </div>
 // 	    </li>
 // 	    <li class="px2-form-input-list__li px2-form-input-list__li--error">
 // 	        <div class="px2-form-input-list__label"><label for="input-text-003">Input Label</label></div>
-// 	        <div class="px2-form-input-list__input"><input type="text" id="input-text-003" name="input-text-003" value="Form Element: text input" class="px2-input px2-input--error" /></div>
+// 	        <div class="px2-form-input-list__input">
+// 	            <p class="px2-error">Error message.</p>
+// 	            <input type="text" id="input-text-003" name="input-text-003" value="Form Element: text input" class="px2-input px2-input--error" />
+// 	        </div>
 // 	    </li>
 //  </ul>
 // </div>

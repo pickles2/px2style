@@ -1082,6 +1082,12 @@ select.px2-input {
     color: #721c24;
     background-color: #f8d7da; }
 
+.px2-error {
+  color: #e00; }
+
+.px2-note {
+  color: #999; }
+
 .px2-input-group {
   display: inline-flex;
   box-sizing: border-box;
