@@ -228,7 +228,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open normal modal dialog.</a></li>
+//      );void(0);">Open normal modal dialog.</a></li>
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',
@@ -240,7 +240,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open normal modal dialog contains long contents.</a></li>
+//      );void(0);">Open normal modal dialog contains long contents.</a></li>
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog 700px.',
@@ -253,7 +253,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open normal modal dialog with 700px width.</a></li>
+//      );void(0);">Open normal modal dialog with 700px width.</a></li>
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Form Dialog.',
@@ -275,7 +275,7 @@
 //                  setTimeout(function(){modalObj.unlock();}, 3000);
 //              });
 //          }
-//      );">Open normal modal dialog with form.</a></li>
+//      );void(0);">Open normal modal dialog with form.</a></li>
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Form Dialog.',
@@ -293,7 +293,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open normal modal dialog with form contains long contents.</a></li>
+//      );void(0);">Open normal modal dialog with form contains long contents.</a></li>
 //  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(
 //          {
 //              title: 'Sample Modal Dialog.',
@@ -306,7 +306,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open modal dialog to target DIV element.</a></li>
+//      );void(0);">Open modal dialog to target DIV element.</a></li>
 //  <li><a href="javascript:px2style.modal(
 //          {
 //              title: 'Sample Form Dialog.',
@@ -329,7 +329,7 @@
 //          function(){
 //              console.log('done.');
 //          }
-//      );">Open normal modal dialog with secondary button.</a></li>
+//      );void(0);">Open normal modal dialog with secondary button.</a></li>
 // </ul>
 //
 // Styleguide 7.1
