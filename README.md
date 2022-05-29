@@ -32,6 +32,7 @@ $ composer require pickles2/px2style
 
 - `px2style.modal()` で、モーダルを開いた直後に、モーダルのタイトルにフォーカスするようになった。
 - `.px2-note`、 `.px2-error` を追加。
+- その他、いくつかの不具合の修正。
 
 ### px2style v2.0.18 (2022/05/06)
 

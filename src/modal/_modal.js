@@ -252,7 +252,7 @@ module.exports = function(Px2style){
 	 */
 	function tabkeyControl($target){
 
-		var $tabTargets = $target.find('a, input, textarea, select, button');
+		var $tabTargets = $target.find('a, input:not([type=hidden]), textarea, select, button');
 		var $start = $tabTargets.eq(0);
 		var $end = $tabTargets.eq(-1);
 		var $title = $target.find('.px2-modal__title');
@@ -276,6 +276,16 @@ module.exports = function(Px2style){
 				}
 			})
 		;
-		$title.focus();
+		$title
+			.on('keydown.px2-modal', function(e){
+				if (e.keyCode == 9 ) {
+					$start.focus();
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				}
+			})
+			.focus()
+		;
 	}
 }
