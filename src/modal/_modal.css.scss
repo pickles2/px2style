@@ -330,6 +330,21 @@
 //              console.log('done.');
 //          }
 //      );void(0);">Open normal modal dialog with secondary button.</a></li>
+//  <li><a href="javascript:(function(){var modal = px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//              setTimeout(function(){
+//                  modal.replaceBody( '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p><p>Sample Content.</p><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p></div>' );
+//              }, 1000);
+//          }
+//      )})();void(0);">Replace modal body.</a></li>
 // </ul>
 //
 // Styleguide 7.1

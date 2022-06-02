@@ -197,6 +197,15 @@ module.exports = function(Px2style){
 			return isClosable;
 		}
 
+
+		this.replaceBody = function(body){
+			var $body = this.$modal.find('.px2-modal__body-inner');
+			$body.html('').append( body );
+			tabkeyControl(this.$modal);
+			this.$modal.find('.px2-modal__title').focus();
+		}
+
+
 		this.close = function(callback){
 			var _this = this;
 			callback = callback||function(){};
@@ -257,6 +266,7 @@ module.exports = function(Px2style){
 		var $end = $tabTargets.eq(-1);
 		var $title = $target.find('.px2-modal__title');
 		$start
+			.off('keydown.px2-modal')
 			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 && e.originalEvent.shiftKey) {
 					$end.focus();
@@ -267,6 +277,7 @@ module.exports = function(Px2style){
 			})
 		;
 		$end
+			.off('keydown.px2-modal')
 			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 && !e.originalEvent.shiftKey) {
 					$start.focus();
@@ -277,6 +288,7 @@ module.exports = function(Px2style){
 			})
 		;
 		$title
+			.off('keydown.px2-modal')
 			.on('keydown.px2-modal', function(e){
 				if (e.keyCode == 9 ) {
 					$start.focus();
