@@ -28,7 +28,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.19 (リリース日未定)
+### px2style v2.0.19 (2022/06/05)
 
 - `px2style.modal()` で、モーダルを開いた直後に、モーダルのタイトルにフォーカスするようになった。
 - `px2style.modal()` に、 `replaceBody()` メソッドを追加。
