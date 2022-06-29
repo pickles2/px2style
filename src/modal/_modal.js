@@ -9,7 +9,7 @@ module.exports = function(Px2style){
 	 * Open modal dialog.
 	 */
 	Px2style.prototype.modal = function(options, callback){
-		var _this = this;
+		var px2style = this;
 		callback = callback||function(){};
 
 		options = options||{};
@@ -19,7 +19,7 @@ module.exports = function(Px2style){
 			$('<button type="submit" class="px2-btn px2-btn--primary">')
 				.text('OK')
 				.on('click.px2-modal', function(e){
-					_this.closeModal();
+					px2style.closeModal();
 				})
 		];
 		options.buttonsSecondary = options.buttonsSecondary||[];
@@ -68,7 +68,7 @@ module.exports = function(Px2style){
 				'action': options.form.action || 'javascript:;',
 				'method': options.form.method || 'post'
 			}).on('submit.px2-modal', options.form.submit || function(){
-				_this.closeModal();
+				px2style.closeModal();
 			});
 		}
 
@@ -78,7 +78,7 @@ module.exports = function(Px2style){
 		var $closeBtn = $modal.find('.px2-modal__close button');
 		$closeBtn.on('click.px2-modal', function(e){
 			e.preventDefault();
-			_this.closeModal();
+			px2style.closeModal();
 		});
 
 		var $body = $modal.find('.px2-modal__body-inner');
@@ -112,7 +112,7 @@ module.exports = function(Px2style){
 		}
 		$footer2.append($footer2Ul);
 
-		var objModal = new classModal(_this, $modal, options);
+		var objModal = new classModal(px2style, $modal, options);
 		modalLayers.push(objModal);
 
 		callback( objModal );
@@ -120,7 +120,11 @@ module.exports = function(Px2style){
 		return objModal;
 	}
 
-	function classModal(_this, $modal, options){
+	/**
+	 * モーダルクラス
+	 */
+	function classModal(px2style, $modal, options){
+		var self = this;
 		this.$modal = $modal;
 		this.options = options;
 		this.focusBackTo = document.activeElement;
@@ -152,7 +156,7 @@ module.exports = function(Px2style){
 			});
 			$(window).on('keydown.px2-modal', function(e){
 				if( e.keyCode == 27 ){ // ESC
-					_this.closeModal(function(){});
+					px2style.closeModal(function(){});
 				}
 			});
 		}
@@ -161,6 +165,12 @@ module.exports = function(Px2style){
 		tabkeyControl(this.$modal);
 
 
+		/**
+		 * フォーム要素をロックする
+		 *
+		 * フォームをロックしても、Escキー操作などでモーダルを閉じることはできます。
+		 * モーダルを閉じれなくするには、 this.closable(false) を同時に呼び出してください。
+		 */
 		this.lock = function(){
 			var $formElms = this.$modal.find('input,select,textarea,button');
 			$formElms.each(function(idx, elm){
@@ -174,6 +184,10 @@ module.exports = function(Px2style){
 				}
 			});
 		}
+
+		/**
+		 * フォーム要素のロックを解除する
+		 */
 		this.unlock = function(){
 			var $formElms = this.$modal.find('[data-px2-modal-locked]');
 			$formElms
@@ -183,6 +197,9 @@ module.exports = function(Px2style){
 		}
 
 
+		/**
+		 * モーダルの 閉じれる/閉じれない を切り替える
+		 */
 		this.closable = function( toggle ){
 			isClosable = !!toggle;
 			var closeBtn = this.$modal.find('.px2-modal__close');
@@ -193,11 +210,18 @@ module.exports = function(Px2style){
 			}
 			return;
 		}
+
+		/**
+		 * モーダルが 閉じれる状態にあるか調べる
+		 */
 		this.isClosable = function(){
 			return isClosable;
 		}
 
 
+		/**
+		 * モーダルの内容を置き換える
+		 */
 		this.replaceBody = function(body){
 			var $body = this.$modal.find('.px2-modal__body-inner');
 			$body.html('').append( body );
@@ -205,26 +229,28 @@ module.exports = function(Px2style){
 			this.$modal.find('.px2-modal__title').focus();
 		}
 
-
+		/**
+		 * モーダルを閉じる
+		 */
 		this.close = function(callback){
-			var _this = this;
+			var self = this;
 			callback = callback||function(){};
-			_this.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
+			self.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
 
 			setTimeout(function(){
 				try {
-					_this.focusBackTo.focus();
+					self.focusBackTo.focus();
 				} catch (e) {}
 				try {
-					_this.$modal.remove();
+					self.$modal.remove();
 				} catch (e) {}
 				if(!modalLayers.length){
 					$(window).off('resize.px2-modal');
 					$(window).off('keydown.px2-modal');
 				}
 				callback(true);
-				_this.options.onclose();
-				delete(_this);
+				self.options.onclose();
+				delete(self);
 			}, 300);
 		}
 
