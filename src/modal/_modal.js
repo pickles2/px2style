@@ -169,7 +169,7 @@ module.exports = function(Px2style){
 		 * フォーム要素をロックする
 		 *
 		 * フォームをロックしても、Escキー操作などでモーダルを閉じることはできます。
-		 * モーダルを閉じれなくするには、 this.closable(false) を同時に呼び出してください。
+		 * モーダルを閉じれなくするには、 `this.closable(false)` を同時に呼び出してください。
 		 */
 		this.lock = function(){
 			var $formElms = this.$modal.find('input,select,textarea,button');
@@ -183,6 +183,7 @@ module.exports = function(Px2style){
 					});
 				}
 			});
+			tabkeyControl(this.$modal, true);
 		}
 
 		/**
@@ -194,6 +195,7 @@ module.exports = function(Px2style){
 				.removeAttr('data-px2-modal-locked')
 				.removeAttr('disabled')
 			;
+			tabkeyControl(this.$modal, false);
 		}
 
 
@@ -285,45 +287,79 @@ module.exports = function(Px2style){
 	/**
 	 * タブキーの操作を制御する
 	 */
-	function tabkeyControl($target){
+	function tabkeyControl($target, isLocked){
 
+		var $modalFrame = $target.find('.px2-modal__dialog');
 		var $tabTargets = $target.find('a, input:not([type=hidden]), textarea, select, button');
 		var $start = $tabTargets.eq(0);
 		var $end = $tabTargets.eq(-1);
 		var $title = $target.find('.px2-modal__title');
-		$start
-			.off('keydown.px2-modal')
-			.on('keydown.px2-modal', function(e){
-				if (e.keyCode == 9 && e.originalEvent.shiftKey) {
-					$end.focus();
-					e.preventDefault();
-					e.stopPropagation();
-					return false;
-				}
+
+		$modalFrame.off('click.px2-modal').off('keydown.px2-modal');
+		$start.off('keydown.px2-modal');
+		$end.off('keydown.px2-modal');
+		$title.off('keydown.px2-modal');
+
+		$target
+			.on('click.px2-modal', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				$(this).find('.px2-modal__title').focus();
+				return false;
 			})
 		;
-		$end
-			.off('keydown.px2-modal')
+		$modalFrame
+			.on('click.px2-modal', function(e){
+				e.stopPropagation();
+			})
 			.on('keydown.px2-modal', function(e){
-				if (e.keyCode == 9 && !e.originalEvent.shiftKey) {
-					$start.focus();
-					e.preventDefault();
-					e.stopPropagation();
-					return false;
-				}
+				e.stopPropagation();
 			})
 		;
-		$title
-			.off('keydown.px2-modal')
-			.on('keydown.px2-modal', function(e){
-				if (e.keyCode == 9 ) {
-					$start.focus();
-					e.preventDefault();
-					e.stopPropagation();
-					return false;
-				}
-			})
-			.focus()
-		;
+
+		if( !isLocked ){
+			$start
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 && e.originalEvent.shiftKey) {
+						$end.focus();
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				})
+			;
+			$end
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 && !e.originalEvent.shiftKey) {
+						$start.focus();
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				})
+			;
+			$title
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 ) {
+						$start.focus();
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				})
+				.focus()
+			;
+		}else{
+			$title
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 ) {
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				})
+				.focus()
+			;
+		}
 	}
 }

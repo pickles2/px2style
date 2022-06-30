@@ -272,7 +272,7 @@
 //              console.log('done.');
 //              modalObj.$modal.find('.btn-lock').on('click',function(){
 //                  modalObj.lock();
-//                  setTimeout(function(){modalObj.unlock();}, 3000);
+//                  setTimeout(function(){modalObj.unlock();}, 20*1000);
 //              });
 //          }
 //      );void(0);">Open normal modal dialog with form.</a></li>
