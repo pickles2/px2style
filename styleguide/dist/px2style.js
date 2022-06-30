@@ -11370,7 +11370,6 @@ module.exports = function(Px2style){
 	 * Close modal dialog.
 	 */
 	Px2style.prototype.closeModal = function(callback){
-		// console.log('---- px2style.closeModal() ----');
 		callback = callback||function(){};
 		var lastModal = modalLayers.pop();
 		if( !lastModal.isClosable() ){
@@ -11389,7 +11388,6 @@ module.exports = function(Px2style){
 	 * Window Resize Event
 	 */
 	function onWindowResize(){
-		// console.log('---- resize.px2-modal ----');
 	}
 
 	/**
@@ -11403,29 +11401,40 @@ module.exports = function(Px2style){
 		var $end = $tabTargets.eq(-1);
 		var $title = $target.find('.px2-modal__title');
 
+		$target.off('keydown.px2-modal');
 		$modalFrame.off('click.px2-modal').off('keydown.px2-modal');
 		$start.off('keydown.px2-modal');
 		$end.off('keydown.px2-modal');
 		$title.off('keydown.px2-modal');
 
+
 		$target
 			.on('click.px2-modal', function(e){
 				e.preventDefault();
 				e.stopPropagation();
-				$(this).find('.px2-modal__title').focus();
+				$title.focus();
 				return false;
 			})
 		;
-		$modalFrame
-			.on('click.px2-modal', function(e){
-				e.stopPropagation();
-			})
-			.on('keydown.px2-modal', function(e){
-				e.stopPropagation();
-			})
-		;
-
 		if( !isLocked ){
+			// --------------------------------------
+			// 基本動作
+			$modalFrame
+				.on('click.px2-modal', function(e){
+					e.stopPropagation();
+				})
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 ) {
+						e.stopPropagation();
+					}
+				})
+			;
+			$tabTargets
+				.css({
+					'pointer-events': '',
+				})
+			;
+
 			$start
 				.on('keydown.px2-modal', function(e){
 					if (e.keyCode == 9 && e.originalEvent.shiftKey) {
@@ -11457,7 +11466,32 @@ module.exports = function(Px2style){
 				})
 				.focus()
 			;
+
 		}else{
+			// --------------------------------------
+			// フォームロックされている場合
+			$modalFrame
+				.on('click.px2-modal', function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					$title.focus();
+					return false;
+				})
+				.on('keydown.px2-modal', function(e){
+					if (e.keyCode == 9 ) {
+						e.preventDefault();
+						e.stopPropagation();
+						$title.focus();
+						return false;
+					}
+				})
+			;
+			$tabTargets
+				.css({
+					'pointer-events': 'none',
+				})
+			;
+
 			$title
 				.on('keydown.px2-modal', function(e){
 					if (e.keyCode == 9 ) {
