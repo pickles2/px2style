@@ -28,7 +28,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v2.0.20 (リリース日未定)
+### px2style v2.0.20 (2022/07/11)
 
 - `px2style.modal()` で、特定の操作により、背景にフォーカスを移動できる問題を修正。
 
