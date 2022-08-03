@@ -129,6 +129,9 @@ module.exports = function(Px2style){
 		this.options = options;
 		this.focusBackTo = document.activeElement;
 
+		var presetOverflow = $('body').css('overflow');
+		$('body').css({'overflow': 'hidden'});
+
 		var isClosable = true;
 		var $target = $(this.options.target);
 		$target.append($modal);
@@ -234,6 +237,7 @@ module.exports = function(Px2style){
 			var self = this;
 			callback = callback||function(){};
 			self.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
+			$('body').css({'overflow': presetOverflow});
 
 			setTimeout(function(){
 				try {
