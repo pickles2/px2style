@@ -160,6 +160,14 @@ select.px2-input{
 // <button class="px2-btn px2-btn--primary">OK</button>
 // </div>
 // </div>
+// <div class="px2-input-group px2-input-group--fluid">
+// <button class="px2-btn">Button 1</button>
+// <button class="px2-btn">Button 2</button>
+// <button class="px2-btn px2-btn--toggle-on">Button 3</button>
+// <button class="px2-btn">Button 4</button>
+// <button class="px2-btn px2-btn--primary">OK</button>
+// </div>
+// </div>
 //
 // Styleguide 6.1
 .px2-input-group {
@@ -237,6 +245,9 @@ select.px2-input{
     &--fluid {
         display: flex;
         width: 100%;
+        > * {
+            flex-grow: 1;
+        }
     }
 }
 

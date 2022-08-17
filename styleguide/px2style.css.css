@@ -1145,6 +1145,8 @@ select.px2-input {
   .px2-input-group--fluid {
     display: flex;
     width: 100%; }
+    .px2-input-group--fluid > * {
+      flex-grow: 1; }
 
 .px2-form-input-list {
   margin-top: 1em;
