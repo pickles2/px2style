@@ -20,7 +20,6 @@
   color: #f9f9f9;
   color: var(--px2-background-color, #f9f9f9);
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
-  transform: translateY(1px);
 }
 
 .px2-btn.px2-btn--primary.pseudo-class-focus,
@@ -89,7 +88,6 @@
   color: #ddd;
   cursor: default;
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
-  transform: none;
 }
 
 .px2-btn--toggle-on.pseudo-class-focus,
@@ -102,7 +100,6 @@
 .px2-btn--toggle-on[disabled].pseudo-class-hover,
 .px2-btn--toggle-on[disabled].pseudo-class-active {
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.25);
-  transform: translateY(1px);
 }
 
 .px2-modal__close button.pseudo-class-hover {
@@ -214,6 +211,10 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-input-group > .px2-btn.pseudo-class-last-child {
   border-right-width: 1px;
   border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
+}
+
+.px2-input-group > .pseudo-class-first-child.pseudo-class-last-child {
+  border-radius: .25rem;
 }
 
 .px2-darkmode .px2-header a.pseudo-class-hover {
@@ -400,7 +401,6 @@ select.px2-input[readonly].pseudo-class-focus {
   color: #f9f9f9;
   color: var(--px2-background-color, #f9f9f9);
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
-  transform: translateY(1px);
 }
 
 .px2-btn.px2-btn--primary.pseudo-class-focus,
@@ -469,7 +469,6 @@ select.px2-input[readonly].pseudo-class-focus {
   color: #ddd;
   cursor: default;
   box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
-  transform: none;
 }
 
 .px2-btn--toggle-on.pseudo-class-focus,
@@ -482,7 +481,6 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-btn--toggle-on[disabled].pseudo-class-hover,
 .px2-btn--toggle-on[disabled].pseudo-class-active {
   box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.25);
-  transform: translateY(1px);
 }
 
 .px2-modal__close button.pseudo-class-hover {
@@ -594,6 +592,10 @@ select.px2-input[readonly].pseudo-class-focus {
 .px2-input-group > .px2-btn.pseudo-class-last-child {
   border-right-width: 1px;
   border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
+}
+
+.px2-input-group > .pseudo-class-first-child.pseudo-class-last-child {
+  border-radius: .25rem;
 }
 
 .px2-darkmode .px2-header a.pseudo-class-hover {

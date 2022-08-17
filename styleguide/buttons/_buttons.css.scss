@@ -27,8 +27,7 @@
 	align-items: stretch;
 	transition:
 		color 0.1s,
-		background-color 0.1s,
-		transform 0.1s
+		background-color 0.1s
 	;
 
 	&:focus,
@@ -37,7 +36,6 @@
 		font-weight: normal;
 		color: #666;
 		background-color: #f3f3f3;
-		// transform: scale(1.04, 1.04);
 	}
 	&:focus{
 		box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
@@ -51,8 +49,6 @@
 		color: $px2-background-color; // fallback
 		color: var(--px2-background-color, $px2-background-color);
 		box-shadow: inset 0 3px 15px rgba(0,0,0,0.3);
-		transform: translateY(1px);
-		// transform: translateY(1px) scale(1.04, 1.04);
 	}
 }
 
@@ -164,7 +160,6 @@
 		background-color: rgba(153,153,153,0.05);
 		color: #ddd;
 		cursor: default;
-		transform: none;
 		&:focus,
 		&:hover,
 		&:active{
@@ -173,7 +168,6 @@
 			color: #ddd;
 			cursor: default;
 			box-shadow: 0 2px 0px rgba(0,0,0,0.1);
-			transform: none;
 		}
 	}
 }
@@ -198,7 +192,6 @@
 .px2-btn{
 	&--toggle-on{
 		box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.25);
-		transform: translateY(1px);
 
 		&:focus,
 		&:hover,
@@ -208,12 +201,10 @@
 
 		&[disabled]{
 			box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.25);
-			transform: translateY(1px);
 			&:focus,
 			&:hover,
 			&:active {
 				box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.25);
-				transform: translateY(1px);
 			}
 		}
 	}
