@@ -126,9 +126,23 @@ select.px2-input{
 // </div>
 // <div class="px2-p">
 // <div class="px2-input-group">
-// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
-// <span class="px2-input-group__text">px</span>
+// <span class="px2-input-group__text">#</span>
+// <input type="color" name="input-number" value="Form Element: color input" class="px2-input" />
 // <button class="px2-btn">OK</button>
+// </div>
+// </div>
+// <div class="px2-p">
+// <div class="px2-input-group">
+// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
+// <span class="px2-input-group__text px2-input-group__text--align-left">px</span>
+// <button class="px2-btn">OK</button>
+// </div>
+// </div>
+// <div class="px2-p">
+// <div class="px2-input-group">
+// <button class="px2-btn">Button 1</button>
+// <button class="px2-btn">Button 2</button>
+// <button class="px2-btn px2-btn--primary">OK</button>
 // </div>
 // </div>
 // <div class="px2-p">
@@ -136,52 +150,72 @@ select.px2-input{
 // <div class="px2-input-group px2-input-group--fluid">
 // <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
 // <span class="px2-input-group__text">px</span>
-// <button class="px2-btn">OK</button>
+// <button class="px2-btn px2-btn--primary">OK</button>
 // </div>
 // </div>
 //
 // Styleguide 6.1
-.px2-input-group{
+.px2-input-group {
     display: inline-flex;
     box-sizing: border-box;
     border-radius: 0px;
     max-width: 100%;
+    align-items: stretch;
+    align-content: stretch;
 
     &__text {
-        display: inline-block;
+        flex-shrink: 100;
+        flex-grow: 1;
+        display: inline-flex;
+        align-items: center;
         box-sizing: border-box;
-        padding: .375rem .75rem;
-        font-size: 1rem;
+        padding: .375rem .25rem;
+        font-size: 1em;
         font-weight: normal;
         line-height: 1.5;
         color: $px2-text-color; // fallback
         color: var(--px2-text-color, $px2-text-color);
-        background-color: $px2-background-color; // fallback
-        background-color: var(--px2-background-color, $px2-background-color);
+        background-color: color-mix($px2-background-color 50%); // fallback
+        background-color: color-mix(var(--px2-background-color, $px2-background-color) 50%);
         border: 1px solid #ced4da;
+        text-align: center;
+
+        &--align-left {
+            text-align: left;
+            padding-right: 1.25rem;
+        }
+        &--align-right {
+            text-align: right;
+            padding-left: 1.25rem;
+        }
     }
 
     >*,
     >input.px2-input,
     >select.px2-input,
     >textarea.px2-input,
-    >.px2-btn{
-        border-right-width: 0px;
-        flex-grow: 1;
+    >.px2-btn {
+        border-right-width: 0px none;
+        border-radius: 0;
+        min-height: calc( calc(1em * 1.5) + .25rem + .25rem + 2px);
+        box-sizing: border-box;
+    }
+    >.px2-input {
+        flex-grow: 100;
     }
 
     >:first-child,
     >input:first-child.px2-input,
     >select:first-child.px2-input,
     >textarea:first-child.px2-input,
-    >:first-child.px2-btn{
+    >.px2-btn:first-child{
         border-radius: .25rem 0 0 .25rem / .25rem 0 0 .25rem;
     }
     >:last-child,
     >input:last-child.px2-input,
     >select:last-child.px2-input,
     >textarea:last-child.px2-input,
-    >:last-child.px2-btn{
+    >.px2-btn:last-child{
         border-right-width: 1px;
         border-radius: 0 .25rem .25rem 0 / 0 .25rem .25rem 0;
     }
@@ -190,7 +224,6 @@ select.px2-input{
         display: flex;
         width: 100%;
     }
-
 }
 
 
