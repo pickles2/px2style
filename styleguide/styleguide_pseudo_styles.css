@@ -217,6 +217,10 @@ select.px2-input[readonly].pseudo-class-focus {
   border-radius: .25rem;
 }
 
+.px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input > *.pseudo-class-first-child {
+  margin-top: 0;
+}
+
 .px2-darkmode .px2-header a.pseudo-class-hover {
   color: #fff;
 }
@@ -596,6 +600,10 @@ select.px2-input[readonly].pseudo-class-focus {
 
 .px2-input-group > .pseudo-class-first-child.pseudo-class-last-child {
   border-radius: .25rem;
+}
+
+.px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input > *.pseudo-class-first-child {
+  margin-top: 0;
 }
 
 .px2-darkmode .px2-header a.pseudo-class-hover {

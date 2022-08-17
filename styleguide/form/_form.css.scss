@@ -265,7 +265,7 @@ select.px2-input{
 // 	        <div class="px2-form-input-list__label"><label for="input-text-002">Input Label</label></div>
 // 	        <div class="px2-form-input-list__input">
 // 	            <p class="px2-note">Note.</p>
-// 	            <input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input" />
+// 	            <input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input px2-input--block" />
 // 	        </div>
 // 	    </li>
 // 	    <li class="px2-form-input-list__li px2-form-input-list__li--error">
@@ -289,7 +289,7 @@ select.px2-input{
 		border-collapse: collapse;
 		width: 100%;
 		box-sizing: border-box;
-		border: 1px solid #999999;
+		border-top: 1px solid #aaaaaa;
 		margin: 0;
 		padding: 0;
 
@@ -302,20 +302,23 @@ select.px2-input{
 			.px2-form-input-list__label{
 				display: table-cell;
                 vertical-align: top;
-				background-color: #e7e7e7;
+				// background-color: #e7e7e7;
 				font-weight: bold;
-				padding: 0.4em 1em;
-				width: 30%;
-				border: 1px solid #999999;
+				padding: 0.6em 0;
+				width: 180px;
+				border-bottom: 1px solid #aaaaaa;
 			}
 			.px2-form-input-list__input{
 				display: table-cell;
                 vertical-align: top;
-                background-color: $px2-background-color; // fallback
-                background-color: var(--px2-background-color, $px2-background-color);
-				padding: 0.4em 1em;
-				width: 70%;
-				border: 1px solid #999999;
+                // background-color: $px2-background-color; // fallback
+                // background-color: var(--px2-background-color, $px2-background-color);
+				padding: 0.6em 0;
+				width: calc(100% - 180px);
+				border-bottom: 1px solid #aaaaaa;
+                > *:first-child {
+                    margin-top: 0;
+                }
 			}
 			p, .px2-p {
 				margin-top: 0.2em;
@@ -337,11 +340,6 @@ select.px2-input{
             &--error {
                 .px2-form-input-list__label{
                     color: #721c24;
-                    &::before {
-                        content: "!!!";
-                        color: #e11;
-                        margin: 0 0.7em 0 0;
-                    }
                 }
                 .px2-form-input-list__input{
                 }
@@ -352,25 +350,20 @@ select.px2-input{
 	@media all and (max-width: 544px){
 		ul.px2-form-input-list__ul{
 			display: block;
-			border-bottom: 0 none;
+			// border-bottom: 0 none;
 
 			li.px2-form-input-list__li{
 				display: block;
 
 				.px2-form-input-list__label{
 					display: block;
-					border-left: 0 none;
-					border-top: 0 none;
-					border-right: 0 none;
-					padding: 0.4em 1em;
+					padding-bottom: 0;
+					border: 0 none;
 					width: auto;
 				}
 				.px2-form-input-list__input{
 					display: block;
-					border-left: 0 none;
-					border-top: 0 none;
-					border-right: 0 none;
-					padding: 0.4em 1em;
+					padding-bottom: 0.9em;
 					width: auto;
 				}
 			}
@@ -405,6 +398,7 @@ select.px2-input{
     &__btns,
     &__backward-btns {
         display: flex;
+        gap: 5px;
         flex-direction: row-reverse;
         margin: 0;
         padding: 0;
@@ -420,17 +414,12 @@ select.px2-input{
 
         &__btns,
         &__backward-btns {
-            flex-direction: column;
-            > li {
-                margin: 0.2em auto;
-            }
+            justify-content: center;
         }
 
         &__backward-btns {
             margin-top: 1em;
-            > li {
-                margin: 0.2em auto 0.2em 0;
-            }
+            justify-content: left;
         }
     }
 }
