@@ -207,6 +207,8 @@ select.px2-input{
         border-radius: 0;
         min-height: calc( calc(1em * 1.5) + .25rem + .25rem + 2px);
         box-sizing: border-box;
+    }
+    >.px2-btn:not(.px2-btn--toggle-on) {
     	box-shadow: none;
     }
     >.px2-input {
