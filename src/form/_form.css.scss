@@ -289,7 +289,7 @@ select.px2-input{
 		border-collapse: collapse;
 		width: 100%;
 		box-sizing: border-box;
-		border-top: 1px solid #aaaaaa;
+		border-top: 1px solid #eeeeee;
 		margin: 0;
 		padding: 0;
 
@@ -304,18 +304,18 @@ select.px2-input{
                 vertical-align: top;
 				// background-color: #e7e7e7;
 				font-weight: bold;
-				padding: 0.6em 0;
+				padding: 1em 1em 1em 1em;
 				width: 180px;
-				border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #eeeeee;
 			}
 			.px2-form-input-list__input{
 				display: table-cell;
                 vertical-align: top;
                 // background-color: $px2-background-color; // fallback
                 // background-color: var(--px2-background-color, $px2-background-color);
-				padding: 0.6em 0;
+				padding: 1em 1em 1em 1em;
 				width: calc(100% - 180px);
-				border-bottom: 1px solid #aaaaaa;
+				border-bottom: 1px solid #eeeeee;
                 > *:first-child {
                     margin-top: 0;
                 }
@@ -338,10 +338,10 @@ select.px2-input{
                 }
             }
             &--error {
-                .px2-form-input-list__label{
-                    color: #721c24;
-                }
+                .px2-form-input-list__label,
                 .px2-form-input-list__input{
+                    color: #e11;
+                    background-color: #fee7e7;
                 }
             }
 		}
