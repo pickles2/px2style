@@ -289,7 +289,6 @@ select.px2-input{
 		border-collapse: collapse;
 		width: 100%;
 		box-sizing: border-box;
-		border-top: 1px solid #eeeeee;
 		margin: 0;
 		padding: 0;
 
@@ -306,7 +305,6 @@ select.px2-input{
 				font-weight: bold;
 				padding: 1em 1em 1em 1em;
 				width: 180px;
-				border-bottom: 1px solid #eeeeee;
 			}
 			.px2-form-input-list__input{
 				display: table-cell;
@@ -315,7 +313,6 @@ select.px2-input{
                 // background-color: var(--px2-background-color, $px2-background-color);
 				padding: 1em 1em 1em 1em;
 				width: calc(100% - 180px);
-				border-bottom: 1px solid #eeeeee;
                 > *:first-child {
                     margin-top: 0;
                 }

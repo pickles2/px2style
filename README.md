@@ -31,7 +31,7 @@ $ composer require pickles2/px2style
 ### px2style v2.0.21 (リリース日未定)
 
 - `px2style.modal()` で、背景がスクロールされないようにする制御を追加した。
-- `.px2-button`、 `.px2-input`、 `.px-input-group` の微調整。
+- `.px2-button`、 `.px2-input`、 `.px-input-group`, `.px2-form-input-list` の微調整。
 
 ### px2style v2.0.20 (2022/07/11)
 
