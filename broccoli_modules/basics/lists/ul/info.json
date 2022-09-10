@@ -1,6 +1,5 @@
 {
-    "name": "リスト - List (テキスト入力)",
-    "deprecated": true,
+    "name": "リスト - List",
     "interface": {
         "fields": {
             "class": {
@@ -46,14 +45,9 @@
         "subModule": {
             "loop": {
                 "fields": {
-                    "text": {
-                        "fieldType": "input",
-                        "type": "multitext",
-                        "label": "リストアイテム",
-                        "default": {
-                            "editor": "text",
-                            "src": "List Item"
-                        }
+                    "modules": {
+                        "fieldType": "module",
+                        "label": "リストアイテム"
                     }
                 }
             }

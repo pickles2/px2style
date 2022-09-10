@@ -9,7 +9,7 @@
                         "fields": []
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -333,7 +333,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -540,13 +540,13 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
                             },
                             "main": {
-                                "src": "高度な状態管理"
+                                "src": "高度な状態表現"
                             },
                             "sub": {
                                 "src": ""
@@ -596,7 +596,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -632,7 +632,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -668,7 +668,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -704,7 +704,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "std-document:headings/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"

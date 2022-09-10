@@ -9,12 +9,12 @@
                         "fields": []
                     },
                     {
-                        "modId": "std-document:lists/ul-module",
+                        "modId": "std-document:lists/ul",
                         "fields": {
                             "class": "px2-horizontal-list px2-horizontal-list--right",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -36,7 +36,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -56,7 +56,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -165,37 +165,11 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/changelog",
-                        "fields": {
-                            "header": {
-                                "editor": "text",
-                                "src": "更新履歴"
-                            },
-                            "loop": [
-                                {
-                                    "modId": "std-document:lists/changelog",
-                                    "fields": {
-                                        "date": "2014年11月21日",
-                                        "contents": {
-                                            "src": "マルチテキスト対応。",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "std-document:lists/dl-module",
+                        "modId": "std-document:lists/dl",
                         "fields": {
                             "dl-loop": [
                                 {
-                                    "modId": "std-document:lists/dl-module",
+                                    "modId": "std-document:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "定義リスト 項目1",
@@ -229,7 +203,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/dl-module",
+                                    "modId": "std-document:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "定義リスト 項目2",
@@ -266,12 +240,12 @@
                         }
                     },
                     {
-                        "modId": "std-document:lists/ul-module",
+                        "modId": "std-document:lists/ul",
                         "fields": {
                             "class": "",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -299,7 +273,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -323,12 +297,12 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-module",
+                                                "modId": "std-document:lists/ul",
                                                 "fields": {
                                                     "class": "",
                                                     "loop": [
                                                         {
-                                                            "modId": "std-document:lists/ul-module",
+                                                            "modId": "std-document:lists/ul",
                                                             "fields": {
                                                                 "modules": [
                                                                     {
@@ -356,7 +330,7 @@
                                                             "subModName": "loop"
                                                         },
                                                         {
-                                                            "modId": "std-document:lists/ul-module",
+                                                            "modId": "std-document:lists/ul",
                                                             "fields": {
                                                                 "modules": [
                                                                     {
@@ -384,7 +358,7 @@
                                                             "subModName": "loop"
                                                         },
                                                         {
-                                                            "modId": "std-document:lists/ul-module",
+                                                            "modId": "std-document:lists/ul",
                                                             "fields": {
                                                                 "modules": [
                                                                     {
@@ -419,7 +393,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -450,14 +424,14 @@
                         }
                     },
                     {
-                        "modId": "std-document:lists/ul-module",
+                        "modId": "std-document:lists/ul",
                         "fields": {
                             "class": {
                                 "src": "px2-note-list"
                             },
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -487,7 +461,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -515,7 +489,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -546,16 +520,6 @@
                         },
                         "anchor": "",
                         "dec": ""
-                    },
-                    {
-                        "modId": "std-document:lists/ul-html",
-                        "fields": {
-                            "class": "",
-                            "main": {
-                                "editor": "markdown",
-                                "src": "- List Item 1\n- List Item 2\n- List Item 3"
-                            }
-                        }
                     },
                     {
                         "modId": "std-document:lists/ul-links",
@@ -719,12 +683,12 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/ul-module",
+                        "modId": "std-document:lists/ul",
                         "fields": {
                             "class": "",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -743,7 +707,7 @@
                                     "subModName": "loop"
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-module",
+                                    "modId": "std-document:lists/ul",
                                     "fields": {
                                         "modules": [
                                             {
@@ -973,74 +937,9 @@
                     {
                         "modId": "std-document:lists/changelog",
                         "fields": {
-                            "header": {
-                                "editor": "markdown",
-                                "src": "## 更新履歴"
-                            },
-                            "loop": [
-                                {
-                                    "modId": "std-document:lists/changelog",
-                                    "fields": {
-                                        "date": "リリース日未定",
-                                        "contents": {
-                                            "src": "更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "std-document:lists/changelog",
-                                    "fields": {
-                                        "date": "2020年8月5日",
-                                        "contents": {
-                                            "src": "更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "std-document:lists/changelog",
-                                    "fields": {
-                                        "date": "2019年2月11日",
-                                        "contents": {
-                                            "src": "更新しました。",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "std-document:lists/changelog",
-                                    "fields": {
-                                        "date": "2019年2月10日",
-                                        "contents": {
-                                            "src": "- list 1\n- list 2",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "std-document:lists/changelog-v2",
-                        "fields": {
                             "header": [
                                 {
-                                    "modId": "std-document:headings/hx-simple",
+                                    "modId": "std-document:headings/hx",
                                     "fields": {
                                         "hx": {
                                             "src": "2"
@@ -1058,7 +957,7 @@
                             ],
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/changelog-v2",
+                                    "modId": "std-document:lists/changelog",
                                     "fields": {
                                         "date": {
                                             "src": "2021-10-08 00:00"
@@ -1073,7 +972,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/changelog-v2",
+                                    "modId": "std-document:lists/changelog",
                                     "fields": {
                                         "date": {
                                             "src": "2021-01-08 00:00:00"
@@ -1096,47 +995,6 @@
                             "dl-loop": [
                                 {
                                     "modId": "std-document:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "説明用語1",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": {
-                                            "src": "用語説明。\n",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "dl-loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "std-document:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "説明用語2",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": {
-                                            "src": "用語説明。\n",
-                                            "editor": "markdown"
-                                        }
-                                    },
-                                    "subModName": "dl-loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "std-document:lists/dl-module",
-                        "fields": {
-                            "dl-loop": [
-                                {
-                                    "modId": "std-document:lists/dl-module",
                                     "fields": {
                                         "dt": {
                                             "src": "用語説明1",
@@ -1205,7 +1063,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/dl-module",
+                                    "modId": "std-document:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "用語説明2",

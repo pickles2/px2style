@@ -2,9 +2,9 @@ Represent a list.
 
 In this module, double-click the green appender (loop field) to add list items.
 
-You can enter text for each list element.
+Then insert other modules as each list item.
 
-`List - List (insert module)` can be used to insert other modules or create complex list expressions such as multilevel lists.
+It can also handle complex list representations such as multi-level list structures.
 
 
 ## Types of list expressions you can choose from

@@ -1,7 +1,7 @@
 {
  "data": [
   {
-   "modId": "std-document:medias/float-v2",
+   "modId": "std-document:medias/float",
    "fields": {
     "lr": {
      "src": "r"
@@ -55,7 +55,7 @@
     ],
     "heading": [
      {
-      "modId": "std-document:headings/hx-simple",
+      "modId": "std-document:headings/hx",
       "fields": {
        "hx": {
         "src": "2"

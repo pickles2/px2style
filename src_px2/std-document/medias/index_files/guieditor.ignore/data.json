@@ -208,7 +208,7 @@
                             ],
                             "heading": [
                                 {
-                                    "modId": "std-document:headings/hx-simple",
+                                    "modId": "std-document:headings/hx",
                                     "fields": {
                                         "hx": {
                                             "src": "2"
@@ -289,7 +289,7 @@
                             ],
                             "heading": [
                                 {
-                                    "modId": "std-document:headings/hx-simple",
+                                    "modId": "std-document:headings/hx",
                                     "fields": {
                                         "hx": {
                                             "src": "2"
