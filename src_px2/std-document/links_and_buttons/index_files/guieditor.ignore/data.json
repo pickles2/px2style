@@ -1,0 +1,746 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:lists/index",
+                        "fields": []
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "リンク"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準的なテストリンク"
+                            },
+                            "class": {
+                                "src": ""
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準ビュレット付きのリンク"
+                            },
+                            "class": {
+                                "src": "px2-a"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準ボタン風リンク"
+                            },
+                            "class": {
+                                "src": "px2-btn"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "プライマリボタン風リンク"
+                            },
+                            "class": {
+                                "src": "px2-btn px2-btn--primary"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "セカンダリボタン風リンク"
+                            },
+                            "class": {
+                                "src": "px2-btn px2-btn--secondary"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "危険ボタン風リンク"
+                            },
+                            "class": {
+                                "src": "px2-btn px2-btn--danger"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "ダウンロードボタン風リンク"
+                            },
+                            "class": {
+                                "src": "px2-btn px2-btn--download"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準的なテキストリンク (ブロック)"
+                            },
+                            "class": {
+                                "src": ""
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": "block"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準ビュレット付きリンク (ブロック)"
+                            },
+                            "class": {
+                                "src": "px2-a"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": "block"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "標準ボタン風リンク (ブロック)"
+                            },
+                            "class": {
+                                "src": "px2-btn"
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "display": {
+                                "src": "block"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/a",
+                        "fields": {
+                            "href": {
+                                "src": "javascript:void(0);"
+                            },
+                            "label": {
+                                "src": "新規ウィンドウへのリンク"
+                            },
+                            "class": {
+                                "src": "px2-a"
+                            },
+                            "target": {
+                                "src": "_blank"
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "ボタン"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "標準ボタン"
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "void(0);",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": "left"
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/button",
+                        "fields": {
+                            "onclick": {
+                                "src": "void(0);",
+                                "lang": "javascript"
+                            },
+                            "label": {
+                                "src": "プライマリボタン"
+                            },
+                            "intention": {
+                                "src": "px2-btn--primary"
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "submit"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "セカンダリ"
+                            },
+                            "intention": {
+                                "src": "px2-btn--secondary"
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "void(0);",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "危険"
+                            },
+                            "intention": {
+                                "src": "px2-btn--danger"
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "void(0);",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "ダウンロード"
+                            },
+                            "intention": {
+                                "src": "px2-btn--download"
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "void(0);",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/button-file-download",
+                        "fields": {
+                            "targetFile": {
+                                "resKey": "aa055cf01cbcce7e49c6bc2f1d6abd09",
+                                "path": "./index_files/resources/download-image-file.xlsx",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "downloadFilename": {
+                                "src": "sample-image-file.xlsx"
+                            },
+                            "label": {
+                                "src": "画像ファイルをダウンロードするサンプル"
+                            },
+                            "class": {
+                                "src": "px2-btn px2-btn--download"
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "align": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "高度な状態管理"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn\">Default Button</button></p>\n<p><input type=\"button\" class=\"px2-btn\" value=\"input type=button\" /></p>\n<p><input type=\"submit\" class=\"px2-btn\" value=\"input type=submit\" /></p>\n<p><a href=\"javascript:;\" class=\"px2-btn\">anchor</a></p>\n<p><label class=\"px2-btn\">label</label></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--primary\">Primary Button</button></p>\n<p><button class=\"px2-btn px2-btn--secondary\">Secondary Button</button></p>\n<p><button class=\"px2-btn px2-btn--danger\">Danger Button</button></p>\n<p><button class=\"px2-btn px2-btn--download\">Download Button</button></p>\n<p><button class=\"px2-btn px2-btn--download px2-btn--block px2-btn--lg\">\n    <strong>Download</strong>\n    <div><small>Pickles 2 @2.0.0-beta.14</small></div>\n    <div><small>for macOS</small></div>\n</button></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "Disabled"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn\" disabled>Disabled Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--primary\" disabled>Disabled Primary Button</button></p>\n<p><button class=\"px2-btn px2-btn--secondary\" disabled>Disabled Secondary Button</button></p>\n<p><button class=\"px2-btn px2-btn--danger\" disabled>Disabled Danger Button</button></p>\n<p><button class=\"px2-btn px2-btn--download\" disabled>Disabled Download Button</button></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "Toggle ON"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn px2-btn--toggle-on\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--primary px2-btn--toggle-on\">Primary Button</button></p>\n<p><button class=\"px2-btn px2-btn--secondary px2-btn--toggle-on\">Secondary Button</button></p>\n<p><button class=\"px2-btn px2-btn--danger px2-btn--toggle-on\">Danger Button</button></p>\n<p><button class=\"px2-btn px2-btn--download px2-btn--toggle-on\">Download Button</button></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "Toggle ON / Disabled"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn px2-btn--toggle-on\" disabled>Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--primary px2-btn--toggle-on\" disabled>Primary Button</button></p>\n<p><button class=\"px2-btn px2-btn--secondary px2-btn--toggle-on\" disabled>Secondary Button</button></p>\n<p><button class=\"px2-btn px2-btn--danger px2-btn--toggle-on\" disabled>Danger Button</button></p>\n<p><button class=\"px2-btn px2-btn--download px2-btn--toggle-on\" disabled>Download Button</button></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "Sizing"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<p><button class=\"px2-btn px2-btn--sm\">Default Button</button></p>\n<p><button class=\"px2-btn\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--lg\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--block px2-btn--sm\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--block\">Default Button</button></p>\n<p><button class=\"px2-btn px2-btn--block px2-btn--lg\">Default Button</button></p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

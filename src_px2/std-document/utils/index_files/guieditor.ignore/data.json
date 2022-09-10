@@ -1,0 +1,486 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "__error__": "",
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "文字。とても大きい。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "font-size": {
+                                "src": " px2-font-size-ll"
+                            },
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "7472d77382792c4eacf518a4fd60f808",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/7472d77382792c4eacf518a4fd60f808.unknown"
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "__error__": "",
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "文字。少し大きい。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "font-size": {
+                                "src": " px2-font-size-l"
+                            },
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "1f4d04b5e7f917400df51587d4bd0e46",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/1f4d04b5e7f917400df51587d4bd0e46.unknown"
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "4cef0ea3056e8bb4cc40278e1aef130c",
+                                "path": "./index_files/resources/4cef0ea3056e8bb4cc40278e1aef130c.unknown",
+                                "resType": "none",
+                                "webUrl": ""
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "文字。普通。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": " px2-font-size-s"
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "文字。少し小さい。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "79f86e0271b425dd5e114b3129d93b49",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/79f86e0271b425dd5e114b3129d93b49.unknown"
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": " px2-font-size-ss"
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "文字。とても小さい。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "61e96d651e39a0684f65703abdb3fe77",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/61e96d651e39a0684f65703abdb3fe77.unknown"
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "## 前後の自然なマージン\n\n`px2-p` は、段落要素と同じように前後に自然な改行を追加します。\n\n段落ユーティリティは、テキストの左右寄せの指定もできます。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "text-align": "",
+                                        "paragraph": "px2-p"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "text-align": {
+                                "src": " px2-text-align-center"
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "text-color": {
+                                "src": ""
+                            },
+                            "background-color": {
+                                "src": ""
+                            },
+                            "background-image": {
+                                "resKey": "f4840302f738bc977f36e7ec2b6fcff9",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/f4840302f738bc977f36e7ec2b6fcff9.unknown"
+                            },
+                            "min-height": {
+                                "src": ""
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "",
+                                "paddingRight": "",
+                                "paddingBottom": "",
+                                "paddingLeft": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/p",
+                        "fields": {
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "Utility Block\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "margin-padding": {
+                                "marginTop": "100px",
+                                "marginRight": "",
+                                "marginBottom": "100px",
+                                "marginLeft": "",
+                                "paddingTop": "50px",
+                                "paddingRight": "1em",
+                                "paddingBottom": "50px",
+                                "paddingLeft": "1em"
+                            },
+                            "text-color": {
+                                "src": "#FFFFFF"
+                            },
+                            "background-color": {
+                                "src": "#FFC107"
+                            },
+                            "background-image": {
+                                "resKey": "84ce9f41a05ea3dc2f3ad29c4687b91e",
+                                "resType": "",
+                                "webUrl": "",
+                                "path": "./index_files/resources/background-sample.gif"
+                            },
+                            "min-height": {
+                                "src": "450px"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:utils/responsive",
+                        "fields": {
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "Responsive Block\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:utils/viewport-fit",
+                        "fields": {
+                            "text-color": {
+                                "src": "#3F51B5"
+                            },
+                            "background-color": {
+                                "src": "#8BC34AD9"
+                            },
+                            "background-image": {
+                                "resKey": "cd88b51d83d4540792f4b42cb20c4341",
+                                "path": "./index_files/resources/background-sample2.jpg",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "min-height": {
+                                "src": "560px"
+                            },
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "4em",
+                                "paddingRight": "2em",
+                                "paddingBottom": "4em",
+                                "paddingLeft": "2em"
+                            },
+                            "fluid-contents": {
+                                "src": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "このブロックは、コンテンツエリアのサイズに対して端から端まで貫通します。\n\n色を敷いて区切り感を表現したい場合などに活用できます。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,1242 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:lists/index",
+                        "fields": []
+                    },
+                    {
+                        "modId": "std-document:lists/ul-module",
+                        "fields": {
+                            "class": "px2-horizontal-list px2-horizontal-list--right",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('Clicked');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": "",
+                                                    "display": "",
+                                                    "paragraph": "px2-p"
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('クリックしました。');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('Clicked');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul",
+                        "fields": {
+                            "class": "px2-horizontal-list",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "markdown",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul",
+                        "fields": {
+                            "class": "px2-note-list",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        }
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/changelog",
+                        "fields": {
+                            "header": {
+                                "editor": "text",
+                                "src": "更新履歴"
+                            },
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/changelog",
+                                    "fields": {
+                                        "date": "2014年11月21日",
+                                        "contents": {
+                                            "src": "マルチテキスト対応。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/dl-module",
+                        "fields": {
+                            "dl-loop": [
+                                {
+                                    "modId": "std-document:lists/dl-module",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "定義リスト 項目1",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "定義リスト1つ目の説明本文がこちらです。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/dl-module",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "定義リスト 項目2",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "定義リスト2つ目の説明本文がこちらです。\n\n定義リストは、モジュール挿入を標準にしました。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:lists/ul-module",
+                        "fields": {
+                            "class": "",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "リストモジュールの1件目の要素です。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "リストモジュールの2件目の要素です。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "std-document:lists/ul-module",
+                                                "fields": {
+                                                    "class": "",
+                                                    "loop": [
+                                                        {
+                                                            "modId": "std-document:lists/ul-module",
+                                                            "fields": {
+                                                                "modules": [
+                                                                    {
+                                                                        "modId": "std-document:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "リストモジュールの1件目の要素です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop"
+                                                        },
+                                                        {
+                                                            "modId": "std-document:lists/ul-module",
+                                                            "fields": {
+                                                                "modules": [
+                                                                    {
+                                                                        "modId": "std-document:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "リストモジュールの2件目の要素です。\n\nリストモジュールは、モジュール挿入式を標準としました。",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop"
+                                                        },
+                                                        {
+                                                            "modId": "std-document:lists/ul-module",
+                                                            "fields": {
+                                                                "modules": [
+                                                                    {
+                                                                        "modId": "std-document:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "リストモジュールの3件目の要素です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "リストモジュールの3件目の要素です。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:lists/ul-module",
+                        "fields": {
+                            "class": {
+                                "src": "px2-note-list"
+                            },
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "注釈リスト1",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "注釈リスト2",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "注釈リスト3",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-html",
+                        "fields": {
+                            "class": "",
+                            "main": {
+                                "editor": "markdown",
+                                "src": "- List Item 1\n- List Item 2\n- List Item 3"
+                            }
+                        }
+                    },
+                    {
+                        "modId": "std-document:lists/ul-links",
+                        "fields": {
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。');",
+                                        "label": "Link List Item",
+                                        "target": ""
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。2');",
+                                        "target": "",
+                                        "label": "Link Item 2"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "class": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-links",
+                        "fields": {
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。');",
+                                        "label": "Link List Item",
+                                        "target": ""
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。2');",
+                                        "target": "",
+                                        "label": "Link Item 2"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。3');",
+                                        "target": "",
+                                        "label": "Link Item"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "class": "px2-horizontal-list px2-horizontal-list--right"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-links",
+                        "fields": {
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。');",
+                                        "label": "Link List Item",
+                                        "target": ""
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。2');",
+                                        "target": "",
+                                        "label": "Link Item 2"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "https://github.com/broccoli-html-editor",
+                                        "target": "_blank",
+                                        "label": "Broccoli on Github"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "class": "px2-vertical-list"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-links",
+                        "fields": {
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。');",
+                                        "label": "Link List Item",
+                                        "target": ""
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。2');",
+                                        "target": "",
+                                        "label": "Link Item 2"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-links",
+                                    "fields": {
+                                        "href": "javascript:alert('クリックしました。3');",
+                                        "target": "",
+                                        "label": "Link Item"
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "class": "px2-horizontal-list px2-horizontal-list--center"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-module",
+                        "fields": {
+                            "class": "",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('クリックしました。');",
+                                                    "label": "List Item (link module)",
+                                                    "class": "px2-a",
+                                                    "target": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-module",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "List Item (module)",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "std-document:lists/ul",
+                                                "fields": {
+                                                    "class": "",
+                                                    "loop": [
+                                                        {
+                                                            "modId": "std-document:lists/ul",
+                                                            "fields": {
+                                                                "text": {
+                                                                    "editor": "text",
+                                                                    "src": "List Item"
+                                                                }
+                                                            },
+                                                            "subModName": "loop"
+                                                        },
+                                                        {
+                                                            "modId": "std-document:lists/ul",
+                                                            "fields": {
+                                                                "text": {
+                                                                    "editor": "text",
+                                                                    "src": "List Item"
+                                                                }
+                                                            },
+                                                            "subModName": "loop"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/sub-page-list",
+                        "fields": {
+                            "parent": "/",
+                            "list_flg": "hide",
+                            "depth": "10",
+                            "style": "withdescription"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/sub-page-list",
+                        "fields": {
+                            "parent": "/",
+                            "list_flg": "show",
+                            "depth": "10",
+                            "style": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-media-list",
+                        "fields": {
+                            "class": "card",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "",
+                                        "label": "メディアリストラベル (リンクではない)",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "d5b42a942dbd24204a1ae09f624a120d",
+                                            "path": "./index_files/resources/photo009_thumb.jpg",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "description": {
+                                            "src": "このリストアイテムは、リンクではありません。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "javascript:alert('clicked');",
+                                        "label": "メディアリストアイテム",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "b238a15d6bef2c7aa900f03458355a78",
+                                            "resType": "",
+                                            "webUrl": "",
+                                            "path": "./index_files/resources/photo001_thumb.jpg"
+                                        },
+                                        "description": {
+                                            "src": "リンク説明。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "javascript:alert('clicked');",
+                                        "label": "メディアリストラベル",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "c6c3afad635de7b1b39cca906883abfb",
+                                            "resType": "",
+                                            "webUrl": "",
+                                            "path": "./index_files/resources/photo003_thumb.jpg"
+                                        },
+                                        "description": {
+                                            "src": "メディアリンクの説明欄テキスト。\n\nメディアリンクの説明欄テキスト。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "list-item-width": "1of3",
+                            "list-item-width-lg": "",
+                            "list-item-width-md": "",
+                            "list-item-width-sm": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/ul-media-list",
+                        "fields": {
+                            "class": "",
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "",
+                                        "label": "メディアリストラベル (リンクではない)",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "853c7fcc4965b846209a78e1a978b6f7",
+                                            "path": "./index_files/resources/photo009_thumb.jpg",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "description": {
+                                            "src": "このリストアイテムは、リンクではありません。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "javascript:alert('clicked');",
+                                        "label": "メディアリストアイテム",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "d4e161b35b9638d57990eee4a4fda81f",
+                                            "resType": "",
+                                            "webUrl": "",
+                                            "path": "./index_files/resources/photo001_thumb.jpg"
+                                        },
+                                        "description": {
+                                            "src": "リンク説明。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/ul-media-list",
+                                    "fields": {
+                                        "href": "javascript:alert('clicked');",
+                                        "label": "メディアリストラベル",
+                                        "target": "",
+                                        "image": {
+                                            "resKey": "1c6bb0273d1bf168b60d0700fbaad704",
+                                            "resType": "",
+                                            "webUrl": "",
+                                            "path": "./index_files/resources/photo003_thumb.jpg"
+                                        },
+                                        "description": {
+                                            "src": "メディアリンクの説明欄テキスト。\n\nメディアリンクの説明欄テキスト。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "list-item-width": "1of3",
+                            "list-item-width-lg": "",
+                            "list-item-width-md": "",
+                            "list-item-width-sm": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/changelog",
+                        "fields": {
+                            "header": {
+                                "editor": "markdown",
+                                "src": "## 更新履歴"
+                            },
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/changelog",
+                                    "fields": {
+                                        "date": "リリース日未定",
+                                        "contents": {
+                                            "src": "更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/changelog",
+                                    "fields": {
+                                        "date": "2020年8月5日",
+                                        "contents": {
+                                            "src": "更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/changelog",
+                                    "fields": {
+                                        "date": "2019年2月11日",
+                                        "contents": {
+                                            "src": "更新しました。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/changelog",
+                                    "fields": {
+                                        "date": "2019年2月10日",
+                                        "contents": {
+                                            "src": "- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/changelog-v2",
+                        "fields": {
+                            "header": [
+                                {
+                                    "modId": "std-document:headings/hx-simple",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "2"
+                                        },
+                                        "main": {
+                                            "src": "更新履歴 v2"
+                                        },
+                                        "sub": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "loop": [
+                                {
+                                    "modId": "std-document:lists/changelog-v2",
+                                    "fields": {
+                                        "date": {
+                                            "src": "2021-10-08 00:00"
+                                        },
+                                        "contents": {
+                                            "src": "更新履歴モジュール v2 が追加されました。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/changelog-v2",
+                                    "fields": {
+                                        "date": {
+                                            "src": "2021-01-08 00:00:00"
+                                        },
+                                        "contents": {
+                                            "src": "月と日は、先頭にゼロを付加しないフォーマットにしました。",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:lists/dl",
+                        "fields": {
+                            "dl-loop": [
+                                {
+                                    "modId": "std-document:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "説明用語1",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": {
+                                            "src": "用語説明。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "説明用語2",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": {
+                                            "src": "用語説明。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/dl-module",
+                        "fields": {
+                            "dl-loop": [
+                                {
+                                    "modId": "std-document:lists/dl-module",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "用語説明1",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "用語を説明します。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "std-document:basics/image",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": ""
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "image_src": {
+                                                        "resKey": "554d9d7ca8ce6565694bdc6d60549c3a",
+                                                        "path": "./index_files/resources/teabug.gif",
+                                                        "resType": "",
+                                                        "webUrl": ""
+                                                    },
+                                                    "alt_text": {
+                                                        "src": "紅茶が入っていた袋"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "align": {
+                                                        "src": "center"
+                                                    },
+                                                    "framed": {
+                                                        "src": "framed"
+                                                    },
+                                                    "caption": {
+                                                        "src": "紅茶が入っていた袋",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "width": {
+                                                        "src": ""
+                                                    },
+                                                    "imagescope": {
+                                                        "src": "onclick"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:lists/dl-module",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "用語説明2",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "用語を説明します。",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

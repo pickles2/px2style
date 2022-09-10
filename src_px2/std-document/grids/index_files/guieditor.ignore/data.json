@@ -1,0 +1,695 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "## カラムモジュール\n",
+                                "editor": "markdown"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of1",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Full Column\n\nSingle Column.\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of2",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "### Column 1\n\nLeft Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of2",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "### Column 2\n\nRight Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "#### Column 1\n\nLeft Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "#### Column 2\n\nCenter Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "#### Column 3\n\nRight Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of4",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "##### Column 1\n\n1/4 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of4",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "##### Column 2\n\n2/4 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of4",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "##### Column 3\n\n3/4 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of4",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "##### Column 4\n\n4/4 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of5",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "###### Column 1\n\n1/5 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of5",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "###### Column 2\n\n2/5 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of5",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "###### Column 3\n\n3/5 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of5",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "###### Column 4\n\n4/5 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of5",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "###### Column 5\n\n5/5 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 1\n\n1/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 2\n\n2/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 3\n\n3/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 4\n\n4/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 5\n\n5/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of6",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 6\n\n6/6 Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 1\n\nLeft Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of1"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 2\n\nCenter Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of3"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 3\n\nRight Column.\n",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of3"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 4\n\nLeft Column.\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of3"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 5\n\nCenter Column.\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of2"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of3",
+                                        "main": [
+                                            {
+                                                "modId": "std-document:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "## Column 6\n\nRight Column.\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ],
+                                        "column-width-lg": "",
+                                        "column-width-md": "",
+                                        "column-width-sm": "1of2"
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

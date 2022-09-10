@@ -1,0 +1,328 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "テキスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "とても大きい文字。",
+                                "editor": "markdown"
+                            },
+                            "font-size": {
+                                "src": "ll"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "大きい文字。",
+                                "editor": "markdown"
+                            },
+                            "font-size": {
+                                "src": "l"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "普通の文字。",
+                                "editor": "markdown"
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "小さい文字。",
+                                "editor": "markdown"
+                            },
+                            "font-size": {
+                                "src": "s"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "とても小さい文字。",
+                                "editor": "markdown"
+                            },
+                            "font-size": {
+                                "src": "ss"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "## 基本モジュール\n\n汎用的なHTMLモジュール環境を提供します。\n\n- <a href=\"javascript:;\" class=\"px2-a\">標準的なビュレット付きリンク</a>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": "",
+                            "paragraph": "px2-p",
+                            "font-size": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "## Heading h2\n\n### Heading h3\n\n#### Heading h4\n\n##### Heading h5\n\n###### Heading h6\n",
+                                "editor": "markdown"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "画像モジュール"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/image",
+                        "fields": {
+                            "href": {
+                                "src": ""
+                            },
+                            "target": {
+                                "src": "_blank"
+                            },
+                            "image_src": {
+                                "resKey": "5abbd983fca0c3d3347f2e9e92337fbb",
+                                "path": "./index_files/resources/photo002.gif",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "alt_text": {
+                                "src": ""
+                            },
+                            "framed": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "width": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/image",
+                        "fields": {
+                            "href": {
+                                "src": ""
+                            },
+                            "target": {
+                                "src": ""
+                            },
+                            "image_src": {
+                                "resKey": "fb35d61749262262889a0fe2163d69a4",
+                                "path": "./index_files/resources/sample-image-center.gif",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "alt_text": {
+                                "src": "中央揃え画像配置のサンプル"
+                            },
+                            "align": {
+                                "src": "center"
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "framed": {
+                                "src": "framed"
+                            },
+                            "width": {
+                                "src": "1of2"
+                            },
+                            "caption": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "imagescope": {
+                                "src": "onclick"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "引用"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/blockquote",
+                        "fields": {
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "この部分は、引用文です。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "この部分は、引用文です。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "std-document:headings/hx-simple",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "水平線モジュール"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:basics/hr",
+                        "fields": [],
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

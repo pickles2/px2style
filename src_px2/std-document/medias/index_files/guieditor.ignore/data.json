@@ -1,0 +1,316 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:medias/float",
+                        "fields": {
+                            "lr": {
+                                "src": "l"
+                            },
+                            "image-size": {
+                                "src": "1of3"
+                            },
+                            "media": [
+                                {
+                                    "modId": "std-document:basics/image",
+                                    "fields": {
+                                        "href": {
+                                            "src": ""
+                                        },
+                                        "target": {
+                                            "src": "_blank"
+                                        },
+                                        "image_src": {
+                                            "resKey": "5e93c391a9a452b8ab7413762a2d7cad",
+                                            "path": "./index_files/resources/photo002.gif",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "alt_text": {
+                                            "src": ""
+                                        },
+                                        "framed": {
+                                            "src": ""
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "width": {
+                                            "src": ""
+                                        },
+                                        "align": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "body_rect": {
+                                "src": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "## Float Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "heading": {
+                                "src": "## 見出し",
+                                "editor": "markdown"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:medias/float",
+                        "fields": {
+                            "lr": {
+                                "src": "r"
+                            },
+                            "image-size": {
+                                "src": "2of3"
+                            },
+                            "media": [
+                                {
+                                    "modId": "std-document:medias/image-media",
+                                    "fields": {
+                                        "image_src": {
+                                            "resKey": "c6cfd08fd68345e626091a798d1c8b4c",
+                                            "path": "./index_files/resources/tea2.gif",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "alt_text": {
+                                            "src": "ティーバッグの袋"
+                                        },
+                                        "caption": {
+                                            "src": "使用したあとのティーバッグの袋",
+                                            "editor": "markdown"
+                                        },
+                                        "framed": {
+                                            "src": "framed"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "body_rect": {
+                                "src": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "## Float Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "## Float Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "## Block Quote Sample\n\n> Float Media Block\n>\n> このモジュールは、テキストを回り込むメディア表示領域を作成します。\n>\n> 回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n>\n> また、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n\n## Code Sample\n\n```\nFloat Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n```\n\n## Inline Code Sample\n行の途中に `code` を挿入します。\n",
+                                            "editor": "markdown"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "heading": {
+                                "src": "## 見出し\n\n見出しエリアは、スクリーン幅が狭いとき、画像メディアよりも先に表示される領域です。\n",
+                                "editor": "markdown"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:medias/float-v2",
+                        "fields": {
+                            "lr": "l",
+                            "image-size": "1of3",
+                            "media": [
+                                {
+                                    "modId": "std-document:medias/image-media",
+                                    "fields": {
+                                        "image_src": {
+                                            "resKey": "6917f9cb673870a49ea57ddba06bb8e0",
+                                            "path": "./index_files/resources/photo002-1.png",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "alt_text": {
+                                            "src": ""
+                                        },
+                                        "caption": {
+                                            "src": "",
+                                            "editor": "markdown"
+                                        },
+                                        "framed": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "body_rect": "",
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "このモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "heading": [
+                                {
+                                    "modId": "std-document:headings/hx-simple",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "2"
+                                        },
+                                        "main": {
+                                            "src": "Heading"
+                                        },
+                                        "sub": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:medias/float-v2",
+                        "fields": {
+                            "lr": {
+                                "src": "r"
+                            },
+                            "image-size": {
+                                "src": "1of3"
+                            },
+                            "media": [
+                                {
+                                    "modId": "std-document:medias/image-media",
+                                    "fields": {
+                                        "image_src": {
+                                            "resKey": "b2bf567942963f23241ca07d2468a547",
+                                            "path": "./index_files/resources/photo002-2.png",
+                                            "resType": "",
+                                            "webUrl": ""
+                                        },
+                                        "alt_text": {
+                                            "src": ""
+                                        },
+                                        "caption": {
+                                            "src": "",
+                                            "editor": "markdown"
+                                        },
+                                        "framed": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "body_rect": {
+                                "src": ""
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "このモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "heading": [
+                                {
+                                    "modId": "std-document:headings/hx-simple",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "2"
+                                        },
+                                        "main": {
+                                            "src": "Heading"
+                                        },
+                                        "sub": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

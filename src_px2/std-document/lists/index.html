@@ -1,0 +1,463 @@
+
+<!-- autoindex -->
+
+<ul class="px2-horizontal-list px2-horizontal-list--right">
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+</ul>
+<ul class="px2-horizontal-list">
+
+	<li>List Item</li>
+
+	<li>List Item</li>
+
+	<li><p>List Item</p>
+</li>
+
+</ul>
+<ul class="px2-note-list">
+
+	<li>List Item</li>
+
+	<li>List Item</li>
+
+	<li>List Item</li>
+
+</ul>
+<div class="px2-changelog"><div class="px2-changelog__header">更新履歴</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2014年11月21日</div>
+		<div class="px2-changelog__contents"><p>マルチテキスト対応。</p>
+</div>
+	</div>
+
+</div><!-- /.px2-changelog -->
+<dl>
+
+<dt><p>定義リスト 項目1</p>
+</dt>
+<dd> <div class="px2-p">
+<p>定義リスト1つ目の説明本文がこちらです。</p>
+
+</div>
+ </dd>
+
+<dt><p>定義リスト 項目2</p>
+</dt>
+<dd> <div class="px2-p">
+<p>定義リスト2つ目の説明本文がこちらです。</p>
+<p>定義リストは、モジュール挿入を標準にしました。</p>
+
+</div>
+ </dd>
+
+</dl>
+<ul>
+
+	<li><div class="px2-p">
+<p>リストモジュールの1件目の要素です。</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>リストモジュールの2件目の要素です。</p>
+
+</div>
+<ul>
+
+	<li><div class="px2-p">
+<p>リストモジュールの1件目の要素です。</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>リストモジュールの2件目の要素です。</p>
+<p>リストモジュールは、モジュール挿入式を標準としました。</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>リストモジュールの3件目の要素です。</p>
+
+</div>
+</li>
+
+</ul>
+</li>
+
+	<li><div class="px2-p">
+<p>リストモジュールの3件目の要素です。</p>
+
+</div>
+</li>
+
+</ul>
+<ul class="px2-note-list">
+
+	<li><div class="px2-p">
+<p>注釈リスト1</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>注釈リスト2</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>注釈リスト3</p>
+
+</div>
+</li>
+
+</ul>
+<ul>
+<li>List Item 1</li>
+<li>List Item 2</li>
+<li>List Item 3</li>
+</ul>
+
+<div class="px2-linklist">
+<ul>
+
+
+	<li><a href="javascript:alert(&#039;クリックしました。&#039;);">Link List Item</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。2&#039;);">Link Item 2</a></li>
+
+</ul>
+</div>
+<div class="px2-linklist">
+<ul class="px2-horizontal-list px2-horizontal-list--right">
+
+
+	<li><a href="javascript:alert(&#039;クリックしました。&#039;);">Link List Item</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。2&#039;);">Link Item 2</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。3&#039;);">Link Item</a></li>
+
+</ul>
+</div>
+<div class="px2-linklist">
+<ul class="px2-vertical-list">
+
+
+	<li><a href="javascript:alert(&#039;クリックしました。&#039;);">Link List Item</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。2&#039;);">Link Item 2</a></li>
+
+	<li><a href="https://github.com/broccoli-html-editor" target="_blank"><span class="px2-open-in-new-window">Broccoli on Github</span></a></li>
+
+</ul>
+</div>
+<div class="px2-linklist">
+<ul class="px2-horizontal-list px2-horizontal-list--center">
+
+
+	<li><a href="javascript:alert(&#039;クリックしました。&#039;);">Link List Item</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。2&#039;);">Link Item 2</a></li>
+
+	<li><a href="javascript:alert(&#039;クリックしました。3&#039;);">Link Item</a></li>
+
+</ul>
+</div>
+<ul>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">List Item (link module)</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>List Item (module)</p>
+
+</div>
+<ul>
+
+	<li>List Item</li>
+
+	<li>List Item</li>
+
+</ul>
+</li>
+
+</ul>
+<div class="px2-linklist">
+
+<?php
+(function($px){
+    $parent = "/";
+    if( !strlen(''.$parent) ){
+        $parent = null;
+    }
+    $list_flg = "hide";
+    if($list_flg == 'hide'){
+        $list_flg = true;
+    }else{
+        $list_flg = false;
+    }
+    $depth = intval("10");
+    if( !$depth ){
+        $depth = 1;
+    }
+    $style = "withdescription";
+
+    $fnc_children_gen = function( $current_page_id, $depth ) use ( &$fnc_children_gen, $px, $list_flg, $style ){
+        $depth --;
+        $children = $px->site()->get_children($current_page_id, array('filter'=>$list_flg));
+        $rtn = '';
+        $rtn .= '<ul>'."\n";
+        foreach( $children as $pid ){
+            $page_info = $px->site()->get_page_info($pid);
+            $description = '';
+            if( array_key_exists('description', $page_info) ){
+                $description = $page_info['description'];
+            }
+
+            $rtn .= '<li><a href="'.$px->href($pid).'">'.htmlspecialchars($page_info['title_label']);
+            if( $style == 'withdescription' ){
+                $rtn .= '<div class="px2-linklist__description">'.htmlspecialchars( $description ).'</div>';
+            }
+            $rtn .= '</a>'."\n";
+            if($depth){
+                $rtn .= $fnc_children_gen($pid, $depth);
+            }
+            $rtn .= '</li>'."\n";
+        }
+        $rtn .= '</ul>'."\n";
+        return $rtn;
+    };
+    echo $fnc_children_gen($parent, $depth);
+})($px);
+?>
+</div><div class="px2-linklist">
+
+<?php
+(function($px){
+    $parent = "/";
+    if( !strlen(''.$parent) ){
+        $parent = null;
+    }
+    $list_flg = "show";
+    if($list_flg == 'hide'){
+        $list_flg = true;
+    }else{
+        $list_flg = false;
+    }
+    $depth = intval("10");
+    if( !$depth ){
+        $depth = 1;
+    }
+    $style = "";
+
+    $fnc_children_gen = function( $current_page_id, $depth ) use ( &$fnc_children_gen, $px, $list_flg, $style ){
+        $depth --;
+        $children = $px->site()->get_children($current_page_id, array('filter'=>$list_flg));
+        $rtn = '';
+        $rtn .= '<ul>'."\n";
+        foreach( $children as $pid ){
+            $page_info = $px->site()->get_page_info($pid);
+            $description = '';
+            if( array_key_exists('description', $page_info) ){
+                $description = $page_info['description'];
+            }
+
+            $rtn .= '<li><a href="'.$px->href($pid).'">'.htmlspecialchars($page_info['title_label']);
+            if( $style == 'withdescription' ){
+                $rtn .= '<div class="px2-linklist__description">'.htmlspecialchars( $description ).'</div>';
+            }
+            $rtn .= '</a>'."\n";
+            if($depth){
+                $rtn .= $fnc_children_gen($pid, $depth);
+            }
+            $rtn .= '</li>'."\n";
+        }
+        $rtn .= '</ul>'."\n";
+        return $rtn;
+    };
+    echo $fnc_children_gen($parent, $depth);
+})($px);
+?>
+</div><div class="px2-medialist px2-medialist--list-style-card px2-medialist--list-item-width-1of3">
+<ul>
+
+
+	<li><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo009_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストラベル (リンクではない)</div>
+    <div class="px2-medialist__description"><p>このリストアイテムは、リンクではありません。</p>
+</div>
+  </div>
+</div>
+</li>
+
+	<li><a href="javascript:alert(&#039;clicked&#039;);"><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo001_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストアイテム</div>
+    <div class="px2-medialist__description"><p>リンク説明。</p>
+</div>
+  </div>
+</div>
+</a></li>
+
+	<li><a href="javascript:alert(&#039;clicked&#039;);"><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo003_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストラベル</div>
+    <div class="px2-medialist__description"><p>メディアリンクの説明欄テキスト。</p>
+<p>メディアリンクの説明欄テキスト。</p>
+</div>
+  </div>
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class="px2-medialist px2-medialist--list-item-width-1of3">
+<ul>
+
+
+	<li><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo009_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストラベル (リンクではない)</div>
+    <div class="px2-medialist__description"><p>このリストアイテムは、リンクではありません。</p>
+</div>
+  </div>
+</div>
+</li>
+
+	<li><a href="javascript:alert(&#039;clicked&#039;);"><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo001_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストアイテム</div>
+    <div class="px2-medialist__description"><p>リンク説明。</p>
+</div>
+  </div>
+</div>
+</a></li>
+
+	<li><a href="javascript:alert(&#039;clicked&#039;);"><div class="px2-medialist__list-item">
+  <div class="px2-medialist__image"><img src="./index_files/resources/photo003_thumb.jpg" alt="" /></div>
+  <div class="px2-medialist__body">
+    <div class="px2-medialist__label">メディアリストラベル</div>
+    <div class="px2-medialist__description"><p>メディアリンクの説明欄テキスト。</p>
+<p>メディアリンクの説明欄テキスト。</p>
+</div>
+  </div>
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class="px2-changelog"><div class="px2-changelog__header"><h2>更新履歴</h2>
+</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">リリース日未定</div>
+		<div class="px2-changelog__contents"><p>更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。</p>
+</div>
+	</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2020年8月5日</div>
+		<div class="px2-changelog__contents"><p>更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。更新しました。長い文字列を表示させてみます。</p>
+</div>
+	</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2019年2月11日</div>
+		<div class="px2-changelog__contents"><p>更新しました。</p>
+</div>
+	</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2019年2月10日</div>
+		<div class="px2-changelog__contents"><ul>
+<li>list 1</li>
+<li>list 2</li>
+</ul>
+</div>
+	</div>
+
+</div><!-- /.px2-changelog -->
+<div class="px2-changelog"><div class="px2-changelog__header"><div class="px2-h2">
+<h2>更新履歴 v2</h2>
+</div>
+</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2021年10月8日</div>
+		<div class="px2-changelog__contents"><p>更新履歴モジュール v2 が追加されました。</p>
+</div>
+	</div>
+
+	<div class="px2-changelog__row">
+		<div class="px2-changelog__date">2021年1月8日</div>
+		<div class="px2-changelog__contents"><p>月と日は、先頭にゼロを付加しないフォーマットにしました。</p>
+</div>
+	</div>
+
+</div><!-- /.px2-changelog -->
+<dl>
+
+<dt><p>説明用語1</p>
+</dt>
+<dd> <p>用語説明。</p>
+ </dd>
+
+<dt><p>説明用語2</p>
+</dt>
+<dd> <p>用語説明。</p>
+ </dd>
+
+</dl>
+<dl>
+
+<dt><p>用語説明1</p>
+</dt>
+<dd> <div class="px2-p">
+<p>用語を説明します。</p>
+
+</div>
+<div class="px2-image px2-image--framed px2-text-align-center px2-p px2-embedded-media--imagescope">
+<div class="px2-image__img">
+<img src="./index_files/resources/teabug.gif" alt="紅茶が入っていた袋" onclick="Px2BroccoliModuleStdDocument_ImageScope(this);" /><div class="px2-image__caption"><p>紅茶が入っていた袋</p>
+</div>
+</div>
+</div>
+ </dd>
+
+<dt><p>用語説明2</p>
+</dt>
+<dd> <div class="px2-p">
+<p>用語を説明します。</p>
+
+</div>
+ </dd>
+
+</dl>

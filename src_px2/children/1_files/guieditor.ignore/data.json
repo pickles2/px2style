@@ -1,0 +1,55 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:headings/hx",
+                        "fields": {
+                            "hx": "2",
+                            "main": "子階層へのリンク",
+                            "sub": "",
+                            "shoulder": []
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/sub-page-list",
+                        "fields": {
+                            "style": "",
+                            "parent": "",
+                            "list_flg": "hide",
+                            "depth": "1"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:headings/hx",
+                        "fields": {
+                            "hx": "2",
+                            "main": "トップページの子階層へのリンク",
+                            "sub": "",
+                            "shoulder": []
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "std-document:lists/sub-page-list",
+                        "fields": {
+                            "style": "withdescription",
+                            "parent": "/",
+                            "list_flg": "show",
+                            "depth": "10"
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

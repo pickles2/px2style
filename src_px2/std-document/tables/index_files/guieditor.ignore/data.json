@@ -1,0 +1,27 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:basics/table",
+                        "fields": {
+                            "table": {
+                                "resKey": "bb6355efe469d255da47632c520b065d",
+                                "output": "<thead>\n<tr>\n<th>カテゴリ</th>\n<th>メニュー</th>\n<th>価格</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th>麺類</th>\n<td>ラーメン</td>\n<td>560</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>味噌ラーメン</td>\n<td>600</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>チャーシュー麺</td>\n<td>700</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>酸辣湯麺</td>\n<td>680</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>つけ麺</td>\n<td>560</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>味噌つけ麺</td>\n<td>600</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>辛味噌つけ麺</td>\n<td>650</td>\n</tr>\n<tr>\n<th>麺類</th>\n<td>油そば</td>\n<td>600</td>\n</tr>\n<tr>\n<th>ごはん</th>\n<td>ごはん小</td>\n<td>50</td>\n</tr>\n<tr>\n<th>ごはん</th>\n<td>ごはん中</td>\n<td>70</td>\n</tr>\n<tr>\n<th>ごはん</th>\n<td>ごはん大</td>\n<td>90</td>\n</tr>\n<tr>\n<th>ごはん</th>\n<td>チャーハン</td>\n<td>600</td>\n</tr>\n<tr>\n<th>ごはん</th>\n<td>かにチャーハン</td>\n<td>900</td>\n</tr>\n<tr>\n<th>トッピング</th>\n<td>たまご</td>\n<td>50</td>\n</tr>\n<tr>\n<th>トッピング</th>\n<td>なっとう</td>\n<td>50</td>\n</tr>\n<tr>\n<th>トッピング</th>\n<td>メンマ</td>\n<td>50</td>\n</tr>\n<tr>\n<th>トッピング</th>\n<td>チャーシュー</td>\n<td>100</td>\n</tr>\n</tbody>\n",
+                                "header_row": "1",
+                                "header_col": "1",
+                                "cell_renderer": "text",
+                                "renderer": "simplify"
+                            },
+                            "align": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

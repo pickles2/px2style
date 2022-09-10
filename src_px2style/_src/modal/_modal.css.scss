@@ -1,0 +1,351 @@
+// Modal Dialog
+//
+// Modal Dialog.
+//
+// Markup:
+// <div style="width: 100%; height: 400px;">
+// <div class="px2-modal">
+//  <article class="px2-modal__dialog">
+//   <div class="px2-modal__header">
+//       <h1 class="px2-modal__title" tabindex="-1">Dialog Title</h1>
+//   </div>
+//   <div class="px2-modal__body">
+//      <p>Dialog Content.</p>
+//      <h2>Heading h2</h2>
+//      <h3>Heading h3</h3>
+//      <h4>Heading h4</h4>
+//      <h5>Heading h5</h5>
+//      <ul>
+//          <li>List 1</li>
+//          <li>List 2
+//              <ul>
+//                  <li>List 2-1</li>
+//                  <li>List 2-2</li>
+//              </ul>
+//          </li>
+//          <li>List 3</li>
+//      </ul>
+//      <ol>
+//          <li>List 1</li>
+//          <li>List 2
+//              <ol>
+//                  <li>List 2-1</li>
+//                  <li>List 2-2</li>
+//              </ol>
+//          </li>
+//          <li>List 3</li>
+//      </ol>
+//   </div>
+//   <div class="px2-modal__footer">
+//      <div class="px2-modal__footer-primary"><ul>
+//          <li><button class="px2-btn px2-btn--primary">OK</button></li>
+//      </ul></div>
+//      <div class="px2-modal__footer-secondary"><ul>
+//          <li><button class="px2-btn">Cancel</button></li>
+//      </ul></div>
+//   </div>
+//   <div class="px2-modal__close"><button></button></div>
+//  </article>
+// </div>
+// </div>
+//
+// Styleguide 7.0
+.px2-modal{
+	background: rgba(0,0,0,0.5);
+	position: absolute; left: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--px2-font-family, $px2-font-family);
+
+	> form{
+		// display: inline;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__close {
+		position: absolute;
+		right: -0.5em;
+		top: -0.5em;
+		width: 1.4em; height: 1.4em;
+		button {
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: block;
+			width: 100%; height: 100%;
+			padding: 0;
+			margin: 0;
+			border-radius: 50%;
+			border: 1px solid #999;
+			background-color: #eee;
+			color: #999;
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				border-bottom: 1px solid #999;
+				width: 70%;
+				position: absolute;
+				top: 50%;
+				left: 15%;
+			}
+			&::before {
+				transform: rotate(45deg);
+			}
+			&::after {
+				transform: rotate(-45deg);
+			}
+			&:hover {
+				border: 1px solid #666;
+				background-color: #f9f9f9;
+				&::before,
+				&::after {
+					border-bottom: 1px solid #666;
+				}
+			}
+			&[data-px2-modal-locked] {
+				visibility: hidden;
+			}
+		}
+	}
+
+    @keyframes px2-modal--initial {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+	&__dialog{
+		position: relative;
+		top: 0; left: 0;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		color: $px2-text-color; // fallback
+		color: var(--px2-text-color, $px2-text-color);
+		background-color: $px2-background-color; // fallback
+		background-color: var(--px2-background-color, $px2-background-color);
+		box-sizing: border-box;
+		padding: 10px 0;
+		margin: 20px auto;
+		width: calc(100% - 40px);
+		max-width: 520px;
+		height: auto;
+		max-height: calc(100% - 40px);
+		overflow: visible;
+		border-radius: 5px;
+		font-size: medium;
+		h1{ font-size: 124%; margin: 0; font-weight: bold; }
+		h2{ font-size: 124%; margin: 2em 0 0.5em 0; font-weight: bold; }
+		h3{ font-size: 112%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h4{ font-size: 104%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h5{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h6{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+
+		animation: px2-modal--initial .3s ease 0s 1 normal none running;
+		transition: transform .3s, opacity .3s;
+		&--closed {
+			transform: translateY(-10px);
+			opacity: 0;
+		}
+	}
+
+	&__header{
+		border-bottom: 1px solid #999;
+		padding: 8px 20px;
+		margin-bottom: 0.5em;
+		box-shadow: 0 5px 12px -5px rgba(0, 0, 0, .1);
+	}
+
+	&__body{
+		position: relative;
+		top: 0; left: 0;
+		padding: 0 20px;
+		overflow: auto;
+		flex-grow: 1;
+	}
+
+	&__title{
+		font-weight: bold;
+		outline: none;
+	}
+
+	&__footer{
+		border-top: 1px solid #999;
+		margin: 10px 0 0 0;
+		padding: 10px 20px 0 20px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+
+		&-primary>ul,
+		&-secondary>ul,
+		>ul{
+			display: flex;
+			justify-content: flex-end;
+			gap: 5px;
+			margin: 0;
+			padding: 0;
+			>li{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}
+
+// Opening Modal Dialog
+//
+// Opening Modal Dialog from JavaScript.
+//
+// Markup:
+// <ul>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open normal modal dialog.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open normal modal dialog contains long contents.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog 700px.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              width: 700
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open normal modal dialog with 700px width.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Form Dialog.',
+//              body: '<div><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; disabled=&quot;true&quot; /></p><p><button class=&quot;btn-lock&quot; type=&quot;button&quot;>lock</button></p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot;>OK</button>'
+//              ],
+//              form: {
+//                  action: 'javascript:alert(\'form action\');',
+//                  method: 'get',
+//                  submit: function(){alert('form submit');px2style.closeModal();}
+//              },
+//              width: 700
+//          },
+//          function(modalObj){
+//              console.log('done.');
+//              modalObj.$modal.find('.btn-lock').on('click',function(){
+//                  modalObj.lock();
+//                  setTimeout(function(){modalObj.unlock();}, 20*1000);
+//              });
+//          }
+//      );void(0);">Open normal modal dialog with form.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Form Dialog.',
+//              body: '<div><input type=&quot;hidden&quot; name=&quot;hidden-sample&quot; value=&quot;&quot; /><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot;>OK</button>'
+//              ],
+//              form: {
+//                  action: 'javascript:alert(\'form action\');',
+//                  method: 'get',
+//                  submit: function(){alert('form submit');px2style.closeModal();}
+//              },
+//              width: 700
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open normal modal dialog with form contains long contents.</a></li>
+//  <li><a href="javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              target: document.querySelectorAll('div.view-section')[0]
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open modal dialog to target DIV element.</a></li>
+//  <li><a href="javascript:px2style.modal(
+//          {
+//              title: 'Sample Form Dialog.',
+//              body: '<div><p>Sample Content. <button type=\'button\' onclick=\''+
+//                  'px2style.modal({'+
+//                  '    title: &quot;2nd layer&quot;,'+
+//                  '    body: &quot;<div><p>Sample Content on 2nd layer.</p></div>&quot;'+
+//                  '}, function(){'+
+//                  '    console.log(&quot;done2.&quot;);'+
+//                  '});'+
+//                  '\'>open new layer</button></p></div>',
+//              buttons: [
+//                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ],
+//              buttonsSecondary: [
+//                  document.createElement('button')
+//              ],
+//              onclose: function(){alert('onclose event');}
+//          },
+//          function(){
+//              console.log('done.');
+//          }
+//      );void(0);">Open normal modal dialog with secondary button.</a></li>
+//  <li><a href="javascript:(function(){var modal = px2style.modal(
+//          {
+//              title: 'Sample Modal Dialog.',
+//              body: '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p></div>',
+//              buttons: [
+//                  '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
+//              ]
+//          },
+//          function(){
+//              console.log('done.');
+//              setTimeout(function(){
+//                  modal.replaceBody( '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p><p>Sample Content.</p><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p></div>' );
+//              }, 1000);
+//          }
+//      )})();void(0);">Replace modal body.</a></li>
+// </ul>
+//
+// Styleguide 7.1

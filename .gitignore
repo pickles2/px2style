@@ -38,7 +38,18 @@ jspm_packages
 
 # composer
 vendor
+composer.phar
 composer.lock
 
 # npm
 package-lock.json
+
+# laravel
+mix-manifest.json
+
+# Pickles 2
+src_px2/px-files/_sys/ram/
+src_px2/common/px_resources/
+
+# others
+images/

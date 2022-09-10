@@ -1,0 +1,20 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:lists/sub-page-list",
+                        "fields": {
+                            "style": "",
+                            "parent": "",
+                            "list_flg": "",
+                            "depth": "1"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

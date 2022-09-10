@@ -1,0 +1,56 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "std-document:notice/notice",
+                        "fields": {
+                            "type": "px2-notice--info",
+                            "heading": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "main": [
+                                {
+                                    "modId": "std-document:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "お知らせいたします。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "std-document:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+[
+    {
+        "id": "px2style-basics",
+        "name": "Basics",
+        "type": "module",
+        "path": "broccoli_modules/basics/"
+    },
+    {
+        "id": "px2style__css-margin-padding",
+        "name": "MarginPadding",
+        "type": "field",
+        "backend": {
+            "class": "tomk79\\broccoliModuleStdDocument\\fields\\cssMarginPadding\\backend",
+            "require": "fields/cssMarginPadding/backend.js"
+        },
+        "frontend": {
+            "dir": "fields/cssMarginPadding/frontend/",
+            "file": [
+                "cssMarginPadding.css",
+                "cssMarginPadding.js"
+            ],
+            "function" : "window.broccoliModuleStdDocumentCssMarginPadding"
+        }
+    }
+]

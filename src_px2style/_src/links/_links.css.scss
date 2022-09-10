@@ -1,0 +1,52 @@
+// Links
+//
+// Markup:
+// <a href="#" class="px2-a">Default Link</a>
+//
+// Styleguide 1.0
+.px2-a{}
+
+// Bullet Link
+//
+// Markup:
+// <a href="#" class="px2-a">Bullet Link</a>
+// <div style="font-size: 130%;"><a href="#" class="px2-a">Bullet Link</a></div>
+// <div style="font-size: 160%;"><a href="#" class="px2-a">Bullet Link</a></div>
+// <div style="font-size: 220%;"><a href="#" class="px2-a">Bullet Link</a></div>
+//
+// Styleguide 1.1
+.px2-a {
+	&:before{
+		content:' ';
+		width: 0;
+		height: 0;
+		display: inline-block;
+		margin-right: 0.2em;
+		border-width: 0.35em 0 0.35em 0.6em;
+		border-style: solid;
+		border-color: $px2-main-color; // fallback
+		border-color: var(--px2-main-color, $px2-main-color);
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+	}
+}
+
+// Open in new window
+//
+// Markup:
+// <p><a href="#"><span class="px2-open-in-new-window">Open in new window</span></a></p>
+// <p><a href="#" class="px2-a"><span class="px2-open-in-new-window">Open in new window</span></a></p>
+//
+// Styleguide 1.2
+.px2-open-in-new-window {
+	&:after {
+		content: '';
+		background-image: url("./resources/link.png");
+		width: 0.8em;
+		height: 0.8em;
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 0.3em;
+	}
+}
