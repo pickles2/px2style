@@ -351,7 +351,7 @@ return call_user_func( function(){
 
 	/** broccoliモジュールセットの登録 */
 	$conf->plugins->px2dt->paths_module_template = array(
-		'std-document' => './../broccoli_modules/basics/',
+		'px2style' => './../broccoli_modules/basics/',
 	);
 
 	/** プロジェクト固有のモジュールセットの格納ディレクトリ */
@@ -395,7 +395,7 @@ return call_user_func( function(){
 	// $conf->plugins->px2dt->guieditor->path_resource_dir = '{$dirname}/{$filename}_files/resources/';
 
 	@$conf->plugins->px2dt->guieditor->custom_fields = array(
-		'std-document__css-margin-padding'=>array(
+		'px2style__css-margin-padding'=>array(
 			'backend'=>array(
 				'class' => 'pickles2\\px2style\\fields\\cssMarginPadding\\backend',
 				'require' => '../fields/cssMarginPadding/backend.js',

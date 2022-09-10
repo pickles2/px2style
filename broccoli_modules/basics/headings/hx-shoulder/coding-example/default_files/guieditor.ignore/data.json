@@ -5,19 +5,19 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:headings/hx-shoulder",
+                        "modId": "px2style:headings/hx-shoulder",
                         "fields": {
                             "hx": "2",
                             "main": "ショルダーメニューのサンプル",
                             "sub": "副見出し",
                             "shoulder": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "class": "px2-horizontal-list",
                                         "loop": [
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー1",
@@ -28,7 +28,7 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー2",
@@ -49,7 +49,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-shoulder",
+                        "modId": "px2style:headings/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -62,12 +62,12 @@
                             },
                             "shoulder": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "class": "px2-horizontal-list",
                                         "loop": [
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー1",
@@ -78,7 +78,7 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー2",
@@ -99,7 +99,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-shoulder",
+                        "modId": "px2style:headings/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "4"
@@ -112,12 +112,12 @@
                             },
                             "shoulder": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "class": "px2-horizontal-list",
                                         "loop": [
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー1",
@@ -128,7 +128,7 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー2",
@@ -149,7 +149,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-shoulder",
+                        "modId": "px2style:headings/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "5"
@@ -162,12 +162,12 @@
                             },
                             "shoulder": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "class": "px2-horizontal-list",
                                         "loop": [
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー1",
@@ -178,7 +178,7 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー2",
@@ -199,7 +199,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-shoulder",
+                        "modId": "px2style:headings/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "6"
@@ -212,12 +212,12 @@
                             },
                             "shoulder": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "class": "px2-horizontal-list",
                                         "loop": [
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー1",
@@ -228,7 +228,7 @@
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "std-document:lists/ul-links",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
                                                     "href": "javascript:alert('clicked');",
                                                     "label": "ショルダーメニュー2",

@@ -5,11 +5,11 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:lists/dl",
+                        "modId": "px2style:lists/dl",
                         "fields": {
                             "dl-loop": [
                                 {
-                                    "modId": "std-document:lists/dl",
+                                    "modId": "px2style:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "説明用語1",
@@ -25,7 +25,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/dl",
+                                    "modId": "px2style:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "説明用語2",
@@ -41,7 +41,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/dl",
+                                    "modId": "px2style:lists/dl",
                                     "fields": {
                                         "dt": {
                                             "src": "説明用語3",

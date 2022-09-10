@@ -1,10 +1,10 @@
 console.log('broccoliModulePx2StyleDroppedFileOperatorGen() is loaded.');
 window.broccoliModulePx2StyleDroppedFileOperatorGen = function(options){
     options = options || {};
-    options.packageId = options.packageId || 'std-document';
+    options.packageId = options.packageId || 'px2style';
 
     return function(fileInfo, callback){
-        console.log('broccoli-module-std-document: IMAGE Operator', fileInfo);
+        console.log('px2style: IMAGE Operator', fileInfo);
         var mimetype = fileInfo.type;
         var originalFileSize = fileInfo.size;
         var originalFileName = fileInfo.name;

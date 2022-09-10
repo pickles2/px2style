@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:basics/image",
+                        "modId": "px2style:basics/image",
                         "fields": {
                             "href": "",
                             "target": "",

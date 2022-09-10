@@ -5,12 +5,12 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:lists/ul-links",
+                        "modId": "px2style:lists/ul-links",
                         "fields": {
                             "class": "",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "リストアイテム1",
@@ -21,7 +21,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "リストアイテム2",
@@ -32,7 +32,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-links",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "リストアイテム3",

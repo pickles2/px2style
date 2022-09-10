@@ -1,0 +1,230 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:notice/notice",
+                        "fields": {
+                            "type": {
+                                "src": ""
+                            },
+                            "heading": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "お知らせいたします。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:notice/notice",
+                        "fields": {
+                            "type": {
+                                "src": "px2-notice--success"
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "成功いたしました。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:notice/notice",
+                        "fields": {
+                            "type": {
+                                "src": "px2-notice--warning"
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "警告いたします。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:notice/notice",
+                        "fields": {
+                            "type": {
+                                "src": "px2-notice--danger"
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "危険をお知らせいたします。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:notice/notice",
+                        "fields": {
+                            "type": {
+                                "src": "px2-notice--info"
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "情報がございます。\n\n- list 1\n- list 2",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/a",
+                                    "fields": {
+                                        "href": "https://pickles2.pxt.jp/",
+                                        "label": "テストリンク",
+                                        "class": "px2-a",
+                                        "target": "_blank"
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

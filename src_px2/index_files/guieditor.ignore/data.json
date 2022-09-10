@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:basics/text",
+                        "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
                                 "src": "標準ドキュメントモジュールのレイアウトサンプルです。\n",
@@ -25,7 +25,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/sub-page-list",
+                        "modId": "px2style:lists/sub-page-list",
                         "fields": {
                             "style": "",
                             "parent": "",

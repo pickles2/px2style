@@ -5,13 +5,13 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:medias/float",
+                        "modId": "px2style:medias/float",
                         "fields": {
                             "lr": "l",
                             "image-size": "1of3",
                             "media": [
                                 {
-                                    "modId": "std-document:medias/image-media",
+                                    "modId": "px2style:medias/image-media",
                                     "fields": {
                                         "image_src": {
                                             "resKey": "7b8d79eb7767900077b50002ae5e6059",
@@ -32,7 +32,7 @@
                             "body_rect": "",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "## Float Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",
@@ -51,13 +51,13 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:medias/float",
+                        "modId": "px2style:medias/float",
                         "fields": {
                             "lr": "r",
                             "image-size": "1of3",
                             "media": [
                                 {
-                                    "modId": "std-document:medias/image-media",
+                                    "modId": "px2style:medias/image-media",
                                     "fields": {
                                         "image_src": {
                                             "resKey": "f6c4f9daed092a4d711caffb378cb584",
@@ -78,7 +78,7 @@
                             "body_rect": "",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "## Float Media Block\n\nこのモジュールは、テキストを回り込むメディア表示領域を作成します。\n\n回り込む方向を右か左のいずれかで選択します。 メディアの大きさは、幅 1/2、1/3、1/4 のサイズから選択することができます。\n\nまた、テキスト領域を回り込むか、矩形とするかを選択することもできます。\n",

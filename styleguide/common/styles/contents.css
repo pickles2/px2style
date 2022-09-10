@@ -1,67 +1,67 @@
 @charset "UTF-8";
 .contents {
   /**
- * module: std-document:basics/a
+ * module: px2style:basics/a
  */
   /**
- * module: std-document:basics/image
+ * module: px2style:basics/image
  */
   /**
- * module: std-document:basics/table
+ * module: px2style:basics/table
  */
   /**
- * module: std-document:grids/grid
+ * module: px2style:grids/grid
  */
   /**
- * module: std-document:headings/hx
+ * module: px2style:headings/hx
  */
   /**
- * module: std-document:interactives/accordion
+ * module: px2style:interactives/accordion
  */
   /**
- * module: std-document:interactives/carousel
+ * module: px2style:interactives/carousel
  */
   /**
- * module: std-document:interactives/tabs
+ * module: px2style:interactives/tabs
  */
   /**
- * module: std-document:lists/changelog-v2
+ * module: px2style:lists/changelog
  */
   /**
- * module: std-document:lists/dl-module
+ * module: px2style:lists/dl
  */
   /**
- * module: std-document:lists/index
+ * module: px2style:lists/index
  */
   /**
- * module: std-document:lists/ul-links
+ * module: px2style:lists/ul-links
  */
   /**
- * module: std-document:lists/ul-media-list
+ * module: px2style:lists/ul-media-list
  */
   /**
- * module: std-document:lists/ul-module
+ * module: px2style:lists/ul
  */
   /**
- * module: std-document:medias/float-v2
+ * module: px2style:medias/float
  */
   /**
- * module: std-document:medias/image-media
+ * module: px2style:medias/image-media
  */
   /**
- * module: std-document:notice/notice
+ * module: px2style:notice/notice
  */
   /**
- * module: std-document:utils/button
+ * module: px2style:utils/button
  */
   /**
- * module: std-document:utils/p
+ * module: px2style:utils/p
  */
   /**
- * module: std-document:utils/responsive
+ * module: px2style:utils/responsive
  */
   /**
- * module: std-document:utils/viewport-fit
+ * module: px2style:utils/viewport-fit
  */
 }
 .contents .px2-a:before {

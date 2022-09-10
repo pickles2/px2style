@@ -4,7 +4,7 @@
 module.exports = function(){
 }
 
-// broccoli-module-std-document
+// broccoli-module-px2style
 require('../broccoli_modules/basics/basics/image/module.js');
 require('../broccoli_modules/basics/interactives/accordion/module.js');
 require('../broccoli_modules/basics/interactives/carousel/module.js');

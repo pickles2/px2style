@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "px2style:headings/hx-simple",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -21,7 +21,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "px2style:headings/hx-simple",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -37,7 +37,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "px2style:headings/hx-simple",
                         "fields": {
                             "hx": {
                                 "src": "4"
@@ -53,7 +53,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "px2style:headings/hx-simple",
                         "fields": {
                             "hx": {
                                 "src": "5"
@@ -69,7 +69,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx-simple",
+                        "modId": "px2style:headings/hx-simple",
                         "fields": {
                             "hx": {
                                 "src": "6"

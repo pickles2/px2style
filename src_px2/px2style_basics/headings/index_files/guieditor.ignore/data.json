@@ -1,0 +1,310 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:headings/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "シンプルな見出し Level 2"
+                            },
+                            "sub": {
+                                "src": "シンプルな副見出し Level 2"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "シンプルな見出し Level 3"
+                            },
+                            "sub": {
+                                "src": "シンプルな副見出し Level 3"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "4"
+                            },
+                            "main": {
+                                "src": "シンプルな見出し Level 4"
+                            },
+                            "sub": {
+                                "src": "シンプルな副見出し Level 4"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "5"
+                            },
+                            "main": {
+                                "src": "シンプルな見出し Level 5"
+                            },
+                            "sub": {
+                                "src": "シンプルな副見出し Level 5"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "6"
+                            },
+                            "main": {
+                                "src": "シンプルな見出し Level 6"
+                            },
+                            "sub": {
+                                "src": "シンプルな副見出し Level 6"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx-shoulder",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "ショルダーメニュー付き見出しレベル2"
+                            },
+                            "shoulder": [
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "class": "px2-horizontal-list",
+                                        "loop": [
+                                            {
+                                                "modId": "px2style:lists/ul",
+                                                "fields": {
+                                                    "text": {
+                                                        "editor": "markdown",
+                                                        "src": "[List Item 1](javascript:void(0);)"
+                                                    },
+                                                    "modules": [
+                                                        {
+                                                            "modId": "px2style:basics/a",
+                                                            "fields": {
+                                                                "href": {
+                                                                    "src": "javascript:void(0);"
+                                                                },
+                                                                "label": {
+                                                                    "src": "List Item"
+                                                                },
+                                                                "class": {
+                                                                    "src": "px2-a"
+                                                                },
+                                                                "target": {
+                                                                    "src": ""
+                                                                },
+                                                                "display": {
+                                                                    "src": ""
+                                                                },
+                                                                "align": {
+                                                                    "src": ""
+                                                                },
+                                                                "paragraph": {
+                                                                    "src": "px2-p"
+                                                                }
+                                                            },
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        }
+                                                    ]
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul",
+                                                "fields": {
+                                                    "text": {
+                                                        "editor": "markdown",
+                                                        "src": "[List Item 2](javascript:void(0);)"
+                                                    },
+                                                    "modules": [
+                                                        {
+                                                            "modId": "px2style:basics/a",
+                                                            "fields": {
+                                                                "href": {
+                                                                    "src": "javascript:void(0);"
+                                                                },
+                                                                "label": {
+                                                                    "src": "List Item"
+                                                                },
+                                                                "class": {
+                                                                    "src": "px2-a"
+                                                                },
+                                                                "target": {
+                                                                    "src": ""
+                                                                },
+                                                                "display": {
+                                                                    "src": ""
+                                                                },
+                                                                "align": {
+                                                                    "src": ""
+                                                                },
+                                                                "paragraph": {
+                                                                    "src": "px2-p"
+                                                                }
+                                                            },
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        }
+                                                    ]
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "sub": {
+                                "src": "副見出し"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx-shoulder",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "ショルダーメニュー付き見出しレベル3"
+                            },
+                            "sub": {
+                                "src": ""
+                            },
+                            "shoulder": [
+                                {
+                                    "modId": "px2style:lists/ul-links",
+                                    "fields": {
+                                        "class": "px2-horizontal-list px2-horizontal-list--right",
+                                        "loop": [
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": "https://github.com/pickles2",
+                                                    "target": "_blank",
+                                                    "label": "Pickles 2 on Github"
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx-shoulder",
+                        "fields": {
+                            "hx": {
+                                "src": "4"
+                            },
+                            "main": {
+                                "src": "ショルダーメニュー付き見出しレベル4"
+                            },
+                            "sub": {
+                                "src": "見出しレベル4"
+                            },
+                            "shoulder": []
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx-shoulder",
+                        "fields": {
+                            "hx": {
+                                "src": "5"
+                            },
+                            "main": {
+                                "src": "ショルダーメニュー付き見出しレベル5"
+                            },
+                            "sub": {
+                                "src": "見出しレベル5"
+                            },
+                            "shoulder": []
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:headings/hx-shoulder",
+                        "fields": {
+                            "hx": {
+                                "src": "6"
+                            },
+                            "main": {
+                                "src": "ショルダーメニュー付き見出しレベル6"
+                            },
+                            "sub": {
+                                "src": "見出しレベル6"
+                            },
+                            "shoulder": []
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

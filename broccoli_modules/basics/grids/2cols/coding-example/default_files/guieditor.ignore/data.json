@@ -5,16 +5,16 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:grids/grid",
+                        "modId": "px2style:grids/grid",
                         "fields": {
                             "col": [
                                 {
-                                    "modId": "std-document:grids/grid",
+                                    "modId": "px2style:grids/grid",
                                     "fields": {
                                         "column-width": "1of2",
                                         "main": [
                                             {
-                                                "modId": "std-document:basics/text",
+                                                "modId": "px2style:basics/text",
                                                 "fields": {
                                                     "main": {
                                                         "src": "## Column 1\n\nLeft Column.\n",
@@ -34,12 +34,12 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:grids/grid",
+                                    "modId": "px2style:grids/grid",
                                     "fields": {
                                         "column-width": "1of2",
                                         "main": [
                                             {
-                                                "modId": "std-document:basics/text",
+                                                "modId": "px2style:basics/text",
                                                 "fields": {
                                                     "main": {
                                                         "src": "## Column 2\n\nRight Column.\n",

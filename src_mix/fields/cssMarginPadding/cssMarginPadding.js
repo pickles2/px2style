@@ -113,41 +113,41 @@ window.broccoliModulePx2StyleCssMarginPadding = function(broccoli){
 			'<p>ボックスの内側、外側のスペースを設定します。単位を含めて入力してください。</p>'
 		);
 		$rtn.append(
-			'<table class="broccoli-module-std-document-css-margin-padding__table">'+
+			'<table class="broccoli-module-px2style-css-margin-padding__table">'+
 				'<tr>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin">margin</td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-top" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin">margin</td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-top" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
 				'</tr>'+
 				'<tr>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-top-width: 1px; border-left-width: 1px;">padding</td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-top-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-top" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-top-width: 1px; border-right-width: 1px;"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-top-width: 1px; border-left-width: 1px;">padding</td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-top-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-top" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-top-width: 1px; border-right-width: 1px;"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
 				'</tr>'+
 				'<tr>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-left" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-left-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-left" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-left" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-left-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-left" value="" style="width: 5em;" /></td>'+
 					'<td></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-right-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-right" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-right" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-right-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-right" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-right" value="" style="width: 5em;" /></td>'+
 				'</tr>'+
 				'<tr>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-bottom-width: 1px; border-left-width: 1px;"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-bottom-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-bottom" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__padding" style="border-bottom-width: 1px; border-right-width: 1px;"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-bottom-width: 1px; border-left-width: 1px;"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-bottom-width: 1px;"><input type="text" class="form-control" name="'+mod.name+'__padding-bottom" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__padding" style="border-bottom-width: 1px; border-right-width: 1px;"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
 				'</tr>'+
 				'<tr>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-bottom" value="" style="width: 5em;" /></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
-					'<td class="broccoli-module-std-document-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"><input type="text" class="form-control" name="'+mod.name+'__margin-bottom" value="" style="width: 5em;" /></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
+					'<td class="broccoli-module-px2style-css-margin-padding__margin"></td>'+
 				'</tr>'+
 			'</table>'
 		);

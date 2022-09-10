@@ -5,12 +5,12 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:notice/notice",
+                        "modId": "px2style:notice/notice",
                         "fields": {
                             "type": "",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "お知らせします。",
@@ -29,12 +29,12 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:notice/notice",
+                        "modId": "px2style:notice/notice",
                         "fields": {
                             "type": "px2-notice--success",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "成功しました。",
@@ -53,12 +53,12 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:notice/notice",
+                        "modId": "px2style:notice/notice",
                         "fields": {
                             "type": "px2-notice--warning",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "警告します。",
@@ -77,12 +77,12 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:notice/notice",
+                        "modId": "px2style:notice/notice",
                         "fields": {
                             "type": "px2-notice--danger",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "エラー、または危険な操作をお知らせします。",
@@ -101,12 +101,12 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:notice/notice",
+                        "modId": "px2style:notice/notice",
                         "fields": {
                             "type": "px2-notice--info",
                             "main": [
                                 {
-                                    "modId": "std-document:basics/text",
+                                    "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
                                             "src": "情報欄です。",

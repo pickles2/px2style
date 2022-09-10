@@ -5,16 +5,16 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:grids/grid",
+                        "modId": "px2style:grids/grid",
                         "fields": {
                             "col": [
                                 {
-                                    "modId": "std-document:grids/grid",
+                                    "modId": "px2style:grids/grid",
                                     "fields": {
                                         "column-width": "1of1",
                                         "main": [
                                             {
-                                                "modId": "std-document:basics/text",
+                                                "modId": "px2style:basics/text",
                                                 "fields": {
                                                     "main": {
                                                         "src": "## Full Column\n\nSingle Column.\n",

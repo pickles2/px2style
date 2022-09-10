@@ -1,6 +1,6 @@
 (function(){
 /**
- * module: std-document:basics/image
+ * module: px2style:basics/image
  */
 try{
 	(function(){
@@ -34,12 +34,12 @@ window.Px2broccoliModulePx2Style_ImageScope = function(imgElm){
 	})();
 
 }catch(err){
-	console.error('Module Error:', "std-document:basics/image", err);
+	console.error('Module Error:', "px2style:basics/image", err);
 }
 
 
 /**
- * module: std-document:interactives/accordion
+ * module: px2style:interactives/accordion
  */
 try{
 	(function(){
@@ -74,12 +74,12 @@ window.addEventListener('load', function(e){
 	})();
 
 }catch(err){
-	console.error('Module Error:', "std-document:interactives/accordion", err);
+	console.error('Module Error:', "px2style:interactives/accordion", err);
 }
 
 
 /**
- * module: std-document:interactives/carousel
+ * module: px2style:interactives/carousel
  */
 try{
 	(function(){
@@ -102,12 +102,12 @@ var tns=function(){var t=window,Ai=t.requestAnimationFrame||t.webkitRequestAnima
 	})();
 
 }catch(err){
-	console.error('Module Error:', "std-document:interactives/carousel", err);
+	console.error('Module Error:', "px2style:interactives/carousel", err);
 }
 
 
 /**
- * module: std-document:interactives/tabs
+ * module: px2style:interactives/tabs
  */
 try{
 	(function(){
@@ -149,12 +149,12 @@ window.addEventListener('load', function(e){
 	})();
 
 }catch(err){
-	console.error('Module Error:', "std-document:interactives/tabs", err);
+	console.error('Module Error:', "px2style:interactives/tabs", err);
 }
 
 
 /**
- * module: std-document:utils/viewport-fit
+ * module: px2style:utils/viewport-fit
  */
 try{
 	(function(){
@@ -171,6 +171,6 @@ window.addEventListener('resize', eventHandler);
 	})();
 
 }catch(err){
-	console.error('Module Error:', "std-document:utils/viewport-fit", err);
+	console.error('Module Error:', "px2style:utils/viewport-fit", err);
 }
 })();

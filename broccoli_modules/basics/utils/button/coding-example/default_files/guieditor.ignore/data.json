@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:basics/button",
+                        "modId": "px2style:basics/button",
                         "fields": {
                             "label": "標準ボタン",
                             "intention": "",
@@ -23,7 +23,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/button",
+                        "modId": "px2style:basics/button",
                         "fields": {
                             "label": "プライマリボタン",
                             "intention": "px2-btn--primary",
@@ -41,7 +41,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/button",
+                        "modId": "px2style:basics/button",
                         "fields": {
                             "label": "セカンダリボタン",
                             "intention": "px2-btn--secondary",
@@ -59,7 +59,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/button",
+                        "modId": "px2style:basics/button",
                         "fields": {
                             "label": "危険ボタン",
                             "intention": "px2-btn--danger",
@@ -77,7 +77,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/button",
+                        "modId": "px2style:basics/button",
                         "fields": {
                             "label": "ダウンロードボタン",
                             "intention": "px2-btn--download",

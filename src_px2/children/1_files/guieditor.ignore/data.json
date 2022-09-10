@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:headings/hx",
+                        "modId": "px2style:headings/hx",
                         "fields": {
                             "hx": "2",
                             "main": "子階層へのリンク",
@@ -16,7 +16,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/sub-page-list",
+                        "modId": "px2style:lists/sub-page-list",
                         "fields": {
                             "style": "",
                             "parent": "",
@@ -27,7 +27,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:headings/hx",
+                        "modId": "px2style:headings/hx",
                         "fields": {
                             "hx": "2",
                             "main": "トップページの子階層へのリンク",
@@ -38,7 +38,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/sub-page-list",
+                        "modId": "px2style:lists/sub-page-list",
                         "fields": {
                             "style": "withdescription",
                             "parent": "/",

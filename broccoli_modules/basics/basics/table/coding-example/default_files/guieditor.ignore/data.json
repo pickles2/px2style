@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:basics/table",
+                        "modId": "px2style:basics/table",
                         "fields": {
                             "table": {
                                 "resKey": "18f1c722fc16e649cbec2675d2f80d6b",

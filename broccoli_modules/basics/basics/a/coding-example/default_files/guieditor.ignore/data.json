@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "標準的なリンクスタイル",
@@ -18,7 +18,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "標準的なビュレットスタイルのリンク",
@@ -31,7 +31,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "ボタン風リンクスタイル",
@@ -44,7 +44,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "プライマリボタン風リンクスタイル",
@@ -57,7 +57,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "セカンダリボタン風リンクスタイル",
@@ -70,7 +70,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "危険ボタン風リンクスタイル",
@@ -83,7 +83,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:basics/a",
+                        "modId": "px2style:basics/a",
                         "fields": {
                             "href": "javascript:alert('clicked');",
                             "label": "ダウンロードボタン風リンクスタイル",

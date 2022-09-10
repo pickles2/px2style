@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "std-document:lists/ul-media-list",
+                        "modId": "px2style:lists/ul-media-list",
                         "fields": {
                             "class": "",
                             "list-item-width": "",
@@ -14,7 +14,7 @@
                             "list-item-width-sm": "",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-media-list",
+                                    "modId": "px2style:lists/ul-media-list",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "メディアリストアイテム1",
@@ -35,7 +35,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-media-list",
+                                    "modId": "px2style:lists/ul-media-list",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "メディアリストアイテム2",
@@ -59,7 +59,7 @@
                         }
                     },
                     {
-                        "modId": "std-document:headings/hx",
+                        "modId": "px2style:headings/hx",
                         "fields": {
                             "hx": "2",
                             "main": "カードスタイル",
@@ -70,7 +70,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "std-document:lists/ul-media-list",
+                        "modId": "px2style:lists/ul-media-list",
                         "fields": {
                             "class": "card",
                             "list-item-width": "1of3",
@@ -79,7 +79,7 @@
                             "list-item-width-sm": "",
                             "loop": [
                                 {
-                                    "modId": "std-document:lists/ul-media-list",
+                                    "modId": "px2style:lists/ul-media-list",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "メディアリストアイテム1",
@@ -100,7 +100,7 @@
                                     "dec": ""
                                 },
                                 {
-                                    "modId": "std-document:lists/ul-media-list",
+                                    "modId": "px2style:lists/ul-media-list",
                                     "fields": {
                                         "href": "javascript:alert('clicked');",
                                         "label": "メディアリストアイテム2",

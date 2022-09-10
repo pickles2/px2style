@@ -80,7 +80,7 @@
             },
             "margin-padding":{
                 "fieldType": "input",
-                "type":"std-document__css-margin-padding",
+                "type":"px2style__css-margin-padding",
                 "label":"ボックス内、ボックス外の隙間"
             },
             "main": {
