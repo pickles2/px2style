@@ -1,62 +1,9 @@
 
 <!-- autoindex -->
 
-<ul class="px2-horizontal-list px2-horizontal-list--right">
-
-	<li><div class="px2-p">
-<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
+<div class="px2-h2">
+<h2>リストモジュール</h2>
 </div>
-</li>
-
-	<li><div class="px2-p">
-<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">リンク</a>
-</div>
-</li>
-
-	<li><div class="px2-p">
-<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
-</div>
-</li>
-
-</ul>
-<ul class="px2-horizontal-list">
-
-	<li></li>
-
-	<li></li>
-
-	<li></li>
-
-</ul>
-<ul class="px2-note-list">
-
-	<li></li>
-
-	<li></li>
-
-	<li></li>
-
-</ul>
-<dl>
-
-<dt><p>定義リスト 項目1</p>
-</dt>
-<dd> <div class="px2-p">
-<p>定義リスト1つ目の説明本文がこちらです。</p>
-
-</div>
- </dd>
-
-<dt><p>定義リスト 項目2</p>
-</dt>
-<dd> <div class="px2-p">
-<p>定義リスト2つ目の説明本文がこちらです。</p>
-<p>定義リストは、モジュール挿入を標準にしました。</p>
-
-</div>
- </dd>
-
-</dl>
 <ul>
 
 	<li><div class="px2-p">
@@ -100,6 +47,45 @@
 </li>
 
 </ul>
+<ul class="px2-horizontal-list px2-horizontal-list--right">
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;Clicked&#039;);" class="px2-a">リンク</a>
+</div>
+</li>
+
+</ul>
+<ul class="px2-horizontal-list">
+
+	<li><div class="px2-p">
+<p>List Item 1</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>List Item 2</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>List Item 3</p>
+
+</div>
+</li>
+
+</ul>
 <ul class="px2-note-list">
 
 	<li><div class="px2-p">
@@ -121,6 +107,83 @@
 </li>
 
 </ul>
+<ul>
+
+	<li><div class="px2-p">
+<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">List Item (link module)</a>
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>List Item (module)</p>
+
+</div>
+<ul>
+
+	<li><div class="px2-p">
+<p>List Item 1</p>
+
+</div>
+</li>
+
+	<li><div class="px2-p">
+<p>List Item 2</p>
+
+</div>
+</li>
+
+</ul>
+</li>
+
+</ul>
+<div class="px2-h2">
+<h2>説明リストモジュール</h2>
+</div>
+<dl>
+
+<dt><p>定義リスト 項目1</p>
+</dt>
+<dd> <div class="px2-p">
+<p>定義リスト1つ目の説明本文がこちらです。</p>
+
+</div>
+ </dd>
+
+<dt><p>定義リスト 項目2</p>
+</dt>
+<dd> <div class="px2-p">
+<p>定義リスト2つ目の説明本文がこちらです。</p>
+<p>定義リストは、モジュール挿入を標準にしました。</p>
+
+</div>
+ </dd>
+
+<dt><p>用語説明1</p>
+</dt>
+<dd> <div class="px2-p">
+<p>用語を説明します。</p>
+
+</div>
+<div class="px2-image px2-image--framed px2-text-align-center px2-p px2-embedded-media--imagescope">
+<div class="px2-image__img">
+<img src="./index_files/resources/teabug.gif" alt="紅茶が入っていた袋" onclick="Px2broccoliModulePx2Style_ImageScope(this);" /><div class="px2-image__caption"><p>紅茶が入っていた袋</p>
+</div>
+</div>
+</div>
+ </dd>
+
+<dt><p>用語説明2</p>
+</dt>
+<dd> <div class="px2-p">
+<p>用語を説明します。</p>
+
+</div>
+ </dd>
+
+</dl>
+<div class="px2-h2">
+<h2>リンクリスト</h2>
+</div>
 <div class="px2-linklist">
 <ul>
 
@@ -167,27 +230,9 @@
 
 </ul>
 </div>
-<ul>
-
-	<li><div class="px2-p">
-<a href="javascript:alert(&#039;クリックしました。&#039;);" class="px2-a">List Item (link module)</a>
+<div class="px2-h2">
+<h2>下層ページリスト</h2>
 </div>
-</li>
-
-	<li><div class="px2-p">
-<p>List Item (module)</p>
-
-</div>
-<ul>
-
-	<li></li>
-
-	<li></li>
-
-</ul>
-</li>
-
-</ul>
 <div class="px2-linklist">
 
 <?php
@@ -284,7 +329,10 @@
     echo $fnc_children_gen($parent, $depth);
 })($px);
 ?>
-</div><div class="px2-medialist px2-medialist--list-style-card px2-medialist--list-item-width-1of3">
+</div><div class="px2-h2">
+<h2>メディアリスト</h2>
+</div>
+<div class="px2-medialist px2-medialist--list-style-card px2-medialist--list-item-width-1of3">
 <ul>
 
 
@@ -358,8 +406,11 @@
 
 </ul>
 </div>
+<div class="px2-h2">
+<h2>更新履歴リスト</h2>
+</div>
 <div class="px2-changelog"><div class="px2-changelog__header"><div class="px2-h2">
-<h2>更新履歴 v2</h2>
+<h2>更新履歴</h2>
 </div>
 </div>
 
@@ -376,28 +427,3 @@
 	</div>
 
 </div><!-- /.px2-changelog -->
-<dl>
-
-<dt><p>用語説明1</p>
-</dt>
-<dd> <div class="px2-p">
-<p>用語を説明します。</p>
-
-</div>
-<div class="px2-image px2-image--framed px2-text-align-center px2-p px2-embedded-media--imagescope">
-<div class="px2-image__img">
-<img src="./index_files/resources/teabug.gif" alt="紅茶が入っていた袋" onclick="Px2broccoliModulePx2Style_ImageScope(this);" /><div class="px2-image__caption"><p>紅茶が入っていた袋</p>
-</div>
-</div>
-</div>
- </dd>
-
-<dt><p>用語説明2</p>
-</dt>
-<dd> <div class="px2-p">
-<p>用語を説明します。</p>
-
-</div>
- </dd>
-
-</dl>

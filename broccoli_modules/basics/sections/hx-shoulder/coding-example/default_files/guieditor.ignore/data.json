@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": "2",
                             "main": "ショルダーメニューのサンプル",
@@ -49,7 +49,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -99,7 +99,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "4"
@@ -149,7 +149,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "5"
@@ -199,7 +199,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "6"

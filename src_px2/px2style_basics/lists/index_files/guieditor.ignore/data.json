@@ -9,235 +9,20 @@
                         "fields": []
                     },
                     {
-                        "modId": "px2style:lists/ul",
+                        "modId": "px2style:sections/hx",
                         "fields": {
-                            "class": "px2-horizontal-list px2-horizontal-list--right",
-                            "loop": [
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "modules": [
-                                            {
-                                                "modId": "px2style:basics/a",
-                                                "fields": {
-                                                    "href": "javascript:alert('Clicked');",
-                                                    "label": "リンク",
-                                                    "class": "px2-a",
-                                                    "target": "",
-                                                    "align": "",
-                                                    "display": "",
-                                                    "paragraph": "px2-p"
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "modules": [
-                                            {
-                                                "modId": "px2style:basics/a",
-                                                "fields": {
-                                                    "href": "javascript:alert('クリックしました。');",
-                                                    "label": "リンク",
-                                                    "class": "px2-a",
-                                                    "target": "",
-                                                    "align": ""
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "modules": [
-                                            {
-                                                "modId": "px2style:basics/a",
-                                                "fields": {
-                                                    "href": "javascript:alert('Clicked');",
-                                                    "label": "リンク",
-                                                    "class": "px2-a",
-                                                    "target": "",
-                                                    "align": ""
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "loop"
-                                }
-                            ]
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "リストモジュール"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""
-                    },
-                    {
-                        "modId": "px2style:lists/ul",
-                        "fields": {
-                            "class": "px2-horizontal-list",
-                            "loop": [
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "text",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "text",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "markdown",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "px2style:lists/ul",
-                        "fields": {
-                            "class": "px2-note-list",
-                            "loop": [
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "text",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "text",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "text": {
-                                            "editor": "text",
-                                            "src": "List Item"
-                                        }
-                                    },
-                                    "subModName": "loop"
-                                }
-                            ]
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "px2style:lists/dl",
-                        "fields": {
-                            "dl-loop": [
-                                {
-                                    "modId": "px2style:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "定義リスト 項目1",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": [
-                                            {
-                                                "modId": "px2style:basics/text",
-                                                "fields": {
-                                                    "main": {
-                                                        "src": "定義リスト1つ目の説明本文がこちらです。\n",
-                                                        "editor": "markdown"
-                                                    },
-                                                    "paragraph": {
-                                                        "src": "px2-p"
-                                                    },
-                                                    "text-align": {
-                                                        "src": ""
-                                                    },
-                                                    "font-size": {
-                                                        "src": ""
-                                                    }
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "dl-loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "px2style:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "定義リスト 項目2",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": [
-                                            {
-                                                "modId": "px2style:basics/text",
-                                                "fields": {
-                                                    "main": {
-                                                        "src": "定義リスト2つ目の説明本文がこちらです。\n\n定義リストは、モジュール挿入を標準にしました。\n",
-                                                        "editor": "markdown"
-                                                    },
-                                                    "paragraph": {
-                                                        "src": "px2-p"
-                                                    },
-                                                    "text-align": {
-                                                        "src": ""
-                                                    },
-                                                    "font-size": {
-                                                        "src": ""
-                                                    }
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "dl-loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        }
                     },
                     {
                         "modId": "px2style:lists/ul",
@@ -426,6 +211,186 @@
                     {
                         "modId": "px2style:lists/ul",
                         "fields": {
+                            "class": "px2-horizontal-list px2-horizontal-list--right",
+                            "loop": [
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('Clicked');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": "",
+                                                    "display": "",
+                                                    "paragraph": "px2-p"
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('クリックしました。');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('Clicked');",
+                                                    "label": "リンク",
+                                                    "class": "px2-a",
+                                                    "target": "",
+                                                    "align": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:lists/ul",
+                        "fields": {
+                            "class": "px2-horizontal-list",
+                            "loop": [
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        },
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "List Item 1",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "text",
+                                            "src": "List Item"
+                                        },
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "List Item 2",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "text": {
+                                            "editor": "markdown",
+                                            "src": "List Item"
+                                        },
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "List Item 3",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:lists/ul",
+                        "fields": {
                             "class": {
                                 "src": "px2-note-list"
                             },
@@ -517,6 +482,332 @@
                                     "subModName": "loop"
                                 }
                             ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:lists/ul",
+                        "fields": {
+                            "class": {
+                                "src": ""
+                            },
+                            "loop": [
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/a",
+                                                "fields": {
+                                                    "href": "javascript:alert('クリックしました。');",
+                                                    "label": "List Item (link module)",
+                                                    "class": "px2-a",
+                                                    "target": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                },
+                                {
+                                    "modId": "px2style:lists/ul",
+                                    "fields": {
+                                        "modules": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "List Item (module)",
+                                                        "editor": "markdown"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul",
+                                                "fields": {
+                                                    "class": "",
+                                                    "loop": [
+                                                        {
+                                                            "modId": "px2style:lists/ul",
+                                                            "fields": {
+                                                                "text": {
+                                                                    "editor": "text",
+                                                                    "src": "List Item"
+                                                                },
+                                                                "modules": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "List Item 1",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop"
+                                                        },
+                                                        {
+                                                            "modId": "px2style:lists/ul",
+                                                            "fields": {
+                                                                "text": {
+                                                                    "editor": "text",
+                                                                    "src": "List Item"
+                                                                },
+                                                                "modules": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "List Item 2",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop"
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "説明リストモジュール"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:lists/dl",
+                        "fields": {
+                            "dl-loop": [
+                                {
+                                    "modId": "px2style:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "定義リスト 項目1",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "定義リスト1つ目の説明本文がこちらです。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "定義リスト 項目2",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "定義リスト2つ目の説明本文がこちらです。\n\n定義リストは、モジュール挿入を標準にしました。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "用語説明1",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "用語を説明します。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:basics/image",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": ""
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "image_src": {
+                                                        "resKey": "94819063787a78e7ffd71f616316658a",
+                                                        "path": "./index_files/resources/teabug.gif",
+                                                        "resType": "",
+                                                        "webUrl": ""
+                                                    },
+                                                    "alt_text": {
+                                                        "src": "紅茶が入っていた袋"
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    },
+                                                    "align": {
+                                                        "src": "center"
+                                                    },
+                                                    "framed": {
+                                                        "src": "framed"
+                                                    },
+                                                    "caption": {
+                                                        "src": "紅茶が入っていた袋",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "width": {
+                                                        "src": ""
+                                                    },
+                                                    "imagescope": {
+                                                        "src": "onclick"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:lists/dl",
+                                    "fields": {
+                                        "dt": {
+                                            "src": "用語説明2",
+                                            "editor": "markdown"
+                                        },
+                                        "dd": [
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "用語を説明します。",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "paragraph": "px2-p",
+                                                    "text-align": "",
+                                                    "font-size": ""
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "dl-loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "リンクリスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -683,77 +974,17 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:lists/ul",
+                        "modId": "px2style:sections/hx",
                         "fields": {
-                            "class": "",
-                            "loop": [
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "modules": [
-                                            {
-                                                "modId": "px2style:basics/a",
-                                                "fields": {
-                                                    "href": "javascript:alert('クリックしました。');",
-                                                    "label": "List Item (link module)",
-                                                    "class": "px2-a",
-                                                    "target": ""
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "loop"
-                                },
-                                {
-                                    "modId": "px2style:lists/ul",
-                                    "fields": {
-                                        "modules": [
-                                            {
-                                                "modId": "px2style:basics/text",
-                                                "fields": {
-                                                    "main": {
-                                                        "src": "List Item (module)",
-                                                        "editor": "markdown"
-                                                    }
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            },
-                                            {
-                                                "modId": "px2style:lists/ul",
-                                                "fields": {
-                                                    "class": "",
-                                                    "loop": [
-                                                        {
-                                                            "modId": "px2style:lists/ul",
-                                                            "fields": {
-                                                                "text": {
-                                                                    "editor": "text",
-                                                                    "src": "List Item"
-                                                                }
-                                                            },
-                                                            "subModName": "loop"
-                                                        },
-                                                        {
-                                                            "modId": "px2style:lists/ul",
-                                                            "fields": {
-                                                                "text": {
-                                                                    "editor": "text",
-                                                                    "src": "List Item"
-                                                                }
-                                                            },
-                                                            "subModName": "loop"
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "loop"
-                                }
-                            ]
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "下層ページリスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -776,6 +1007,22 @@
                             "list_flg": "show",
                             "depth": "10",
                             "style": ""
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "メディアリスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -935,17 +1182,33 @@
                         "dec": ""
                     },
                     {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "更新履歴リスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
                         "modId": "px2style:lists/changelog",
                         "fields": {
                             "header": [
                                 {
-                                    "modId": "px2style:headings/hx",
+                                    "modId": "px2style:sections/hx",
                                     "fields": {
                                         "hx": {
                                             "src": "2"
                                         },
                                         "main": {
-                                            "src": "更新履歴 v2"
+                                            "src": "更新履歴"
                                         },
                                         "sub": {
                                             "src": ""
@@ -983,110 +1246,6 @@
                                         }
                                     },
                                     "subModName": "loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "modId": "px2style:lists/dl",
-                        "fields": {
-                            "dl-loop": [
-                                {
-                                    "modId": "px2style:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "用語説明1",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": [
-                                            {
-                                                "modId": "px2style:basics/text",
-                                                "fields": {
-                                                    "main": {
-                                                        "src": "用語を説明します。\n",
-                                                        "editor": "markdown"
-                                                    },
-                                                    "paragraph": "px2-p",
-                                                    "text-align": "",
-                                                    "font-size": ""
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            },
-                                            {
-                                                "modId": "px2style:basics/image",
-                                                "fields": {
-                                                    "href": {
-                                                        "src": ""
-                                                    },
-                                                    "target": {
-                                                        "src": ""
-                                                    },
-                                                    "image_src": {
-                                                        "resKey": "554d9d7ca8ce6565694bdc6d60549c3a",
-                                                        "path": "./index_files/resources/teabug.gif",
-                                                        "resType": "",
-                                                        "webUrl": ""
-                                                    },
-                                                    "alt_text": {
-                                                        "src": "紅茶が入っていた袋"
-                                                    },
-                                                    "paragraph": {
-                                                        "src": "px2-p"
-                                                    },
-                                                    "align": {
-                                                        "src": "center"
-                                                    },
-                                                    "framed": {
-                                                        "src": "framed"
-                                                    },
-                                                    "caption": {
-                                                        "src": "紅茶が入っていた袋",
-                                                        "editor": "markdown"
-                                                    },
-                                                    "width": {
-                                                        "src": ""
-                                                    },
-                                                    "imagescope": {
-                                                        "src": "onclick"
-                                                    }
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "dl-loop",
-                                    "anchor": "",
-                                    "dec": ""
-                                },
-                                {
-                                    "modId": "px2style:lists/dl",
-                                    "fields": {
-                                        "dt": {
-                                            "src": "用語説明2",
-                                            "editor": "markdown"
-                                        },
-                                        "dd": [
-                                            {
-                                                "modId": "px2style:basics/text",
-                                                "fields": {
-                                                    "main": {
-                                                        "src": "用語を説明します。",
-                                                        "editor": "markdown"
-                                                    },
-                                                    "paragraph": "px2-p",
-                                                    "text-align": "",
-                                                    "font-size": ""
-                                                },
-                                                "anchor": "",
-                                                "dec": ""
-                                            }
-                                        ]
-                                    },
-                                    "subModName": "dl-loop",
                                     "anchor": "",
                                     "dec": ""
                                 }

@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:notice/notice",
+                        "modId": "px2style:sections/notice",
                         "fields": {
                             "type": {
                                 "src": ""
@@ -52,7 +52,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:notice/notice",
+                        "modId": "px2style:sections/notice",
                         "fields": {
                             "type": {
                                 "src": "px2-notice--success"
@@ -95,7 +95,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:notice/notice",
+                        "modId": "px2style:sections/notice",
                         "fields": {
                             "type": {
                                 "src": "px2-notice--warning"
@@ -138,7 +138,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:notice/notice",
+                        "modId": "px2style:sections/notice",
                         "fields": {
                             "type": {
                                 "src": "px2-notice--danger"
@@ -181,7 +181,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:notice/notice",
+                        "modId": "px2style:sections/notice",
                         "fields": {
                             "type": {
                                 "src": "px2-notice--info"

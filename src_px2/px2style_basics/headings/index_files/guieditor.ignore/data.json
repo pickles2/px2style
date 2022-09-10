@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -21,7 +21,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -37,7 +37,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "4"
@@ -53,7 +53,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "5"
@@ -69,7 +69,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "6"
@@ -85,7 +85,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -95,89 +95,39 @@
                             },
                             "shoulder": [
                                 {
-                                    "modId": "px2style:lists/ul",
+                                    "modId": "px2style:lists/ul-links",
                                     "fields": {
-                                        "class": "px2-horizontal-list",
+                                        "class": "px2-horizontal-list px2-horizontal-list--right",
                                         "loop": [
                                             {
-                                                "modId": "px2style:lists/ul",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
-                                                    "text": {
-                                                        "editor": "markdown",
-                                                        "src": "[List Item 1](javascript:void(0);)"
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
                                                     },
-                                                    "modules": [
-                                                        {
-                                                            "modId": "px2style:basics/a",
-                                                            "fields": {
-                                                                "href": {
-                                                                    "src": "javascript:void(0);"
-                                                                },
-                                                                "label": {
-                                                                    "src": "List Item"
-                                                                },
-                                                                "class": {
-                                                                    "src": "px2-a"
-                                                                },
-                                                                "target": {
-                                                                    "src": ""
-                                                                },
-                                                                "display": {
-                                                                    "src": ""
-                                                                },
-                                                                "align": {
-                                                                    "src": ""
-                                                                },
-                                                                "paragraph": {
-                                                                    "src": "px2-p"
-                                                                }
-                                                            },
-                                                            "anchor": "",
-                                                            "dec": ""
-                                                        }
-                                                    ]
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
                                                 },
                                                 "subModName": "loop",
                                                 "anchor": "",
                                                 "dec": ""
                                             },
                                             {
-                                                "modId": "px2style:lists/ul",
+                                                "modId": "px2style:lists/ul-links",
                                                 "fields": {
-                                                    "text": {
-                                                        "editor": "markdown",
-                                                        "src": "[List Item 2](javascript:void(0);)"
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
                                                     },
-                                                    "modules": [
-                                                        {
-                                                            "modId": "px2style:basics/a",
-                                                            "fields": {
-                                                                "href": {
-                                                                    "src": "javascript:void(0);"
-                                                                },
-                                                                "label": {
-                                                                    "src": "List Item"
-                                                                },
-                                                                "class": {
-                                                                    "src": "px2-a"
-                                                                },
-                                                                "target": {
-                                                                    "src": ""
-                                                                },
-                                                                "display": {
-                                                                    "src": ""
-                                                                },
-                                                                "align": {
-                                                                    "src": ""
-                                                                },
-                                                                "paragraph": {
-                                                                    "src": "px2-p"
-                                                                }
-                                                            },
-                                                            "anchor": "",
-                                                            "dec": ""
-                                                        }
-                                                    ]
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
                                                 },
                                                 "subModName": "loop",
                                                 "anchor": "",
@@ -197,7 +147,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -253,7 +203,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "4"
@@ -264,13 +214,58 @@
                             "sub": {
                                 "src": "見出しレベル4"
                             },
-                            "shoulder": []
+                            "shoulder": [
+                                {
+                                    "modId": "px2style:lists/ul-links",
+                                    "fields": {
+                                        "class": "px2-horizontal-list px2-horizontal-list--right",
+                                        "loop": [
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
                         },
                         "anchor": "",
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "5"
@@ -281,13 +276,58 @@
                             "sub": {
                                 "src": "見出しレベル5"
                             },
-                            "shoulder": []
+                            "shoulder": [
+                                {
+                                    "modId": "px2style:lists/ul-links",
+                                    "fields": {
+                                        "class": "px2-horizontal-list px2-horizontal-list--right",
+                                        "loop": [
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
                         },
                         "anchor": "",
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx-shoulder",
+                        "modId": "px2style:sections/hx-shoulder",
                         "fields": {
                             "hx": {
                                 "src": "6"
@@ -298,7 +338,52 @@
                             "sub": {
                                 "src": "見出しレベル6"
                             },
-                            "shoulder": []
+                            "shoulder": [
+                                {
+                                    "modId": "px2style:lists/ul-links",
+                                    "fields": {
+                                        "class": "px2-horizontal-list px2-horizontal-list--right",
+                                        "loop": [
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:lists/ul-links",
+                                                "fields": {
+                                                    "href": {
+                                                        "src": "javascript:void(0);"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "label": {
+                                                        "src": "Link Item"
+                                                    }
+                                                },
+                                                "subModName": "loop",
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
                         },
                         "anchor": "",
                         "dec": ""

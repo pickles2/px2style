@@ -49,7 +49,7 @@
     ],
     "heading": [
      {
-      "modId": "px2style:headings/hx",
+      "modId": "px2style:sections/hx",
       "fields": {
        "hx": {
         "src": "2"

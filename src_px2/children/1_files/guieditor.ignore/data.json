@@ -5,7 +5,7 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": "2",
                             "main": "子階層へのリンク",
@@ -27,7 +27,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": "2",
                             "main": "トップページの子階層へのリンク",

@@ -9,7 +9,7 @@
                         "fields": []
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -333,7 +333,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -540,7 +540,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "2"
@@ -596,7 +596,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -632,7 +632,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -668,7 +668,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
@@ -704,7 +704,7 @@
                         "dec": ""
                     },
                     {
-                        "modId": "px2style:headings/hx",
+                        "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
                                 "src": "3"
