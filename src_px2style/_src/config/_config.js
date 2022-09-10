@@ -2,6 +2,9 @@
  * config.js
  */
 (function(){
+	if( window.px2style.setConfig ){
+		return;
+	}
 
 	var config = {
 		'additionalClassName': '',

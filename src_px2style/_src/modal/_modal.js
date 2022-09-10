@@ -2,6 +2,10 @@
  * modal.js
  */
 (function(){
+	if( window.px2style.modal ){
+		return;
+	}
+
 	var $ = window.px2style.$;
 	var modalLayers = [];
 

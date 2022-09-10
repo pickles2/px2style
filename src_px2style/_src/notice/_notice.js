@@ -1,16 +1,19 @@
 /**
  * notice.js
  */
-module.exports = function(Px2style){
+(function(){
+	if( window.px2style.flashMessage ){
+		return;
+	}
 
-	var $ = require('jquery');
+	var $ = window.px2style.$;
 	var $flashmessage,
 		$target;
 
 	/**
 	 * Flash Message.
 	 */
-	Px2style.prototype.flashMessage = function(message, callback){
+	window.px2style.flashMessage = function(message, callback){
 		var _this = this;
 		callback = callback||function(){};
 
@@ -92,4 +95,4 @@ module.exports = function(Px2style){
 			$flashmessage = undefined;
 		}
 	}
-}
+})();

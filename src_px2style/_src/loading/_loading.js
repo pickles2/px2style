@@ -1,8 +1,12 @@
 /**
  * loading.js
  */
-module.exports = function(Px2style){
-	var $ = require('jquery');
+(function(){
+	if( window.px2style.loading ){
+		return;
+	}
+
+	var $ = window.px2style.$;
 	var $loading,
 		$message,
 		$target;
@@ -10,7 +14,7 @@ module.exports = function(Px2style){
 	/**
 	 * Open loading dialog.
 	 */
-	Px2style.prototype.loading = function(options, callback){
+	window.px2style.loading = function(options, callback){
 		var _this = this;
 		var additionalClassName = this.getConfig('additionalClassName');
 		callback = callback||function(){};
@@ -67,7 +71,7 @@ module.exports = function(Px2style){
 	/**
 	 * Update loading message.
 	 */
-	Px2style.prototype.loadingMessage = function(message){
+	window.px2style.loadingMessage = function(message){
 		$message.text(message);
 		return;
 	}
@@ -75,7 +79,7 @@ module.exports = function(Px2style){
 	/**
 	 * Close loading dialog.
 	 */
-	Px2style.prototype.closeLoading = function(callback){
+	window.px2style.closeLoading = function(callback){
 		callback = callback||function(){};
 		try {
 			$loading.remove();
@@ -84,4 +88,4 @@ module.exports = function(Px2style){
 		return;
 	}
 
-}
+})();
