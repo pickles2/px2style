@@ -42,13 +42,18 @@ mix
 
 
 	// --------------------------------------
+	// modules: basics/a
+	.js('./src_mix/modules/basics/basics/_/module.js', './broccoli_modules/basics/basics/_/module.js')
+	.js('./src_mix/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
+
+	// --------------------------------------
 	// fields: cssMarginPadding
 	.js('./src_mix/fields/cssMarginPadding/cssMarginPadding.js', './fields/cssMarginPadding/frontend/')
 	.sass('src_mix/fields/cssMarginPadding/cssMarginPadding.css.scss', './fields/cssMarginPadding/frontend/cssMarginPadding.css')
 
 	// --------------------------------------
 	// px2style
-	.js('./src_px2style/_src/main.js', './px2style/px2style.js')
+	.js('./src_px2style/px2style.js', './px2style/px2style.js')
 	.sass('src_px2style/px2style.css.scss', './px2style/px2style.css')
 
 ;

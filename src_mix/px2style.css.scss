@@ -1,0 +1,20 @@
+$px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+$px2-main-color: #00a0e6;
+$px2-text-color: #333;
+$px2-background-color: #f9f9f9;
+
+// px2style
+@import '../src_px2style/_src/form/_form.css.scss';
+@import '../src_px2style/_src/header/_header.css.scss';
+@import '../src_px2style/_src/layouts/_grid.css.scss';
+@import '../src_px2style/_src/lists/_lists.css.scss';
+@import '../src_px2style/_src/modal/_modal.css.scss';
+@import '../src_px2style/_src/notice/_notice.css.scss';
+@import '../src_px2style/_src/styles/_utils.css.scss';
+@import '../src_px2style/_src/tables/_tables.css.scss';
+
+
+// Darkmode
+.px2-darkmode {
+	@import '../src_px2style/_src/themes/darkmode/_darkmode.css.scss';
+}

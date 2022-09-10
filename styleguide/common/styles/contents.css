@@ -13,9 +13,6 @@
  * module: px2style:grids/grid
  */
   /**
- * module: px2style:sections/hx
- */
-  /**
  * module: px2style:interactives/accordion
  */
   /**
@@ -47,6 +44,9 @@
  */
   /**
  * module: px2style:medias/image-media
+ */
+  /**
+ * module: px2style:sections/hx
  */
   /**
  * module: px2style:sections/notice
@@ -492,36 +492,6 @@
     width: calc(16.66% - 1rem);
   }
 }
-.contents h1, .contents .px2-h1, .contents h2, .contents .px2-h2, .contents h3, .contents .px2-h3, .contents h4, .contents .px2-h4, .contents h5, .contents .px2-h5, .contents h6, .contents .px2-h6 {
-  font-weight: bold;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-}
-.contents h1 h1, .contents h1 .px2-h1, .contents h1 h2, .contents h1 .px2-h2, .contents h1 h3, .contents h1 .px2-h3, .contents h1 h4, .contents h1 .px2-h4, .contents h1 h5, .contents h1 .px2-h5, .contents h1 h6, .contents h1 .px2-h6, .contents h1 p, .contents .px2-h1 h1, .contents .px2-h1 .px2-h1, .contents .px2-h1 h2, .contents .px2-h1 .px2-h2, .contents .px2-h1 h3, .contents .px2-h1 .px2-h3, .contents .px2-h1 h4, .contents .px2-h1 .px2-h4, .contents .px2-h1 h5, .contents .px2-h1 .px2-h5, .contents .px2-h1 h6, .contents .px2-h1 .px2-h6, .contents .px2-h1 p, .contents h2 h1, .contents h2 .px2-h1, .contents h2 h2, .contents h2 .px2-h2, .contents h2 h3, .contents h2 .px2-h3, .contents h2 h4, .contents h2 .px2-h4, .contents h2 h5, .contents h2 .px2-h5, .contents h2 h6, .contents h2 .px2-h6, .contents h2 p, .contents .px2-h2 h1, .contents .px2-h2 .px2-h1, .contents .px2-h2 h2, .contents .px2-h2 .px2-h2, .contents .px2-h2 h3, .contents .px2-h2 .px2-h3, .contents .px2-h2 h4, .contents .px2-h2 .px2-h4, .contents .px2-h2 h5, .contents .px2-h2 .px2-h5, .contents .px2-h2 h6, .contents .px2-h2 .px2-h6, .contents .px2-h2 p, .contents h3 h1, .contents h3 .px2-h1, .contents h3 h2, .contents h3 .px2-h2, .contents h3 h3, .contents h3 .px2-h3, .contents h3 h4, .contents h3 .px2-h4, .contents h3 h5, .contents h3 .px2-h5, .contents h3 h6, .contents h3 .px2-h6, .contents h3 p, .contents .px2-h3 h1, .contents .px2-h3 .px2-h1, .contents .px2-h3 h2, .contents .px2-h3 .px2-h2, .contents .px2-h3 h3, .contents .px2-h3 .px2-h3, .contents .px2-h3 h4, .contents .px2-h3 .px2-h4, .contents .px2-h3 h5, .contents .px2-h3 .px2-h5, .contents .px2-h3 h6, .contents .px2-h3 .px2-h6, .contents .px2-h3 p, .contents h4 h1, .contents h4 .px2-h1, .contents h4 h2, .contents h4 .px2-h2, .contents h4 h3, .contents h4 .px2-h3, .contents h4 h4, .contents h4 .px2-h4, .contents h4 h5, .contents h4 .px2-h5, .contents h4 h6, .contents h4 .px2-h6, .contents h4 p, .contents .px2-h4 h1, .contents .px2-h4 .px2-h1, .contents .px2-h4 h2, .contents .px2-h4 .px2-h2, .contents .px2-h4 h3, .contents .px2-h4 .px2-h3, .contents .px2-h4 h4, .contents .px2-h4 .px2-h4, .contents .px2-h4 h5, .contents .px2-h4 .px2-h5, .contents .px2-h4 h6, .contents .px2-h4 .px2-h6, .contents .px2-h4 p, .contents h5 h1, .contents h5 .px2-h1, .contents h5 h2, .contents h5 .px2-h2, .contents h5 h3, .contents h5 .px2-h3, .contents h5 h4, .contents h5 .px2-h4, .contents h5 h5, .contents h5 .px2-h5, .contents h5 h6, .contents h5 .px2-h6, .contents h5 p, .contents .px2-h5 h1, .contents .px2-h5 .px2-h1, .contents .px2-h5 h2, .contents .px2-h5 .px2-h2, .contents .px2-h5 h3, .contents .px2-h5 .px2-h3, .contents .px2-h5 h4, .contents .px2-h5 .px2-h4, .contents .px2-h5 h5, .contents .px2-h5 .px2-h5, .contents .px2-h5 h6, .contents .px2-h5 .px2-h6, .contents .px2-h5 p, .contents h6 h1, .contents h6 .px2-h1, .contents h6 h2, .contents h6 .px2-h2, .contents h6 h3, .contents h6 .px2-h3, .contents h6 h4, .contents h6 .px2-h4, .contents h6 h5, .contents h6 .px2-h5, .contents h6 h6, .contents h6 .px2-h6, .contents h6 p, .contents .px2-h6 h1, .contents .px2-h6 .px2-h1, .contents .px2-h6 h2, .contents .px2-h6 .px2-h2, .contents .px2-h6 h3, .contents .px2-h6 .px2-h3, .contents .px2-h6 h4, .contents .px2-h6 .px2-h4, .contents .px2-h6 h5, .contents .px2-h6 .px2-h5, .contents .px2-h6 h6, .contents .px2-h6 .px2-h6, .contents .px2-h6 p {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-.contents h1 small, .contents .px2-h1 small, .contents h2 small, .contents .px2-h2 small, .contents h3 small, .contents .px2-h3 small, .contents h4 small, .contents .px2-h4 small, .contents h5 small, .contents .px2-h5 small, .contents h6 small, .contents .px2-h6 small {
-  display: inline-block;
-  font-weight: normal;
-  color: #6c757d;
-  margin-left: 0.6em;
-}
-.contents .px2-h1 .px2-h1__shoulder, .contents .px2-h2 .px2-h2__shoulder, .contents .px2-h3 .px2-h3__shoulder, .contents .px2-h4 .px2-h4__shoulder, .contents .px2-h5 .px2-h5__shoulder, .contents .px2-h6 .px2-h6__shoulder {
-  float: right;
-  margin-left: 1em;
-  text-align: left;
-}
-.contents .px2-h1 .px2-h1__shoulder ul, .contents .px2-h1 .px2-h1__shoulder p, .contents .px2-h2 .px2-h2__shoulder ul, .contents .px2-h2 .px2-h2__shoulder p, .contents .px2-h3 .px2-h3__shoulder ul, .contents .px2-h3 .px2-h3__shoulder p, .contents .px2-h4 .px2-h4__shoulder ul, .contents .px2-h4 .px2-h4__shoulder p, .contents .px2-h5 .px2-h5__shoulder ul, .contents .px2-h5 .px2-h5__shoulder p, .contents .px2-h6 .px2-h6__shoulder ul, .contents .px2-h6 .px2-h6__shoulder p {
-  margin: 0;
-}
-.contents .px2-h1 .px2-h1__shoulder::after, .contents .px2-h2 .px2-h2__shoulder::after, .contents .px2-h3 .px2-h3__shoulder::after, .contents .px2-h4 .px2-h4__shoulder::after, .contents .px2-h5 .px2-h5__shoulder::after, .contents .px2-h6 .px2-h6__shoulder::after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-}
 @keyframes px2-accordion__content--show-hide {
   0% {
     transform: scaleY(1) translateY(-5px);
@@ -879,7 +849,7 @@
 .contents .px2-changelog__header {
   margin-bottom: 0.5em;
 }
-.contents .px2-changelog__header * {
+.contents .px2-changelog__header *, .contents .px2-changelog__header .px2-h2, .contents .px2-changelog__header h2, .contents .px2-changelog__header .px2-h3, .contents .px2-changelog__header h3, .contents .px2-changelog__header .px2-h4, .contents .px2-changelog__header h4, .contents .px2-changelog__header .px2-h5, .contents .px2-changelog__header h5, .contents .px2-changelog__header .px2-h6, .contents .px2-changelog__header h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1496,6 +1466,36 @@
 }
 .contents .px2-embedded-media--imagescope img {
   cursor: pointer;
+}
+.contents h1, .contents .px2-h1, .contents h2, .contents .px2-h2, .contents h3, .contents .px2-h3, .contents h4, .contents .px2-h4, .contents h5, .contents .px2-h5, .contents h6, .contents .px2-h6 {
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.contents h1 h1, .contents h1 .px2-h1, .contents h1 h2, .contents h1 .px2-h2, .contents h1 h3, .contents h1 .px2-h3, .contents h1 h4, .contents h1 .px2-h4, .contents h1 h5, .contents h1 .px2-h5, .contents h1 h6, .contents h1 .px2-h6, .contents h1 p, .contents .px2-h1 h1, .contents .px2-h1 .px2-h1, .contents .px2-h1 h2, .contents .px2-h1 .px2-h2, .contents .px2-h1 h3, .contents .px2-h1 .px2-h3, .contents .px2-h1 h4, .contents .px2-h1 .px2-h4, .contents .px2-h1 h5, .contents .px2-h1 .px2-h5, .contents .px2-h1 h6, .contents .px2-h1 .px2-h6, .contents .px2-h1 p, .contents h2 h1, .contents h2 .px2-h1, .contents h2 h2, .contents h2 .px2-h2, .contents h2 h3, .contents h2 .px2-h3, .contents h2 h4, .contents h2 .px2-h4, .contents h2 h5, .contents h2 .px2-h5, .contents h2 h6, .contents h2 .px2-h6, .contents h2 p, .contents .px2-h2 h1, .contents .px2-h2 .px2-h1, .contents .px2-h2 h2, .contents .px2-h2 .px2-h2, .contents .px2-h2 h3, .contents .px2-h2 .px2-h3, .contents .px2-h2 h4, .contents .px2-h2 .px2-h4, .contents .px2-h2 h5, .contents .px2-h2 .px2-h5, .contents .px2-h2 h6, .contents .px2-h2 .px2-h6, .contents .px2-h2 p, .contents h3 h1, .contents h3 .px2-h1, .contents h3 h2, .contents h3 .px2-h2, .contents h3 h3, .contents h3 .px2-h3, .contents h3 h4, .contents h3 .px2-h4, .contents h3 h5, .contents h3 .px2-h5, .contents h3 h6, .contents h3 .px2-h6, .contents h3 p, .contents .px2-h3 h1, .contents .px2-h3 .px2-h1, .contents .px2-h3 h2, .contents .px2-h3 .px2-h2, .contents .px2-h3 h3, .contents .px2-h3 .px2-h3, .contents .px2-h3 h4, .contents .px2-h3 .px2-h4, .contents .px2-h3 h5, .contents .px2-h3 .px2-h5, .contents .px2-h3 h6, .contents .px2-h3 .px2-h6, .contents .px2-h3 p, .contents h4 h1, .contents h4 .px2-h1, .contents h4 h2, .contents h4 .px2-h2, .contents h4 h3, .contents h4 .px2-h3, .contents h4 h4, .contents h4 .px2-h4, .contents h4 h5, .contents h4 .px2-h5, .contents h4 h6, .contents h4 .px2-h6, .contents h4 p, .contents .px2-h4 h1, .contents .px2-h4 .px2-h1, .contents .px2-h4 h2, .contents .px2-h4 .px2-h2, .contents .px2-h4 h3, .contents .px2-h4 .px2-h3, .contents .px2-h4 h4, .contents .px2-h4 .px2-h4, .contents .px2-h4 h5, .contents .px2-h4 .px2-h5, .contents .px2-h4 h6, .contents .px2-h4 .px2-h6, .contents .px2-h4 p, .contents h5 h1, .contents h5 .px2-h1, .contents h5 h2, .contents h5 .px2-h2, .contents h5 h3, .contents h5 .px2-h3, .contents h5 h4, .contents h5 .px2-h4, .contents h5 h5, .contents h5 .px2-h5, .contents h5 h6, .contents h5 .px2-h6, .contents h5 p, .contents .px2-h5 h1, .contents .px2-h5 .px2-h1, .contents .px2-h5 h2, .contents .px2-h5 .px2-h2, .contents .px2-h5 h3, .contents .px2-h5 .px2-h3, .contents .px2-h5 h4, .contents .px2-h5 .px2-h4, .contents .px2-h5 h5, .contents .px2-h5 .px2-h5, .contents .px2-h5 h6, .contents .px2-h5 .px2-h6, .contents .px2-h5 p, .contents h6 h1, .contents h6 .px2-h1, .contents h6 h2, .contents h6 .px2-h2, .contents h6 h3, .contents h6 .px2-h3, .contents h6 h4, .contents h6 .px2-h4, .contents h6 h5, .contents h6 .px2-h5, .contents h6 h6, .contents h6 .px2-h6, .contents h6 p, .contents .px2-h6 h1, .contents .px2-h6 .px2-h1, .contents .px2-h6 h2, .contents .px2-h6 .px2-h2, .contents .px2-h6 h3, .contents .px2-h6 .px2-h3, .contents .px2-h6 h4, .contents .px2-h6 .px2-h4, .contents .px2-h6 h5, .contents .px2-h6 .px2-h5, .contents .px2-h6 h6, .contents .px2-h6 .px2-h6, .contents .px2-h6 p {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.contents h1 small, .contents .px2-h1 small, .contents h2 small, .contents .px2-h2 small, .contents h3 small, .contents .px2-h3 small, .contents h4 small, .contents .px2-h4 small, .contents h5 small, .contents .px2-h5 small, .contents h6 small, .contents .px2-h6 small {
+  display: inline-block;
+  font-weight: normal;
+  color: #6c757d;
+  margin-left: 0.6em;
+}
+.contents .px2-h1 .px2-h1__shoulder, .contents .px2-h2 .px2-h2__shoulder, .contents .px2-h3 .px2-h3__shoulder, .contents .px2-h4 .px2-h4__shoulder, .contents .px2-h5 .px2-h5__shoulder, .contents .px2-h6 .px2-h6__shoulder {
+  float: right;
+  margin-left: 1em;
+  text-align: left;
+}
+.contents .px2-h1 .px2-h1__shoulder ul, .contents .px2-h1 .px2-h1__shoulder p, .contents .px2-h2 .px2-h2__shoulder ul, .contents .px2-h2 .px2-h2__shoulder p, .contents .px2-h3 .px2-h3__shoulder ul, .contents .px2-h3 .px2-h3__shoulder p, .contents .px2-h4 .px2-h4__shoulder ul, .contents .px2-h4 .px2-h4__shoulder p, .contents .px2-h5 .px2-h5__shoulder ul, .contents .px2-h5 .px2-h5__shoulder p, .contents .px2-h6 .px2-h6__shoulder ul, .contents .px2-h6 .px2-h6__shoulder p {
+  margin: 0;
+}
+.contents .px2-h1 .px2-h1__shoulder::after, .contents .px2-h2 .px2-h2__shoulder::after, .contents .px2-h3 .px2-h3__shoulder::after, .contents .px2-h4 .px2-h4__shoulder::after, .contents .px2-h5 .px2-h5__shoulder::after, .contents .px2-h6 .px2-h6__shoulder::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
 }
 .contents .px2-notice {
   margin-top: 1.5em;
