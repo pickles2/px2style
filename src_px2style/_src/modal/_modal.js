@@ -1,14 +1,14 @@
 /**
  * modal.js
  */
-module.exports = function(Px2style){
-	var $ = require('jquery');
+(function(){
+	var $ = window.px2style.$;
 	var modalLayers = [];
 
 	/**
 	 * Open modal dialog.
 	 */
-	Px2style.prototype.modal = function(options, callback){
+	window.px2style.modal = function(options, callback){
 		var px2style = this;
 		callback = callback||function(){};
 
@@ -136,16 +136,9 @@ module.exports = function(Px2style){
 		var $target = $(this.options.target);
 		$target.append($modal);
 
-		if( $target.get(0).tagName.toLowerCase() == 'body' ){
-			// body に挿入する場合は、 fixed に。
-			this.$modal.css({
-				"position": "fixed"
-			});
-		}else{
-			this.$modal.css({
-				"height": $target.outerHeight()
-			});
-		}
+		this.$modal.css({
+			"position": "fixed"
+		});
 
 		if( this.options.width ){
 			this.$modal.find('.px2-modal__dialog').css({
@@ -260,7 +253,7 @@ module.exports = function(Px2style){
 	/**
 	 * Close modal dialog.
 	 */
-	Px2style.prototype.closeModal = function(callback){
+	window.px2style.closeModal = function(callback){
 		callback = callback||function(){};
 		var lastModal = modalLayers.pop();
 		if( !lastModal.isClosable() ){
@@ -389,4 +382,4 @@ module.exports = function(Px2style){
 			;
 		}
 	}
-}
+})();

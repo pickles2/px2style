@@ -44,7 +44,7 @@ mix
 	// --------------------------------------
 	// modules: basics/a
 	.js('./src_mix/modules/basics/basics/_/module.js', './broccoli_modules/basics/basics/_/module.js')
-	.js('./src_mix/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
+	.sass('./src_mix/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
 
 	// --------------------------------------
 	// fields: cssMarginPadding

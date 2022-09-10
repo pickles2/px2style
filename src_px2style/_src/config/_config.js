@@ -1,7 +1,7 @@
 /**
  * config.js
  */
-module.exports = function(Px2style){
+(function(){
 
 	var config = {
 		'additionalClassName': '',
@@ -10,7 +10,7 @@ module.exports = function(Px2style){
 	/**
 	 * Set config.
 	 */
-	Px2style.prototype.setConfig = function(key, val){
+	window.px2style.setConfig = function(key, val){
 		config[key] = val;
 		return true;
 	}
@@ -18,8 +18,8 @@ module.exports = function(Px2style){
 	/**
 	 * Get config.
 	 */
-	Px2style.prototype.getConfig = function(key){
+	window.px2style.getConfig = function(key){
 		return config[key];
 	}
 
-}
+})();

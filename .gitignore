@@ -52,4 +52,4 @@ src_px2/px-files/_sys/ram/
 src_px2/common/px_resources/
 
 # others
-images/
+/images/

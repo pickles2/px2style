@@ -89,6 +89,79 @@
                                                 },
                                                 "anchor": "",
                                                 "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:interactives/accordion",
+                                                "fields": {
+                                                    "loop": [
+                                                        {
+                                                            "modId": "px2style:interactives/accordion",
+                                                            "fields": {
+                                                                "accordion-label": {
+                                                                    "src": "アコーディオン1-1"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "アコーディオン1-1の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        },
+                                                        {
+                                                            "modId": "px2style:interactives/accordion",
+                                                            "fields": {
+                                                                "accordion-label": {
+                                                                    "src": "アコーディオン1-2"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "アコーディオン1-2の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         ]
                                     },
@@ -122,6 +195,79 @@
                                                 },
                                                 "anchor": "",
                                                 "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:interactives/accordion",
+                                                "fields": {
+                                                    "loop": [
+                                                        {
+                                                            "modId": "px2style:interactives/accordion",
+                                                            "fields": {
+                                                                "accordion-label": {
+                                                                    "src": "アコーディオン2-1"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "アコーディオン2-1の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        },
+                                                        {
+                                                            "modId": "px2style:interactives/accordion",
+                                                            "fields": {
+                                                                "accordion-label": {
+                                                                    "src": "アコーディオン2-2"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "アコーディオン2-2の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         ]
                                     },
@@ -192,6 +338,81 @@
                                                     "font-size": {
                                                         "src": ""
                                                     }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:interactives/tabs",
+                                                "fields": {
+                                                    "loop": [
+                                                        {
+                                                            "modId": "px2style:interactives/tabs",
+                                                            "fields": {
+                                                                "tab-label": {
+                                                                    "src": "タブ 1"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "タブ1の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        },
+                                                        {
+                                                            "modId": "px2style:interactives/tabs",
+                                                            "fields": {
+                                                                "tab-label": {
+                                                                    "src": "タブ 2"
+                                                                },
+                                                                "main": [
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "これは、タブ2の内容です。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "subModName": "loop",
+                                                            "anchor": "",
+                                                            "dec": ""
+                                                        }
+                                                    ]
                                                 },
                                                 "anchor": "",
                                                 "dec": ""
