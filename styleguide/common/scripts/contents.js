@@ -5,7 +5,7 @@
 try{
 	(function(){
 
-window.Px2BroccoliModuleStdDocument_ImageScope = function(imgElm){
+window.Px2broccoliModulePx2Style_ImageScope = function(imgElm){
     let scope = document.querySelector('.px2-image-scope');
     if( scope ){
         scope.remove();

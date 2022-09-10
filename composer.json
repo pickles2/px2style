@@ -35,10 +35,10 @@
     },
     "autoload": {
         "psr-4": {
-            "tomk79\\broccoliModuleStdDocument\\": [
+            "pickles2\\px2style\\": [
                 "php/"
             ],
-            "tomk79\\broccoliModuleStdDocument\\fields\\": [
+            "pickles2\\px2style\\fields\\": [
                 "fields/"
             ]
         }

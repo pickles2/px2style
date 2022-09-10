@@ -2,7 +2,7 @@
 /**
  * broccoli-html-editor fields
  */
-namespace tomk79\broccoliModuleStdDocument;
+namespace pickles2\px2style;
 
 /**
  * Utilities
@@ -29,8 +29,8 @@ class utils{
 		switch( $type ){
 			case 'image':
 				$rtn = array();
-				$rtn['file'] = __DIR__.'/../dist/broccoliModuleStdDocumentDroppedFileOperatorGen.js';
-				$rtn['function'] = 'window.broccoliModuleStdDocumentDroppedFileOperatorGen({})';
+				$rtn['file'] = __DIR__.'/../dist/broccoliModulePx2StyleDroppedFileOperatorGen.js';
+				$rtn['function'] = 'window.broccoliModulePx2StyleDroppedFileOperatorGen({})';
 				break;
 		}
 		return $rtn;

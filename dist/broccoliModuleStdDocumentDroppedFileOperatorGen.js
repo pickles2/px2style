@@ -1,5 +1,5 @@
-console.log('broccoliModuleStdDocumentDroppedFileOperatorGen() is loaded.');
-window.broccoliModuleStdDocumentDroppedFileOperatorGen = function(options){
+console.log('broccoliModulePx2StyleDroppedFileOperatorGen() is loaded.');
+window.broccoliModulePx2StyleDroppedFileOperatorGen = function(options){
     options = options || {};
     options.packageId = options.packageId || 'std-document';
 

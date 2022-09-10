@@ -10,7 +10,7 @@
         "name": "MarginPadding",
         "type": "field",
         "backend": {
-            "class": "tomk79\\broccoliModuleStdDocument\\fields\\cssMarginPadding\\backend",
+            "class": "pickles2\\px2style\\fields\\cssMarginPadding\\backend",
             "require": "fields/cssMarginPadding/backend.js"
         },
         "frontend": {
@@ -19,7 +19,7 @@
                 "cssMarginPadding.css",
                 "cssMarginPadding.js"
             ],
-            "function" : "window.broccoliModuleStdDocumentCssMarginPadding"
+            "function" : "window.broccoliModulePx2StyleCssMarginPadding"
         }
     }
 ]

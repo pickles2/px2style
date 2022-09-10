@@ -1,4 +1,4 @@
-window.broccoliModuleStdDocumentCssMarginPadding = function(broccoli){
+window.broccoliModulePx2StyleCssMarginPadding = function(broccoli){
 	var $ = require('jquery');
 
 	/**

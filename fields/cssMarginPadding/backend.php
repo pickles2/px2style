@@ -1,5 +1,5 @@
 <?php
-namespace tomk79\broccoliModuleStdDocument\fields\cssMarginPadding;
+namespace pickles2\px2style\fields\cssMarginPadding;
 class backend extends \broccoliHtmlEditor\fieldBase{
 
     private $broccoli;
