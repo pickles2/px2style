@@ -1,6 +1,6 @@
 [
     {
-        "id": "px2style-basics",
+        "id": "px2style",
         "name": "Basics",
         "type": "module",
         "path": "broccoli_modules/basics/"
