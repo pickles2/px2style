@@ -224,7 +224,7 @@ return call_user_func( function(){
 	$conf->funcs->before_sitemap = array(
 		// px2-clover
 		\tomk79\pickles2\px2clover\register::clover(array(
-			"protect_preview" => true, // プレビューに認証を要求するか？
+			"protect_preview" => false, // プレビューに認証を要求するか？
 		)),
 
 		// PX=clearcache
