@@ -9,3 +9,5 @@ require('../broccoli_modules/basics/interactives/accordion/module.js');
 require('../broccoli_modules/basics/interactives/carousel/module.js');
 require('../broccoli_modules/basics/interactives/tabs/module.js');
 require('../broccoli_modules/basics/utils/viewport-fit/module.js');
+
+module.exports = window.px2style;
