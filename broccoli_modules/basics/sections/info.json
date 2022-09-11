@@ -2,6 +2,7 @@
     "name": "セクション",
     "sort": [
         "hx",
+        "section",
         "notice"
     ]
 }

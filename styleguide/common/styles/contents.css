@@ -56,6 +56,9 @@
  * module: px2style:sections/notice
  */
   /**
+ * module: px2style:sections/section
+ */
+  /**
  * module: px2style:utils/button
  */
   /**
@@ -540,276 +543,6 @@
   margin: 2px;
   width: 15px;
   width: 60px;
-}
-.contents .px2-darkmode .px2-header {
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-header__inner {
-  background-color: #222;
-  box-shadow: 0 5px 13px rgba(255, 102, 102, 0.1);
-}
-.contents .px2-darkmode .px2-header a {
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-header a:hover {
-  color: #fff;
-}
-.contents .px2-darkmode .px2-header__px2logo a {
-  background-color: #222;
-}
-.contents .px2-darkmode .px2-header__id a:hover {
-  color: #fff;
-}
-.contents .px2-darkmode .px2-header__global-menu ul li a, .contents .px2-darkmode .px2-header__global-menu ul li span {
-  color: #999;
-}
-.contents .px2-darkmode .px2-header__global-menu ul li a.current, .contents .px2-darkmode .px2-header__global-menu ul li span.current {
-  border-bottom-color: rgba(0, 0, 0, 0.85);
-}
-.contents .px2-darkmode .px2-header__global-menu ul li.px2-header__global-menu-group > a:after {
-  border-color: transparent #999;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > button {
-  background: #060606;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul {
-  background-color: #555;
-  border-color: #222;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li {
-  border-bottom-color: #333;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li a {
-  background-color: #555;
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li a:hover {
-  background-color: #444;
-  color: #eee;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li a.current {
-  color: #eee;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group > a:after {
-  border-color: transparent #eee;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a {
-  background-color: #333;
-  color: #ddd;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a:hover {
-  background-color: #444;
-  color: #eee;
-}
-.contents .px2-darkmode .px2-header__shoulder-menu > ul li.px2-header__shoulder-menu-group ul li a.current {
-  color: #eee;
-}
-.contents .px2-darkmode .px2-btn {
-  background-color: #242424;
-  border: 3px solid #ccc;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.1);
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-btn:focus, .contents .px2-darkmode .px2-btn:hover {
-  background-color: #222;
-  color: #eee;
-}
-.contents .px2-darkmode .px2-btn:focus {
-  box-shadow: 0 0 0 0.2rem rgba(123, 230, 255, 0.25);
-}
-.contents .px2-darkmode .px2-btn:hover {
-  background-color: #292929;
-}
-.contents .px2-darkmode .px2-btn:active {
-  background-color: #ccc;
-  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.3);
-  color: #242424;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--primary {
-  background-color: #d9f1fb;
-  border-color: #00a0e6;
-  color: #00a0e6;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--primary:focus, .contents .px2-darkmode .px2-btn.px2-btn--primary:hover {
-  background-color: #ccecfa;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--primary:hover {
-  background-color: #f5fbfe;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--primary:active {
-  background-color: #00a0e6;
-  color: #fff;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--secondary {
-  background: #242424;
-  border-color: #ccc;
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--secondary:focus, .contents .px2-darkmode .px2-btn.px2-btn--secondary:hover {
-  background-color: #222;
-  color: #eee;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--secondary:hover {
-  background-color: #292929;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--secondary:active {
-  background-color: #ccc;
-  color: #242424;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--danger {
-  background-color: #fdf8f8;
-  border-color: #e86a60;
-  color: #e86a60;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--danger:focus, .contents .px2-darkmode .px2-btn.px2-btn--danger:hover {
-  background-color: #fce9e7;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--danger:hover {
-  background-color: #fae1df;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--danger:active {
-  background-color: #e86a60;
-  color: #fff;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--download {
-  background-color: #f7fcf7;
-  border-color: #4ad64d;
-  color: #4ad64d;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--download:focus, .contents .px2-darkmode .px2-btn.px2-btn--download:hover {
-  background-color: #e4f9e4;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--download:hover {
-  background-color: #dbf7db;
-}
-.contents .px2-darkmode .px2-btn.px2-btn--download:active {
-  background-color: #4ad64d;
-  color: #fff;
-}
-.contents .px2-darkmode .px2-btn[disabled] {
-  background-color: rgba(153, 153, 153, 0.05);
-  border-color: #444;
-  color: #444;
-}
-.contents .px2-darkmode .px2-btn[disabled]:active, .contents .px2-darkmode .px2-btn[disabled]:focus, .contents .px2-darkmode .px2-btn[disabled]:hover {
-  background-color: rgba(153, 153, 153, 0.05);
-  border-color: #444;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.1);
-  color: #444;
-}
-.contents .px2-darkmode .px2-btn--toggle-on, .contents .px2-darkmode .px2-btn--toggle-on[disabled], .contents .px2-darkmode .px2-btn--toggle-on[disabled]:active, .contents .px2-darkmode .px2-btn--toggle-on[disabled]:focus, .contents .px2-darkmode .px2-btn--toggle-on[disabled]:hover {
-  box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15);
-}
-.contents .px2-darkmode .px2-modal {
-  background: rgba(222, 222, 222, 0.5);
-}
-.contents .px2-darkmode .px2-modal__close button {
-  background-color: #111;
-  border-color: #999;
-  color: #999;
-}
-.contents .px2-darkmode .px2-modal__close button:after, .contents .px2-darkmode .px2-modal__close button:before {
-  border-bottom: 1px solid #999;
-}
-.contents .px2-darkmode .px2-modal__close button:hover {
-  background-color: #000;
-  border: 1px solid #ccc;
-}
-.contents .px2-darkmode .px2-modal__close button:hover:after, .contents .px2-darkmode .px2-modal__close button:hover:before {
-  border-bottom: 1px solid #ccc;
-}
-.contents .px2-darkmode .px2-modal__dialog {
-  background-color: #242424;
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-modal__header {
-  border-bottom: 1px solid #999;
-  box-shadow: 0 5px 12px -5px rgba(255, 255, 255, 0.4);
-}
-.contents .px2-darkmode .px2-notice {
-  background-color: #1f456e;
-  border: 1px solid #3c6794;
-  color: #91b4da;
-}
-.contents .px2-darkmode .px2-notice.px2-notice--success {
-  background-color: #1b5c2a;
-  border-color: #458052;
-  color: #98c4a2;
-}
-.contents .px2-darkmode .px2-notice.px2-notice--warning {
-  background-color: #68561c;
-  border-color: #948b6c;
-  color: #d6c9a3;
-}
-.contents .px2-darkmode .px2-notice.px2-notice--danger {
-  background-color: #5e1319;
-  border-color: #91595f;
-  color: #dfc7ca;
-}
-.contents .px2-darkmode .px2-notice.px2-notice--info {
-  background-color: #144b55;
-  border-color: #5b868d;
-  color: #bbe1e7;
-}
-.contents .px2-darkmode .px2-table {
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-table td, .contents .px2-darkmode .px2-table th {
-  background: #242424;
-  border-color: #666;
-}
-.contents .px2-darkmode .px2-table th {
-  background: #191919;
-}
-.contents .px2-darkmode .px2-table tfoot td, .contents .px2-darkmode .px2-table tfoot th, .contents .px2-darkmode .px2-table thead td, .contents .px2-darkmode .px2-table thead th {
-  background: #111;
-}
-.contents .px2-darkmode input[type=color].px2-input, .contents .px2-darkmode input[type=date].px2-input, .contents .px2-darkmode input[type=datetime-local].px2-input, .contents .px2-darkmode input[type=datetime].px2-input, .contents .px2-darkmode input[type=email].px2-input, .contents .px2-darkmode input[type=file].px2-input, .contents .px2-darkmode input[type=month].px2-input, .contents .px2-darkmode input[type=number].px2-input, .contents .px2-darkmode input[type=password].px2-input, .contents .px2-darkmode input[type=search].px2-input, .contents .px2-darkmode input[type=tel].px2-input, .contents .px2-darkmode input[type=text].px2-input, .contents .px2-darkmode input[type=time].px2-input, .contents .px2-darkmode input[type=url].px2-input, .contents .px2-darkmode input[type=week].px2-input, .contents .px2-darkmode select.px2-input, .contents .px2-darkmode textarea.px2-input {
-  background-color: #242424;
-  border: 1px solid #555;
-  color: #ccc;
-}
-.contents .px2-darkmode input[type=color].px2-input:focus, .contents .px2-darkmode input[type=date].px2-input:focus, .contents .px2-darkmode input[type=datetime-local].px2-input:focus, .contents .px2-darkmode input[type=datetime].px2-input:focus, .contents .px2-darkmode input[type=email].px2-input:focus, .contents .px2-darkmode input[type=file].px2-input:focus, .contents .px2-darkmode input[type=month].px2-input:focus, .contents .px2-darkmode input[type=number].px2-input:focus, .contents .px2-darkmode input[type=password].px2-input:focus, .contents .px2-darkmode input[type=search].px2-input:focus, .contents .px2-darkmode input[type=tel].px2-input:focus, .contents .px2-darkmode input[type=text].px2-input:focus, .contents .px2-darkmode input[type=time].px2-input:focus, .contents .px2-darkmode input[type=url].px2-input:focus, .contents .px2-darkmode input[type=week].px2-input:focus, .contents .px2-darkmode select.px2-input:focus, .contents .px2-darkmode textarea.px2-input:focus {
-  background-color: #000;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  color: #f3f3f3;
-}
-.contents .px2-darkmode input[type=color].px2-input[readonly], .contents .px2-darkmode input[type=date].px2-input[readonly], .contents .px2-darkmode input[type=datetime-local].px2-input[readonly], .contents .px2-darkmode input[type=datetime].px2-input[readonly], .contents .px2-darkmode input[type=email].px2-input[readonly], .contents .px2-darkmode input[type=file].px2-input[readonly], .contents .px2-darkmode input[type=month].px2-input[readonly], .contents .px2-darkmode input[type=number].px2-input[readonly], .contents .px2-darkmode input[type=password].px2-input[readonly], .contents .px2-darkmode input[type=search].px2-input[readonly], .contents .px2-darkmode input[type=tel].px2-input[readonly], .contents .px2-darkmode input[type=text].px2-input[readonly], .contents .px2-darkmode input[type=time].px2-input[readonly], .contents .px2-darkmode input[type=url].px2-input[readonly], .contents .px2-darkmode input[type=week].px2-input[readonly], .contents .px2-darkmode select.px2-input[readonly], .contents .px2-darkmode textarea.px2-input[readonly] {
-  background-color: #242424;
-  color: #ccc;
-}
-.contents .px2-darkmode input[type=color].px2-input[readonly]:focus, .contents .px2-darkmode input[type=date].px2-input[readonly]:focus, .contents .px2-darkmode input[type=datetime-local].px2-input[readonly]:focus, .contents .px2-darkmode input[type=datetime].px2-input[readonly]:focus, .contents .px2-darkmode input[type=email].px2-input[readonly]:focus, .contents .px2-darkmode input[type=file].px2-input[readonly]:focus, .contents .px2-darkmode input[type=month].px2-input[readonly]:focus, .contents .px2-darkmode input[type=number].px2-input[readonly]:focus, .contents .px2-darkmode input[type=password].px2-input[readonly]:focus, .contents .px2-darkmode input[type=search].px2-input[readonly]:focus, .contents .px2-darkmode input[type=tel].px2-input[readonly]:focus, .contents .px2-darkmode input[type=text].px2-input[readonly]:focus, .contents .px2-darkmode input[type=time].px2-input[readonly]:focus, .contents .px2-darkmode input[type=url].px2-input[readonly]:focus, .contents .px2-darkmode input[type=week].px2-input[readonly]:focus, .contents .px2-darkmode select.px2-input[readonly]:focus, .contents .px2-darkmode textarea.px2-input[readonly]:focus {
-  border-color: #555;
-  box-shadow: none;
-}
-.contents .px2-darkmode input[type=color].px2-input[disabled], .contents .px2-darkmode input[type=date].px2-input[disabled], .contents .px2-darkmode input[type=datetime-local].px2-input[disabled], .contents .px2-darkmode input[type=datetime].px2-input[disabled], .contents .px2-darkmode input[type=email].px2-input[disabled], .contents .px2-darkmode input[type=file].px2-input[disabled], .contents .px2-darkmode input[type=month].px2-input[disabled], .contents .px2-darkmode input[type=number].px2-input[disabled], .contents .px2-darkmode input[type=password].px2-input[disabled], .contents .px2-darkmode input[type=search].px2-input[disabled], .contents .px2-darkmode input[type=tel].px2-input[disabled], .contents .px2-darkmode input[type=text].px2-input[disabled], .contents .px2-darkmode input[type=time].px2-input[disabled], .contents .px2-darkmode input[type=url].px2-input[disabled], .contents .px2-darkmode input[type=week].px2-input[disabled], .contents .px2-darkmode select.px2-input[disabled], .contents .px2-darkmode textarea.px2-input[disabled] {
-  background-color: #333;
-  color: #8e959c;
-}
-.contents .px2-darkmode input[type=color].px2-input--error, .contents .px2-darkmode input[type=date].px2-input--error, .contents .px2-darkmode input[type=datetime-local].px2-input--error, .contents .px2-darkmode input[type=datetime].px2-input--error, .contents .px2-darkmode input[type=email].px2-input--error, .contents .px2-darkmode input[type=file].px2-input--error, .contents .px2-darkmode input[type=month].px2-input--error, .contents .px2-darkmode input[type=number].px2-input--error, .contents .px2-darkmode input[type=password].px2-input--error, .contents .px2-darkmode input[type=search].px2-input--error, .contents .px2-darkmode input[type=tel].px2-input--error, .contents .px2-darkmode input[type=text].px2-input--error, .contents .px2-darkmode input[type=time].px2-input--error, .contents .px2-darkmode input[type=url].px2-input--error, .contents .px2-darkmode input[type=week].px2-input--error, .contents .px2-darkmode select.px2-input--error, .contents .px2-darkmode textarea.px2-input--error {
-  background-color: #f8d7da;
-  border-color: #721c24;
-  color: #721c24;
-}
-.contents .px2-darkmode .px2-input-group__text {
-  background-color: #333;
-  border: 1px solid #555;
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-form-input-list {
-  color: #ccc;
-}
-.contents .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul {
-  border: 1px solid #666;
-}
-.contents .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
-  background-color: #191919;
-  border: 1px solid #666;
-}
-.contents .px2-darkmode .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
-  background-color: #242424;
-  border: 1px solid #666;
 }
 .contents .px2-a:before {
   content: " ";
@@ -2276,6 +2009,34 @@
   color: #0c5460;
   background-color: #d1ecf1;
   border-color: #bee5eb;
+}
+.contents .px2-section {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.contents .px2-section.px2-section--framed {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.contents .px2-section.px2-section--framed .px2-section__heading {
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f0f0f0;
+}
+.contents .px2-section.px2-section--framed .px2-section__heading *, .contents .px2-section.px2-section--framed .px2-section__heading .px2-h2, .contents .px2-section.px2-section--framed .px2-section__heading h2, .contents .px2-section.px2-section--framed .px2-section__heading .px2-h3, .contents .px2-section.px2-section--framed .px2-section__heading h3, .contents .px2-section.px2-section--framed .px2-section__heading .px2-h4, .contents .px2-section.px2-section--framed .px2-section__heading h4, .contents .px2-section.px2-section--framed .px2-section__heading .px2-h5, .contents .px2-section.px2-section--framed .px2-section__heading h5, .contents .px2-section.px2-section--framed .px2-section__heading .px2-h6, .contents .px2-section.px2-section--framed .px2-section__heading h6 {
+  margin: 0px;
+}
+.contents .px2-section.px2-section--framed .px2-section__body {
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+}
+.contents .px2-section.px2-section--framed .px2-section__body > *:first-child {
+  margin-top: 0px;
+}
+.contents .px2-section.px2-section--framed .px2-section__body > *:last-child {
+  margin-bottom: 0px;
 }
 .contents .px2-btn {
   display: inline-block;

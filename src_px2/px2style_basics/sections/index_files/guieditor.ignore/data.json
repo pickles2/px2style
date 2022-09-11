@@ -1,0 +1,117 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:sections/section",
+                        "fields": {
+                            "heading": [
+                                {
+                                    "modId": "px2style:sections/hx",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "2"
+                                        },
+                                        "main": {
+                                            "src": "セクションの見出し"
+                                        },
+                                        "sub": {
+                                            "src": "標準的なセクション"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "セクションの本文エリアです。",
+                                            "editor": "markdown"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "section_type": {
+                                "src": "div"
+                            },
+                            "style": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/section",
+                        "fields": {
+                            "style": {
+                                "src": "framed"
+                            },
+                            "section_type": {
+                                "src": ""
+                            },
+                            "heading": [
+                                {
+                                    "modId": "px2style:sections/hx",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "2"
+                                        },
+                                        "main": {
+                                            "src": "セクションの見出し"
+                                        },
+                                        "sub": {
+                                            "src": "標準的なセクション"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ],
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "セクションの本文エリアです。",
+                                            "editor": "markdown"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

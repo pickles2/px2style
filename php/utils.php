@@ -29,7 +29,7 @@ class utils{
 		switch( $type ){
 			case 'image':
 				$rtn = array();
-				$rtn['file'] = __DIR__.'/../broccoliHelper/broccoliModulePx2StyleDroppedFileOperatorGen.js';
+				$rtn['file'] = __DIR__.'/../broccoli_helper/broccoliModulePx2StyleDroppedFileOperatorGen.js';
 				$rtn['function'] = 'window.broccoliModulePx2StyleDroppedFileOperatorGen({})';
 				break;
 		}
