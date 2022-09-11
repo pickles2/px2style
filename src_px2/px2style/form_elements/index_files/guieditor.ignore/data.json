@@ -1,0 +1,155 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "フォーム要素"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input\" />\n<button class=\"px2-btn px2-btn--primary\">OK</button>\n\n<p>様々な入力欄</p>\n\n<input type=\"password\" name=\"password\" value=\"password\" class=\"px2-input\" />\n<input type=\"number\" name=\"input-number\" value=\"200\" class=\"px2-input\" />\n<input type=\"search\" name=\"input-search\" value=\"Search Keyword\" class=\"px2-input\" />\n<input type=\"tel\" name=\"input-tel\" value=\"090-0000-0000\" class=\"px2-input\" />\n<input type=\"url\" name=\"input-url\" value=\"https://pickles2.pxt.jp/\" class=\"px2-input\" />\n<input type=\"email\" name=\"input-email\" value=\"pickles2@example.com\" class=\"px2-input\" />\n<input type=\"month\" name=\"input-month\" value=\"\" class=\"px2-input\" />\n<input type=\"week\" name=\"input-week\" value=\"\" class=\"px2-input\" />\n<input type=\"time\" name=\"input-time\" value=\"\" class=\"px2-input\" />\n<input type=\"color\" name=\"input-color\" value=\"\" class=\"px2-input\" />\n<input type=\"file\" name=\"input-file\" value=\"\" class=\"px2-input\" />\n<input type=\"datetime\" name=\"input-datetime\" value=\"\" class=\"px2-input\" />\n<input type=\"date\" name=\"input-date\" value=\"\" class=\"px2-input\" />\n<input type=\"datetime-local\" name=\"input-datetime-local\" value=\"\" class=\"px2-input\" />\n<select name=\"input-select\" class=\"px2-input\">\n\t<option value=\"1\">Select Option 1</option>\n\t<option value=\"2\">Select Option 2</option>\n\t<option value=\"3\">Select Option 3</option>\n</select>\n<textarea name=\"input-textarea\" class=\"px2-input\">Text Area</textarea>\n\n<p>Readonly:</p>\n<input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input\" readonly />\n\n<p>Disabled:</p>\n<input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input\" disabled />\n\n<p>Block:</p>\n<p><input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input px2-input--block\" /></p>\n<p><textarea name=\"input-text\" class=\"px2-input px2-input--block\">Form Element: text input</textarea></p>\n<p><select name=\"input-select\" class=\"px2-input px2-input--block\"><option value=\"1\">Select Option 1</option></select></p>\n\n<p>Errored:</p>\n<p><input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input px2-input--error\" /></p>\n<p><textarea name=\"input-text\" class=\"px2-input px2-input--error\">Form Element: text input</textarea></p>\n<p><select name=\"input-select\" class=\"px2-input px2-input--error\"><option value=\"1\">Select Option 1</option></select></p>\n<p class=\"px2-error\">Error message.</p>\n\n<p>Note:</p>\n<p class=\"px2-note\">Note message.</p>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "入力欄グループ"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-p\">\n    <div class=\"px2-input-group\">\n        <input type=\"text\" name=\"input-text\" value=\"Form Element: text input\" class=\"px2-input\" />\n        <button class=\"px2-btn\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <div class=\"px2-input-group\">\n        <span class=\"px2-input-group__text\">#</span>\n        <input type=\"color\" name=\"input-number\" value=\"Form Element: color input\" class=\"px2-input\" />\n        <button class=\"px2-btn\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <div class=\"px2-input-group\">\n        <input type=\"number\" name=\"input-number\" value=\"Form Element: number input\" class=\"px2-input\" />\n        <span class=\"px2-input-group__text px2-input-group__text--align-left\">px</span>\n        <button class=\"px2-btn\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <div class=\"px2-input-group\">\n        <button class=\"px2-btn\">Button 1</button>\n        <button class=\"px2-btn\">Button 2</button>\n        <button class=\"px2-btn px2-btn--toggle-on\">Button 3</button>\n        <button class=\"px2-btn\">Button 4</button>\n        <button class=\"px2-btn px2-btn--primary\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <div class=\"px2-input-group\">\n        <button class=\"px2-btn px2-btn--primary\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <p>Fluid</p>\n    <div class=\"px2-input-group px2-input-group--fluid\">\n        <input type=\"number\" name=\"input-number\" value=\"Form Element: number input\" class=\"px2-input\" />\n        <span class=\"px2-input-group__text\">px</span>\n        <button class=\"px2-btn px2-btn--primary\">OK</button>\n    </div>\n</div>\n<div class=\"px2-p\">\n    <div class=\"px2-input-group px2-input-group--fluid\">\n        <button class=\"px2-btn\">Button 1</button>\n        <button class=\"px2-btn\">Button 2</button>\n        <button class=\"px2-btn px2-btn--toggle-on\">Button 3</button>\n        <button class=\"px2-btn\">Button 4</button>\n        <button class=\"px2-btn px2-btn--primary\">OK</button>\n    </div>\n</div>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "入力欄リスト"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-form-input-list\">\n <ul class=\"px2-form-input-list__ul\">\n\t    <li class=\"px2-form-input-list__li\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-001\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\"><input type=\"text\" id=\"input-text-001\" name=\"input-text-001\" value=\"Form Element: text input\" class=\"px2-input\" /></div>\n\t    </li>\n\t    <li class=\"px2-form-input-list__li px2-form-input-list__li--required\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-002\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\">\n\t            <p class=\"px2-note\">Note.</p>\n\t            <input type=\"text\" id=\"input-text-002\" name=\"input-text-002\" value=\"Form Element: text input\" class=\"px2-input px2-input--block\" />\n\t        </div>\n\t    </li>\n\t    <li class=\"px2-form-input-list__li px2-form-input-list__li--error\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-003\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\">\n\t            <p class=\"px2-error\">Error message.</p>\n\t            <input type=\"text\" id=\"input-text-003\" name=\"input-text-003\" value=\"Form Element: text input\" class=\"px2-input px2-input--error\" />\n\t        </div>\n\t    </li>\n </ul>\n</div>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "送信ボタン"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-form-submit-area\">\n<ul class=\"px2-form-submit-area__btns\">\n<li><button class=\"px2-btn px2-btn--primary\">OK 1</button></li>\n<li><button class=\"px2-btn px2-btn--primary\">OK 2</button></li>\n</ul>\n<ul class=\"px2-form-submit-area__backward-btns\">\n<li><button class=\"px2-btn px2-btn--secondary\">Back 1</button></li>\n<li><button class=\"px2-btn px2-btn--secondary\">Back 2</button></li>\n</ul>\n</div>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

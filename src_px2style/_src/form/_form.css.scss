@@ -1,50 +1,4 @@
 // Form Elements
-//
-// General input elements.
-//
-// Markup:
-// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
-// <button class="px2-btn">OK</button>
-// <hr />
-// <input type="password" name="password" value="password" class="px2-input" />
-// <input type="number" name="input-number" value="200" class="px2-input" />
-// <input type="search" name="input-search" value="Search Keyword" class="px2-input" />
-// <input type="tel" name="input-tel" value="090-0000-0000" class="px2-input" />
-// <input type="url" name="input-url" value="https://pickles2.pxt.jp/" class="px2-input" />
-// <input type="email" name="input-email" value="pickles2@example.com" class="px2-input" />
-// <input type="datetime" name="input-datetime" value="" class="px2-input" />
-// <input type="date" name="input-date" value="" class="px2-input" />
-// <input type="month" name="input-month" value="" class="px2-input" />
-// <input type="week" name="input-week" value="" class="px2-input" />
-// <input type="time" name="input-time" value="" class="px2-input" />
-// <input type="color" name="input-color" value="" class="px2-input" />
-// <input type="file" name="input-file" value="" class="px2-input" />
-// <input type="datetime-local" name="input-datetime-local" value="" class="px2-input" />
-// <select name="input-select" class="px2-input"><option value="1">Select Option 1</option></select>
-// <hr />
-// <textarea name="input-textarea" class="px2-input">Text Area</textarea>
-// <hr />
-// Readonly:
-// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" readonly />
-// <hr />
-// Disabled:
-// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" disabled />
-// <hr />
-// Block:
-// <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--block" /></p>
-// <p><textarea name="input-text" class="px2-input px2-input--block">Form Element: text input</textarea></p>
-// <p><select name="input-select" class="px2-input px2-input--block"><option value="1">Select Option 1</option></select></p>
-// <hr />
-// Errored:
-// <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--error" /></p>
-// <p><textarea name="input-text" class="px2-input px2-input--error">Form Element: text input</textarea></p>
-// <p><select name="input-select" class="px2-input px2-input--error"><option value="1">Select Option 1</option></select></p>
-// <p class="px2-error">Error message.</p>
-// <hr />
-// Note:
-// <p class="px2-note">Note message.</p>
-//
-// Styleguide 6.0
 input[type=text].px2-input,
 input[type=password].px2-input,
 input[type=number].px2-input,
@@ -108,6 +62,15 @@ select.px2-input{
         background-color: #f8d7da;
     }
 }
+input[type=number].px2-input {
+    text-align: right;
+    padding-right: 0.25rem;
+    width: 9em;
+}
+input[type=search].px2-input {
+    border-radius: 2em;
+}
+
 .px2-error {
     color: #e00;
 }
@@ -115,67 +78,11 @@ select.px2-input{
     color: #999;
 }
 
-// Input Group
-//
-// Markup:
-// <div class="px2-p">
-// <div class="px2-input-group">
-// <input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
-// <button class="px2-btn">OK</button>
-// </div>
-// </div>
-// <div class="px2-p">
-// <div class="px2-input-group">
-// <span class="px2-input-group__text">#</span>
-// <input type="color" name="input-number" value="Form Element: color input" class="px2-input" />
-// <button class="px2-btn">OK</button>
-// </div>
-// </div>
-// <div class="px2-p">
-// <div class="px2-input-group">
-// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
-// <span class="px2-input-group__text px2-input-group__text--align-left">px</span>
-// <button class="px2-btn">OK</button>
-// </div>
-// </div>
-// <div class="px2-p">
-// <div class="px2-input-group">
-// <button class="px2-btn">Button 1</button>
-// <button class="px2-btn">Button 2</button>
-// <button class="px2-btn px2-btn--toggle-on">Button 3</button>
-// <button class="px2-btn">Button 4</button>
-// <button class="px2-btn px2-btn--primary">OK</button>
-// </div>
-// </div>
-// <div class="px2-p">
-// <div class="px2-input-group">
-// <button class="px2-btn px2-btn--primary">OK</button>
-// </div>
-// </div>
-// <div class="px2-p">
-// <p>Fluid</p>
-// <div class="px2-input-group px2-input-group--fluid">
-// <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
-// <span class="px2-input-group__text">px</span>
-// <button class="px2-btn px2-btn--primary">OK</button>
-// </div>
-// </div>
-// <div class="px2-input-group px2-input-group--fluid">
-// <button class="px2-btn">Button 1</button>
-// <button class="px2-btn">Button 2</button>
-// <button class="px2-btn px2-btn--toggle-on">Button 3</button>
-// <button class="px2-btn">Button 4</button>
-// <button class="px2-btn px2-btn--primary">OK</button>
-// </div>
-// </div>
-//
-// Styleguide 6.1
 .px2-input-group {
     display: inline-flex;
     align-items: stretch;
     align-content: stretch;
     border-radius: .25rem;
-	// box-shadow: 0 2px 0px rgba(0,0,0,0.1);
     box-sizing: border-box;
     max-width: 100%;
 
@@ -253,33 +160,6 @@ select.px2-input{
 
 
 // Form input list
-//
-// Markup:
-// <div class="px2-form-input-list">
-//  <ul class="px2-form-input-list__ul">
-// 	    <li class="px2-form-input-list__li">
-// 	        <div class="px2-form-input-list__label"><label for="input-text-001">Input Label</label></div>
-// 	        <div class="px2-form-input-list__input"><input type="text" id="input-text-001" name="input-text-001" value="Form Element: text input" class="px2-input" /></div>
-// 	    </li>
-// 	    <li class="px2-form-input-list__li px2-form-input-list__li--required">
-// 	        <div class="px2-form-input-list__label"><label for="input-text-002">Input Label</label></div>
-// 	        <div class="px2-form-input-list__input">
-// 	            <p class="px2-note">Note.</p>
-// 	            <input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input px2-input--block" />
-// 	        </div>
-// 	    </li>
-// 	    <li class="px2-form-input-list__li px2-form-input-list__li--error">
-// 	        <div class="px2-form-input-list__label"><label for="input-text-003">Input Label</label></div>
-// 	        <div class="px2-form-input-list__input">
-// 	            <p class="px2-error">Error message.</p>
-// 	            <input type="text" id="input-text-003" name="input-text-003" value="Form Element: text input" class="px2-input px2-input--error" />
-// 	        </div>
-// 	    </li>
-//  </ul>
-// </div>
-//
-// Styleguide 6.2
-
 .px2-form-input-list{
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -347,7 +227,6 @@ select.px2-input{
 	@media all and (max-width: 544px){
 		ul.px2-form-input-list__ul{
 			display: block;
-			// border-bottom: 0 none;
 
 			li.px2-form-input-list__li{
 				display: block;
@@ -370,21 +249,6 @@ select.px2-input{
 
 
 // Form submit buttons
-//
-// Markup:
-// <div class="px2-form-submit-area">
-// <ul class="px2-form-submit-area__btns">
-// <li><button class="px2-btn px2-btn--primary">OK 1</button></li>
-// <li><button class="px2-btn px2-btn--primary">OK 2</button></li>
-// </ul>
-// <ul class="px2-form-submit-area__backward-btns">
-// <li><button class="px2-btn px2-btn--secondary">Back 1</button></li>
-// <li><button class="px2-btn px2-btn--secondary">Back 2</button></li>
-// </ul>
-// </div>
-//
-// Styleguide 6.3
-
 .px2-form-submit-area {
     margin: 1em 0;
     padding: 0;

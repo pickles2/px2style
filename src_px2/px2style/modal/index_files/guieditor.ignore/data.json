@@ -1,0 +1,83 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "モーダルを開く"
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "px2style.modal({\n\"title\": \"モーダルを開くサンプル\",\n\"target\": \".contents\",\n});\n",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<ul>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Modal Dialog.',\n             target: '.contents',\n             body: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ]\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open normal modal dialog.</a></li>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Modal Dialog.',\n             target: '.contents',\n             body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ]\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open normal modal dialog contains long contents.</a></li>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Modal Dialog 700px.',\n             target: '.contents',\n             body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ],\n             width: 700\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open normal modal dialog with 700px width.</a></li>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Form Dialog.',\n             target: '.contents',\n             body: '<div><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; disabled=&quot;true&quot; /></p><p><button class=&quot;btn-lock&quot; type=&quot;button&quot;>lock</button></p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot;>OK</button>'\n             ],\n             form: {\n                 action: 'javascript:alert(\\'form action\\');',\n                 method: 'get',\n                 submit: function(){alert('form submit');px2style.closeModal();}\n             },\n             width: 700\n         },\n         function(modalObj){\n             console.log('done.');\n             modalObj.$modal.find('.btn-lock').on('click',function(){\n                 modalObj.lock();\n                 setTimeout(function(){modalObj.unlock();}, 20*1000);\n             });\n         }\n     );void(0);\">Open normal modal dialog with form.</a></li>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Form Dialog.',\n             target: '.contents',\n             body: '<div><input type=&quot;hidden&quot; name=&quot;hidden-sample&quot; value=&quot;&quot; /><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot;>OK</button>'\n             ],\n             form: {\n                 action: 'javascript:alert(\\'form action\\');',\n                 method: 'get',\n                 submit: function(){alert('form submit');px2style.closeModal();}\n             },\n             width: 700\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open normal modal dialog with form contains long contents.</a></li>\n <li><a href=\"javascript:console.log(document.querySelectorAll('div.view-section'));px2style.modal(\n         {\n             title: 'Sample Modal Dialog.',\n             target: document.querySelectorAll('div.cont-view-section')[0],\n             body: '<div><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p><p>Sample Content.</p></div>',\n             buttons: [\n                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ],\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open modal dialog to target DIV element.</a></li>\n <li><a href=\"javascript:px2style.modal(\n         {\n             title: 'Sample Form Dialog.',\n             target: '.contents',\n             body: '<div><p>Sample Content. <button type=\\'button\\' onclick=\\''+\n                 'px2style.modal({'+\n                 '    title: &quot;2nd layer&quot;,'+\n                 '    target: &quot;.contents&quot;,'+\n                 '    body: &quot;<div><p>Sample Content on 2nd layer.</p></div>&quot;'+\n                 '}, function(){'+\n                 '    console.log(&quot;done2.&quot;);'+\n                 '});'+\n                 '\\' class=\\'px2-btn\\'>open new layer</button></p></div>',\n             buttons: [\n                 '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ],\n             buttonsSecondary: [\n                 document.createElement('button')\n             ],\n             onclose: function(){alert('onclose event');}\n         },\n         function(){\n             console.log('done.');\n         }\n     );void(0);\">Open normal modal dialog with secondary button.</a></li>\n <li><a href=\"javascript:(function(){var modal = px2style.modal(\n         {\n             title: 'Sample Modal Dialog.',\n             target: '.contents',\n             body: '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p></div>',\n             buttons: [\n                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'\n             ]\n         },\n         function(){\n             console.log('done.');\n             setTimeout(function(){\n                 modal.replaceBody( '<div><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p><p>Sample Content.</p><p><input type=&quot;text&quot; value=&quot;&quot; /></p><p>Sample Content.</p></div>' );\n             }, 1000);\n         }\n     )})();void(0);\">Replace modal body.</a></li>\n</ul>",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"cont-view-section\" style=\"height: 10px;\">\n</div>",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}

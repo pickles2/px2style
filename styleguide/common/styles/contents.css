@@ -114,6 +114,14 @@
   border-color: #721c24;
   color: #721c24;
 }
+.contents input[type=number].px2-input {
+  padding-right: 0.25rem;
+  text-align: right;
+  width: 9em;
+}
+.contents input[type=search].px2-input {
+  border-radius: 2em;
+}
 .contents .px2-error {
   color: #e00;
 }
