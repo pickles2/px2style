@@ -54,6 +54,9 @@ mix
 	// --------------------------------------
 	// px2style
 	.js('./src_px2style/px2style.js', './px2style/px2style.js')
-	.sass('src_px2style/px2style.css.scss', './px2style/px2style.css')
+	.sass('./src_px2style/px2style.css.scss', './px2style/px2style.css')
+
+	// px2style - Theme
+	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './px2style/themes/darkmode.css')
 
 ;
