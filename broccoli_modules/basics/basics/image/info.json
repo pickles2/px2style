@@ -54,7 +54,8 @@
                         "value": "framed",
                         "label": "枠で囲う"
                     }
-                ]
+                ],
+                "default": "framed"
             },
             "width": {
                 "fieldType": "input",
@@ -82,7 +83,8 @@
                         "value": "1of2",
                         "label": "1/2幅"
                     }
-                ]
+                ],
+                "default": ""
             },
             "align": {
                 "fieldType": "input",
@@ -106,7 +108,8 @@
                         "value": "right",
                         "label": "右揃え"
                     }
-                ]
+                ],
+                "default": "center"
             },
             "imagescope": {
                 "fieldType": "input",

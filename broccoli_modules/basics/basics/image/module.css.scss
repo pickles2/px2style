@@ -3,9 +3,11 @@
 		width: 100%;
 		max-width: 100%;
 	}
-	&--framed > img, // <- fallback
-	&--framed &__img{
+	&__img {
 		display: inline-block;
+	}
+	&--framed > img,
+	&--framed &__img {
 		box-sizing: border-box;
 		border: 1px solid #bbb;
 		padding: 8px;

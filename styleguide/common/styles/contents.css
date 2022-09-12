@@ -574,8 +574,10 @@
   width: 100%;
   max-width: 100%;
 }
-.contents .px2-image .px2-image--framed > img, .contents .px2-image--framed .px2-image__img {
+.contents .px2-image__img {
   display: inline-block;
+}
+.contents .px2-image .px2-image--framed > img, .contents .px2-image--framed .px2-image__img {
   box-sizing: border-box;
   border: 1px solid #bbb;
   padding: 8px;
