@@ -43,11 +43,18 @@
 <div class="contents" data-contents-area="">
 <div class="px2-p">
 <button onclick="window.px2style.loading({
+});
+setTimeout(function(){
+	window.px2style.closeLoading();
+}, 10*1000);" type="button" class="px2-btn">ローディングアニメーションを表示する</button>
+</div>
+<div class="px2-p">
+<button onclick="window.px2style.loading({
 &quot;target&quot;: &quot;.contents&quot;,
 });
 setTimeout(function(){
 	window.px2style.closeLoading();
-}, 5*1000);" type="button" class="px2-btn">ローディングアニメーションを表示する</button>
+}, 60*1000);" type="button" class="px2-btn">ローディングアニメーションを表示 (.contents)</button>
 </div>
 </div>
 <div class="theme-breadcrumb"><ul><li><a href="/">ホーム</a></li><li><a href="/px2style/">px2style</a></li><li><span>ローディング</span></li></ul></div>

@@ -24,43 +24,27 @@
 			options.target = options.target||$('body');
 
 			var tpl = '';
-			tpl += '<div>';
-			tpl += ' <div class="px2-loading"></div>';
+			tpl += '<div class="px2-loading">';
+			tpl += ' <div class="px2-loading__sign"></div>';
 			tpl += '</div>';
 
 			$loading = $(tpl);
 			if( additionalClassName ){
 				$loading.addClass(additionalClassName);
 			}
-			$message = $('<div>');
-			$message.css({
-				"clear": "both",
-				"font-size": "0.8rem",
-				"text-align": "center",
-				"color": "#999"
-			});
+
+			$message = $('<div class="px2-loading__message">');
 
 			$target = $(options.target);
 			$target.append($loading);
 			$loading.append($message);
 
-			if( $target.get(0).tagName.toLowerCase() == 'body' ){
+			if( $target.get(0).tagName.toLowerCase() != 'body' ){
 				// body に挿入する場合は、 fixed に。
 				$loading.css({
-					"position": "fixed",
-					"left": 0,
-					"top": 0
+					"position": "absolute",
 				});
 			}
-			$loading.css({
-				"width": '100%',
-				"height": '100%',
-				"display": "flex",
-				"justify-content": "center",
-				"flex-direction": "column",
-				"align-items": "center",
-				"z-index": 1010000
-			});
 
 			callback();
 		});

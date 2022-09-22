@@ -1,8 +1,15 @@
 <div class="px2-p">
 <button onclick="window.px2style.loading({
+});
+setTimeout(function(){
+	window.px2style.closeLoading();
+}, 10*1000);" type="button" class="px2-btn">ローディングアニメーションを表示する</button>
+</div>
+<div class="px2-p">
+<button onclick="window.px2style.loading({
 &quot;target&quot;: &quot;.contents&quot;,
 });
 setTimeout(function(){
 	window.px2style.closeLoading();
-}, 5*1000);" type="button" class="px2-btn">ローディングアニメーションを表示する</button>
+}, 60*1000);" type="button" class="px2-btn">ローディングアニメーションを表示 (.contents)</button>
 </div>
