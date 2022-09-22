@@ -31,7 +31,9 @@ $ composer require pickles2/px2style
 ### px2style v3.0.0 (リリース日未定)
 
 - Broccoliモジュールを追加し、モジュール機能が統合された。
+- `@layer px2style` を導入した。
 - `px2style.modal()` で、背景がスクロールされないようにする制御を追加した。
+- `px2style.modal()` のコンテナを `dialog` 要素に変更した。
 - セクションモジュール `.px2-section` を追加した。
 - `.px2-button`、 `.px2-input`、 `.px-input-group`, `.px2-form-input-list` の微調整。
 - `.px2-header`、 `.px2-editor-type`、 `.px2-document`、 `.px2-slim` を削除。

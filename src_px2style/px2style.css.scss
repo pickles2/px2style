@@ -1,3 +1,5 @@
+@layer px2style {
+
 // px2style
 @import '../src_mix/px2style.css.scss';
 
@@ -7,8 +9,6 @@
 	--px2-text-color: $px2-text-color;
 	--px2-background-color: $px2-background-color;
 }
-
-@layer px2style {
 
 // broccoli-module-px2style
 @import '../broccoli_modules/basics/basics/a/module.css.scss';

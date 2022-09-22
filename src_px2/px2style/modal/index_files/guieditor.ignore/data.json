@@ -23,7 +23,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal({\n\"title\": \"モーダルを開くサンプル\",\n\"target\": \".contents\",\n});\n",
+                                "src": "px2style.modal({\n\"title\": \"モーダルを開くサンプル\",\n\"target\": \".contents\",\n\"body\": $('#cont-modal-contents-001').html(),\n});\n",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -31,6 +31,26 @@
                             },
                             "paragraph": {
                                 "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<script type=\"template\" id=\"cont-modal-contents-001\">\n<p>これは、モーダルダイアログに表示するコンテンツです。</p>\n<p>これは、モーダルダイアログに表示するコンテンツです。</p>\n</script>\n",
+                                "editor": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": ""
                             }
                         },
                         "anchor": "",

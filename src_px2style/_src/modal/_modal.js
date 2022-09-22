@@ -32,7 +32,7 @@
 		options.form = options.form||false;
 
 		var tpl = '';
-		tpl += '<div class="px2-modal">';
+		tpl += '<dialog class="px2-modal">';
 		if(options.form){
 			tpl += '<form>';
 		}
@@ -47,25 +47,14 @@
 		if(options.form){
 			tpl += '</form>';
 		}
-		tpl += '</div>';
+		tpl += '</dialog>';
 
-		var $modal = $('<div>')
-			.css({
-				'display': 'flex',
-				'position': 'absolute',
-				'top': 0,
-				'left': 0,
-				'width': '100%',
-				'height': '100%',
-				'z-index': 1000000,
-			})
-		;
+		var $modal = $(tpl);
 
 		var additionalClassName = this.getConfig('additionalClassName');
 		if( additionalClassName ){
 			$modal.addClass(additionalClassName);
 		}
-		$modal.append(tpl);
 
 		if(options.form){
 			$modal.find('form').attr({
@@ -139,10 +128,6 @@
 		var isClosable = true;
 		var $target = $(this.options.target);
 		$target.append($modal);
-
-		this.$modal.css({
-			"position": "fixed"
-		});
 
 		if( this.options.width ){
 			this.$modal.find('.px2-modal__dialog').css({
