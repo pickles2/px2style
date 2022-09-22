@@ -28,9 +28,12 @@
 			tpl += ' <div class="px2-loading__sign"></div>';
 			tpl += '</div>';
 
-			$loading = $(tpl);
 			if( additionalClassName ){
-				$loading.addClass(additionalClassName);
+				$loading = $('<div>')
+					.addClass(additionalClassName)
+					.append(tpl);
+			}else{
+				$loading = $(tpl);
 			}
 
 			$message = $('<div class="px2-loading__message">');

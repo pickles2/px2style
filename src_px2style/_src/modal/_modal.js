@@ -49,11 +49,15 @@
 		}
 		tpl += '</dialog>';
 
-		var $modal = $(tpl);
-
+		var $modal;
 		var additionalClassName = this.getConfig('additionalClassName');
+
 		if( additionalClassName ){
-			$modal.addClass(additionalClassName);
+			$modal = $('<div>')
+				.addClass(additionalClassName)
+				.append(tpl);
+		}else{
+			$modal = $(tpl);
 		}
 
 		if(options.form){

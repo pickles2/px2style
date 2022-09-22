@@ -55,7 +55,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "window.px2style.loading({\n\"target\": \".contents\",\n});\nsetTimeout(function(){\n\twindow.px2style.closeLoading();\n}, 60*1000);",
+                                "src": "window.px2style.loading({\n\"target\": \".contents\",\n});\nsetTimeout(function(){\n\twindow.px2style.closeLoading();\n}, 10*1000);",
                                 "lang": "javascript"
                             },
                             "align": {
