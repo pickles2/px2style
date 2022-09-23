@@ -221,6 +221,7 @@ input[type=search].px2-input {
 }
 .px2-modal {
   background: rgba(0, 0, 0, 0.7);
+  border: none;
   font-family: var(--px2-font-family, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif);
   left: 0;
   position: fixed;
@@ -449,8 +450,11 @@ input[type=search].px2-input {
   }
 }
 .px2-loading {
+  background-color: transparent;
+  border: none;
   clear: both;
   float: none;
+  padding: 0;
   position: fixed;
   z-index: 1010000;
 }
@@ -468,7 +472,7 @@ input[type=search].px2-input {
 }
 .px2-loading__sign {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
 }
 .px2-loading__sign:before {
   -webkit-animation-fill-mode: both;

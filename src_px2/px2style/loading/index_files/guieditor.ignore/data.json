@@ -5,6 +5,26 @@
             "fields": {
                 "main": [
                     {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div style=\"height: 600px; position: relative;\">\n<dialog class=\"px2-loading\" style=\"position: absolute;\">\n\t<div class=\"px2-loading__sign\">\n\t\t<div class=\"px2-loading__message\">メッセージを表示</div>\n\t</div>\n</dialog>\n</div>\n",
+                                "editor": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
                         "modId": "px2style:basics/button",
                         "fields": {
                             "label": {
@@ -59,6 +79,46 @@
                                 "lang": "javascript"
                             },
                             "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<button type=\"button\" class=\"px2-btn\" onclick=\"contLoading()\">ローディングアニメーション</button>\n<script>\nfunction contLoading(){\n\twindow.px2style.loading({\n\t\t// \"target\": \".contents\",\n\t});\n\tsetTimeout(function(){\n\t\twindow.px2style.loadingMessage('メッセージを表示');\n\t}, 2*1000);\n\tsetTimeout(function(){\n\t\twindow.px2style.closeLoading();\n\t}, 10*1000);\n}\n</script>",
+                                "editor": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<button type=\"button\" class=\"px2-btn\" onclick=\"contLoading_contents()\">ローディングアニメーション (.contents)</button>\n<script>\nfunction contLoading_contents(){\n\twindow.px2style.loading({\n\t\t\"target\": \".contents\",\n\t});\n\tsetTimeout(function(){\n\t\twindow.px2style.loadingMessage('メッセージを表示');\n\t}, 2*1000);\n\tsetTimeout(function(){\n\t\twindow.px2style.closeLoading();\n\t}, 10*1000);\n}\n</script>",
+                                "editor": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
                                 "src": ""
                             },
                             "paragraph": {

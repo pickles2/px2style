@@ -24,9 +24,11 @@
 			options.target = options.target||$('body');
 
 			var tpl = '';
-			tpl += '<div class="px2-loading">';
-			tpl += ' <div class="px2-loading__sign"></div>';
-			tpl += '</div>';
+			tpl += '<dialog class="px2-loading">';
+			tpl += ' <div class="px2-loading__sign">';
+			tpl += ' 	<div class="px2-loading__message"></div>';
+			tpl += ' </div>';
+			tpl += '</dialog>';
 
 			if( additionalClassName ){
 				$loading = $('<div>')
@@ -36,11 +38,10 @@
 				$loading = $(tpl);
 			}
 
-			$message = $('<div class="px2-loading__message">');
+			$message = $loading.find('.px2-loading__message');
 
 			$target = $(options.target);
 			$target.append($loading);
-			$loading.append($message);
 
 			if( $target.get(0).tagName.toLowerCase() != 'body' ){
 				// body に挿入する場合は、 fixed に。
