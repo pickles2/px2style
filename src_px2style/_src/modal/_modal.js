@@ -151,6 +151,13 @@
 
 
 		/**
+		 * 状態を更新する
+		 */
+		this.refresh = function(){
+			tabkeyControl(this.$modal);
+		}
+
+		/**
 		 * フォーム要素をロックする
 		 *
 		 * フォームをロックしても、Escキー操作などでモーダルを閉じることはできます。
