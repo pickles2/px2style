@@ -11,10 +11,10 @@
     ],
     "scripts":{
 		"start": [
-			"@php ./src_px2/.px_execute.php \"/?PX=serve\""
+			"@php ./src_px2/.px_execute.php \"/?PX=serve&S=localhost:18080\""
 		],
 		"start-pub": [
-			"@php ./src_px2/.px_execute.php \"/?PX=serve.pub\""
+			"@php ./src_px2/.px_execute.php \"/?PX=serve.pub&S=localhost:18081\""
 		]
     } ,
     "config": {
