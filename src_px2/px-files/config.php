@@ -246,6 +246,30 @@ return call_user_func( function(){
 
 	);
 
+	$devices = array();
+	foreach( array('darkmode') as $theme_id ){
+		array_push( $devices, array(
+			'user_agent'=>'Mozilla/',$theme_id,
+			'params' => array(
+				'THEME' => $theme_id,
+			),
+			'path_publish_dir'=>'../styleguide/',
+			'path_rewrite_rule'=>'/_'.$theme_id.'{$dirname}/{$filename}.{$ext}',
+			'paths_target'=>array(
+				'/*',
+			),
+			'paths_ignore'=>array(
+				// '/common/*',
+			),
+
+			// リンクの書き換え方向
+			// `origin2origin`、`origin2rewrited`、`rewrited2origin`、`rewrited2rewrited` のいずれかで指定します。
+			// `origin` は変換前のパス、 `rewrited` は変換後のパスを意味します。
+			// 変換前のパスから変換後のパスへのリンクとして書き換える場合は `origin2rewrited` のように指定します。
+			'rewrite_direction'=>'rewrited2rewrited',
+		) );
+	}
+
 	/**
 	 * funcs: Before content
 	 *
@@ -256,7 +280,9 @@ return call_user_func( function(){
 		'picklesFramework2\commands\api::register' ,
 
 		// PX=publish (px2-publish-ex)
-		'picklesFramework2\commands\publish::register()' ,
+		'tomk79\pickles2\publishEx\publish::register('.json_encode(array(
+			'devices'=>$devices,
+		)).')' ,
 
 		// PX=px2dthelper
 		'tomk79\pickles2\px2dthelper\main::register' ,
@@ -297,18 +323,12 @@ return call_user_func( function(){
 			)
 		) ).')' ,
 
-		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
-		'picklesFramework2\processors\encodingconverter\encodingconverter::exec' ,
 	);
 
 	$conf->funcs->processor->css = array(
-		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
-		'picklesFramework2\processors\encodingconverter\encodingconverter::exec' ,
 	);
 
 	$conf->funcs->processor->js = array(
-		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
-		'picklesFramework2\processors\encodingconverter\encodingconverter::exec' ,
 	);
 
 	$conf->funcs->processor->md = array(
@@ -336,6 +356,31 @@ return call_user_func( function(){
 	 * (HTMLの場合は、テーマの処理の後のコードが対象になります)
 	 */
 	$conf->funcs->before_output = array(
+		// px2-path-resolver - 相対パス・絶対パスを変換して出力する
+		//   options
+		//     string 'to':
+		//       - relate: 相対パスへ変換
+		//       - absolute: 絶対パスへ変換
+		//       - pass: 変換を行わない(default)
+		//     bool 'supply_index_filename':
+		//       - true: 省略されたindexファイル名を補う
+		//       - false: 省略できるindexファイル名を削除
+		//       - null: そのまま (default)
+		'tomk79\pickles2\pathResolver\main::exec('.json_encode(array(
+			'to' => 'relate' ,
+			'supply_index_filename' => false
+		)).')' ,
+
+		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
+		'picklesFramework2\processors\encodingconverter\encodingconverter::exec('.json_encode(array(
+			'ext'=>array( // 対象の拡張子。省略時はすべてのリクエストが適用される。
+				'html',
+				'htm',
+				'css',
+				'js',
+			),
+		)).')' ,
+
 	);
 
 

@@ -58,5 +58,5 @@ mix
 
 	// px2style - Theme
 	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './px2style/themes/darkmode.css')
-
+	.copy('./px2style/themes/darkmode.css', './src_px2/px-files/themes/darkmode/theme_files/styles/px2style-theme-darkmode.css')
 ;
