@@ -42,14 +42,14 @@ mix
 
 
 	// --------------------------------------
-	// modules: basics/a
-	.js('./src_mix/modules/basics/basics/_/module.js', './broccoli_modules/basics/basics/_/module.js')
-	.sass('./src_mix/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
+	// fields: cssMarginPadding
+	.js('./src_broccoli/fields/cssMarginPadding/cssMarginPadding.js', './fields/cssMarginPadding/frontend/')
+	.sass('src_broccoli/fields/cssMarginPadding/cssMarginPadding.css.scss', './fields/cssMarginPadding/frontend/cssMarginPadding.css')
 
 	// --------------------------------------
-	// fields: cssMarginPadding
-	.js('./src_mix/fields/cssMarginPadding/cssMarginPadding.js', './fields/cssMarginPadding/frontend/')
-	.sass('src_mix/fields/cssMarginPadding/cssMarginPadding.css.scss', './fields/cssMarginPadding/frontend/cssMarginPadding.css')
+	// modules: basics/_
+	.js('./src_broccoli/modules/basics/basics/_/module.js', './broccoli_modules/basics/basics/_/module.js')
+	.sass('./src_broccoli/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
 
 	// --------------------------------------
 	// px2style
