@@ -1,13 +1,16 @@
 (function(){
-    if( !window.px2style || window.px2style.basicsInteractivesCarousel ){
+    if( !window.px2style ){
         return;
     }
-    window.px2style.basicsInteractivesCarousel = true;
 
-	window.addEventListener('load', function(e){
+	window.px2style.registerInitFunction('px2-carousel', function(){
 		var carouselModules = document.querySelectorAll('.px2-carousel .px2-carousel__contents');
 		for(var idx = 0; idx < carouselModules.length; idx ++){
-			// console.log(idx);
+			var $carouselElement = $(carouselModules[idx]);
+			if( $carouselElement.hasClass('px2-carousel__contents--initialized') ){
+				continue;
+			}
+			$carouselElement.addClass('px2-carousel__contents--initialized');
 			tns({
 				container: carouselModules[idx],
 				nav: true,

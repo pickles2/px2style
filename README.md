@@ -37,6 +37,7 @@ $ composer require pickles2/px2style
 - セクションモジュール `.px2-section` を追加した。
 - `.px2-button`、 `.px2-input`、 `.px-input-group`, `.px2-form-input-list` の微調整。
 - `.px2-header`、 `.px2-editor-type`、 `.px2-document`、 `.px2-slim` を削除。
+- `px2style.setConfig()`、 `px2style.getConfig()` を廃止。
 - ダークモードを テーマファイルに分離した。
 
 ### px2style v2.0.20 (2022/07/11)

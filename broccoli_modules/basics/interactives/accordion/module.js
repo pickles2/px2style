@@ -1,10 +1,9 @@
 (function(){
-    if( !window.px2style || window.px2style.basicsInteractivesAccordion ){
+    if( !window.px2style ){
         return;
     }
-    window.px2style.basicsInteractivesAccordion = true;
 
-	window.addEventListener('load', function(e){
+	window.px2style.registerInitFunction('px2-accordion', function(){
 		var accordionModules = document.querySelectorAll('.px2-accordion');
 		for(var idx = 0; idx < accordionModules.length; idx ++){
 			// console.log(idx);
@@ -18,13 +17,15 @@
 				var content = units[idxUnit].querySelector(':scope > .px2-accordion__content');
 				(function(idxUnit, unit, units, a, content){
 					// console.log(idxUnit);
-					a.addEventListener('click', function(e){
-						if(unit.classList.contains("px2-accordion--active")){
-							unit.classList.remove('px2-accordion--active');
-						}else{
-							unit.classList.add('px2-accordion--active');
-						}
-					});
+					window.px2style.$(a)
+						.off('click.px2-accordion')
+						.on('click.px2-accordion', function(e){
+							if(unit.classList.contains("px2-accordion--active")){
+								unit.classList.remove('px2-accordion--active');
+							}else{
+								unit.classList.add('px2-accordion--active');
+							}
+						});
 				})(idxUnit, units[idxUnit], units, a, content);
 			}
 			// console.log(units);

@@ -16,7 +16,6 @@
 	 */
 	window.px2style.loading = function(options, callback){
 		var _this = this;
-		var additionalClassName = this.getConfig('additionalClassName');
 		callback = callback||function(){};
 
 		this.closeLoading(function(){
@@ -30,13 +29,7 @@
 			tpl += ' </div>';
 			tpl += '</dialog>';
 
-			if( additionalClassName ){
-				$loading = $('<div>')
-					.addClass(additionalClassName)
-					.append(tpl);
-			}else{
-				$loading = $(tpl);
-			}
+			$loading = $(tpl);
 
 			$message = $loading.find('.px2-loading__message');
 

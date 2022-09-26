@@ -36,9 +36,7 @@
 
 		$notice.hide();
 
-		var additionalClassName = this.getConfig('additionalClassName');
-
-		appendToFlashArea($notice, additionalClassName);
+		appendToFlashArea($notice);
 
 		$notice
 			.fadeIn('slow', function(){
@@ -68,12 +66,9 @@
 		return;
 	}
 
-	function appendToFlashArea(elm, additionalClassName){
+	function appendToFlashArea(elm){
 		if( !$flashmessage ){
 			$flashmessage = $('<div>');
-			if( additionalClassName ){
-				$flashmessage.addClass(additionalClassName);
-			}
 			$flashmessage.css({
 				'position': 'fixed',
 				'left': 0,

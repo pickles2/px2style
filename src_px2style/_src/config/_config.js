@@ -2,19 +2,12 @@
  * config.js
  */
 (function(){
-	if( window.px2style.setConfig ){
-		return;
-	}
-
-	var config = {
-		'additionalClassName': '',
-	};
 
 	/**
 	 * Set config.
 	 */
-	window.px2style.setConfig = function(key, val){
-		config[key] = val;
+	window.px2style.setConfig = function(){
+		console.error('px2style.setConfig() was obsoleted.');
 		return true;
 	}
 
@@ -22,7 +15,8 @@
 	 * Get config.
 	 */
 	window.px2style.getConfig = function(key){
-		return config[key];
+		console.error('px2style.getConfig() was obsoleted.');
+		return false;
 	}
 
 })();
