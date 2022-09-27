@@ -2,6 +2,14 @@
 /**
  * module: px2style:basics/_
  */
+body.px2-scroll-lock {
+  overflow: hidden;
+}
+body.px2-scroll-lock--iphone {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
 input[type=color].px2-input, input[type=date].px2-input, input[type=datetime-local].px2-input, input[type=datetime].px2-input, input[type=email].px2-input, input[type=file].px2-input, input[type=month].px2-input, input[type=number].px2-input, input[type=password].px2-input, input[type=search].px2-input, input[type=tel].px2-input, input[type=text].px2-input, input[type=time].px2-input, input[type=url].px2-input, input[type=week].px2-input, select.px2-input, textarea.px2-input {
   background-clip: padding-box;
   background-color: #f9f9f9;
@@ -1459,6 +1467,7 @@ table.px2-table--right {
   border: 1px solid #dee2e6;
   border-top: none;
   padding: 1rem;
+  background-color: #fff;
 }
 .px2-tabs__content {
   display: none;
