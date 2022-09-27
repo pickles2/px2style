@@ -1,0 +1,8 @@
+body.px2-scroll-lock {
+    overflow: hidden;
+}
+body.px2-scroll-lock--iphone {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

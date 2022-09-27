@@ -8,6 +8,8 @@
 
 	var $ = window.px2style.$;
 	var modalLayers = [];
+	var isIphone = window.navigator.userAgent.match(/iPhone/);
+	var $body;
 
 	/**
 	 * Open modal dialog.
@@ -15,6 +17,8 @@
 	window.px2style.modal = function(options, callback){
 		var px2style = this;
 		callback = callback||function(){};
+
+		$body = $('body');
 
 		options = options||{};
 		options.title = options.title||'';
@@ -69,8 +73,8 @@
 			px2style.closeModal();
 		});
 
-		var $body = $modal.find('.px2-modal__body-inner');
-		$body.append( options.body );
+		var $modalBodyInner = $modal.find('.px2-modal__body-inner');
+		$modalBodyInner.append( options.body );
 
 		function generateBtn(btnSetting){
 			btnSetting = btnSetting || {};
@@ -117,8 +121,21 @@
 		this.options = options;
 		this.focusBackTo = document.activeElement;
 
-		var presetOverflow = $('body').css('overflow');
-		$('body').css({'overflow': 'hidden'});
+		var presetOverflow = {
+			"hasClass": $body.hasClass('px2-scroll-lock'),
+			"scrollY": window.scrollY,
+			"scrollX": window.scrollX,
+			"css_overflow": $body.css('overflow'),
+			"css_top": $body.css('top'),
+		};
+		if( !presetOverflow.hasClass ){
+			$body.addClass('px2-scroll-lock');
+			if( isIphone ){
+				$body
+					.addClass('px2-scroll-lock--iphone')
+					.css({"top": presetOverflow.scrollY * -1});
+			}
+		}
 
 		var isClosable = true;
 		var $target = $(this.options.target);
@@ -207,9 +224,9 @@
 		/**
 		 * モーダルの内容を置き換える
 		 */
-		this.replaceBody = function(body){
-			var $body = this.$modal.find('.px2-modal__body-inner');
-			$body.html('').append( body );
+		this.replaceBody = function( modalBodyContent ){
+			var $modalBodyInner = this.$modal.find('.px2-modal__body-inner');
+			$modalBodyInner.html('').append( modalBodyContent );
 			tabkeyControl(this.$modal);
 			this.$modal.find('.px2-modal__title').focus();
 		}
@@ -217,11 +234,20 @@
 		/**
 		 * モーダルを閉じる
 		 */
-		this.close = function(callback){
+		this.close = function( callback ){
 			var self = this;
 			callback = callback||function(){};
 			self.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
-			$('body').css({'overflow': presetOverflow});
+
+			if( !presetOverflow.hasClass ){
+				$body
+					.removeClass('px2-scroll-lock')
+					.removeClass('px2-scroll-lock--iphone');
+				if( isIphone ){
+					window.scroll(presetOverflow.scrollX, presetOverflow.scrollY);
+					$body.css({"top": presetOverflow.css_top});
+				}
+			}
 
 			setTimeout(function(){
 				try {

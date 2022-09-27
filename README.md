@@ -39,6 +39,7 @@ $ composer require pickles2/px2style
 - `.px2-header`、 `.px2-editor-type`、 `.px2-document`、 `.px2-slim` を削除。
 - `px2style.setConfig()`、 `px2style.getConfig()` を廃止。
 - ダークモードを テーマファイルに分離した。
+- その他、いくつかの不具合の修正。
 
 ### px2style v2.0.20 (2022/07/11)
 

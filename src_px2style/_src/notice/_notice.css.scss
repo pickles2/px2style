@@ -1,21 +1,4 @@
 // Notice
-//
-// お知らせ。
-//
-// Styleguide 5.0
-
-// Notice
-//
-// 各種のお知らせ欄を表示します。
-//
-// Markup:
-// <div class="px2-notice"><p>Notice</p></div>
-// <div class="px2-notice px2-notice--success"><p>Success</p></div>
-// <div class="px2-notice px2-notice--warning"><p>Warning</p></div>
-// <div class="px2-notice px2-notice--danger"><p>Danger</p></div>
-// <div class="px2-notice px2-notice--info"><p>Info</p></div>
-//
-// Styleguide 5.1
 .px2-notice {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
@@ -51,55 +34,3 @@
 	background-color: #d1ecf1;
 	border-color: #bee5eb;
 }
-
-// Flash Message
-//
-// Show Flash Message from JavaScript.
-//
-// Markup:
-// <ul>
-//  <li><a href="javascript:px2style.flashMessage(
-//          'Flash Message',
-//          function(){
-//              console.log('done.');
-//          }
-//      );">Show Flash Message.</a></li>
-//  <li><a href="javascript:px2style.flashMessage(
-//          {
-//              'message':'Flash Message',
-//              'type':'success',
-//          },
-//          function(){
-//              console.log('done.');
-//          }
-//      );">Show Flash Message -- success.</a></li>
-//  <li><a href="javascript:px2style.flashMessage(
-//          {
-//              'message':'Flash Message',
-//              'type':'warning',
-//          },
-//          function(){
-//              console.log('done.');
-//          }
-//      );">Show Flash Message -- warning.</a></li>
-//  <li><a href="javascript:px2style.flashMessage(
-//          {
-//              'message':'Flash Message',
-//              'type':'danger',
-//          },
-//          function(){
-//              console.log('done.');
-//          }
-//      );">Show Flash Message -- danger.</a></li>
-//  <li><a href="javascript:px2style.flashMessage(
-//          {
-//              'message':'Flash Message',
-//              'type':'info',
-//          },
-//          function(){
-//              console.log('done.');
-//          }
-//      );">Show Flash Message -- info.</a></li>
-// </ul>
-//
-// Styleguide 5.2
