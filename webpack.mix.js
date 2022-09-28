@@ -57,6 +57,8 @@ mix
 	.sass('./src_px2style/px2style.css.scss', './dist/px2style.css')
 
 	// px2style - Theme
+	.sass('./src_px2style/_src/themes/default/default.css.scss', './dist/themes/default.css')
+	.copy('./dist/themes/default.css', './src_px2/px-files/themes/default/theme_files/styles/px2style-theme-default.css')
 	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './dist/themes/darkmode.css')
 	.copy('./dist/themes/darkmode.css', './src_px2/px-files/themes/darkmode/theme_files/styles/px2style-theme-darkmode.css')
 ;

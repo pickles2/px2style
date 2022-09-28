@@ -1,0 +1,35 @@
+
+// px2style
+@import '../../../../src_broccoli/px2style.css.scss';
+
+:root {
+	--px2-font-family: $px2-font-family;
+	--px2-main-color: $px2-main-color;
+	--px2-text-color: $px2-text-color;
+	--px2-background-color: $px2-background-color;
+}
+
+// broccoli-module-px2style
+@import '../../../../broccoli_modules/basics/basics/a/module.css.scss';
+@import '../../../../broccoli_modules/basics/basics/blockquote/module.css.scss';
+@import '../../../../broccoli_modules/basics/basics/image/module.css.scss';
+@import '../../../../broccoli_modules/basics/basics/table/module.css.scss';
+@import '../../../../broccoli_modules/basics/basics/text/module.css.scss';
+@import '../../../../broccoli_modules/basics/grids/grid/module.css.scss';
+@import '../../../../broccoli_modules/basics/sections/hx/module.css.scss';
+@import '../../../../broccoli_modules/basics/sections/section/module.css.scss';
+@import '../../../../broccoli_modules/basics/sections/notice/module.css.scss';
+@import '../../../../broccoli_modules/basics/interactives/accordion/module.css.scss';
+@import '../../../../broccoli_modules/basics/interactives/carousel/module.css.scss';
+@import '../../../../broccoli_modules/basics/interactives/tabs/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/changelog/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/dl/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/index/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/ul/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/ul-links/module.css.scss';
+@import '../../../../broccoli_modules/basics/lists/ul-media-list/module.css.scss';
+@import '../../../../broccoli_modules/basics/medias/float/module.css.scss';
+@import '../../../../broccoli_modules/basics/medias/image-media/module.css.scss';
+@import '../../../../broccoli_modules/basics/utils/p/module.css.scss';
+@import '../../../../broccoli_modules/basics/utils/responsive/module.css.scss';
+@import '../../../../broccoli_modules/basics/utils/viewport-fit/module.css.scss';
