@@ -53,10 +53,10 @@ mix
 
 	// --------------------------------------
 	// px2style
-	.js('./src_px2style/px2style.js', './px2style/px2style.js')
-	.sass('./src_px2style/px2style.css.scss', './px2style/px2style.css')
+	.js('./src_px2style/px2style.js', './dist/px2style.js')
+	.sass('./src_px2style/px2style.css.scss', './dist/px2style.css')
 
 	// px2style - Theme
-	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './px2style/themes/darkmode.css')
-	.copy('./px2style/themes/darkmode.css', './src_px2/px-files/themes/darkmode/theme_files/styles/px2style-theme-darkmode.css')
+	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './dist/themes/darkmode.css')
+	.copy('./dist/themes/darkmode.css', './src_px2/px-files/themes/darkmode/theme_files/styles/px2style-theme-darkmode.css')
 ;
