@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>ローディング | Pickles 2 CSS Modules</title>
+		<title>ノーティス | Pickles 2 CSS Modules</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 
@@ -37,69 +37,62 @@
 <div class="theme-layouts theme-layouts--rnavi">
 	<div class="theme-layouts__body">
 		<div class="theme-layouts__content">
-<div class="theme-breadcrumb"><ul><li><a href="../../">ホーム</a></li><li><a href="../">px2style</a></li><li><span>ローディング</span></li></ul></div>
-<h1>ローディング</h1>
+<div class="theme-breadcrumb"><ul><li><a href="../../">ホーム</a></li><li><a href="../">px2style</a></li><li><span>ノーティス</span></li></ul></div>
+<h1>ノーティス</h1>
 
 <div class="contents" data-contents-area="">
-<div class="px2-p">
-<div style="height: 600px; position: relative;">
-<dialog class="px2-loading" style="position: absolute;">
-	<div class="px2-loading__sign">
-		<div class="px2-loading__message">メッセージを表示</div>
-	</div>
-</dialog>
+<div class="px2-h2">
+<h2>Notice</h2>
 </div>
+<div class="px2-p">
+<ul>
+ <li><a href="javascript:px2style.flashMessage(
+         'Flash Message',
+         function(){
+             console.log('done.');
+         }
+     );">Show Flash Message.</a></li>
+ <li><a href="javascript:px2style.flashMessage(
+         {
+             'message':'Flash Message',
+             'type':'success',
+         },
+         function(){
+             console.log('done.');
+         }
+     );">Show Flash Message -- success.</a></li>
+ <li><a href="javascript:px2style.flashMessage(
+         {
+             'message':'Flash Message',
+             'type':'warning',
+         },
+         function(){
+             console.log('done.');
+         }
+     );">Show Flash Message -- warning.</a></li>
+ <li><a href="javascript:px2style.flashMessage(
+         {
+             'message':'Flash Message',
+             'type':'danger',
+         },
+         function(){
+             console.log('done.');
+         }
+     );">Show Flash Message -- danger.</a></li>
+ <li><a href="javascript:px2style.flashMessage(
+         {
+             'message':'Flash Message',
+             'type':'info',
+         },
+         function(){
+             console.log('done.');
+         }
+     );">Show Flash Message -- info.</a></li>
+</ul>
 
 </div>
-<div class="px2-p">
-<button onclick="window.px2style.loading({
-});
-setTimeout(function(){
-	window.px2style.closeLoading();
-}, 10*1000);" type="button" class="px2-btn">ローディングアニメーションを表示する</button>
 </div>
-<div class="px2-p">
-<button onclick="window.px2style.loading({
-&quot;target&quot;: &quot;.contents&quot;,
-});
-setTimeout(function(){
-	window.px2style.closeLoading();
-}, 10*1000);" type="button" class="px2-btn">ローディングアニメーションを表示 (.contents)</button>
-</div>
-<div class="px2-p">
-<button type="button" class="px2-btn" onclick="contLoading()">ローディングアニメーション</button>
-<script>
-function contLoading(){
-	window.px2style.loading({
-		// "target": ".contents",
-	});
-	setTimeout(function(){
-		window.px2style.loadingMessage('メッセージを表示');
-	}, 2*1000);
-	setTimeout(function(){
-		window.px2style.closeLoading();
-	}, 10*1000);
-}
-</script>
-</div>
-<div class="px2-p">
-<button type="button" class="px2-btn" onclick="contLoading_contents()">ローディングアニメーション (.contents)</button>
-<script>
-function contLoading_contents(){
-	window.px2style.loading({
-		"target": ".contents",
-	});
-	setTimeout(function(){
-		window.px2style.loadingMessage('メッセージを表示');
-	}, 2*1000);
-	setTimeout(function(){
-		window.px2style.closeLoading();
-	}, 10*1000);
-}
-</script>
-</div>
-</div>
-<div class="theme-breadcrumb"><ul><li><a href="../../">ホーム</a></li><li><a href="../">px2style</a></li><li><span>ローディング</span></li></ul></div>
+<div class="theme-breadcrumb"><ul><li><a href="../../">ホーム</a></li><li><a href="../">px2style</a></li><li><span>ノーティス</span></li></ul></div>
 		</div>
 		<div class="theme-layouts__rnavi">
 <nav class="theme-common-navi">
@@ -107,8 +100,8 @@ function contLoading_contents(){
 <ul>
 <li><a href="../form_elements/">フォーム要素</a></li>
 <li><a href="../modal/">モーダル</a></li>
-<li><a href="../notice/">ノーティス</a></li>
-<li><a href="./" class="current">ローディング</a></li>
+<li><a href="./" class="current">ノーティス</a></li>
+<li><a href="../loading/">ローディング</a></li>
 </ul>
 </nav>
 		</div>

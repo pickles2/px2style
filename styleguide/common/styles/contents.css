@@ -290,7 +290,7 @@ input[type=search].px2-input {
   border-bottom: 1px solid #666;
 }
 .px2-modal__close button[data-px2-modal-locked] {
-  visibility: hidden;
+  opacity: 0.2;
 }
 @-webkit-keyframes px2-modal--initial {
   0% {

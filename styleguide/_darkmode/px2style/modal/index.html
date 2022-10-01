@@ -167,20 +167,23 @@
 
 </div>
 <div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		title: &#039;Sample Modal Dialog.&#039;,
+		target: &#039;.contents&#039;,
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [
+			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
+		]
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn">Open normal modal dialog.</button>
+</div>
+<div class="px2-p">
 <ul>
- <li><a href="javascript:px2style.modal(
-         {
-             title: 'Sample Modal Dialog.',
-             target: '.contents',
-             body: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',
-             buttons: [
-                 '<button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;>OK</button>'
-             ]
-         },
-         function(){
-             console.log('done.');
-         }
-     );void(0);">Open normal modal dialog.</a></li>
  <li><a href="javascript:px2style.modal(
          {
              title: 'Sample Modal Dialog.',
@@ -212,7 +215,7 @@
          {
              title: 'Sample Form Dialog.',
              target: '.contents',
-             body: '<div><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; disabled=&quot;true&quot; /></p><p><button class=&quot;btn-lock&quot; type=&quot;button&quot;>lock</button></p><p>Sample Content.</p></div>',
+             body: '<div><p>Sample Content.</p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; /></p><p><input type=&quot;text&quot; name=&quot;modal-test&quot; value=&quot;&quot; disabled=&quot;true&quot; /></p><p><button class=&quot;btn-lock-a&quot; type=&quot;button&quot;>lock() + closable(false)</button></p><p><button class=&quot;btn-lock-b&quot; type=&quot;button&quot;>lock()</button></p><p><button class=&quot;btn-lock-c&quot; type=&quot;button&quot;>closable(false)</button></p><p>Sample Content.</p></div>',
              buttons: [
                  '<button type=&quot;submit&quot; class=&quot;px2-btn px2-btn--primary&quot;>OK</button>'
              ],
@@ -225,9 +228,25 @@
          },
          function(modalObj){
              console.log('done.');
-             modalObj.$modal.find('.btn-lock').on('click',function(){
+             modalObj.$modal.find('.btn-lock-a').on('click',function(){
                  modalObj.lock();
-                 setTimeout(function(){modalObj.unlock();}, 20*1000);
+                 modalObj.closable(false);
+                 setTimeout(function(){
+                    modalObj.unlock();
+                    modalObj.closable(true);
+                 }, 10*1000);
+             });
+             modalObj.$modal.find('.btn-lock-b').on('click',function(){
+                 modalObj.lock();
+                 setTimeout(function(){
+                    modalObj.unlock();
+                 }, 10*1000);
+             });
+             modalObj.$modal.find('.btn-lock-c').on('click',function(){
+                 modalObj.closable(false);
+                 setTimeout(function(){
+                    modalObj.closable(true);
+                 }, 10*1000);
              });
          }
      );void(0);">Open normal modal dialog with form.</a></li>
@@ -312,56 +331,6 @@
 </div>
 
 </div>
-<div class="px2-h2">
-<h2>Notice</h2>
-</div>
-<div class="px2-p">
-<ul>
- <li><a href="javascript:px2style.flashMessage(
-         'Flash Message',
-         function(){
-             console.log('done.');
-         }
-     );">Show Flash Message.</a></li>
- <li><a href="javascript:px2style.flashMessage(
-         {
-             'message':'Flash Message',
-             'type':'success',
-         },
-         function(){
-             console.log('done.');
-         }
-     );">Show Flash Message -- success.</a></li>
- <li><a href="javascript:px2style.flashMessage(
-         {
-             'message':'Flash Message',
-             'type':'warning',
-         },
-         function(){
-             console.log('done.');
-         }
-     );">Show Flash Message -- warning.</a></li>
- <li><a href="javascript:px2style.flashMessage(
-         {
-             'message':'Flash Message',
-             'type':'danger',
-         },
-         function(){
-             console.log('done.');
-         }
-     );">Show Flash Message -- danger.</a></li>
- <li><a href="javascript:px2style.flashMessage(
-         {
-             'message':'Flash Message',
-             'type':'info',
-         },
-         function(){
-             console.log('done.');
-         }
-     );">Show Flash Message -- info.</a></li>
-</ul>
-
-</div>
 </div>
 <div class="theme-breadcrumb"><ul><li><a href="../../">ホーム</a></li><li><a href="../">px2style</a></li><li><span>モーダル</span></li></ul></div>
 		</div>
@@ -371,6 +340,7 @@
 <ul>
 <li><a href="../form_elements/">フォーム要素</a></li>
 <li><a href="./" class="current">モーダル</a></li>
+<li><a href="../notice/">ノーティス</a></li>
 <li><a href="../loading/">ローディング</a></li>
 </ul>
 </nav>

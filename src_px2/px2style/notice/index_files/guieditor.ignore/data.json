@@ -1,0 +1,47 @@
+{
+    "bowl": {
+        "main": {
+            "modId": "_sys/root",
+            "fields": {
+                "main": [
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "Notice"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<ul>\n <li><a href=\"javascript:px2style.flashMessage(\n         'Flash Message',\n         function(){\n             console.log('done.');\n         }\n     );\">Show Flash Message.</a></li>\n <li><a href=\"javascript:px2style.flashMessage(\n         {\n             'message':'Flash Message',\n             'type':'success',\n         },\n         function(){\n             console.log('done.');\n         }\n     );\">Show Flash Message -- success.</a></li>\n <li><a href=\"javascript:px2style.flashMessage(\n         {\n             'message':'Flash Message',\n             'type':'warning',\n         },\n         function(){\n             console.log('done.');\n         }\n     );\">Show Flash Message -- warning.</a></li>\n <li><a href=\"javascript:px2style.flashMessage(\n         {\n             'message':'Flash Message',\n             'type':'danger',\n         },\n         function(){\n             console.log('done.');\n         }\n     );\">Show Flash Message -- danger.</a></li>\n <li><a href=\"javascript:px2style.flashMessage(\n         {\n             'message':'Flash Message',\n             'type':'info',\n         },\n         function(){\n             console.log('done.');\n         }\n     );\">Show Flash Message -- info.</a></li>\n</ul>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    }
+                ]
+            }
+        }
+    }
+}
