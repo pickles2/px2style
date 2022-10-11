@@ -1,60 +1,28 @@
 Insert text.
 
-You can choose your favorite text style from HTML format, Markdown format, and plain text.
+## Input fields
 
-## Type of writing
+### Text
 
-### HTML format
+Enter the text to insert.
 
-This is how to write HTML directly.
-Those who have knowledge of HTML tags are suitable for inserting free expressions outside the fixed form.
-
-
-### Plain text format
-
-The text you wrote will be displayed in the browser as it is.
-Line breaks are converted to `<br>` tags and HTML special characters are escaped.
-If it contains a URL, it will be converted to a link.
+Multi-line rich text representation is supported.
 
 
-### Markdown format
+### Text alignment
 
-Markdown notation is a grammar that can express rich document structure with simple notation, and is used in many tools and services.
+Select Align Left, Align Center, or Align Right.
 
-If you understand HTML, you can also embed HTML tags directly in a part of a document written in Markdown notation.
-
-
-## Sample of how to write in Markdown format
-
-Here are some examples of the main writing styles that can be used in Markdown format.
-
-### Heading
-
-```
-## H2 Heading
-### H3 Heading
-#### H4 Heading
-##### H5 Heading
-###### H6 Heading
-```
+If you select Not Specified (Follow Parent's Alignment), the text will be affected by the default justification of the block in which it is placed.
 
 
-### hyperlink
+### Font size
 
-```
-[Link Label](../linkto/foobar.html)
-```
+Set the font size.
 
-Alternatively, you can embed an HTML representation.
+You can select from five levels: LL, L, Normal, S, SS.
 
-```
-<a href="../linkto/foobar.html" target="_blank">link label</a>
-```
 
-### List
+### Margin
 
-```
-- list 1
-- list 2
-- list 3
-```
+Choose whether to give natural line breaks before and after text.
