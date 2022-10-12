@@ -1,10 +1,8 @@
-console.log('broccoliModulePx2StyleDroppedFileOperatorGen() is loaded.');
 window.broccoliModulePx2StyleDroppedFileOperatorGen = function(options){
     options = options || {};
     options.packageId = options.packageId || 'px2style';
 
     return function(fileInfo, callback){
-        console.log('px2style: IMAGE Operator', fileInfo);
         var mimetype = fileInfo.type;
         var originalFileSize = fileInfo.size;
         var originalFileName = fileInfo.name;
@@ -18,13 +16,11 @@ window.broccoliModulePx2StyleDroppedFileOperatorGen = function(options){
 
         var reader = new FileReader();
         reader.onload = function(evt) {
-            // console.log(evt.target);
             var content = evt.target.result;
-            // console.log(content);
 
             // --------------------------------------
             // 画像ファイルのドロップを処理
-            // _sys/image に当てはめて挿入します。
+            // :basics/image に当てはめて挿入します。
             originalFileFirstname = originalFileFirstname.split(/[^a-zA-Z0-9]/).join('_');
 
             var base64 = content.replace(/^data\:[a-zA-Z0-9]+\/[a-zA-Z0-9]+\;base64\,/i, '');
