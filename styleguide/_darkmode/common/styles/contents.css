@@ -292,16 +292,6 @@ input[type=search].px2-input {
 .px2-modal__close button[data-px2-modal-locked] {
   opacity: 0.2;
 }
-@-webkit-keyframes px2-modal--initial {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes px2-modal--initial {
   0% {
     opacity: 0;
@@ -313,7 +303,6 @@ input[type=search].px2-input {
   }
 }
 .px2-modal__dialog {
-  -webkit-animation: px2-modal--initial 0.3s ease 0s 1 normal none running;
   animation: px2-modal--initial 0.3s ease 0s 1 normal none running;
   background-color: #f9f9f9;
   background-color: var(--px2-background-color, #f9f9f9);
@@ -437,16 +426,6 @@ input[type=search].px2-input {
   border-color: #bee5eb;
   color: #0c5460;
 }
-@-webkit-keyframes px2-loading {
-  0% {
-    opacity: 1;
-    transform: scale(0);
-  }
-  to {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
 @keyframes px2-loading {
   0% {
     opacity: 1;
@@ -483,9 +462,7 @@ input[type=search].px2-input {
   position: relative;
 }
 .px2-loading__sign:before {
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation: px2-loading 1s ease-in-out 0s infinite;
   animation: px2-loading 1s ease-in-out 0s infinite;
   background-color: #00a0e6;
   background-color: var(--px2-main-color, #00a0e6);
