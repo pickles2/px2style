@@ -28,7 +28,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.0.0 (リリース日未定)
+### px2style v3.0.0 (2022/10/16)
 
 - Broccoliモジュールを追加し、モジュール機能が統合された。
 - `@layer px2style` を導入した。
