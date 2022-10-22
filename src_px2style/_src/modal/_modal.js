@@ -33,6 +33,7 @@
 		options.buttonsSecondary = options.buttonsSecondary||[];
 		options.target = options.target||$('body');
 		options.onclose = options.onclose||function(){};
+		options.onbgclick = options.onbgclick||function(){};
 		options.form = options.form||false;
 
 		var tpl = '';
@@ -54,6 +55,10 @@
 		tpl += '</dialog>';
 
 		var $modal = $(tpl);
+		$modal.on('click.px2-modal', function(e){
+			e.preventDefault();
+			options.onbgclick(e);
+		});
 
 		if(options.form){
 			$modal.find('form').attr({
@@ -65,7 +70,11 @@
 		}
 
 		var $title = $modal.find('.px2-modal__title');
-		$title.append( options.title );
+		if( typeof(options.title) === typeof('') && options.title.length ){
+			$title.append( options.title );
+		}else{
+			$modal.addClass('px2-modal--no-title');
+		}
 
 		var $closeBtn = $modal.find('.px2-modal__close button');
 		$closeBtn.on('click.px2-modal', function(e){
@@ -103,6 +112,10 @@
 			$footer2Ul.append( generateBtn(options.buttonsSecondary[i]) );
 		}
 		$footer2.append($footer2Ul);
+
+		if( (!options.buttons || !options.buttons.length) && (!options.buttonsSecondary || !options.buttonsSecondary.length) ){
+			$modal.addClass('px2-modal--no-btn');
+		}
 
 		var objModal = new classModal(px2style, $modal, options);
 		modalLayers.push(objModal);

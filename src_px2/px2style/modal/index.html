@@ -130,13 +130,29 @@
 		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
 		buttons: [
 			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
-		]
+		],
+		onbgclick: function(){
+			alert(&#039;bgclicked&#039;);
+			px2style.closeModal();
+		}
 	},
 	function(){
 		console.log(&#039;done.&#039;);
 	}
 );
 " type="button" class="px2-btn">Open normal modal dialog.</button>
+</div>
+<div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [],
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn">No title, No button</button>
 </div>
 <div class="px2-p">
 <ul>

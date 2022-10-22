@@ -75,7 +75,39 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Modal Dialog.',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t]\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Modal Dialog.',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t],\n\t\tonbgclick: function(){\n\t\t\talert('bgclicked');\n\t\t\tpx2style.closeModal();\n\t\t}\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "No title, No button"
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "px2style.modal(\n\t{\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [],\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
                                 "lang": "javascript"
                             },
                             "align": {

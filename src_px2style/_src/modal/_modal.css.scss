@@ -16,6 +16,13 @@
 	margin: 0;
 	border: none;
 
+	&--no-title .px2-modal__header{
+		display: none;
+	}
+	&--no-btn .px2-modal__footer {
+		display: none;
+	}
+
 	> form{
 		// display: inline;
 		margin: 0;
