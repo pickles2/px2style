@@ -82,17 +82,6 @@
 		}
 	}
 
-    @keyframes px2-modal--initial {
-        0% {
-            transform: translateY(-10px);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
 	&__dialog{
 		position: relative;
 		top: 0; left: 0;
@@ -172,28 +161,79 @@
 		}
 	}
 }
+@keyframes px2-modal--initial {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes px2-modal--initial-drawer-left {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+		left: -100%;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		left: 0;
+	}
+}
+@keyframes px2-modal--initial-drawer-right {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+		right: -100%;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		right: 0;
+	}
+}
 
 // ドロワー
 .px2-modal.px2-modal--type-drawer-left,
 .px2-modal.px2-modal--type-drawer-right {
+	background-color: transparent;
+
 	.px2-modal__dialog {
 		position: absolute;
 		top: 0;
 		left: auto;
 		right: auto;
-		width: 280px;
+		width: 360px;
+		max-width: calc(100% - 20px);
 		height: 100%;
 		max-height: 100%;
 		margin: 0;
+		&--closed {
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
 }
 .px2-modal.px2-modal--type-drawer-left {
 	.px2-modal__dialog {
 		left: 0;
+		animation: px2-modal--initial-drawer-left .3s ease 0s 1 normal none running;
+		transition: transform .3s, opacity .3s, left .3s;
+		&--closed {
+			left: -100%;
+		}
 	}
 }
 .px2-modal.px2-modal--type-drawer-right {
 	.px2-modal__dialog {
 		right: 0;
+		animation: px2-modal--initial-drawer-right .3s ease 0s 1 normal none running;
+		transition: transform .3s, opacity .3s, right .3s;
+		&--closed {
+			right: -100%;
+		}
 	}
 }
