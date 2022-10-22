@@ -159,6 +159,127 @@
                         },
                         "anchor": "",
                         "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "ドロワー"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "text-align": "",
+                            "font-size": "",
+                            "paragraph": "px2-p"
+                        }
+                    },
+                    {
+                        "modId": "px2style:grids/grid",
+                        "fields": {
+                            "col": [
+                                {
+                                    "modId": "px2style:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of2",
+                                        "main": [
+                                            {
+                                                "modId": "px2style:basics/button",
+                                                "fields": {
+                                                    "label": {
+                                                        "src": "Open Drawer (left)"
+                                                    },
+                                                    "intention": {
+                                                        "src": ""
+                                                    },
+                                                    "sizing": {
+                                                        "src": ""
+                                                    },
+                                                    "display": {
+                                                        "src": "px2-btn--block"
+                                                    },
+                                                    "btntype": {
+                                                        "src": "button"
+                                                    },
+                                                    "onclick": {
+                                                        "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Drawer.',\n\t\ttype: 'drawer-left',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t],\n\t\tonbgclick: function(){\n\t\t\tpx2style.closeModal();\n\t\t}\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                                        "lang": "javascript"
+                                                    },
+                                                    "align": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:grids/grid",
+                                    "fields": {
+                                        "column-width": "1of2",
+                                        "main": [
+                                            {
+                                                "modId": "px2style:basics/button",
+                                                "fields": {
+                                                    "label": {
+                                                        "src": "Open Drawer (right)"
+                                                    },
+                                                    "intention": {
+                                                        "src": ""
+                                                    },
+                                                    "sizing": {
+                                                        "src": ""
+                                                    },
+                                                    "display": {
+                                                        "src": "px2-btn--block"
+                                                    },
+                                                    "btntype": {
+                                                        "src": "button"
+                                                    },
+                                                    "onclick": {
+                                                        "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Drawer.',\n\t\ttype: 'drawer-right',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t],\n\t\tonbgclick: function(){\n\t\t\tpx2style.closeModal();\n\t\t}\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                                        "lang": "javascript"
+                                                    },
+                                                    "align": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "col",
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
+                        }
                     }
                 ]
             }

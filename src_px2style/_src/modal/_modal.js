@@ -22,6 +22,7 @@
 
 		options = options||{};
 		options.title = options.title||'';
+		options.type = options.type||'modal'; // modal(default), drawer-left, drawer-right
 		options.body = options.body||$('<div>');
 		options.buttons = options.buttons||[
 			$('<button type="submit" class="px2-btn px2-btn--primary">')
@@ -59,6 +60,10 @@
 			e.preventDefault();
 			options.onbgclick(e);
 		});
+
+		if( options.type ){
+			$modal.addClass('px2-modal--type-'+options.type);
+		}
 
 		if(options.form){
 			$modal.find('form').attr({

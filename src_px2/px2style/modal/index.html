@@ -303,3 +303,56 @@
 </div>
 
 </div>
+<div class="px2-h2">
+<h2>ドロワー</h2>
+</div>
+<div class="px2-p">
+
+</div>
+<div class="px2-grid">
+
+    <div class="px2-grid__col-1of2"><div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		title: &#039;Sample Drawer.&#039;,
+		type: &#039;drawer-left&#039;,
+		target: &#039;.contents&#039;,
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [
+			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
+		],
+		onbgclick: function(){
+			px2style.closeModal();
+		}
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn px2-btn--block">Open Drawer (left)</button>
+</div>
+</div>
+
+    <div class="px2-grid__col-1of2"><div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		title: &#039;Sample Drawer.&#039;,
+		type: &#039;drawer-right&#039;,
+		target: &#039;.contents&#039;,
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [
+			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
+		],
+		onbgclick: function(){
+			px2style.closeModal();
+		}
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn px2-btn--block">Open Drawer (right)</button>
+</div>
+</div>
+
+</div>
