@@ -134,7 +134,10 @@
 		onbgclick: function(){
 			alert(&#039;bgclicked&#039;);
 			px2style.closeModal();
-		}
+		},
+		onclose: function(){
+			alert(&#039;onclose event&#039;);
+		},
 	},
 	function(){
 		console.log(&#039;done.&#039;);
@@ -153,6 +156,36 @@
 	}
 );
 " type="button" class="px2-btn">No title, No button</button>
+</div>
+<div class="px2-p">
+<button onclick="contOpenNestableDialog();" type="button" class="px2-btn">多重に開くモーダルダイアログ</button>
+</div>
+<div>
+<script type="text/javascript">
+function contOpenNestableDialog(){
+	px2style.modal(
+		{
+			title: 'Nestable Dialog Sample.',
+			body: '<div><p>Sample Content. <button type=\'button\' onclick=\''+
+			'contOpenNestableDialog();'+
+			'\' class=\'px2-btn\'>open new layer</button></p></div>',
+			buttons: [
+				'<button type="submit" class="px2-btn px2-btn--primary" onclick="px2style.closeModal();">OK</button>'
+			],
+			buttonsSecondary: [
+				document.createElement('button')
+			],
+			onbgclick: function(){
+				px2style.closeModal();
+			},
+		},
+		function(){
+			console.log('done.');
+		}
+	);
+}
+</script>
+
 </div>
 <div class="px2-p">
 <ul>

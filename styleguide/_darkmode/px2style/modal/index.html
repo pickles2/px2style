@@ -174,13 +174,62 @@
 		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
 		buttons: [
 			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
-		]
+		],
+		onbgclick: function(){
+			alert(&#039;bgclicked&#039;);
+			px2style.closeModal();
+		},
+		onclose: function(){
+			alert(&#039;onclose event&#039;);
+		},
 	},
 	function(){
 		console.log(&#039;done.&#039;);
 	}
 );
 " type="button" class="px2-btn">Open normal modal dialog.</button>
+</div>
+<div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [],
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn">No title, No button</button>
+</div>
+<div class="px2-p">
+<button onclick="contOpenNestableDialog();" type="button" class="px2-btn">多重に開くモーダルダイアログ</button>
+</div>
+<div>
+<script type="text/javascript">
+function contOpenNestableDialog(){
+	px2style.modal(
+		{
+			title: 'Nestable Dialog Sample.',
+			body: '<div><p>Sample Content. <button type=\'button\' onclick=\''+
+			'contOpenNestableDialog();'+
+			'\' class=\'px2-btn\'>open new layer</button></p></div>',
+			buttons: [
+				'<button type="submit" class="px2-btn px2-btn--primary" onclick="px2style.closeModal();">OK</button>'
+			],
+			buttonsSecondary: [
+				document.createElement('button')
+			],
+			onbgclick: function(){
+				px2style.closeModal();
+			},
+		},
+		function(){
+			console.log('done.');
+		}
+	);
+}
+</script>
+
 </div>
 <div class="px2-p">
 <ul>
@@ -328,6 +377,59 @@
 </div>
 <div class="px2-p">
 <div class="cont-view-section" style="height: 10px;">
+</div>
+
+</div>
+<div class="px2-h2">
+<h2>ドロワー</h2>
+</div>
+<div class="px2-p">
+
+</div>
+<div class="px2-grid">
+
+    <div class="px2-grid__col-1of2"><div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		title: &#039;Sample Drawer.&#039;,
+		type: &#039;drawer-left&#039;,
+		target: &#039;.contents&#039;,
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [
+			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
+		],
+		onbgclick: function(){
+			px2style.closeModal();
+		}
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn px2-btn--block">Open Drawer (left)</button>
+</div>
+</div>
+
+    <div class="px2-grid__col-1of2"><div class="px2-p">
+<button onclick="px2style.modal(
+	{
+		title: &#039;Sample Drawer.&#039;,
+		type: &#039;drawer-right&#039;,
+		target: &#039;.contents&#039;,
+		body: &#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;,
+		buttons: [
+			&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot; onclick=&quot;px2style.closeModal();&quot;&gt;OK&lt;/button&gt;&#039;
+		],
+		onbgclick: function(){
+			px2style.closeModal();
+		}
+	},
+	function(){
+		console.log(&#039;done.&#039;);
+	}
+);
+" type="button" class="px2-btn px2-btn--block">Open Drawer (right)</button>
+</div>
 </div>
 
 </div>

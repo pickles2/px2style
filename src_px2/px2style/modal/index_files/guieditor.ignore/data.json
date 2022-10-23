@@ -75,7 +75,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Modal Dialog.',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t],\n\t\tonbgclick: function(){\n\t\t\talert('bgclicked');\n\t\t\tpx2style.closeModal();\n\t\t}\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Modal Dialog.',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t],\n\t\tonbgclick: function(){\n\t\t\talert('bgclicked');\n\t\t\tpx2style.closeModal();\n\t\t},\n\t\tonclose: function(){\n\t\t\talert('onclose event');\n\t\t},\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -115,6 +115,58 @@
                             },
                             "paragraph": {
                                 "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "多重に開くモーダルダイアログ"
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "contOpenNestableDialog();",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<script type=\"text/javascript\">\nfunction contOpenNestableDialog(){\n\tpx2style.modal(\n\t\t{\n\t\t\ttitle: 'Nestable Dialog Sample.',\n\t\t\tbody: '<div><p>Sample Content. <button type=\\'button\\' onclick=\\''+\n\t\t\t'contOpenNestableDialog();'+\n\t\t\t'\\' class=\\'px2-btn\\'>open new layer</button></p></div>',\n\t\t\tbuttons: [\n\t\t\t\t'<button type=\"submit\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK</button>'\n\t\t\t],\n\t\t\tbuttonsSecondary: [\n\t\t\t\tdocument.createElement('button')\n\t\t\t],\n\t\t\tonbgclick: function(){\n\t\t\t\tpx2style.closeModal();\n\t\t\t},\n\t\t},\n\t\tfunction(){\n\t\t\tconsole.log('done.');\n\t\t}\n\t);\n}\n</script>\n",
+                                "editor": ""
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": ""
                             }
                         },
                         "anchor": "",
