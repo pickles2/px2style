@@ -28,7 +28,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.0.1 (リリース日未定)
+### px2style v3.0.1 (2022/11/03)
 
 - `px2style.modal()` のオプションに `onbgclick` を追加した。
 - `px2style.modal()` のオプションに `type` を追加した。`drawer-left` と `drawer-right` を追加した。
