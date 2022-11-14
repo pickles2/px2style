@@ -2337,3 +2337,12 @@ h1 small, .px2-h1 small, h2 small, .px2-h2 small, h3 small, .px2-h3 small, h4 sm
 .contents {
   position: relative;
 }
+pre {
+  padding: 0;
+}
+pre > code {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  overflow: auto;
+}

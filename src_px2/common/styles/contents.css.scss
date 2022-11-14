@@ -5,3 +5,13 @@
 .contents {
     position: relative;
 }
+
+pre {
+    padding: 0;
+    > code {
+        display: block;
+        padding: 1em;
+        margin: 0;
+        overflow: auto;
+    }
+}
