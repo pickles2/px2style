@@ -45,7 +45,7 @@
 <!-- == autoindex == -->
 <div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
 <div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_サンプル">サンプル</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Minimum_modal_sample">Minimum modal sample</a></li>
-<li style="list-style-type:disc; display:list-item;"><a href="#hash_Maximum_options_modal_sample">Maximum options modal sample</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Full_optioned_modal_sample">Full optioned modal sample</a></li>
 <li style="list-style-type:disc; display:list-item;"><a href="#hash_モーダルコンテンツにインタラクティブな表現を含めるサンプル">モーダルコンテンツにインタラクティブな表現を含めるサンプル</a></li>
 <li style="list-style-type:disc; display:list-item;"><a href="#hash_ノーマルなモーダルのサンプル">ノーマルなモーダルのサンプル</a></li>
 <li style="list-style-type:disc; display:list-item;"><a href="#hash_タイトルなし、ボタンなしのサンプル">タイトルなし、ボタンなしのサンプル</a></li>
@@ -65,7 +65,6 @@
 </div>
 <div class="px2-p">
 <button onclick="px2style.modal({
-	&quot;title&quot;: &quot;Minimum Modal Sample&quot;,
 	&quot;body&quot;: document.getElementById(&#039;cont-modal-contents-001&#039;).innerHTML,
 });
 " type="button" class="px2-btn">Minimum modal sample</button>
@@ -80,7 +79,6 @@
 </div>
 <div class="px2-p">
 <pre><code class="js">px2style.modal({
-    "title": "Minimum modal sample",
     "body": document.getElementById('modal-contents').innerHTML,
 });
 </code></pre>
@@ -93,7 +91,7 @@
 
 </div>
 <div class="px2-h3">
-<span id="hash_Maximum_options_modal_sample"></span><h3>Maximum options modal sample</h3>
+<span id="hash_Full_optioned_modal_sample"></span><h3>Full optioned modal sample</h3>
 </div>
 <div class="px2-p">
 <button onclick="px2style.modal({
@@ -124,7 +122,7 @@
 }, function( modalObj ){
 	console.info(&#039;Modal has opened.&#039;, modalObj);
 });
-" type="button" class="px2-btn">Minimum modal sample</button>
+" type="button" class="px2-btn">Full optioned modal sample</button>
 </div>
 <div>
 <script type="template" id="cont-modal-maximum-options">

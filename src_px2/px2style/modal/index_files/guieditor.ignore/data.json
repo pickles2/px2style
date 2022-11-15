@@ -59,7 +59,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal({\n\t\"title\": \"Minimum Modal Sample\",\n\t\"body\": document.getElementById('cont-modal-contents-001').innerHTML,\n});\n",
+                                "src": "px2style.modal({\n\t\"body\": document.getElementById('cont-modal-contents-001').innerHTML,\n});\n",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -96,7 +96,7 @@
                         "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
-                                "src": "```js\npx2style.modal({\n\t\"title\": \"Minimum modal sample\",\n\t\"body\": document.getElementById('modal-contents').innerHTML,\n});\n```\n\n```html\n<script type=\"template\" id=\"modal-contents\">\n<div>\n\t<p>モーダルコンテンツ</p>\n</div>\n</script>\n```\n",
+                                "src": "```js\npx2style.modal({\n\t\"body\": document.getElementById('modal-contents').innerHTML,\n});\n```\n\n```html\n<script type=\"template\" id=\"modal-contents\">\n<div>\n\t<p>モーダルコンテンツ</p>\n</div>\n</script>\n```\n",
                                 "editor": "markdown"
                             },
                             "text-align": {
@@ -119,7 +119,7 @@
                                 "src": "3"
                             },
                             "main": {
-                                "src": "Maximum options modal sample"
+                                "src": "Full optioned modal sample"
                             },
                             "sub": {
                                 "src": ""
@@ -132,7 +132,7 @@
                         "modId": "px2style:basics/button",
                         "fields": {
                             "label": {
-                                "src": "Minimum modal sample"
+                                "src": "Full optioned modal sample"
                             },
                             "intention": {
                                 "src": ""

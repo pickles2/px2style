@@ -311,26 +311,26 @@
 	/**
 	 * タブキーの操作を制御する
 	 */
-	function tabkeyControl($target, isLocked){
+	function tabkeyControl($targetModal, isLocked){
 
-		var $modalFrame = $target.find('.px2-modal__dialog');
-		var $tabTargets = $target.find('a, input:not([type=hidden]), textarea, select, button');
+		var $modalFrame = $targetModal.find('.px2-modal__dialog');
+		var $tabTargets = $targetModal.find('a, input:not([type=hidden]), textarea, select, button');
 		var $start = $tabTargets.eq(0);
 		var $end = $tabTargets.eq(-1);
-		var $title = $target.find('.px2-modal__title');
+		var $title = $targetModal.find('.px2-modal__title');
 
-		$target.off('keydown.px2-modal');
+		$targetModal.off('keydown.px2-modal');
 		$modalFrame.off('click.px2-modal').off('keydown.px2-modal');
 		$start.off('keydown.px2-modal');
 		$end.off('keydown.px2-modal');
 		$title.off('keydown.px2-modal');
 
 
-		$target
+		$targetModal
 			.on('click.px2-modal', function(e){
 				e.preventDefault();
 				e.stopPropagation();
-				$title.focus();
+				autoFocus( $targetModal );
 				return false;
 			})
 		;
@@ -382,7 +382,6 @@
 						return false;
 					}
 				})
-				.focus()
 			;
 
 		}else{
@@ -392,14 +391,14 @@
 				.on('click.px2-modal', function(e){
 					e.preventDefault();
 					e.stopPropagation();
-					$title.focus();
+					autoFocus( $targetModal );
 					return false;
 				})
 				.on('keydown.px2-modal', function(e){
 					if (e.keyCode == 9 ) {
 						e.preventDefault();
 						e.stopPropagation();
-						$title.focus();
+						autoFocus( $targetModal );
 						return false;
 					}
 				})
@@ -418,9 +417,27 @@
 						return false;
 					}
 				})
-				.focus()
 			;
 		}
+
+		autoFocus( $targetModal );
+		return;
+	}
+
+	/**
+	 * 適切な要素に自動的にフォーカスを当てる
+	 */
+	function autoFocus($targetModal){
+		var $tabTargets = $targetModal.find('a, input:not([type=hidden]), textarea, select, button');
+		var $start = $tabTargets.eq(0);
+		var $title = $targetModal.find('.px2-modal__title');
+
+		if( $title.length && $title.is(':visible') ){
+			$title.focus();
+		}else{
+			$start.focus();
+		}
+		return;
 	}
 
 	/**
