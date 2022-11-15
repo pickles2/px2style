@@ -247,6 +247,9 @@ input[type=search].px2-input {
 .px2-modal--no-btn .px2-modal__footer, .px2-modal--no-title .px2-modal__header {
   display: none;
 }
+.px2-modal--background {
+  background: transparent;
+}
 .px2-modal > form {
   align-items: center;
   display: flex;

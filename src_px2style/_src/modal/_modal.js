@@ -125,6 +125,8 @@
 		var objModal = new classModal(px2style, $modal, options);
 		modalLayers.push(objModal);
 
+		optimizeOverlappingModalStyles();
+
 		callback( objModal );
 
 		return objModal;
@@ -279,7 +281,10 @@
 				}
 				callback(true);
 				self.options.onclose();
-				// delete(self);
+
+				optimizeOverlappingModalStyles();
+
+				self = undefined;
 			}, 300);
 		}
 
@@ -415,6 +420,19 @@
 				})
 				.focus()
 			;
+		}
+	}
+
+	/**
+	 * モーダルの重なりを考慮したスタイリングの調整
+	 */
+	function optimizeOverlappingModalStyles(){
+		for(var i = 0; i < modalLayers.length; i ++){
+			if( modalLayers.length == i + 1 ){
+				modalLayers[i].$modal.removeClass('px2-modal--background');
+			}else{
+				modalLayers[i].$modal.addClass('px2-modal--background');
+			}
 		}
 	}
 })();

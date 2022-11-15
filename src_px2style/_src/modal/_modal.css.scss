@@ -22,6 +22,9 @@
 	&--no-btn .px2-modal__footer {
 		display: none;
 	}
+	&--background {
+		background: transparent;
+	}
 
 	> form{
 		// display: inline;

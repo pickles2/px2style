@@ -28,6 +28,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.0.2 (リリース日未定)
+
+- `px2style.modal()` が重ねて開かれたとき、背景色が重なりすぎる問題を修正した。
+
 ### px2style v3.0.1 (2022/11/03)
 
 - `px2style.modal()` のオプションに `onbgclick` を追加した。
