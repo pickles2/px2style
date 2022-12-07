@@ -65,28 +65,14 @@
 </div>
 <div class="px2-p">
 <button onclick="px2style.modal({
-	&quot;body&quot;: document.getElementById(&#039;cont-modal-contents-001&#039;).innerHTML,
+	&quot;body&quot;: &quot;&lt;p&gt;モーダルコンテンツ&lt;/p&gt;&quot;,
 });
 " type="button" class="px2-btn">Minimum modal sample</button>
 </div>
-<div>
-<script type="template" id="cont-modal-contents-001">
-<div>
-	<p>モーダルコンテンツ</p>
-</div>
-</script>
-
-</div>
 <div class="px2-p">
 <pre><code class="js">px2style.modal({
-    "body": document.getElementById('modal-contents').innerHTML,
+    "body": "&lt;p&gt;モーダルコンテンツ&lt;/p&gt;",
 });
-</code></pre>
-<pre><code class="html">&lt;script type="template" id="modal-contents"&gt;
-&lt;div&gt;
-    &lt;p&gt;モーダルコンテンツ&lt;/p&gt;
-&lt;/div&gt;
-&lt;/script&gt;
 </code></pre>
 
 </div>
@@ -98,6 +84,7 @@
 	&quot;title&quot;: &quot;Maximum Options Modal Sample&quot;,
 	&quot;type&quot;: &quot;modal&quot;,
 	&quot;body&quot;: document.getElementById(&#039;cont-modal-maximum-options&#039;).innerHTML,
+	&quot;height&quot;: 600,
 	&quot;width&quot;: 800,
 	&quot;buttons&quot;: [
 		$(&#039;&lt;button class=&quot;px2-btn px2-btn--primary&quot;&gt;&#039;).text(&#039;OK button&#039;),
@@ -137,6 +124,7 @@
     "title": "Maximum Options Modal Sample",
     "type": "modal",
     "body": document.getElementById('cont-modal-maximum-options').innerHTML,
+    "height": 600,
     "width": 800,
     "buttons": [
         $('&lt;button class="px2-btn px2-btn--primary"&gt;').text('OK button'),
