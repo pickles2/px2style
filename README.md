@@ -32,6 +32,7 @@ $ composer require pickles2/px2style
 
 - `px2style.modal()` が重ねて開かれたとき、背景色が重なりすぎる問題を修正した。
 - `px2style.modal()` について、要素への自動フォーカス機能を改善した。
+- `px2style.modal()` に、オプション `height` を追加。
 - その他、細かい内部コードの改善。
 
 ### px2style v3.0.1 (2022/11/03)

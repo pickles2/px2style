@@ -33,6 +33,8 @@
 		];
 		options.buttonsSecondary = options.buttonsSecondary||[];
 		options.target = options.target||$('body');
+		options.width = options.width||null;
+		options.height = options.height||null;
 		options.onclose = options.onclose||function(){};
 		options.onbgclick = options.onbgclick||function(){};
 		options.form = options.form||false;
@@ -164,6 +166,12 @@
 		if( this.options.width ){
 			this.$modal.find('.px2-modal__dialog').css({
 				"max-width": this.options.width
+			});
+		}
+
+		if( this.options.height ){
+			this.$modal.find('.px2-modal__dialog').css({
+				"height": this.options.height
 			});
 		}
 

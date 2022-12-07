@@ -6,7 +6,9 @@
                 "main": [
                     {
                         "modId": "px2style:lists/index",
-                        "fields": []
+                        "fields": [],
+                        "anchor": "",
+                        "dec": ""
                     },
                     {
                         "modId": "px2style:sections/hx",
@@ -59,7 +61,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal({\n\t\"body\": document.getElementById('cont-modal-contents-001').innerHTML,\n});\n",
+                                "src": "px2style.modal({\n\t\"body\": \"<p>モーダルコンテンツ</p>\",\n});\n",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -76,27 +78,7 @@
                         "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
-                                "src": "<script type=\"template\" id=\"cont-modal-contents-001\">\n<div>\n\t<p>モーダルコンテンツ</p>\n</div>\n</script>\n",
-                                "editor": ""
-                            },
-                            "text-align": {
-                                "src": ""
-                            },
-                            "font-size": {
-                                "src": ""
-                            },
-                            "paragraph": {
-                                "src": ""
-                            }
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "px2style:basics/text",
-                        "fields": {
-                            "main": {
-                                "src": "```js\npx2style.modal({\n\t\"body\": document.getElementById('modal-contents').innerHTML,\n});\n```\n\n```html\n<script type=\"template\" id=\"modal-contents\">\n<div>\n\t<p>モーダルコンテンツ</p>\n</div>\n</script>\n```\n",
+                                "src": "```js\npx2style.modal({\n\t\"body\": \"<p>モーダルコンテンツ</p>\",\n});\n```\n",
                                 "editor": "markdown"
                             },
                             "text-align": {
@@ -147,7 +129,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "px2style.modal({\n\t\"title\": \"Maximum Options Modal Sample\",\n\t\"type\": \"modal\",\n\t\"body\": document.getElementById('cont-modal-maximum-options').innerHTML,\n\t\"width\": 800,\n\t\"buttons\": [\n\t\t$('<button class=\"px2-btn px2-btn--primary\">').text('OK button'),\n\t],\n\t\"buttonsSecondary\": [\n\t\t$('<button class=\"px2-btn px2-btn--secondary\">').text('Cancel button'),\n\t],\n\t\"target\": \"body\",\n\t\"form\": {\n\t\t\"action\": \"javascript:void(0);\",\n\t\t\"method\": \"get\",\n\t\t\"submit\": function(){\n\t\t\tconsole.info('Form has submitted.');\n\t\t},\n\t},\n\t\"onclose\": function(){\n\t\tconsole.info('Modal has closed.');\n\t},\n\t\"onbgclick\": function(){\n\t\tconsole.info('Modal background has clicked.');\n\t},\n}, function( modalObj ){\n\tconsole.info('Modal has opened.', modalObj);\n});\n",
+                                "src": "px2style.modal({\n\t\"title\": \"Maximum Options Modal Sample\",\n\t\"type\": \"modal\",\n\t\"body\": document.getElementById('cont-modal-maximum-options').innerHTML,\n\t\"height\": 600,\n\t\"width\": 800,\n\t\"buttons\": [\n\t\t$('<button class=\"px2-btn px2-btn--primary\">').text('OK button'),\n\t],\n\t\"buttonsSecondary\": [\n\t\t$('<button class=\"px2-btn px2-btn--secondary\">').text('Cancel button'),\n\t],\n\t\"target\": \"body\",\n\t\"form\": {\n\t\t\"action\": \"javascript:void(0);\",\n\t\t\"method\": \"get\",\n\t\t\"submit\": function(){\n\t\t\tconsole.info('Form has submitted.');\n\t\t},\n\t},\n\t\"onclose\": function(){\n\t\tconsole.info('Modal has closed.');\n\t},\n\t\"onbgclick\": function(){\n\t\tconsole.info('Modal background has clicked.');\n\t},\n}, function( modalObj ){\n\tconsole.info('Modal has opened.', modalObj);\n});\n",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -184,7 +166,7 @@
                         "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
-                                "src": "```js\nvar modalObj = px2style.modal({\n\t\"title\": \"Maximum Options Modal Sample\",\n\t\"type\": \"modal\",\n\t\"body\": document.getElementById('cont-modal-maximum-options').innerHTML,\n\t\"width\": 800,\n\t\"buttons\": [\n\t\t$('<button class=\"px2-btn px2-btn--primary\">').text('OK button'),\n\t],\n\t\"buttonsSecondary\": [\n\t\t$('<button class=\"px2-btn px2-btn--secondary\">').text('Cancel button'),\n\t],\n\t\"target\": \"body\",\n\t\"form\": {\n\t\t\"action\": \"javascript:void(0);\",\n\t\t\"method\": \"get\",\n\t\t\"submit\": function(){\n\t\t\tconsole.info('Form has submitted.');\n\t\t},\n\t},\n\t\"onclose\": function(){\n\t\tconsole.info('Modal has closed.');\n\t},\n\t\"onbgclick\": function(){\n\t\tconsole.info('Modal background has clicked.');\n\t},\n}, function( modalObj ){\n\tconsole.info('Modal has opened.', modalObj);\n});\n```\n",
+                                "src": "```js\nvar modalObj = px2style.modal({\n\t\"title\": \"Maximum Options Modal Sample\",\n\t\"type\": \"modal\",\n\t\"body\": document.getElementById('cont-modal-maximum-options').innerHTML,\n\t\"height\": 600,\n\t\"width\": 800,\n\t\"buttons\": [\n\t\t$('<button class=\"px2-btn px2-btn--primary\">').text('OK button'),\n\t],\n\t\"buttonsSecondary\": [\n\t\t$('<button class=\"px2-btn px2-btn--secondary\">').text('Cancel button'),\n\t],\n\t\"target\": \"body\",\n\t\"form\": {\n\t\t\"action\": \"javascript:void(0);\",\n\t\t\"method\": \"get\",\n\t\t\"submit\": function(){\n\t\t\tconsole.info('Form has submitted.');\n\t\t},\n\t},\n\t\"onclose\": function(){\n\t\tconsole.info('Modal has closed.');\n\t},\n\t\"onbgclick\": function(){\n\t\tconsole.info('Modal background has clicked.');\n\t},\n}, function( modalObj ){\n\tconsole.info('Modal has opened.', modalObj);\n});\n```\n",
                                 "editor": "markdown"
                             },
                             "text-align": {
