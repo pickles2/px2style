@@ -124,7 +124,7 @@
 			$modal.addClass('px2-modal--no-btn');
 		}
 
-		var objModal = new classModal(px2style, $modal, options);
+		var objModal = new ClassModal(px2style, $modal, options);
 		modalLayers.push(objModal);
 
 		optimizeOverlappingModalStyles();
@@ -137,7 +137,7 @@
 	/**
 	 * モーダルクラス
 	 */
-	function classModal(px2style, $modal, options){
+	function ClassModal(px2style, $modal, options){
 		var self = this;
 		this.$modal = $modal;
 		this.options = options;
@@ -175,7 +175,7 @@
 			});
 		}
 
-		if(!modalLayers.length){
+		if( !modalLayers.length ){
 			$(window).on('keydown.px2-modal', function(e){
 				if( e.keyCode == 27 ){ // ESC
 					px2style.closeModal(function(){});
@@ -314,6 +314,13 @@
 			lastModal = undefined;
 		});
 		return;
+	}
+
+	/**
+	 * 開かれているモーダルの数を調べる
+	 */
+	window.px2style.getOpenedModalCount = function(){
+		return modalLayers.length;
 	}
 
 	/**

@@ -405,6 +405,7 @@
 function contOpenNestableDialog(){
 	var $body = $('<div>').html(
 		'<p>Sample Content. <button type="button" class="px2-btn cont-btn-open-new-layer">open new layer</button></p>'
+		+'<p>Modal Counter: <span class="cont-opened-modal-counter"></span></p>'
 		+'<p><button type="button" class="px2-btn cont-btn-lock-modal-2sec">Lock modal 3 seconds.</button></p>'
 	);
 	var modal = px2style.modal(
@@ -434,6 +435,7 @@ function contOpenNestableDialog(){
 					modal.unlock();
 				}, 3000);
 			});
+			$body.find('.cont-opened-modal-counter').text( px2style.getOpenedModalCount() );
 		}
 	);
 }
