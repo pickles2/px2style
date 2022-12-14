@@ -1576,12 +1576,17 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
   color: #000;
 }
 .px2-linklist ul li > a::before {
+  content: none;
+}
+.px2-linklist ul li > a::after {
   content: "";
   width: 14px;
   height: 14px;
   display: inline-block;
   border-top: 1px solid #000;
   border-right: 1px solid #000;
+  border-bottom: none;
+  border-left: none;
   position: absolute;
   right: 30px;
   top: calc(50% - 8px);

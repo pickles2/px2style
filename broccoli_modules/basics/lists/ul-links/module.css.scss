@@ -27,12 +27,17 @@
 				background-color: #fff;
 				color: #000;
 				&::before {
+					content: none;
+				}
+				&::after {
 					content: '';
 					width: 14px;
 					height: 14px;
 					display: inline-block;
 					border-top: 1px solid #000;
 					border-right: 1px solid #000;
+					border-bottom: none;
+					border-left: none;
 					position: absolute;
 					right: 30px;
 					top: calc(50% - 8px);
