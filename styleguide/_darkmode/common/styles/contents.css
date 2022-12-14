@@ -1626,7 +1626,7 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
 a .px2-linklist__description {
   text-decoration: none;
 }
-.px2-linklist .px2-linklist__vertical {
+.px2-linklist ul.px2-linklist__vertical {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1634,11 +1634,11 @@ a .px2-linklist__description {
   margin-bottom: 0.2em;
   padding-left: 0;
 }
-.px2-linklist .px2-linklist__vertical > ul > li, .px2-linklist .px2-linklist__vertical > li {
+.px2-linklist ul.px2-linklist__vertical > ul > li, .px2-linklist ul.px2-linklist__vertical > li {
   list-style-type: none;
   padding-left: 0;
 }
-.px2-linklist .px2-linklist__vertical > ul > li > p, .px2-linklist .px2-linklist__vertical > li > p {
+.px2-linklist ul.px2-linklist__vertical > ul > li > p, .px2-linklist ul.px2-linklist__vertical > li > p {
   margin: 0;
 }
 .px2-linklist ul.px2-linklist__horizontal {
@@ -1692,6 +1692,18 @@ h1 .px2-linklist > ul > li, .px2-h1 .px2-linklist > ul > li, h2 .px2-linklist > 
 }
 h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklist > ul > li a, .px2-h2 .px2-linklist > ul > li a, h3 .px2-linklist > ul > li a, .px2-h3 .px2-linklist > ul > li a, h4 .px2-linklist > ul > li a, .px2-h4 .px2-linklist > ul > li a, h5 .px2-linklist > ul > li a, .px2-h5 .px2-linklist > ul > li a, h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
   padding: 0.1em 0.5em;
+}
+.px2-linklist ul.px2-horizontal-list {
+  border: none;
+  gap: 10px;
+  box-shadow: none;
+}
+.px2-linklist ul.px2-horizontal-list > li {
+  list-style-type: none;
+  border: none;
+}
+.px2-linklist ul.px2-horizontal-list > li > a::before, .px2-linklist ul.px2-horizontal-list > li > a::after {
+  content: none;
 }
 /**
  * module: px2style:lists/ul-media-list

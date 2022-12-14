@@ -89,7 +89,7 @@
 
 // 垂直リスト
 .px2-linklist {
-	.px2-linklist__vertical {
+	ul.px2-linklist__vertical {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -174,6 +174,27 @@ h6, .px2-h6 {
 				border-top: none;
 				a {
 					padding: 0.1em 0.5em;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------
+// 後方互換性維持のための対応
+// NOTE: v3.0.1 まで、`.px2-horizontal-list` をネストする作りになっていました。
+.px2-linklist {
+	ul.px2-horizontal-list {
+		border: none;
+		gap: 10px;
+		box-shadow: none;
+		> li{
+			list-style-type: none;
+			border: none;
+			>a {
+				&::before,
+				&::after {
+					content: none;
 				}
 			}
 		}
