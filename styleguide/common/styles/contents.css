@@ -1616,50 +1616,69 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
 .px2-linklist ul {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 .px2-linklist ul li {
   list-style-type: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e5e5e5;
   padding: 0;
-  margin: 0 2px;
+  margin: 0;
 }
-.px2-linklist ul li a {
+.px2-linklist ul li:first-child {
+  border-top: none;
+}
+.px2-linklist ul li > a {
   display: block;
-  padding: 0.5em 1em;
+  position: relative;
+  padding: 20px 30px;
+  background-color: #fff;
+  color: #000;
 }
-.px2-linklist ul li a:before {
-  content: " ";
-  width: 0;
-  height: 0;
+.px2-linklist ul li > a::after {
+  content: "";
+  width: 14px;
+  height: 14px;
   display: inline-block;
-  margin-right: 0.2em;
-  border-width: 0.35em 0 0.35em 0.6em;
-  border-style: solid;
-  border-color: #00a0e6;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 8px);
+  transform: rotate(45deg);
 }
-.px2-linklist ul li a:hover {
-  background-color: #f9f9f9;
+.px2-linklist ul li > a:hover {
+  background-color: #f5faff;
+  text-decoration: none;
+}
+.px2-linklist ul li > span {
+  display: block;
+  padding: 20px 30px;
+  background-color: #fff;
+  color: #333;
 }
 .px2-linklist ul li ul {
-  border-bottom: none;
+  border: none;
+  border-radius: 0px;
+  overflow: auto;
+  box-shadow: none;
 }
-.px2-linklist ul li ul li {
-  border-top: 1px dashed #eee;
+.px2-linklist ul li ul li, .px2-linklist ul li ul li:first-child {
+  border-top: 1px dashed #e5e5e5;
 }
-.px2-linklist ul li ul a {
-  padding-left: 2em;
+.px2-linklist ul li ul li > a, .px2-linklist ul li ul li > span {
+  padding-left: 55px;
 }
-.px2-linklist ul li ul ul a {
-  padding-left: 3em;
+.px2-linklist ul li ul ul li > a, .px2-linklist ul li ul ul li > span {
+  padding-left: 70px;
 }
-.px2-linklist ul li ul ul ul a {
-  padding-left: 4em;
+.px2-linklist ul li ul ul ul li > a, .px2-linklist ul li ul ul ul li > span {
+  padding-left: 85px;
 }
-.px2-linklist ul li ul ul ul ul a {
-  padding-left: 5em;
+.px2-linklist ul li ul ul ul ul li > a, .px2-linklist ul li ul ul ul ul li > span {
+  padding-left: 100px;
 }
 .px2-linklist__description {
   font-size: 86%;
@@ -1668,6 +1687,56 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
 }
 a .px2-linklist__description {
   text-decoration: none;
+}
+.px2-linklist .px2-linklist__vertical {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding-left: 0;
+}
+.px2-linklist .px2-linklist__vertical > ul > li, .px2-linklist .px2-linklist__vertical > li {
+  list-style-type: none;
+  padding-left: 0;
+}
+.px2-linklist .px2-linklist__vertical > ul > li > p, .px2-linklist .px2-linklist__vertical > li > p {
+  margin: 0;
+}
+.px2-linklist ul.px2-linklist__horizontal {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 0;
+  border: none;
+  box-shadow: none;
+}
+.px2-linklist ul.px2-linklist__horizontal li > a::before, .px2-linklist ul.px2-linklist__horizontal li > a::after {
+  content: none;
+}
+.px2-linklist ul.px2-linklist__horizontal > ul > li, .px2-linklist ul.px2-linklist__horizontal > li {
+  list-style-type: none;
+  border-top: none;
+}
+.px2-linklist ul.px2-linklist__horizontal > ul > li > p, .px2-linklist ul.px2-linklist__horizontal > li > p {
+  margin: 0;
+}
+.px2-linklist ul.px2-linklist__horizontal > ul > li:first-child, .px2-linklist ul.px2-linklist__horizontal > li:first-child {
+  margin-left: 0;
+}
+.px2-linklist ul.px2-linklist__horizontal > ul > li:last-child, .px2-linklist ul.px2-linklist__horizontal > li:last-child {
+  margin-right: 0;
+}
+.px2-linklist ul.px2-linklist__horizontal--left {
+  justify-content: flex-start;
+}
+.px2-linklist ul.px2-linklist__horizontal--center {
+  justify-content: center;
+}
+.px2-linklist ul.px2-linklist__horizontal--right {
+  justify-content: flex-end;
 }
 h1 .px2-linklist, .px2-h1 .px2-linklist, h2 .px2-linklist, .px2-h2 .px2-linklist, h3 .px2-linklist, .px2-h3 .px2-linklist, h4 .px2-linklist, .px2-h4 .px2-linklist, h5 .px2-linklist, .px2-h5 .px2-linklist, h6 .px2-linklist, .px2-h6 .px2-linklist {
   padding: 0;
@@ -1685,12 +1754,6 @@ h1 .px2-linklist > ul > li, .px2-h1 .px2-linklist > ul > li, h2 .px2-linklist > 
 }
 h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklist > ul > li a, .px2-h2 .px2-linklist > ul > li a, h3 .px2-linklist > ul > li a, .px2-h3 .px2-linklist > ul > li a, h4 .px2-linklist > ul > li a, .px2-h4 .px2-linklist > ul > li a, h5 .px2-linklist > ul > li a, .px2-h5 .px2-linklist > ul > li a, h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
   padding: 0.1em 0.5em;
-}
-.px2-linklist ul.px2-horizontal-list, .px2-linklist ul.px2-note-list {
-  border-bottom: none;
-}
-.px2-linklist ul.px2-horizontal-list > li, .px2-linklist ul.px2-note-list > li {
-  border-top: none;
 }
 /**
  * module: px2style:lists/ul-media-list
@@ -1725,7 +1788,7 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
   align-items: stretch;
 }
 .px2-medialist > ul > li > a :hover {
-  background-color: #f5f5f5;
+  background-color: #f5faff;
 }
 .px2-medialist__list-item {
   padding: 1em;
@@ -1758,7 +1821,7 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 10px;
-  box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 .px2-medialist--list-style-card .px2-medialist__image {
   width: 100%;

@@ -1,53 +1,79 @@
-.px2-linklist{
+.px2-linklist {
 	padding: 0;
 	margin: 1em 0;
 	position: relative;
-	ul{
+
+	ul {
 		padding: 0;
 		margin: 0;
-		border-bottom: 1px solid #ddd;
-		li{
-			list-style-type: none;
-			border-top: 1px solid #ddd;
-			padding: 0;
-			margin: 0 2px;
+		border: 1px solid #e5e5e5;
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 
-			a {
+		li {
+			list-style-type: none;
+			border-top: 1px solid #e5e5e5;
+			padding: 0;
+			margin: 0;
+			&:first-child {
+				border-top: none;
+			}
+
+			> a {
 				display: block;
-				padding: 0.5em 1em;
-				&:before {
-					content:' ';
-					width:0;
-					height:0;
+				position: relative;
+				padding: 20px 30px;
+				background-color: #fff;
+				color: #000;
+				&::after {
+					content: '';
+					width: 14px;
+					height: 14px;
 					display: inline-block;
-					margin-right: 0.2em;
-					border-width:0.35em 0 0.35em 0.6em;
-					border-style:solid;
-					border-color:#00a0e6;
-					border-top-color:transparent;
-					border-bottom-color:transparent;
+					border-top: 1px solid #000;
+					border-right: 1px solid #000;
+					position: absolute;
+					right: 30px;
+					top: calc(50% - 8px);
+					transform:rotate(45deg);
 				}
-				&:hover{
-					background-color: #f9f9f9;
-				}
-			}
-			ul{
-				border-bottom: none;
-				li {
-					border-top: 1px dashed #eee;
-				}
-				a {
-					padding-left: 2em;
+				&:hover {
+					background-color: #f5faff;
+					text-decoration: none;
 				}
 			}
-			ul ul a {
-				padding-left: 3em;
+			> span {
+				display: block;
+				padding: 20px 30px;
+				background-color: #fff;
+				color: #333;
 			}
-			ul ul ul a {
-				padding-left: 4em;
+			ul {
+				border: none;
+				border-radius: 0px;
+				overflow: auto;
+				box-shadow: none;
+				li,
+				li:first-child {
+					border-top: 1px dashed #e5e5e5;
+				}
 			}
-			ul ul ul ul a {
-				padding-left: 5em;
+			ul li>a,
+			ul li>span {
+				padding-left: 55px;
+			}
+			ul ul li>a,
+			ul ul li>span {
+				padding-left: 70px;
+			}
+			ul ul ul li>a,
+			ul ul ul li>span {
+				padding-left: 85px;
+			}
+			ul ul ul ul li>a,
+			ul ul ul ul li>span {
+				padding-left: 100px;
 			}
 		}
 	}
@@ -61,37 +87,95 @@
 	}
 }
 
+// 垂直リスト
+.px2-linklist {
+	.px2-linklist__vertical {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin-top: 0.2em;
+		margin-bottom: 0.2em;
+		padding-left: 0;
+
+		>ul>li ,
+		>li {
+			list-style-type: none;
+			padding-left: 0;
+			>p{
+				margin: 0;
+			}
+		}
+	}
+}
+
+// 水平リスト
+.px2-linklist {
+	ul.px2-linklist__horizontal {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding-left: 0;
+		border: none;
+		box-shadow: none;
+
+		li>a {
+			&::before,
+			&::after {
+				content: none;
+			}
+		}
+
+		>ul>li ,
+		>li {
+			list-style-type: none;
+			border-top: none;
+			>p{
+				margin: 0;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&--left {
+			justify-content: flex-start;
+		}
+		&--center {
+			justify-content: center;
+		}
+		&--right {
+			justify-content: flex-end;
+		}
+	}
+}
+
 // 他のモジュールとの関係を解決
 h1, .px2-h1,
 h2, .px2-h2,
 h3, .px2-h3,
 h4, .px2-h4,
 h5, .px2-h5,
-h6, .px2-h6{
-	.px2-linklist{
+h6, .px2-h6 {
+	.px2-linklist {
 		padding: 0;
 		margin: 0;
-		> ul{
+		> ul {
 			padding: 0;
 			margin: 0;
 			border-bottom: none;
-			> li{
+			> li {
 				padding: 0;
 				margin: 0;
 				border-top: none;
-				a{
+				a {
 					padding: 0.1em 0.5em;
 				}
 			}
-		}
-	}
-}
-.px2-linklist{
-	ul.px2-horizontal-list,
-	ul.px2-note-list{
-		border-bottom: none;
-		> li{
-			border-top: none;
 		}
 	}
 }

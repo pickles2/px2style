@@ -839,7 +839,9 @@
                                     "dec": ""
                                 }
                             ],
-                            "class": ""
+                            "class": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -882,7 +884,9 @@
                                     "dec": ""
                                 }
                             ],
-                            "class": "px2-horizontal-list px2-horizontal-list--right"
+                            "class": {
+                                "src": "px2-linklist__horizontal px2-linklist__horizontal--right"
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -925,7 +929,9 @@
                                     "dec": ""
                                 }
                             ],
-                            "class": "px2-vertical-list"
+                            "class": {
+                                "src": "px2-linklist__vertical"
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -968,7 +974,9 @@
                                     "dec": ""
                                 }
                             ],
-                            "class": "px2-horizontal-list px2-horizontal-list--center"
+                            "class": {
+                                "src": "px2-linklist__horizontal px2-linklist__horizontal--center"
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -992,10 +1000,18 @@
                     {
                         "modId": "px2style:lists/sub-page-list",
                         "fields": {
-                            "parent": "/",
-                            "list_flg": "hide",
-                            "depth": "10",
-                            "style": "withdescription"
+                            "parent": {
+                                "src": "/"
+                            },
+                            "list_flg": {
+                                "src": "hide"
+                            },
+                            "depth": {
+                                "src": "10"
+                            },
+                            "style": {
+                                "src": "withdescription"
+                            }
                         },
                         "anchor": "",
                         "dec": ""
@@ -1003,10 +1019,18 @@
                     {
                         "modId": "px2style:lists/sub-page-list",
                         "fields": {
-                            "parent": "/",
-                            "list_flg": "show",
-                            "depth": "10",
-                            "style": ""
+                            "parent": {
+                                "src": "/"
+                            },
+                            "list_flg": {
+                                "src": "show"
+                            },
+                            "depth": {
+                                "src": "10"
+                            },
+                            "style": {
+                                "src": ""
+                            }
                         },
                         "anchor": "",
                         "dec": ""

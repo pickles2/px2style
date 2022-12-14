@@ -1,6 +1,6 @@
 // 通常のリスト
-ul{
-	>li{
+ul {
+	>li {
 		>ul,
 		>ol,
 		>.px2-p,
@@ -14,7 +14,7 @@ ul{
 
 // 垂直リスト
 .px2-vertical-list,
-.px2-vertical-list>ul{
+.px2-vertical-list>ul {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -34,7 +34,7 @@ ul{
 
 // 水平リスト
 .px2-horizontal-list,
-.px2-horizontal-list>ul{
+.px2-horizontal-list>ul {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 1em;
@@ -58,21 +58,21 @@ ul{
 		}
 	}
 }
-.px2-horizontal-list{
-	&--left{
+.px2-horizontal-list {
+	&--left {
 		justify-content: flex-start;
 	}
-	&--center{
+	&--center {
 		justify-content: center;
 	}
-	&--right{
+	&--right {
 		justify-content: flex-end;
 	}
 }
 
 // 注釈リスト
 .px2-note-list,
-.px2-note-list>ul{
+.px2-note-list>ul {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding-left: 1.5em;
