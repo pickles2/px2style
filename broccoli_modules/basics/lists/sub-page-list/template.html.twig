@@ -1,7 +1,7 @@
 <div class="px2-linklist"{% if _ENV.mode == 'canvas' %} style="padding-top: 12px;"{% endif %}>
 {% if _ENV.mode == 'canvas' %}
 
-<div style="background-color:#f9f9f9;color:#aaa; padding: 10px; font-size: 11px; position: absolute; right: 5px; top: 5px;">
+<div style="background-color:#f9f9f9ee; color:#aaa; padding: 10px; font-size: 11px; position: absolute; right: 5px; top: 5px; z-index: 10000;">
 <div style="text-align: center;">【下層ページリスト (自動生成)】</div>
 スタイル: {% if style == '' %}リンクリスト{% else %}説明付き{% endif %}<br />
 {% if _ENV.vars.parent %}

@@ -35,6 +35,7 @@ $ composer require pickles2/px2style
 - `px2style.modal()` に、オプション `height` を追加。
 - `px2style.getOpenedModalCount()` を追加。
 - リンクリストのスタイリングを改善。
+- 画像モジュールで、拡大画像のモーダルを `px2style.modal()` で開くように修正した。
 - その他、細かい内部コードの改善。
 
 ### px2style v3.0.1 (2022/11/03)
