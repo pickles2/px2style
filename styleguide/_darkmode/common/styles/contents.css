@@ -1575,7 +1575,7 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
   background-color: #fff;
   color: #000;
 }
-.px2-linklist ul li > a::after {
+.px2-linklist ul li > a::before {
   content: "";
   width: 14px;
   height: 14px;
