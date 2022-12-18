@@ -16,7 +16,7 @@
 	margin: 0;
 	border: none;
 
-	&--no-title .px2-modal__header{
+	&--no-title .px2-modal__header {
 		display: none;
 	}
 	&--no-btn .px2-modal__footer {
@@ -26,7 +26,7 @@
 		background: transparent;
 	}
 
-	> form{
+	> form {
 		// display: inline;
 		margin: 0;
 		padding: 0;
@@ -83,7 +83,7 @@
 		}
 	}
 
-	&__dialog{
+	&__dialog {
 		position: relative;
 		top: 0; left: 0;
 		display: flex;
@@ -103,12 +103,12 @@
 		overflow: visible;
 		border-radius: 5px;
 		font-size: medium;
-		h1{ font-size: 124%; margin: 0; font-weight: bold; }
-		h2{ font-size: 124%; margin: 2em 0 0.5em 0; font-weight: bold; }
-		h3{ font-size: 112%; margin: 1em 0 0.5em 0; font-weight: bold; }
-		h4{ font-size: 104%; margin: 1em 0 0.5em 0; font-weight: bold; }
-		h5{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
-		h6{ font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h1 { font-size: 124%; margin: 0; font-weight: bold; }
+		h2 { font-size: 124%; margin: 2em 0 0.5em 0; font-weight: bold; }
+		h3 { font-size: 112%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h4 { font-size: 104%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h5 { font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
+		h6 { font-size: 100%; margin: 1em 0 0.5em 0; font-weight: bold; }
 
 		animation: px2-modal--initial .3s ease 0s 1 normal none running;
 		transition: transform .3s, opacity .3s;
@@ -118,27 +118,35 @@
 		}
 	}
 
-	&__header{
+	&__header {
 		border-bottom: 1px solid #e5e5e5;
 		padding: 8px 40px 8px 20px;
 		margin-bottom: 0.5em;
 		box-shadow: 0 5px 12px -5px rgba(0, 0, 0, .1);
 	}
 
-	&__body{
+	&__body {
 		position: relative;
 		top: 0; left: 0;
 		padding: 0 20px;
 		overflow: auto;
 		flex-grow: 1;
 	}
+	&__body,
+	&__body-inner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		flex-grow: 100;
+	}
 
-	&__title{
+	&__title {
 		font-weight: bold;
 		outline: none;
 	}
 
-	&__footer{
+	&__footer {
 		border-top: 1px solid #e5e5e5;
 		margin: 10px 0 0 0;
 		padding: 10px 20px 0 20px;
