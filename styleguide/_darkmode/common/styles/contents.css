@@ -362,12 +362,25 @@ input[type=search].px2-input {
   padding: 8px 40px 8px 20px;
 }
 .px2-modal__body {
+  box-sizing: border-box;
   flex-grow: 1;
   left: 0;
   overflow: auto;
   padding: 0 20px;
   position: relative;
   top: 0;
+}
+.px2-modal__body-inner {
+  box-sizing: border-box;
+  display: block;
+}
+.px2-modal__body, .px2-modal__body-inner--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.px2-modal__body-inner--flex > *, .px2-modal__body > * {
+  flex-grow: 100;
 }
 .px2-modal__title {
   font-weight: 700;

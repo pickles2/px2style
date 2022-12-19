@@ -35,6 +35,7 @@
 		options.target = options.target||$('body');
 		options.width = options.width||null;
 		options.height = options.height||null;
+		options.contentFill = !!options.contentFill;
 		options.onclose = options.onclose||function(){};
 		options.onbgclick = options.onbgclick||function(){};
 		options.form = options.form||false;
@@ -65,6 +66,10 @@
 
 		if( options.type ){
 			$modal.addClass('px2-modal--type-'+options.type);
+		}
+
+		if( options.contentFill ){
+			$modal.find('.px2-modal__body-inner').addClass('px2-modal__body-inner--flex');
 		}
 
 		if(options.form){

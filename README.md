@@ -32,7 +32,7 @@ $ composer require pickles2/px2style
 
 - `px2style.modal()` が重ねて開かれたとき、背景色が重なりすぎる問題を修正した。
 - `px2style.modal()` について、要素への自動フォーカス機能を改善した。
-- `px2style.modal()` に、オプション `height` を追加。
+- `px2style.modal()` に、オプション `height`, `contentFill` を追加。
 - `px2style.getOpenedModalCount()` を追加。
 - リンクリストのスタイリングを改善。
 - 画像モジュールで、拡大画像のモーダルを `px2style.modal()` で開くように修正した。
