@@ -927,6 +927,23 @@
                                     "subModName": "loop",
                                     "anchor": "",
                                     "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:lists/ul-links",
+                                    "fields": {
+                                        "href": {
+                                            "src": "https://pickles2.com/"
+                                        },
+                                        "label": {
+                                            "src": "長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル 長いリンクラベル"
+                                        },
+                                        "target": {
+                                            "src": "_blank"
+                                        }
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
                                 }
                             ],
                             "class": {

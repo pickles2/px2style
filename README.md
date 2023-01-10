@@ -28,6 +28,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.0.3 (リリース日未定)
+
+- `.px2-linklist` のスタイリングを改善。
+
 ### px2style v3.0.2 (2022/12/28)
 
 - `px2style.modal()` が重ねて開かれたとき、背景色が重なりすぎる問題を修正した。

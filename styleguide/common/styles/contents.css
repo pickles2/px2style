@@ -1584,7 +1584,7 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
 .px2-linklist ul li > a {
   display: block;
   position: relative;
-  padding: 20px 30px;
+  padding: 20px 45px 20px 30px;
   background-color: #fff;
   color: #000;
 }
@@ -1601,7 +1601,7 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
   border-bottom: none;
   border-left: none;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: calc(50% - 8px);
   transform: rotate(45deg);
 }
@@ -1625,7 +1625,23 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
   border-top: 1px dashed #e5e5e5;
 }
 .px2-linklist ul li ul li > a, .px2-linklist ul li ul li > span {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 55px;
+}
+.px2-linklist ul li ul li > a::after, .px2-linklist ul li ul li > span::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-top: 1.4px solid #000;
+  border-right: 1.4px solid #000;
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 8px);
+  transform: rotate(45deg);
 }
 .px2-linklist ul li ul ul li > a, .px2-linklist ul li ul ul li > span {
   padding-left: 70px;
@@ -1636,8 +1652,20 @@ dl dt > .px2-p, dl dt > .px2-p p, dl dt > p, dl dd > .px2-p, dl dd > .px2-p p, d
 .px2-linklist ul li ul ul ul ul li > a, .px2-linklist ul li ul ul ul ul li > span {
   padding-left: 100px;
 }
+.px2-linklist ul li ul li > a, .px2-linklist ul li ul li > span, .px2-linklist ul li ul ul ul li > a, .px2-linklist ul li ul ul ul li > span, .px2-linklist ul li ul ul ul ul li > a, .px2-linklist ul li ul ul ul ul li > span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.px2-linklist ul li ul li > a::after, .px2-linklist ul li ul li > span::after, .px2-linklist ul li ul ul ul li > a::after, .px2-linklist ul li ul ul ul li > span::after, .px2-linklist ul li ul ul ul ul li > a::after, .px2-linklist ul li ul ul ul ul li > span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 0.5px solid #0006;
+  border-right: 0.5px solid #0006;
+  top: calc(50% - 5px);
+}
 .px2-linklist__description {
-  font-size: 86%;
+  font-size: 74%;
   color: #999;
   text-decoration: none;
 }
