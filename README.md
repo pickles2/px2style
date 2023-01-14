@@ -31,6 +31,7 @@ $ composer require pickles2/px2style
 ### px2style v3.0.3 (リリース日未定)
 
 - `.px2-linklist` のスタイリングを改善。
+- `.px2-grid` のスタイリングを改善。
 
 ### px2style v3.0.2 (2022/12/28)
 
