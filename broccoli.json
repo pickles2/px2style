@@ -21,5 +21,22 @@
             ],
             "function" : "window.broccoliModulePx2StyleCssMarginPadding"
         }
+    },
+    {
+        "id": "px2style__image",
+        "name": "Image",
+        "type": "field",
+        "backend": {
+            "class": "pickles2\\px2style\\fields\\image\\backend",
+            "require": "fields/image/backend.js"
+        },
+        "frontend": {
+            "dir": "fields/image/frontend/",
+            "file": [
+                "image.css",
+                "image.js"
+            ],
+            "function" : "window.broccoliModulePx2StyleImage"
+        }
     }
 ]

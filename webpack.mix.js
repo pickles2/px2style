@@ -47,6 +47,11 @@ mix
 	.sass('src_broccoli/fields/cssMarginPadding/cssMarginPadding.css.scss', './fields/cssMarginPadding/frontend/cssMarginPadding.css')
 
 	// --------------------------------------
+	// fields: image
+	.js('./src_broccoli/fields/image/image.js', './fields/image/frontend/')
+	.sass('src_broccoli/fields/image/image.css.scss', './fields/image/frontend/image.css')
+
+	// --------------------------------------
 	// modules: basics/_
 	.js('./src_broccoli/modules/basics/basics/_/module.js', './broccoli_modules/basics/basics/_/module.js')
 	.sass('./src_broccoli/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')

@@ -33,6 +33,8 @@
     "sass-loader": "^12.6.0",
     "testcafe": "^1.17.1",
     "tiny-slider": "^2.9.1",
-    "twig-loader": "^0.5.5"
+    "twig-loader": "^0.5.5",
+    "url-parse": "^1.4.7",
+    "utils79": "^0.0.5"
   }
 }

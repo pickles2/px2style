@@ -459,6 +459,20 @@ return call_user_func( function(){
 				'function' => 'window.broccoliModulePx2StyleCssMarginPadding',
 			),
 		),
+		'image'=>array(
+			'backend'=>array(
+				'class' => 'pickles2\\px2style\\fields\\image\\backend',
+				'require' => '../fields/image/backend.js',
+			),
+			'frontend'=>array(
+				'dir' => '../fields/image/frontend/',
+				'file' => array(
+					'image.css',
+					'image.js',
+				),
+				'function' => 'window.broccoliModulePx2StyleImage',
+			),
+		),
 	);
 
 	$droppedImageOperator = \pickles2\px2style\utils::droppedFileOperator('image');

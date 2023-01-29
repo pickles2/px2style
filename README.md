@@ -32,6 +32,7 @@ $ composer require pickles2/px2style
 
 - `.px2-linklist` のスタイリングを改善。
 - `.px2-grid` のスタイリングを改善。
+- `px2style__image` フィールドを追加。
 
 ### px2style v3.0.2 (2022/12/28)
 
