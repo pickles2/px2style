@@ -774,6 +774,9 @@ input[type=search].px2-input {
 .px2-image__img {
   display: inline-block;
 }
+.px2-image__img img, .px2-image__img a {
+  display: block;
+}
 .px2-image .px2-image--framed > img, .px2-image--framed .px2-image__img {
   box-sizing: border-box;
   border: 1px solid #bbb;

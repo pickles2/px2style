@@ -5,6 +5,10 @@
 	}
 	&__img {
 		display: inline-block;
+		img,
+		a {
+			display: block;
+		}
 	}
 	&--framed > img,
 	&--framed &__img {

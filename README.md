@@ -35,6 +35,7 @@ $ composer require pickles2/px2style
 - `.px2-grid` で 5/6幅 を追加した。
 - `.px2-grid` のマージン設計を改善。
 - bug fix: `.px2-grid` で 3/4幅 が効かない不具合を修正。
+- その他、いくつかの細かい改善。
 
 ### px2style v3.0.2 (2022/12/28)
 

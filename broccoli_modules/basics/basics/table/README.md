@@ -34,16 +34,3 @@
 	</tbody>
 </table>
 ```
-
-コンテンツ制作者は、`table` 要素の幅(width)、高さ(height)、行や列の幅(width)、高さ(height) を上書きして変更できます。
-
-```html
-<table class="px2-table" width="100%">
-	<tbody>
-		<tr>
-			<th width="30%">見出しセル</th>
-			<td width="70%">セル</td>
-		</tr>
-	</tbody>
-</table>
-```

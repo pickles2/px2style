@@ -1,1 +1,1 @@
-Insert a simple `img` element.
+Insert a simple image element.

@@ -34,16 +34,3 @@ For ease of learning <q> Design as much as possible to markup with plain HTML st
 	</tbody>
 </table>
 ```
-
-Content authors can override and change the width, height, row and column width, and height of the `table` element.
-
-```html
-<table class="px2-table" width="100%">
-	<tbody>
-		<tr>
-			<th width="30%">Heading cell</th>
-			<td width="70%">cell</td>
-		</tr>
-	</tbody>
-</table>
-```
