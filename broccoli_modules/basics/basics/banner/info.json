@@ -11,7 +11,7 @@
             "target": {
                 "fieldType": "input",
                 "type": "select",
-                "label": "ターゲットウィンドウ",
+                "label": "リンク先の表示方法",
                 "options": [
                     {
                         "value": "",
@@ -21,7 +21,8 @@
                         "value": "_blank",
                         "label": "新規ウィンドウ (_blank)"
                     }
-                ]
+                ],
+                "default": "_blank"
             },
             "image_src": {
                 "fieldType": "input",
