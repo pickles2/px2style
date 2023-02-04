@@ -5,13 +5,13 @@
 
 ### シンプルなリンク
 
-```
+```html
 <a href="...">Label</a>
 ```
 
 ### 標準的なビュレットつきリンク
 
-```
+```html
 <a href="..." class="px2-a">Label</a>
 ```
 
@@ -24,6 +24,6 @@
 
 ターゲットウィンドウ で 新規ウィンドウ (_blank) を選択すると、 新規ウィンドウで開くアイコンが自動的に付与されます。
 
-```
+```html
 <a href="..." target="_blank"><span class="px2-open-in-new-window">Label</span></a>
 ```

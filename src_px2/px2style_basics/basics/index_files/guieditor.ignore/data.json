@@ -306,28 +306,6 @@
                                 "src": "2"
                             },
                             "main": {
-                                "src": "水平線モジュール"
-                            },
-                            "sub": {
-                                "src": ""
-                            }
-                        },
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "px2style:basics/hr",
-                        "fields": [],
-                        "anchor": "",
-                        "dec": ""
-                    },
-                    {
-                        "modId": "px2style:sections/hx",
-                        "fields": {
-                            "hx": {
-                                "src": "2"
-                            },
-                            "main": {
                                 "src": "バナーリンク"
                             },
                             "sub": {
@@ -347,17 +325,17 @@
                                 "webUrl": ""
                             },
                             "alt_text": {
-                                "src": ""
+                                "src": "バナーALTテキスト"
                             },
                             "caption": {
-                                "src": "",
+                                "src": "バナーキャプション",
                                 "editor": "markdown"
                             },
                             "framed": {
                                 "src": "framed"
                             },
                             "width": {
-                                "src": ""
+                                "src": "1of2"
                             },
                             "align": {
                                 "src": "center"
@@ -369,12 +347,75 @@
                                 "src": "px2-p"
                             },
                             "href": {
-                                "src": ""
+                                "src": "https://pickles2.com/"
                             },
                             "target": {
+                                "src": "_blank"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/banner",
+                        "fields": {
+                            "image_src": {
+                                "resKey": "5a1ad63e211128eba0b29781eca35d50",
+                                "path": "./index_files/resources/banner-image-2.png",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "alt_text": {
+                                "src": "バナーALTテキスト"
+                            },
+                            "caption": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "framed": {
+                                "src": "framed"
+                            },
+                            "width": {
+                                "src": "320px"
+                            },
+                            "align": {
+                                "src": "center"
+                            },
+                            "imagescope": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "href": {
+                                "src": "https://pickles2.com/"
+                            },
+                            "target": {
+                                "src": "_blank"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "水平線モジュール"
+                            },
+                            "sub": {
                                 "src": ""
                             }
                         },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/hr",
+                        "fields": [],
                         "anchor": "",
                         "dec": ""
                     }

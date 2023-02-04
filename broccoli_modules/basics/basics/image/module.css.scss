@@ -29,6 +29,7 @@
 	&--width-2of3 > img { width: 67%; } // <- fallback
 	&--width-1of2 > img { width: 50%; } // <- fallback
 
+	// キャプション
 	&__caption {
 		font-size: 0.77em;
 		margin-top: 0.5em;
@@ -41,6 +42,7 @@
 		}
 	}
 
+	// 拡大画像
 	&--imagescope img {
 		cursor: pointer;
 	}

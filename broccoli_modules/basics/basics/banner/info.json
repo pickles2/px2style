@@ -65,6 +65,18 @@
                     {
                         "value": "1of2",
                         "label": "1/2幅"
+                    },
+                    {
+                        "value": "180px",
+                        "label": "180px"
+                    },
+                    {
+                        "value": "320px",
+                        "label": "320px"
+                    },
+                    {
+                        "value": "640px",
+                        "label": "640px"
                     }
                 ],
                 "default": ""

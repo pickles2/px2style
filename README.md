@@ -18,7 +18,7 @@ $ composer require pickles2/px2style
 
 ## Custom Properties
 
-```
+```scss
 :root {
 	--px2-main-color: #00a0e6;
 	--px2-text-color: #333;
