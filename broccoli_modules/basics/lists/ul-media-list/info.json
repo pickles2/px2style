@@ -180,7 +180,7 @@
                     "target": {
                         "fieldType": "input",
                         "type": "select",
-                        "label": "ターゲットウィンドウ",
+                        "label": "リンク先の表示方法",
                         "options": [
                             {
                                 "value": "",

@@ -10,7 +10,7 @@
 "fields.class:options.4.label","セカンダリボタン風","like Secondary button"
 "fields.class:options.5.label","危険ボタン風","like Danger button"
 "fields.class:options.6.label","ダウンロードボタン風","like Download button"
-"fields.target:label","ターゲットウィンドウ","Target window"
+"fields.target:label","リンク先の表示方法","Target window"
 "fields.target:options.0.label","デフォルト","Defaut"
 "fields.target:options.1.label","新規ウィンドウ (_blank)","New window (_blank)"
 "fields.display:label","ディスプレイタイプ","Display type"

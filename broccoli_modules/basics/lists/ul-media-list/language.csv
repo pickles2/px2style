@@ -34,7 +34,7 @@
 "fields.loop:label","リストアイテム","List items"
 "subModule.loop.href:label","リンク先","Link to..."
 "subModule.loop.label:label","ラベル","Label"
-"subModule.loop.target:label","ターゲットウィンドウ","Target window"
+"subModule.loop.target:label","リンク先の表示方法","Target window"
 "subModule.loop.target:options.0.label","デフォルト","Defaut"
 "subModule.loop.target:options.1.label","新規ウィンドウ (_blank)","New window (_blank)"
 "subModule.loop.image:label","画像メディア","Image media"
