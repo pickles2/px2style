@@ -6,6 +6,7 @@
         "table",
         "a",
         "hr",
-        "blockquote"
+        "blockquote",
+        "banner"
     ]
 }

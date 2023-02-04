@@ -773,6 +773,54 @@ input[type=search].px2-input {
   width: 100%;
 }
 /**
+ * module: px2style:basics/banner
+ */
+.px2-image-banner-link img {
+  width: 100%;
+  max-width: 100%;
+}
+.px2-image-banner-link__img {
+  display: inline-block;
+}
+.px2-image-banner-link__img img, .px2-image-banner-link__img a {
+  display: block;
+}
+.px2-image-banner-link--width-1of1 .px2-image-banner-link__img {
+  width: 100%;
+}
+.px2-image-banner-link--width-3of4 .px2-image-banner-link__img {
+  width: 75%;
+}
+.px2-image-banner-link--width-2of3 .px2-image-banner-link__img {
+  width: 67%;
+}
+.px2-image-banner-link--width-1of2 .px2-image-banner-link__img {
+  width: 50%;
+}
+.px2-image-banner-link--width-1of1 > img {
+  width: 100%;
+}
+.px2-image-banner-link--width-3of4 > img {
+  width: 75%;
+}
+.px2-image-banner-link--width-2of3 > img {
+  width: 67%;
+}
+.px2-image-banner-link--width-1of2 > img {
+  width: 50%;
+}
+.px2-image-banner-link__caption {
+  font-size: 0.77em;
+  margin-top: 0.5em;
+  line-height: 1.3;
+  color: #999;
+  text-align: left;
+}
+.px2-image-banner-link__caption * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/**
  * module: px2style:basics/image
  */
 .px2-image img {

@@ -320,6 +320,63 @@
                         "fields": [],
                         "anchor": "",
                         "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "バナーリンク"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/banner",
+                        "fields": {
+                            "image_src": {
+                                "resKey": "45e0a0e899b2e4fc3780eeaa0453e487",
+                                "path": "./index_files/resources/banner-image.png",
+                                "resType": "",
+                                "webUrl": ""
+                            },
+                            "alt_text": {
+                                "src": ""
+                            },
+                            "caption": {
+                                "src": "",
+                                "editor": "markdown"
+                            },
+                            "framed": {
+                                "src": "framed"
+                            },
+                            "width": {
+                                "src": ""
+                            },
+                            "align": {
+                                "src": "center"
+                            },
+                            "imagescope": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            },
+                            "href": {
+                                "src": ""
+                            },
+                            "target": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
                     }
                 ]
             }
