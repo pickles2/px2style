@@ -10,6 +10,9 @@
         }
     ],
     "scripts":{
+        "build": [
+            "npm run prod; php ./src_px2/.px_execute.php \"/?PX=publish.run\""
+        ],
 		"start": [
 			"@php ./src_px2/.px_execute.php \"/?PX=serve&S=localhost:18080\""
 		],

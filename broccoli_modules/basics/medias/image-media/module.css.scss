@@ -1,9 +1,12 @@
 .px2-embedded-media{
 	margin: 0 0 1em 0;
 
-	&__image-media img{
-		width: 100%;
-		height: auto;
+	&__image-media {
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&--framed {

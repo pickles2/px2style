@@ -43,6 +43,13 @@
                                         },
                                         "align": {
                                             "src": ""
+                                        },
+                                        "caption": {
+                                            "src": "",
+                                            "editor": "markdown"
+                                        },
+                                        "imagescope": {
+                                            "src": ""
                                         }
                                     },
                                     "anchor": "",
@@ -124,6 +131,9 @@
                                         },
                                         "framed": {
                                             "src": "framed"
+                                        },
+                                        "imagescope": {
+                                            "src": ""
                                         }
                                     },
                                     "anchor": "",
@@ -301,6 +311,9 @@
                                             "editor": "markdown"
                                         },
                                         "framed": {
+                                            "src": "framed"
+                                        },
+                                        "imagescope": {
                                             "src": ""
                                         }
                                     },

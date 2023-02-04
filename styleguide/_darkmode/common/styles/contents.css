@@ -2253,6 +2253,7 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
   margin: 0 0 1em 0;
 }
 .px2-embedded-media__image-media img {
+  display: block;
   width: 100%;
   height: auto;
 }
