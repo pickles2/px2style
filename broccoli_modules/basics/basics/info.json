@@ -2,11 +2,10 @@
     "name": "基本モジュール - Basic Modules",
     "sort":[
         "text",
+        "hx",
         "image",
-        "table",
         "a",
-        "hr",
-        "blockquote",
-        "banner"
+        "banner",
+        "table"
     ]
 }

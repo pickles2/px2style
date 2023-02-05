@@ -1,5 +1,6 @@
 {
     "name": "画像メディア - Image Media",
+    "hidden": true,
     "interface": {
         "fields": {
             "image_src": {

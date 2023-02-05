@@ -1,4 +1,5 @@
 {
+    "id": ":sections/hx-shoulder",
     "name": "見出し (ショルダーメニュー付き)",
     "deprecated": true,
     "interface": {
