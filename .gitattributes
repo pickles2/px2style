@@ -12,6 +12,7 @@
 /src_broccoli           export-ignore
 /src_px2                export-ignore
 /src_px2style           export-ignore
+/src_images             export-ignore
 /styleguide             export-ignore
 /tests                  export-ignore
 
