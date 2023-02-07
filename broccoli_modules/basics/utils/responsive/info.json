@@ -1,4 +1,5 @@
 {
+    "id": ":utils/responsive",
     "name": "レスポンシブ - Responsive Block",
     "interface": {
         "fields": {

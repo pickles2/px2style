@@ -1,4 +1,5 @@
 {
+    "id": ":interactives/tabs",
     "name": "タブ - Tabs",
     "interface": {
         "fields": {

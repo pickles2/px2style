@@ -1,4 +1,5 @@
 {
+    "id": ":lists/ul-media-list",
     "name": "メディアリスト - Media List",
     "interface": {
         "fields": {

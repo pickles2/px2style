@@ -1,4 +1,5 @@
 {
+    "id": ":lists/sub-page-list",
     "name": "下層ページリスト - Sub Pages",
     "interface": {
         "fields": {

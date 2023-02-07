@@ -1,4 +1,5 @@
 {
+    "id": ":lists/ul-links",
     "name": "リンクリスト - Link List",
     "interface": {
         "fields": {

@@ -1,4 +1,5 @@
 {
+    "id": ":basics/text",
     "name": "テキスト - Text",
     "interface": {
         "fields": {

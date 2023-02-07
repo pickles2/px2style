@@ -1,4 +1,5 @@
 {
+    "id": ":utils/button-file-download",
     "name": "ダウンロードボタン - Download Button",
     "interface": {
         "fields": {

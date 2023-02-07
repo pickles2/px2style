@@ -1,4 +1,5 @@
 {
+    "id": ":basics/banner",
     "name": "バナー - Banner",
     "interface": {
         "fields": {

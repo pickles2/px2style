@@ -1,4 +1,5 @@
 {
+    "id": ":sections/section",
     "name": "セクション - Section",
     "hidden": false,
     "interface": {

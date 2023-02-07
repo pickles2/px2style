@@ -1,4 +1,5 @@
 {
+    "id": ":sections/notice",
     "name": "お知らせ - Notice",
     "interface": {
         "fields": {

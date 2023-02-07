@@ -1,4 +1,5 @@
 {
+    "id": ":basics/table",
     "name": "表組み - Table",
     "interface": {
         "fields": {

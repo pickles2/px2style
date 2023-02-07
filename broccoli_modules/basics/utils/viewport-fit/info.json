@@ -1,4 +1,5 @@
 {
+    "id": ":utils/viewport-fit",
     "name": "ビューポート幅に合わせる",
     "areaSizeDetection": "deep",
     "interface": {

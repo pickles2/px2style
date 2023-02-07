@@ -1,4 +1,5 @@
 {
+    "id": ":basics/image",
     "name": "画像 - Image",
     "interface": {
         "fields": {

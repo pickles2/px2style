@@ -1,4 +1,5 @@
 {
+    "id": ":grids/grid",
     "name": "グリッド - Grid",
     "hidden": true,
     "interface": {

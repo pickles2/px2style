@@ -1,4 +1,5 @@
 {
+    "id": ":interactives/accordion",
     "name": "アコーディオン - Accordion",
     "interface": {
         "fields": {

@@ -38,6 +38,7 @@ $ composer require pickles2/px2style
 - `.px2-image` から、 `href`, `target` フィールドを削除した。
 - 新しいモジュール `.px2-image-banner-link` を追加した。
 - bug fix: `.px2-grid` で 3/4幅 が効かない不具合を修正。
+- 各Broccoliモジュールに、モジュールIDを明示した。
 - その他、いくつかの細かい改善。
 
 ### px2style v3.0.2 (2022/12/28)

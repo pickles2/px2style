@@ -1,4 +1,5 @@
 {
+    "id": ":lists/ul",
     "name": "リスト - List",
     "interface": {
         "fields": {

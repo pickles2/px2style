@@ -1,4 +1,5 @@
 {
+    "id": ":interactives/carousel",
     "name": "カルーセル - Carousel",
     "interface": {
         "fields": {

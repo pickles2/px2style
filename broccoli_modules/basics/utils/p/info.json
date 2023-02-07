@@ -1,4 +1,5 @@
 {
+    "id": ":utils/p",
     "name": "ユーティリティブロック - Utility Block",
     "interface": {
         "fields": {
