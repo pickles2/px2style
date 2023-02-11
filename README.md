@@ -28,7 +28,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.1.0 (リリース日未定)
+### px2style v3.1.0 (2023/2/11)
 
 - モジュールのカテゴリ分けを改善した。
 - `px2style__image` フィールドを追加。
