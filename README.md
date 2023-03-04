@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.1.1 (リリース日未定)
+
+- `.px2-a` のスタイリングを改善。
+
 ### px2style v3.1.0 (2023/2/11)
 
 - モジュールのカテゴリ分けを改善した。

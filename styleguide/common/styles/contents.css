@@ -584,7 +584,7 @@ input[type=search].px2-input {
   margin-right: 0.2em;
   border-width: 0.35em 0 0.35em 0.6em;
   border-style: solid;
-  border-color: #00a0e6;
+  border-color: var(--px2-main-color, #00a0e6);
   border-top-color: transparent;
   border-bottom-color: transparent;
 }
@@ -845,6 +845,39 @@ input[type=search].px2-input {
 .px2-image-banner-link__caption * {
   margin-top: 0;
   margin-bottom: 0;
+}
+/**
+ * module: px2style:basics/hx
+ */
+h1, .px2-h1, h2, .px2-h2, h3, .px2-h3, h4, .px2-h4, h5, .px2-h5, h6, .px2-h6 {
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+h1 h1, h1 .px2-h1, h1 h2, h1 .px2-h2, h1 h3, h1 .px2-h3, h1 h4, h1 .px2-h4, h1 h5, h1 .px2-h5, h1 h6, h1 .px2-h6, h1 p, .px2-h1 h1, .px2-h1 .px2-h1, .px2-h1 h2, .px2-h1 .px2-h2, .px2-h1 h3, .px2-h1 .px2-h3, .px2-h1 h4, .px2-h1 .px2-h4, .px2-h1 h5, .px2-h1 .px2-h5, .px2-h1 h6, .px2-h1 .px2-h6, .px2-h1 p, h2 h1, h2 .px2-h1, h2 h2, h2 .px2-h2, h2 h3, h2 .px2-h3, h2 h4, h2 .px2-h4, h2 h5, h2 .px2-h5, h2 h6, h2 .px2-h6, h2 p, .px2-h2 h1, .px2-h2 .px2-h1, .px2-h2 h2, .px2-h2 .px2-h2, .px2-h2 h3, .px2-h2 .px2-h3, .px2-h2 h4, .px2-h2 .px2-h4, .px2-h2 h5, .px2-h2 .px2-h5, .px2-h2 h6, .px2-h2 .px2-h6, .px2-h2 p, h3 h1, h3 .px2-h1, h3 h2, h3 .px2-h2, h3 h3, h3 .px2-h3, h3 h4, h3 .px2-h4, h3 h5, h3 .px2-h5, h3 h6, h3 .px2-h6, h3 p, .px2-h3 h1, .px2-h3 .px2-h1, .px2-h3 h2, .px2-h3 .px2-h2, .px2-h3 h3, .px2-h3 .px2-h3, .px2-h3 h4, .px2-h3 .px2-h4, .px2-h3 h5, .px2-h3 .px2-h5, .px2-h3 h6, .px2-h3 .px2-h6, .px2-h3 p, h4 h1, h4 .px2-h1, h4 h2, h4 .px2-h2, h4 h3, h4 .px2-h3, h4 h4, h4 .px2-h4, h4 h5, h4 .px2-h5, h4 h6, h4 .px2-h6, h4 p, .px2-h4 h1, .px2-h4 .px2-h1, .px2-h4 h2, .px2-h4 .px2-h2, .px2-h4 h3, .px2-h4 .px2-h3, .px2-h4 h4, .px2-h4 .px2-h4, .px2-h4 h5, .px2-h4 .px2-h5, .px2-h4 h6, .px2-h4 .px2-h6, .px2-h4 p, h5 h1, h5 .px2-h1, h5 h2, h5 .px2-h2, h5 h3, h5 .px2-h3, h5 h4, h5 .px2-h4, h5 h5, h5 .px2-h5, h5 h6, h5 .px2-h6, h5 p, .px2-h5 h1, .px2-h5 .px2-h1, .px2-h5 h2, .px2-h5 .px2-h2, .px2-h5 h3, .px2-h5 .px2-h3, .px2-h5 h4, .px2-h5 .px2-h4, .px2-h5 h5, .px2-h5 .px2-h5, .px2-h5 h6, .px2-h5 .px2-h6, .px2-h5 p, h6 h1, h6 .px2-h1, h6 h2, h6 .px2-h2, h6 h3, h6 .px2-h3, h6 h4, h6 .px2-h4, h6 h5, h6 .px2-h5, h6 h6, h6 .px2-h6, h6 p, .px2-h6 h1, .px2-h6 .px2-h1, .px2-h6 h2, .px2-h6 .px2-h2, .px2-h6 h3, .px2-h6 .px2-h3, .px2-h6 h4, .px2-h6 .px2-h4, .px2-h6 h5, .px2-h6 .px2-h5, .px2-h6 h6, .px2-h6 .px2-h6, .px2-h6 p {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+h1 small, .px2-h1 small, h2 small, .px2-h2 small, h3 small, .px2-h3 small, h4 small, .px2-h4 small, h5 small, .px2-h5 small, h6 small, .px2-h6 small {
+  display: inline-block;
+  font-weight: normal;
+  color: #6c757d;
+  margin-left: 0.6em;
+}
+.px2-h1 .px2-h1__shoulder, .px2-h2 .px2-h2__shoulder, .px2-h3 .px2-h3__shoulder, .px2-h4 .px2-h4__shoulder, .px2-h5 .px2-h5__shoulder, .px2-h6 .px2-h6__shoulder {
+  float: right;
+  margin-left: 1em;
+  text-align: left;
+}
+.px2-h1 .px2-h1__shoulder ul, .px2-h1 .px2-h1__shoulder p, .px2-h2 .px2-h2__shoulder ul, .px2-h2 .px2-h2__shoulder p, .px2-h3 .px2-h3__shoulder ul, .px2-h3 .px2-h3__shoulder p, .px2-h4 .px2-h4__shoulder ul, .px2-h4 .px2-h4__shoulder p, .px2-h5 .px2-h5__shoulder ul, .px2-h5 .px2-h5__shoulder p, .px2-h6 .px2-h6__shoulder ul, .px2-h6 .px2-h6__shoulder p {
+  margin: 0;
+}
+.px2-h1 .px2-h1__shoulder::after, .px2-h2 .px2-h2__shoulder::after, .px2-h3 .px2-h3__shoulder::after, .px2-h4 .px2-h4__shoulder::after, .px2-h5 .px2-h5__shoulder::after, .px2-h6 .px2-h6__shoulder::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
 }
 /**
  * module: px2style:basics/image
@@ -2358,39 +2391,6 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
 }
 .px2-embedded-media--imagescope img {
   cursor: pointer;
-}
-/**
- * module: px2style:sections/hx
- */
-h1, .px2-h1, h2, .px2-h2, h3, .px2-h3, h4, .px2-h4, h5, .px2-h5, h6, .px2-h6 {
-  font-weight: bold;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-}
-h1 h1, h1 .px2-h1, h1 h2, h1 .px2-h2, h1 h3, h1 .px2-h3, h1 h4, h1 .px2-h4, h1 h5, h1 .px2-h5, h1 h6, h1 .px2-h6, h1 p, .px2-h1 h1, .px2-h1 .px2-h1, .px2-h1 h2, .px2-h1 .px2-h2, .px2-h1 h3, .px2-h1 .px2-h3, .px2-h1 h4, .px2-h1 .px2-h4, .px2-h1 h5, .px2-h1 .px2-h5, .px2-h1 h6, .px2-h1 .px2-h6, .px2-h1 p, h2 h1, h2 .px2-h1, h2 h2, h2 .px2-h2, h2 h3, h2 .px2-h3, h2 h4, h2 .px2-h4, h2 h5, h2 .px2-h5, h2 h6, h2 .px2-h6, h2 p, .px2-h2 h1, .px2-h2 .px2-h1, .px2-h2 h2, .px2-h2 .px2-h2, .px2-h2 h3, .px2-h2 .px2-h3, .px2-h2 h4, .px2-h2 .px2-h4, .px2-h2 h5, .px2-h2 .px2-h5, .px2-h2 h6, .px2-h2 .px2-h6, .px2-h2 p, h3 h1, h3 .px2-h1, h3 h2, h3 .px2-h2, h3 h3, h3 .px2-h3, h3 h4, h3 .px2-h4, h3 h5, h3 .px2-h5, h3 h6, h3 .px2-h6, h3 p, .px2-h3 h1, .px2-h3 .px2-h1, .px2-h3 h2, .px2-h3 .px2-h2, .px2-h3 h3, .px2-h3 .px2-h3, .px2-h3 h4, .px2-h3 .px2-h4, .px2-h3 h5, .px2-h3 .px2-h5, .px2-h3 h6, .px2-h3 .px2-h6, .px2-h3 p, h4 h1, h4 .px2-h1, h4 h2, h4 .px2-h2, h4 h3, h4 .px2-h3, h4 h4, h4 .px2-h4, h4 h5, h4 .px2-h5, h4 h6, h4 .px2-h6, h4 p, .px2-h4 h1, .px2-h4 .px2-h1, .px2-h4 h2, .px2-h4 .px2-h2, .px2-h4 h3, .px2-h4 .px2-h3, .px2-h4 h4, .px2-h4 .px2-h4, .px2-h4 h5, .px2-h4 .px2-h5, .px2-h4 h6, .px2-h4 .px2-h6, .px2-h4 p, h5 h1, h5 .px2-h1, h5 h2, h5 .px2-h2, h5 h3, h5 .px2-h3, h5 h4, h5 .px2-h4, h5 h5, h5 .px2-h5, h5 h6, h5 .px2-h6, h5 p, .px2-h5 h1, .px2-h5 .px2-h1, .px2-h5 h2, .px2-h5 .px2-h2, .px2-h5 h3, .px2-h5 .px2-h3, .px2-h5 h4, .px2-h5 .px2-h4, .px2-h5 h5, .px2-h5 .px2-h5, .px2-h5 h6, .px2-h5 .px2-h6, .px2-h5 p, h6 h1, h6 .px2-h1, h6 h2, h6 .px2-h2, h6 h3, h6 .px2-h3, h6 h4, h6 .px2-h4, h6 h5, h6 .px2-h5, h6 h6, h6 .px2-h6, h6 p, .px2-h6 h1, .px2-h6 .px2-h1, .px2-h6 h2, .px2-h6 .px2-h2, .px2-h6 h3, .px2-h6 .px2-h3, .px2-h6 h4, .px2-h6 .px2-h4, .px2-h6 h5, .px2-h6 .px2-h5, .px2-h6 h6, .px2-h6 .px2-h6, .px2-h6 p {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-h1 small, .px2-h1 small, h2 small, .px2-h2 small, h3 small, .px2-h3 small, h4 small, .px2-h4 small, h5 small, .px2-h5 small, h6 small, .px2-h6 small {
-  display: inline-block;
-  font-weight: normal;
-  color: #6c757d;
-  margin-left: 0.6em;
-}
-.px2-h1 .px2-h1__shoulder, .px2-h2 .px2-h2__shoulder, .px2-h3 .px2-h3__shoulder, .px2-h4 .px2-h4__shoulder, .px2-h5 .px2-h5__shoulder, .px2-h6 .px2-h6__shoulder {
-  float: right;
-  margin-left: 1em;
-  text-align: left;
-}
-.px2-h1 .px2-h1__shoulder ul, .px2-h1 .px2-h1__shoulder p, .px2-h2 .px2-h2__shoulder ul, .px2-h2 .px2-h2__shoulder p, .px2-h3 .px2-h3__shoulder ul, .px2-h3 .px2-h3__shoulder p, .px2-h4 .px2-h4__shoulder ul, .px2-h4 .px2-h4__shoulder p, .px2-h5 .px2-h5__shoulder ul, .px2-h5 .px2-h5__shoulder p, .px2-h6 .px2-h6__shoulder ul, .px2-h6 .px2-h6__shoulder p {
-  margin: 0;
-}
-.px2-h1 .px2-h1__shoulder::after, .px2-h2 .px2-h2__shoulder::after, .px2-h3 .px2-h3__shoulder::after, .px2-h4 .px2-h4__shoulder::after, .px2-h5 .px2-h5__shoulder::after, .px2-h6 .px2-h6__shoulder::after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
 }
 /**
  * module: px2style:sections/notice
