@@ -1,7 +1,7 @@
 "* path","* content","* id","* title","* title_breadcrumb","* title_h1","* title_label","* title_full","* logical_path","* list_flg","* layout","* orderby","* keywords","* description","* category_top_flg","* role","* proc_type","* **delete_flg"
 "/index.html",,,"ホーム",,,,,,"1","top",,,,,,,
-"/px2style_basics/",,,"標準モジュール",,,,,,"1",,,,,,,,
-"/px2style/",,,"px2style",,,,,,"1",,,,,,,,
+"/px2style_basics/",,,"標準モジュール",,,,,,"1",,,,,"1",,,
+"/px2style/",,,"px2style",,,,,,"1",,,,,"1",,,
 "/px2style/form_elements/",,,"フォーム要素",,,,,"/px2style/index.html","1",,,,,,,,
 "/px2style/modal/",,,"モーダル",,,,,"/px2style/index.html","1",,,,,,,,
 "/px2style/notice/",,,"ノーティス",,,,,"/px2style/index.html","1",,,,,,,,
