@@ -116,6 +116,42 @@
                         "modId": "px2style:sections/hx",
                         "fields": {
                             "hx": {
+                                "src": "3"
+                            },
+                            "main": {
+                                "src": "フォーム制御"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-form-input-list\" id=\"form-control-sample\">\n <ul class=\"px2-form-input-list__ul\">\n\t    <li class=\"px2-form-input-list__li\" data-name=\"input-text-001\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-001\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\"><input type=\"text\" id=\"input-text-001\" name=\"input-text-001\" value=\"Form Element: text input\" class=\"px2-input\" /></div>\n\t    </li>\n\t    <li class=\"px2-form-input-list__li px2-form-input-list__li--required\" data-name=\"input-text-002\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-002\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\">\n\t            <p class=\"px2-note\">Note.</p>\n\t            <input type=\"text\" id=\"input-text-002\" name=\"input-text-002\" value=\"Form Element: text input\" class=\"px2-input px2-input--block\" />\n\t        </div>\n\t    </li>\n\t    <li class=\"px2-form-input-list__li\" data-name=\"input-text-003\">\n\t        <div class=\"px2-form-input-list__label\"><label for=\"input-text-003\">Input Label</label></div>\n\t        <div class=\"px2-form-input-list__input\">\n\t            <input type=\"text\" id=\"input-text-003\" name=\"input-text-003\" value=\"Form Element: text input\" class=\"px2-input\" />\n\t        </div>\n\t    </li>\n </ul>\n</div>\n\n<p>\n\t<button type=\"button\" class=\"px2-btn\" data-btn-error-report>reportValidationError</button>\n\t<button type=\"button\" class=\"px2-btn\" data-btn-has-error>hasValidationError</button>\n</p>\n\n<script>\n$(function(){\n\tvar form = px2style.form(`#form-control-sample`);\n\tconsole.log('form:', form);\n\n\t$('[data-btn-error-report]').on('click', function(){\n\t\tform.reportValidationError({\n\t\t\terrors: {\n\t\t\t\t\"input-text-001\": \"テストエラーA\",\n\t\t\t\t\"input-text-003\": \"テストエラーC\",\n\t\t\t},\n\t\t});\n\t});\n\t$('[data-btn-has-error]').on('click', function(){\n\t\talert(form.hasValidationError());\n\t});\n\n});\n</script>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
                                 "src": "2"
                             },
                             "main": {

@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.1.2 (リリース日未定)
+
+- `px2style.form()` を追加。
+
 ### px2style v3.1.1 (2023/3/11)
 
 - `.px2-a` のスタイリングを改善。

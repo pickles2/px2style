@@ -171,6 +171,54 @@
 </div>
 
 </div>
+<div class="px2-h3">
+<h3>フォーム制御</h3>
+</div>
+<div class="px2-p">
+<div class="px2-form-input-list" id="form-control-sample">
+ <ul class="px2-form-input-list__ul">
+        <li class="px2-form-input-list__li" data-name="input-text-001">
+            <div class="px2-form-input-list__label"><label for="input-text-001">Input Label</label></div>
+            <div class="px2-form-input-list__input"><input type="text" id="input-text-001" name="input-text-001" value="Form Element: text input" class="px2-input" /></div>
+        </li>
+        <li class="px2-form-input-list__li px2-form-input-list__li--required" data-name="input-text-002">
+            <div class="px2-form-input-list__label"><label for="input-text-002">Input Label</label></div>
+            <div class="px2-form-input-list__input">
+                <p class="px2-note">Note.</p>
+                <input type="text" id="input-text-002" name="input-text-002" value="Form Element: text input" class="px2-input px2-input--block" />
+            </div>
+        </li>
+        <li class="px2-form-input-list__li" data-name="input-text-003">
+            <div class="px2-form-input-list__label"><label for="input-text-003">Input Label</label></div>
+            <div class="px2-form-input-list__input">
+                <input type="text" id="input-text-003" name="input-text-003" value="Form Element: text input" class="px2-input" />
+            </div>
+        </li>
+ </ul>
+</div>
+<p>
+    <button type="button" class="px2-btn" data-btn-error-report>reportValidationError</button>
+    <button type="button" class="px2-btn" data-btn-has-error>hasValidationError</button>
+</p>
+<script>
+$(function(){
+    var form = px2style.form(`#form-control-sample`);
+    console.log('form:', form);
+    $('[data-btn-error-report]').on('click', function(){
+        form.reportValidationError({
+            errors: {
+                "input-text-001": "テストエラーA",
+                "input-text-003": "テストエラーC",
+            },
+        });
+    });
+    $('[data-btn-has-error]').on('click', function(){
+        alert(form.hasValidationError());
+    });
+});
+</script>
+
+</div>
 <div class="px2-h2">
 <h2>送信ボタン</h2>
 </div>

@@ -37,6 +37,7 @@ if( !window.px2style ){
     // px2style components
     require('./../src_px2style/_src/config/_config.js');
     require('./../src_px2style/_src/modal/_modal.js');
+    require('./../src_px2style/_src/form/_form.js');
     require('./../src_px2style/_src/notice/_notice.js');
     require('./../src_px2style/_src/loading/_loading.js');
 }
