@@ -33,6 +33,7 @@ $ composer require pickles2/px2style
 ### px2style v3.1.2 (リリース日未定)
 
 - `px2style.form()` を追加。
+- `.px2-table.px2-table--dl` を追加。
 
 ### px2style v3.1.1 (2023/3/11)
 

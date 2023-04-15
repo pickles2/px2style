@@ -973,6 +973,7 @@ table.px2-table {
   border-collapse: collapse;
   margin: 0;
   text-align: left;
+  border: 1px solid #dee2e6;
 }
 table.px2-table th, table.px2-table td {
   border: 1px solid #dee2e6;
@@ -997,6 +998,38 @@ table.px2-table--center {
 }
 table.px2-table--right {
   margin: 0 0 0 auto;
+}
+table.px2-table--dl {
+  width: 100%;
+}
+table.px2-table--dl th {
+  width: 30%;
+}
+table.px2-table--dl td {
+  width: 70%;
+}
+@media (max-width: 440px) {
+  table.px2-table--dl {
+    display: block;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  table.px2-table--dl tbody, table.px2-table--dl thead, table.px2-table--dl tr, table.px2-table--dl th, table.px2-table--dl td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  table.px2-table--dl th, table.px2-table--dl td {
+    border-bottom: none;
+  }
+}
+table.px2-table th > *:first-child, table.px2-table td > *:first-child {
+  margin-top: 0;
+}
+table.px2-table th > *:last-child, table.px2-table td > *:last-child {
+  margin-bottom: 0;
 }
 /**
  * module: px2style:grids/grid
