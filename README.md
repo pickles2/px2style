@@ -34,6 +34,7 @@ $ composer require pickles2/px2style
 
 - `px2style.form()` を追加。
 - `.px2-table.px2-table--dl` を追加。
+- その他、いくつかの細かい改善。
 
 ### px2style v3.1.1 (2023/3/11)
 

@@ -10,6 +10,7 @@ table.px2-table {
 		border: 1px solid #dee2e6;
 		background: #fff;
 		padding: 0.4em 1em;
+		word-wrap: break-word;
 	}
 
 	th {
@@ -39,13 +40,14 @@ table.px2-table {
 
 	&--dl {
 		width: 100%;
+		table-layout: fixed;
 		th {
 			width: 30%;
 		}
 		td {
 			width: 70%;
 		}
-		@media all and (max-width: 440px) {
+		@media all and (max-width: 544px) {
 			display: block;
 			box-sizing: border-box;
 			border-top: none;

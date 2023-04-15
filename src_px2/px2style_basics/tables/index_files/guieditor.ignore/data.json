@@ -62,7 +62,7 @@
                         "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
-                                "src": "<table class=\"px2-table px2-table--dl\">\n\t<tr>\n\t\t<th>項目名1</th>\n\t\t<td>説明テキスト1。</td>\n\t</tr>\n\t<tr>\n\t\t<th>項目名2</th>\n\t\t<td><p>説明テキスト2。</p></td>\n\t</tr>\n\t<tr>\n\t\t<th>項目名3</th>\n\t\t<td><p>説明テキスト3。</p><p>説明テキスト3。</p></td>\n\t</tr>\n</table>\n",
+                                "src": "<table class=\"px2-table px2-table--dl\">\n\t<tr>\n\t\t<th>項目名1</th>\n\t\t<td>説明テキスト1。</td>\n\t</tr>\n\t<tr>\n\t\t<th>項目名2</th>\n\t\t<td><p>説明テキスト2。</p></td>\n\t</tr>\n\t<tr>\n\t\t<th>項目名3</th>\n\t\t<td><p>説明テキスト3。</p><p>説明テキスト3。</p></td>\n\t</tr>\n\t<tr>\n\t\t<th>Input Label LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel Label Label Label</th>\n\t\t<td>Input Label LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel Label Label Label</td>\n\t</tr>\n</table>\n",
                                 "editor": "markdown"
                             },
                             "text-align": {

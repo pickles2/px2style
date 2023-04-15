@@ -12,13 +12,11 @@ body.px2-scroll-lock--iphone {
 }
 input[type=color].px2-input, input[type=date].px2-input, input[type=datetime-local].px2-input, input[type=datetime].px2-input, input[type=email].px2-input, input[type=file].px2-input, input[type=month].px2-input, input[type=number].px2-input, input[type=password].px2-input, input[type=search].px2-input, input[type=tel].px2-input, input[type=text].px2-input, input[type=time].px2-input, input[type=url].px2-input, input[type=week].px2-input, select.px2-input, textarea.px2-input {
   background-clip: padding-box;
-  background-color: #f9f9f9;
-  background-color: var(--px2-background-color, #f9f9f9);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   box-sizing: border-box;
   color: #333;
-  color: var(--px2-text-color, #333);
   display: inline-block;
   font-size: 1em;
   font-weight: 400;
@@ -133,8 +131,7 @@ input[type=search].px2-input {
   flex-grow: 1;
 }
 .px2-form-input-list {
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin: 1em -10px;
 }
 .px2-form-input-list ul.px2-form-input-list__ul {
   border-collapse: collapse;
@@ -156,7 +153,7 @@ input[type=search].px2-input {
   display: table-cell;
   font-weight: 700;
   max-width: 140px;
-  padding: 1em;
+  padding: 1em 10px;
   vertical-align: top;
   width: 140px;
 }
@@ -165,7 +162,7 @@ input[type=search].px2-input {
   box-sizing: border-box;
   display: table-cell;
   max-width: calc(100% - 140px);
-  padding: 1em;
+  padding: 1em 10px;
   vertical-align: top;
   width: calc(100% - 140px);
 }
@@ -979,6 +976,7 @@ table.px2-table th, table.px2-table td {
   border: 1px solid #dee2e6;
   background: #fff;
   padding: 0.4em 1em;
+  word-wrap: break-word;
 }
 table.px2-table th {
   background: #f9f9f9;
@@ -1001,6 +999,7 @@ table.px2-table--right {
 }
 table.px2-table--dl {
   width: 100%;
+  table-layout: fixed;
 }
 table.px2-table--dl th {
   width: 30%;
@@ -1008,7 +1007,7 @@ table.px2-table--dl th {
 table.px2-table--dl td {
   width: 70%;
 }
-@media (max-width: 440px) {
+@media (max-width: 544px) {
   table.px2-table--dl {
     display: block;
     box-sizing: border-box;
