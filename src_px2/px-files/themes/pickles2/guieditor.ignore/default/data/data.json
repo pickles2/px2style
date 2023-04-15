@@ -55,7 +55,9 @@
                                 {
                                     "modId": "themeEditorModules:vars/bowl",
                                     "fields": {
-                                        "bowlName": ""
+                                        "bowlName": {
+                                            "src": ""
+                                        }
                                     },
                                     "anchor": "",
                                     "dec": ""

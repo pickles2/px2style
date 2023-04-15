@@ -1097,17 +1097,23 @@
                                 {
                                     "modId": "px2style:lists/ul-media-list",
                                     "fields": {
-                                        "href": "javascript:alert('clicked');",
-                                        "label": "メディアリストアイテム",
-                                        "target": "",
+                                        "href": {
+                                            "src": "javascript:alert('clicked');"
+                                        },
+                                        "label": {
+                                            "src": "メディアリストアイテム"
+                                        },
+                                        "target": {
+                                            "src": ""
+                                        },
                                         "image": {
                                             "resKey": "b238a15d6bef2c7aa900f03458355a78",
                                             "resType": "",
                                             "webUrl": "",
-                                            "path": "./index_files/resources/photo001_thumb.jpg"
+                                            "path": "./index_files/resources/photo001_thumb2.jpg"
                                         },
                                         "description": {
-                                            "src": "リンク説明。",
+                                            "src": "リンク説明。 Link Description DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription Description Description.\n",
                                             "editor": "markdown"
                                         }
                                     },

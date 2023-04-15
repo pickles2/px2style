@@ -89,7 +89,47 @@
                                     "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {
-                                            "src": "セクションの本文エリアです。",
+                                            "src": "セクションの本文エリアです。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "セクションの本文エリアです。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "セクションの本文エリアです。\n",
                                             "editor": "markdown"
                                         },
                                         "text-align": {
