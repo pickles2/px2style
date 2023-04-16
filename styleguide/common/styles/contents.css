@@ -395,12 +395,17 @@ input[type=search].px2-input {
   border-top: 1px solid #e5e5e5;
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   margin: 10px 0 0;
+  max-height: 30vh;
+  overflow: auto;
   padding: 10px 20px 0;
 }
 .px2-modal__footer-primary > ul, .px2-modal__footer-secondary > ul, .px2-modal__footer > ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   justify-content: flex-end;
   margin: 0;
