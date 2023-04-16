@@ -160,6 +160,7 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		flex-shrink: 0;
 		gap: 10px;
 		overflow: auto;
 		max-height: 30vh;
