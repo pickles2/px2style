@@ -985,7 +985,7 @@ table.px2-table {
 table.px2-table th, table.px2-table td {
   border: 1px solid #dee2e6;
   background: #fff;
-  padding: 0.4em 1em;
+  padding: 0.6em 1em;
   word-wrap: break-word;
 }
 table.px2-table th {
@@ -1013,25 +1013,31 @@ table.px2-table--dl {
 }
 table.px2-table--dl th {
   width: 30%;
+  border-right: none;
+  border-left: none;
 }
 table.px2-table--dl td {
   width: 70%;
+  border-right: none;
+  border-left: none;
 }
 @media (max-width: 544px) {
   table.px2-table--dl {
     display: block;
     box-sizing: border-box;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-bottom: none;
   }
   table.px2-table--dl tbody, table.px2-table--dl thead, table.px2-table--dl tr, table.px2-table--dl th, table.px2-table--dl td {
     display: block;
     box-sizing: border-box;
     width: 100%;
   }
-  table.px2-table--dl th, table.px2-table--dl td {
-    border-bottom: none;
+  table.px2-table--dl th {
+    border: none;
+  }
+  table.px2-table--dl td {
+    border-top: none;
+    padding-bottom: 1em;
   }
 }
 table.px2-table th > *:first-child, table.px2-table td > *:first-child {

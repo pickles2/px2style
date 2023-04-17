@@ -9,7 +9,7 @@ table.px2-table {
 	td {
 		border: 1px solid #dee2e6;
 		background: #fff;
-		padding: 0.4em 1em;
+		padding: 0.6em 1em;
 		word-wrap: break-word;
 	}
 
@@ -43,16 +43,18 @@ table.px2-table {
 		table-layout: fixed;
 		th {
 			width: 30%;
+			border-right: none;
+			border-left: none;
 		}
 		td {
 			width: 70%;
+			border-right: none;
+			border-left: none;
 		}
 		@media all and (max-width: 544px) {
 			display: block;
 			box-sizing: border-box;
-			border-top: none;
-			border-left: none;
-			border-right: none;
+			border-bottom: none;
 			tbody,
 			thead,
 			tr,
@@ -62,9 +64,12 @@ table.px2-table {
 				box-sizing: border-box;
 				width: 100%;
 			}
-			th,
+			th {
+				border: none;
+			}
 			td {
-				border-bottom: none;
+				border-top: none;
+				padding-bottom: 1em;
 			}
 		}
 	}
