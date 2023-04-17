@@ -373,6 +373,54 @@
                                 "src": "3"
                             },
                             "main": {
+                                "src": "ボタンがたくさんあるサンプル"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "Open modal dialog which has many buttons."
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "px2style.modal(\n\t{\n\t\ttitle: 'Sample Modal Dialog.',\n\t\ttarget: '.contents',\n\t\tbody: '<div><p>Sample Content.</p><p>Sample Content.</p></div>',\n\t\tbuttons: [\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 1</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 2</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 3</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 4</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 5</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 6</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--primary\" onclick=\"px2style.closeModal();\">OK 7</button>',\n\t\t],\n\t\tbuttonsSecondary: [\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 1</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 2</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 3</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 4</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 5</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 6</button>',\n\t\t\t'<button type=\"button\" class=\"px2-btn px2-btn--secondary\" onclick=\"px2style.closeModal();\">Cancel 7</button>',\n\t\t],\n\t},\n\tfunction(){\n\t\tconsole.log('done.');\n\t}\n);\n",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
                                 "src": "ドロワーのサンプル"
                             },
                             "sub": {

@@ -396,7 +396,7 @@ input[type=search].px2-input {
   display: flex;
   flex-direction: row-reverse;
   flex-shrink: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   justify-content: space-between;
   margin: 10px 0 0;
@@ -406,7 +406,7 @@ input[type=search].px2-input {
 }
 .px2-modal__footer-primary > ul, .px2-modal__footer-secondary > ul, .px2-modal__footer > ul {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 5px;
   justify-content: flex-end;
   margin: 0;
@@ -416,6 +416,10 @@ input[type=search].px2-input {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+}
+.px2-modal__footer-secondary > ul {
+  justify-content: flex-start;
 }
 @keyframes px2-modal--initial {
   0% {
