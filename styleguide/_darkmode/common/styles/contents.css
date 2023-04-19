@@ -1641,15 +1641,15 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
   flex-grow: 1;
   flex-shrink: 0;
 }
-.px2-tabs__tabs ul {
+.px2-tabs__tabs > ul {
   display: flex;
   flex-wrap: nowrap;
   gap: 2px;
   border-bottom: 1px solid #dee2e6;
-  margin: 0;
+  margin: 0 0 0 0 !important;
   padding: 5px 5px 0px 5px;
 }
-.px2-tabs__tabs li {
+.px2-tabs__tabs > ul > li {
   list-style-type: none;
   display: block;
   margin: 0;
@@ -1661,7 +1661,7 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
   box-sizing: border-box;
   transform: translate(0px, 1px);
 }
-.px2-tabs__tabs a {
+.px2-tabs__tabs > ul > li > a {
   display: block;
   width: auto;
   height: 100%;
@@ -1671,16 +1671,16 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
   padding: 0.5em 1em;
   box-sizing: border-box;
 }
-.px2-tabs__tabs a.px2-tabs--active {
+.px2-tabs__tabs > ul > li > a.px2-tabs--active {
   color: #666;
   text-decoration: none;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
-.px2-tabs__tabs a.px2-tabs--active:hover {
+.px2-tabs__tabs > ul > li > a.px2-tabs--active:hover {
   border-bottom-color: #fff;
 }
-.px2-tabs__tabs a:hover {
+.px2-tabs__tabs > ul > li > a:hover {
   border-color: #dee2e6;
   background-color: #f5faff;
 }

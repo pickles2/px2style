@@ -10,15 +10,15 @@
 		box-sizing: border-box;
 		flex-grow: 1;
 		flex-shrink: 0;
-		ul {
+		> ul {
 			display: flex;
 			flex-wrap: nowrap;
 			gap: 2px;
 			border-bottom: 1px solid #dee2e6;
-			margin: 0;
+			margin: 0 0 0 0 !important;
 			padding: 5px 5px 0px 5px;
 		}
-		li {
+		> ul > li {
 			list-style-type: none;
 			display: block;
 			margin: 0;
@@ -30,7 +30,7 @@
 			box-sizing: border-box;
 			transform: translate(0px, 1px);
 		}
-		a {
+		> ul > li > a {
 			display: block;
 			width: auto;
 			height: 100%;
