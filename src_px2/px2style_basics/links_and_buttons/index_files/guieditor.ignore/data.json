@@ -738,6 +738,62 @@
                         },
                         "anchor": "",
                         "dec": ""
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "2"
+                            },
+                            "main": {
+                                "src": "ラジオスイッチ"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-radio-switch\">\n\t<ul>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-001\" value=\"1\" checked=\"checked\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ1</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-001\" value=\"2\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ2</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-001\" value=\"3\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ3</span></label></li>\n\t</ul>\n</div>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "<div class=\"px2-radio-switch\">\n\t<ul>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"1\" checked=\"checked\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ1</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"2\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ2</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"3\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ3</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"4\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ4</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"5\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ5</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"6\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ6</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"7\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ7</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"8\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ8</span></label></li>\n\t\t<li><label><input type=\"radio\" name=\"cont-radio-sample-002\" value=\"9\" />\n\t\t\t<span class=\"px2-radio-switch__btn\">スイッチ9</span></label></li>\n\t</ul>\n</div>\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": ""
                     }
                 ]
             }
