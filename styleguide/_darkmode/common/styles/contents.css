@@ -1631,20 +1631,35 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
 .px2-tabs {
   margin-top: 1em;
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
 }
 .px2-tabs__tabs {
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #dee2e6;
   text-align: left;
+  overflow: auto;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
-.px2-tabs__tabs div {
+.px2-tabs__tabs ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  border-bottom: 1px solid #dee2e6;
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+}
+.px2-tabs__tabs li {
+  list-style-type: none;
   display: block;
+  margin: 0;
+  padding: 0;
   width: auto;
   height: 100%;
-  margin-bottom: -1px;
-  margin-right: 2px;
   box-sizing: border-box;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transform: translate(0px, 1px);
 }
 .px2-tabs__tabs a {
   display: block;
@@ -1654,6 +1669,7 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
   padding: 0.5em 1em;
+  box-sizing: border-box;
 }
 .px2-tabs__tabs a.px2-tabs--active {
   color: #666;
@@ -1666,18 +1682,31 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
 }
 .px2-tabs__tabs a:hover {
   border-color: #dee2e6;
+  background-color: #f5faff;
 }
 .px2-tabs__contents {
   border: 1px solid #dee2e6;
   border-top: none;
   padding: 1rem;
   background-color: #fff;
+  flex-grow: 1000;
+  display: flex;
+  flex-direction: column;
 }
 .px2-tabs__content {
   display: none;
 }
 .px2-tabs__content.px2-tabs--active {
   display: block;
+}
+.px2-tabs__content > *:first-child {
+  margin-top: 0;
+}
+.px2-tabs__content > *:last-child {
+  margin-bottom: 0;
+}
+.px2-tabs--allow-tabs-wrap .px2-tabs__tabs ul {
+  flex-wrap: wrap;
 }
 /**
  * module: px2style:lists/changelog
@@ -2530,6 +2559,12 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
 .px2-p {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+.px2-p > *:first-child {
+  margin-top: 0px;
+}
+.px2-p > *:last-child {
+  margin-bottom: 0px;
 }
 .px2-text-align-left {
   text-align: left;

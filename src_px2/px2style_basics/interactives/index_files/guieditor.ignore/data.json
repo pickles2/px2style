@@ -341,7 +341,20 @@
                                                 },
                                                 "anchor": "",
                                                 "dec": ""
-                                            },
+                                            }
+                                        ]
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "タブ内にタブをネストするタブ"
+                                        },
+                                        "main": [
                                             {
                                                 "modId": "px2style:interactives/tabs",
                                                 "fields": {
@@ -422,8 +435,74 @@
                                     "subModName": "loop",
                                     "anchor": "",
                                     "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "長いラベルのタブ"
+                                        },
+                                        "main": []
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "長いラベルのタブ 2"
+                                        },
+                                        "main": []
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "長いラベルのタブ 3"
+                                        },
+                                        "main": []
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "長いラベルのタブ 4"
+                                        },
+                                        "main": []
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
+                                    "modId": "px2style:interactives/tabs",
+                                    "fields": {
+                                        "tab-label": {
+                                            "src": "長いラベルのタブ 5"
+                                        },
+                                        "main": []
+                                    },
+                                    "subModName": "loop",
+                                    "anchor": "",
+                                    "dec": ""
                                 }
-                            ]
+                            ],
+                            "allow-tabs-wrap": {
+                                "src": "1"
+                            },
+                            "tabs-overflow": {
+                                "src": "scroll"
+                            }
                         },
                         "anchor": "",
                         "dec": ""
