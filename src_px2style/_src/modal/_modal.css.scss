@@ -155,13 +155,13 @@
 	&__footer {
 		border-top: 1px solid #e5e5e5;
 		margin: 10px 0 0 0;
-		padding: 10px 20px 0 20px;
+		padding: 10px 20px 2px 20px;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		flex-wrap: nowrap;
 		flex-shrink: 0;
-		gap: 10px;
+		gap: 30px;
 		overflow: auto;
 		max-height: 30vh;
 
