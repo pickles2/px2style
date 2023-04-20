@@ -271,6 +271,7 @@ input[type=search].px2-input {
   right: 20px;
   top: 18px;
   width: 20px;
+  z-index: 1150;
 }
 .px2-modal__close button {
   background-color: transparent;
@@ -363,8 +364,9 @@ input[type=search].px2-input {
 .px2-modal__header {
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 5px 12px -5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   padding: 8px 40px 8px 20px;
+  z-index: 1100;
 }
 .px2-modal__body {
   box-sizing: border-box;
@@ -373,6 +375,7 @@ input[type=search].px2-input {
   padding: 0 20px;
   position: relative;
   top: 0;
+  z-index: 1050;
 }
 .px2-modal__body-inner {
   box-sizing: border-box;
@@ -399,10 +402,11 @@ input[type=search].px2-input {
   flex-wrap: nowrap;
   gap: 30px;
   justify-content: space-between;
-  margin: 10px 0 0;
+  margin: 0;
   max-height: 30vh;
   overflow: auto;
   padding: 10px 20px 2px;
+  z-index: 1100;
 }
 .px2-modal__footer-primary > ul, .px2-modal__footer-secondary > ul, .px2-modal__footer > ul {
   display: flex;
