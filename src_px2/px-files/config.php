@@ -480,6 +480,7 @@ return call_user_func( function(){
 		'png' => $droppedImageOperator,
 		'gif' => $droppedImageOperator,
 		'jpg' => $droppedImageOperator,
+		'webp' => $droppedImageOperator,
 		'svg' => $droppedImageOperator,
 		'application/svg+xml' => $droppedImageOperator,
 	);

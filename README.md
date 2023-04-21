@@ -36,6 +36,8 @@ $ composer require pickles2/px2style
 - `.px2-table.px2-table--dl` を追加。
 - `.px2-radio-switch` を追加。
 - `.px2-tabs` に、タブの折返しオプションを追加.
+- imageフィールドに、登録した画像が自動的にリサイズされる機能を追加した。
+- imageフィールドに、`format` オプションを追加した。
 - その他、いくつかの細かい改善。
 
 ### px2style v3.1.1 (2023/3/11)
