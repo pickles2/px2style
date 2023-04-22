@@ -485,6 +485,18 @@ return call_user_func( function(){
 		'application/svg+xml' => $droppedImageOperator,
 	);
 
+	$conf->plugins->px2dt->guieditor->field_config = array(
+		// image フィールドを設定
+		'image' => array(
+			// 'filenameAutoSetter' => 'random', // random = 画像ファイル名をランダムに自動命名する。
+			'format' => array(
+				'maxWidth' => 1600,
+				'quality' => 0.2,
+				'mimeType' => 'image/webp',
+			),
+		),
+	);
+
 
 	// -------- PHP Setting --------
 
