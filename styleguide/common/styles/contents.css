@@ -2578,10 +2578,6 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
   background-color: #cce5ff;
   border: 1px solid #b8daff;
 }
-.px2-notice * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .px2-notice > *:first-child {
   margin-top: 0;
 }
