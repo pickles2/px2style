@@ -1797,12 +1797,6 @@ table.px2-table th > *:last-child, table.px2-table td > *:last-child {
 .px2-tabs__content.px2-tabs--active {
   display: block;
 }
-.px2-tabs__content > *:first-child {
-  margin-top: 0;
-}
-.px2-tabs__content > *:last-child {
-  margin-bottom: 0;
-}
 .px2-tabs--allow-tabs-wrap .px2-tabs__tabs ul {
   flex-wrap: wrap;
 }
@@ -2577,12 +2571,6 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
   color: #004085;
   background-color: #cce5ff;
   border: 1px solid #b8daff;
-}
-.px2-notice > *:first-child {
-  margin-top: 0;
-}
-.px2-notice > *:last-child {
-  margin-bottom: 0;
 }
 .px2-notice.px2-notice--success {
   color: #155724;
