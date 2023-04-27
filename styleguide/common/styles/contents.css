@@ -494,39 +494,6 @@ input[type=search].px2-input {
 .px2-modal.px2-modal--type-drawer-right .px2-modal__dialog--closed {
   right: -100%;
 }
-.px2-notice {
-  background-color: #cce5ff;
-  border: 1px solid #b8daff;
-  border-radius: 0.25em;
-  color: #004085;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
-  padding: 0.75em 1.25em;
-}
-.px2-notice * {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.px2-notice.px2-notice--success {
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  color: #155724;
-}
-.px2-notice.px2-notice--warning {
-  background-color: #fff3cd;
-  border-color: #ffeeba;
-  color: #856404;
-}
-.px2-notice.px2-notice--danger {
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  color: #721c24;
-}
-.px2-notice.px2-notice--info {
-  background-color: #d1ecf1;
-  border-color: #bee5eb;
-  color: #0c5460;
-}
 @keyframes px2-loading {
   0% {
     opacity: 1;
