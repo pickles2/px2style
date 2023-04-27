@@ -30,7 +30,7 @@
                                             "webUrl": ""
                                         },
                                         "alt_text": {
-                                            "src": ""
+                                            "src": "代替テキスト"
                                         },
                                         "framed": {
                                             "src": ""
@@ -45,7 +45,7 @@
                                             "src": ""
                                         },
                                         "caption": {
-                                            "src": "",
+                                            "src": "キャプションテキスト",
                                             "editor": "markdown"
                                         },
                                         "imagescope": {

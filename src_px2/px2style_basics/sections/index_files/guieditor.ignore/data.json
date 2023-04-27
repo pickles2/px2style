@@ -86,6 +86,22 @@
                             ],
                             "main": [
                                 {
+                                    "modId": "px2style:sections/hx",
+                                    "fields": {
+                                        "hx": {
+                                            "src": "3"
+                                        },
+                                        "main": {
+                                            "src": "h3見出し"
+                                        },
+                                        "sub": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                },
+                                {
                                     "modId": "px2style:basics/text",
                                     "fields": {
                                         "main": {

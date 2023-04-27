@@ -2614,7 +2614,6 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
 }
 .px2-section.px2-section--framed .px2-section__heading *, .px2-section.px2-section--framed .px2-section__heading .px2-h2, .px2-section.px2-section--framed .px2-section__heading h2, .px2-section.px2-section--framed .px2-section__heading .px2-h3, .px2-section.px2-section--framed .px2-section__heading h3, .px2-section.px2-section--framed .px2-section__heading .px2-h4, .px2-section.px2-section--framed .px2-section__heading h4, .px2-section.px2-section--framed .px2-section__heading .px2-h5, .px2-section.px2-section--framed .px2-section__heading h5, .px2-section.px2-section--framed .px2-section__heading .px2-h6, .px2-section.px2-section--framed .px2-section__heading h6 {
   margin: 0px;
-  font-size: medium;
 }
 .px2-section.px2-section--framed .px2-section__heading * small, .px2-section.px2-section--framed .px2-section__heading .px2-h2 small, .px2-section.px2-section--framed .px2-section__heading h2 small, .px2-section.px2-section--framed .px2-section__heading .px2-h3 small, .px2-section.px2-section--framed .px2-section__heading h3 small, .px2-section.px2-section--framed .px2-section__heading .px2-h4 small, .px2-section.px2-section--framed .px2-section__heading h4 small, .px2-section.px2-section--framed .px2-section__heading .px2-h5 small, .px2-section.px2-section--framed .px2-section__heading h5 small, .px2-section.px2-section--framed .px2-section__heading .px2-h6 small, .px2-section.px2-section--framed .px2-section__heading h6 small {
   font-size: 80%;
