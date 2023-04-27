@@ -2654,12 +2654,6 @@ ul > li > ul, ul > li > ol, ul > li > .px2-p, ul > li > .px2-p p, ul > li > p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.px2-p > *:first-child {
-  margin-top: 0px;
-}
-.px2-p > *:last-child {
-  margin-bottom: 0px;
-}
 .px2-text-align-left {
   text-align: left;
 }

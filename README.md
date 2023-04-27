@@ -32,7 +32,7 @@ $ composer require pickles2/px2style
 
 ### px2style v3.1.3 (リリース日未定)
 
-- `.px2-notice` のスタイルの微修正。
+- `.px2-p`、 `.px2-notice` のスタイルの修正。
 
 ### px2style v3.1.2 (2023/4/22)
 
