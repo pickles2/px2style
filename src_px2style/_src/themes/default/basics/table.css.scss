@@ -28,19 +28,8 @@ table.px2-table {
 		background: #eee;
 	}
 
-	&--left{
-		margin: 0 auto 0 0;
-	}
-	&--center{
-		margin: 0 auto 0 auto;
-	}
-	&--right{
-		margin: 0 0 0 auto;
-	}
-
 	&--dl {
-		width: 100%;
-		table-layout: fixed;
+
 		th {
 			width: 30%;
 			border-right: none;

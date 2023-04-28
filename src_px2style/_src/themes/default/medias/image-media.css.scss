@@ -1,14 +1,6 @@
 .px2-embedded-media{
 	margin: 0 0 1em 0;
 
-	&__image-media {
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	}
-
 	&--framed {
 		box-sizing: border-box;
 		border: 1px solid #bbb;
@@ -26,9 +18,5 @@
 			margin-top: 0;
 			margin-bottom: 0;
 		}
-	}
-
-	&--imagescope img {
-		cursor: pointer;
 	}
 }

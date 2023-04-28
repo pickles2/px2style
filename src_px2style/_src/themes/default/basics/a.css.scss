@@ -12,15 +12,10 @@
 		border-top-color: transparent;
 		border-bottom-color: transparent;
 	}
-	&--block {
-		display: block;
-		width: 100%;
-	}
 }
 .px2-open-in-new-window {
 	&::after {
 		content: '';
-		background-image: url("./resources/link.png");
 		width: 0.8em;
 		height: 0.8em;
 		display: inline-block;
