@@ -8,3 +8,4 @@
 
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/modules.css') ); ?>" />
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/theme.css') ); ?>">
+		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/px2style-theme-default.css') ); ?>">
