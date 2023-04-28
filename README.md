@@ -33,6 +33,7 @@ $ composer require pickles2/px2style
 ### px2style v3.1.3 (リリース日未定)
 
 - `.px2-p`、 `.px2-section`、 `.px2-notice`、 `.px2-tabs` のスタイルの修正。
+- ベーススタイルシートと defaultテーマ が切り離された。
 
 ### px2style v3.1.2 (2023/4/22)
 

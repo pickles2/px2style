@@ -1,6 +1,7 @@
-
-// px2style
-@import '../../../../src_broccoli/px2style.css.scss';
+$px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+$px2-main-color: #00a0e6;
+$px2-text-color: #333;
+$px2-background-color: #f9f9f9;
 
 :root {
 	--px2-font-family: $px2-font-family;
@@ -9,28 +10,33 @@
 	--px2-background-color: $px2-background-color;
 }
 
+// px2style
+@import './px2style/utils.css.scss';
+@import './px2style/form.css.scss';
+@import './px2style/modal.css.scss';
+@import './px2style/loading.css.scss';
+
 // broccoli-module-px2style
-@import '../../../../broccoli_modules/basics/basics/a/module.css.scss';
-@import '../../../../broccoli_modules/basics/basics/banner/module.css.scss';
-@import '../../../../broccoli_modules/basics/basics/hx/module.css.scss';
-@import '../../../../broccoli_modules/basics/basics/image/module.css.scss';
-@import '../../../../broccoli_modules/basics/basics/table/module.css.scss';
-@import '../../../../broccoli_modules/basics/basics/text/module.css.scss';
-@import '../../../../broccoli_modules/basics/grids/grid/module.css.scss';
-@import '../../../../broccoli_modules/basics/sections/section/module.css.scss';
-@import '../../../../broccoli_modules/basics/sections/notice/module.css.scss';
-@import '../../../../broccoli_modules/basics/sections/blockquote/module.css.scss';
-@import '../../../../broccoli_modules/basics/interactives/accordion/module.css.scss';
-@import '../../../../broccoli_modules/basics/interactives/carousel/module.css.scss';
-@import '../../../../broccoli_modules/basics/interactives/tabs/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/changelog/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/dl/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/index/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/ul/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/ul-links/module.css.scss';
-@import '../../../../broccoli_modules/basics/lists/ul-media-list/module.css.scss';
-@import '../../../../broccoli_modules/basics/medias/float/module.css.scss';
-@import '../../../../broccoli_modules/basics/medias/image-media/module.css.scss';
-@import '../../../../broccoli_modules/basics/utils/p/module.css.scss';
-@import '../../../../broccoli_modules/basics/utils/responsive/module.css.scss';
-@import '../../../../broccoli_modules/basics/utils/viewport-fit/module.css.scss';
+@import './basics/a.css.scss';
+@import './basics/banner.css.scss';
+@import './basics/hx.css.scss';
+@import './basics/image.css.scss';
+@import './basics/table.css.scss';
+@import './grids/grid.css.scss';
+@import './sections/section.css.scss';
+@import './sections/notice.css.scss';
+@import './sections/blockquote.css.scss';
+@import './interactives/accordion.css.scss';
+@import './interactives/carousel.css.scss';
+@import './interactives/tabs.css.scss';
+@import './lists/changelog.css.scss';
+@import './lists/dl.css.scss';
+@import './lists/index.css.scss';
+@import './lists/ul.css.scss';
+@import './lists/ul-links.css.scss';
+@import './lists/ul-media-list.css.scss';
+@import './medias/float.css.scss';
+@import './medias/image-media.css.scss';
+@import './utils/p.css.scss';
+@import './utils/responsive.css.scss';
+@import './utils/viewport-fit.css.scss';
