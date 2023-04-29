@@ -726,17 +726,15 @@ input[type=search].px2-input {
   position: relative;
   margin-top: 1em;
   margin-bottom: 1em;
-  padding: 10px 0;
+  padding: 0;
   overflow: auto;
-  background-color: #f9f9f9;
-  border-radius: 13px;
+  background-color: rgba(220, 220, 220, 0.3);
   white-space: nowrap;
-  box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
   box-sizing: border-box;
 }
 .px2-radio-switch > ul {
-  padding: 0 15px;
+  padding: 10px 15px;
   margin: 0;
   display: inline-flex;
   gap: 5px;
@@ -2372,7 +2370,6 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   padding: 0.75em 15px;
-  border-radius: 8px;
   color: #004085;
   background-color: #cce5ff;
   border: 1px solid #b8daff;
@@ -2480,16 +2477,4 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
 .px2-viewport-fit__contents--fluid {
   width: 100%;
   max-width: 100%;
-}
-.contents {
-  position: relative;
-}
-pre {
-  padding: 0;
-}
-pre > code {
-  display: block;
-  padding: 1em;
-  margin: 0;
-  overflow: auto;
 }
