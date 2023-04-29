@@ -418,6 +418,58 @@
                                                                         },
                                                                         "anchor": "",
                                                                         "dec": ""
+                                                                    },
+                                                                    {
+                                                                        "modId": "px2style:sections/hx",
+                                                                        "fields": {
+                                                                            "hx": {
+                                                                                "src": "2"
+                                                                            },
+                                                                            "main": {
+                                                                                "src": "h2見出し"
+                                                                            },
+                                                                            "sub": {
+                                                                                "src": "副見出し"
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    },
+                                                                    {
+                                                                        "modId": "px2style:sections/hx",
+                                                                        "fields": {
+                                                                            "hx": {
+                                                                                "src": "3"
+                                                                            },
+                                                                            "main": {
+                                                                                "src": "h3見出し"
+                                                                            },
+                                                                            "sub": {
+                                                                                "src": "副見出し"
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
+                                                                    },
+                                                                    {
+                                                                        "modId": "px2style:basics/text",
+                                                                        "fields": {
+                                                                            "main": {
+                                                                                "src": "pテキスト。段落。\n",
+                                                                                "editor": "markdown"
+                                                                            },
+                                                                            "text-align": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "font-size": {
+                                                                                "src": ""
+                                                                            },
+                                                                            "paragraph": {
+                                                                                "src": "px2-p"
+                                                                            }
+                                                                        },
+                                                                        "anchor": "",
+                                                                        "dec": ""
                                                                     }
                                                                 ]
                                                             },
@@ -442,7 +494,60 @@
                                         "tab-label": {
                                             "src": "長いラベルのタブ"
                                         },
-                                        "main": []
+                                        "main": [
+                                            {
+                                                "modId": "px2style:sections/hx",
+                                                "fields": {
+                                                    "hx": {
+                                                        "src": "2"
+                                                    },
+                                                    "main": {
+                                                        "src": "h2見出し"
+                                                    },
+                                                    "sub": {
+                                                        "src": "副見出し"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:sections/hx",
+                                                "fields": {
+                                                    "hx": {
+                                                        "src": "3"
+                                                    },
+                                                    "main": {
+                                                        "src": "h3見出し"
+                                                    },
+                                                    "sub": {
+                                                        "src": "副見出し"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            },
+                                            {
+                                                "modId": "px2style:basics/text",
+                                                "fields": {
+                                                    "main": {
+                                                        "src": "pテキスト。段落。\n",
+                                                        "editor": "markdown"
+                                                    },
+                                                    "text-align": {
+                                                        "src": ""
+                                                    },
+                                                    "font-size": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
+                                                },
+                                                "anchor": "",
+                                                "dec": ""
+                                            }
+                                        ]
                                     },
                                     "subModName": "loop",
                                     "anchor": "",

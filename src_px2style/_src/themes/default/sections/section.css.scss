@@ -21,6 +21,7 @@
 		.px2-h4, h4,
 		.px2-h5, h5,
 		.px2-h6, h6 {
+			font-size: 20px;
 			margin-top: 0px;
 			margin-bottom: 0px;
 			small {
@@ -31,5 +32,14 @@
 	.px2-section__body {
 		padding: 0.75em 15px;
 		box-sizing: border-box;
+
+		> *:first-child,
+		> *:first-child > *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child,
+		> *:last-child > *:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

@@ -267,3 +267,20 @@
 		}
 	}
 }
+
+// .px2-form-input-list 調整
+.px2-modal .px2-modal__body-inner > .px2-form-input-list {
+	margin-left: -20px;
+	margin-right: -20px;
+
+	.px2-form-input-list__ul > .px2-form-input-list__li {
+		.px2-form-input-list__label {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.px2-form-input-list__input {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

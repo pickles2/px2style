@@ -7,6 +7,23 @@
 	color: #004085;
 	background-color: #cce5ff;
 	border: 1px solid #b8daff;
+
+	.px2-h2 h2, h2,
+	.px2-h3 h3, h3,
+	.px2-h4 h4, h4,
+	.px2-h5 h5, h5,
+	.px2-h6 h6, h6 {
+		font-size: 20px;
+	}
+
+	> :first-child,
+	> :first-child > :first-child {
+		margin-top: 0;
+	}
+	> :last-child,
+	> :last-child > :last-child {
+		margin-bottom: 0;
+	}
 }
 .px2-notice.px2-notice--success {
 	color: #155724;

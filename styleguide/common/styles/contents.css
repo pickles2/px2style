@@ -1685,7 +1685,7 @@ table.px2-table--dl td {
 .px2-tabs__contents {
   border: 1px solid #dee2e6;
   border-top: none;
-  padding: 1rem;
+  padding: 0 15px;
   flex-grow: 1000;
   display: flex;
   flex-direction: column;
