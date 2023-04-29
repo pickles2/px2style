@@ -1755,24 +1755,71 @@ table.px2-table--dl td {
 .px2-linklist ul {
   padding: 0;
   margin: 0;
+  border: 1px solid #e5e5e5;
   overflow: hidden;
 }
 .px2-linklist ul li {
   list-style-type: none;
+  border-top: 1px solid #e5e5e5;
   padding: 0;
   margin: 0;
+}
+.px2-linklist ul li:first-child {
+  border-top: none;
 }
 .px2-linklist ul li > a {
   display: block;
   position: relative;
+  padding: 20px 45px 20px 30px;
+}
+.px2-linklist ul li > a::before {
+  content: none;
+}
+.px2-linklist ul li > a::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 8px);
+  transform: rotate(45deg);
 }
 .px2-linklist ul li > span {
   display: block;
+  padding: 20px 30px;
 }
 .px2-linklist ul li ul {
   border: none;
+  border-radius: 0px;
   overflow: auto;
   box-shadow: none;
+}
+.px2-linklist ul li ul li, .px2-linklist ul li ul li:first-child {
+  border-top: 1px dashed #e5e5e5;
+}
+.px2-linklist ul li ul li > a, .px2-linklist ul li ul li > span {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+}
+.px2-linklist ul li ul li > a::after, .px2-linklist ul li ul li > span::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-top: 1.4px solid #000;
+  border-right: 1.4px solid #000;
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 8px);
+  transform: rotate(45deg);
 }
 .px2-linklist ul li ul ul li > a, .px2-linklist ul li ul ul li > span {
   padding-left: 70px;
@@ -1786,6 +1833,14 @@ table.px2-table--dl td {
 .px2-linklist ul li ul li > a, .px2-linklist ul li ul li > span, .px2-linklist ul li ul ul ul li > a, .px2-linklist ul li ul ul ul li > span, .px2-linklist ul li ul ul ul ul li > a, .px2-linklist ul li ul ul ul ul li > span {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.px2-linklist ul li ul li > a::after, .px2-linklist ul li ul li > span::after, .px2-linklist ul li ul ul ul li > a::after, .px2-linklist ul li ul ul ul li > span::after, .px2-linklist ul li ul ul ul ul li > a::after, .px2-linklist ul li ul ul ul ul li > span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 0.5px solid #0006;
+  border-right: 0.5px solid #0006;
+  top: calc(50% - 5px);
 }
 .px2-linklist__description {
   text-decoration: none;
@@ -1841,6 +1896,19 @@ h1 .px2-linklist, .px2-h1 .px2-linklist, h2 .px2-linklist, .px2-h2 .px2-linklist
   padding: 0;
   margin: 0;
 }
+h1 .px2-linklist > ul, .px2-h1 .px2-linklist > ul, h2 .px2-linklist > ul, .px2-h2 .px2-linklist > ul, h3 .px2-linklist > ul, .px2-h3 .px2-linklist > ul, h4 .px2-linklist > ul, .px2-h4 .px2-linklist > ul, h5 .px2-linklist > ul, .px2-h5 .px2-linklist > ul, h6 .px2-linklist > ul, .px2-h6 .px2-linklist > ul {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+h1 .px2-linklist > ul > li, .px2-h1 .px2-linklist > ul > li, h2 .px2-linklist > ul > li, .px2-h2 .px2-linklist > ul > li, h3 .px2-linklist > ul > li, .px2-h3 .px2-linklist > ul > li, h4 .px2-linklist > ul > li, .px2-h4 .px2-linklist > ul > li, h5 .px2-linklist > ul > li, .px2-h5 .px2-linklist > ul > li, h6 .px2-linklist > ul > li, .px2-h6 .px2-linklist > ul > li {
+  padding: 0;
+  margin: 0;
+  border-top: none;
+}
+h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklist > ul > li a, .px2-h2 .px2-linklist > ul > li a, h3 .px2-linklist > ul > li a, .px2-h3 .px2-linklist > ul > li a, h4 .px2-linklist > ul > li a, .px2-h4 .px2-linklist > ul > li a, h5 .px2-linklist > ul > li a, .px2-h5 .px2-linklist > ul > li a, h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
+  padding: 0.1em 0.5em;
+}
 .px2-linklist ul.px2-horizontal-list {
   border: none;
   gap: 10px;
@@ -1880,7 +1948,6 @@ h1 .px2-linklist, .px2-h1 .px2-linklist, h2 .px2-linklist, .px2-h2 .px2-linklist
 .px2-medialist > ul > li > a {
   display: flex;
   align-items: stretch;
-  text-decoration: none;
 }
 .px2-medialist__list-item {
   padding: 1em 15px;
@@ -1906,6 +1973,7 @@ h1 .px2-linklist, .px2-h1 .px2-linklist, h2 .px2-linklist, .px2-h2 .px2-linklist
 }
 .px2-medialist--list-style-card .px2-medialist__list-item {
   flex-direction: column;
+  border: 1px solid #ddd;
   margin: 10px auto;
   width: calc(100% - 20px);
 }
