@@ -1,0 +1,121 @@
+table.px2-table {
+	border: none;
+	border-collapse: collapse;
+	margin: 0;
+	text-align: left;
+	border: 1px solid #dee2e6;
+
+	th,
+	td {
+		border: 1px solid #dee2e6;
+		background: #fff;
+		padding: 0.6em 1em;
+		word-wrap: break-word;
+	}
+
+	th {
+		background: #f9f9f9;
+	}
+
+	thead th,
+	tfoot th {
+		background: #eee;
+		text-align: center;
+	}
+
+	thead td,
+	tfoot td {
+		background: #eee;
+	}
+
+	&--dl {
+		width: 100%;
+		table-layout: fixed;
+
+		th {
+			width: 30%;
+			border-right: none;
+			border-left: none;
+		}
+		td {
+			width: 70%;
+			border-right: none;
+			border-left: none;
+		}
+		@media all and (max-width: 544px) {
+			display: block;
+			box-sizing: border-box;
+			border-bottom: none;
+			tbody,
+			thead,
+			tr,
+			th,
+			td {
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			th {
+				border: none;
+			}
+			td {
+				border-top: none;
+				padding-bottom: 1em;
+			}
+		}
+	}
+
+	th > *:first-child,
+	td > *:first-child {
+		margin-top: 0;
+	}
+	th > *:last-child,
+	td > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Table
+ */
+.px2-table{
+	color: $darkmode-text-color;
+
+	th,
+	td {
+		border-color: #666;
+		background: $darkmode-background-color;
+	}
+
+	th {
+		background: #191919;
+	}
+
+	thead th,
+	tfoot th {
+		background: #111;
+	}
+
+	thead td,
+	tfoot td {
+		background: #111;
+	}
+}

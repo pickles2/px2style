@@ -1,0 +1,29 @@
+.px2-image {
+
+	&--framed > img,
+	&--framed &__img {
+		box-sizing: border-box;
+		border: 1px solid #bbb;
+		padding: 8px;
+		border-radius: 5px;
+		background-color: #f9f9f9;
+	}
+
+	// キャプション
+	&__caption {
+		font-size: 0.77em;
+		margin-top: 0.5em;
+		line-height: 1.3;
+		color: #999;
+		text-align: left;
+		* {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	// 拡大画像
+	&--imagescope img {
+		cursor: pointer;
+	}
+}

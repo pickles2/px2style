@@ -1,18 +1,45 @@
+$px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+$px2-main-color: #00a0e6;
+$px2-text-color: #333;
+$px2-background-color: #f9f9f9;
+
 $darkmode-text-color: #ccc;
 $darkmode-background-color: #242424;
 
-@import './buttons/_buttons.css.scss';
-@import './modal/_modal.css.scss';
-@import './notice/_notice.css.scss';
-@import './tables/_tables.css.scss';
-@import './form/_form.css.scss';
+:root {
+	--px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+	--px2-main-color: #00a0e6;
+	--px2-text-color: #333;
+	--px2-background-color: #f9f9f9;
+}
 
-// for DEVELOP
-// body.px2-darkmode {
-// 	color:$darkmode-text-color;
-// 	background-color:$darkmode-background-color;
-// 	.sg.sg-section-partial.ng-scope {
-// 		color:$darkmode-text-color;
-// 		background-color:$darkmode-background-color;
-// 	}
-// }
+// px2style
+@import './px2style/utils.css.scss';
+@import './px2style/form.css.scss';
+@import './px2style/modal.css.scss';
+@import './px2style/loading.css.scss';
+
+// broccoli-module-px2style
+@import './basics/a.css.scss';
+@import './basics/banner.css.scss';
+@import './basics/hx.css.scss';
+@import './basics/image.css.scss';
+@import './basics/table.css.scss';
+@import './grids/grid.css.scss';
+@import './sections/section.css.scss';
+@import './sections/notice.css.scss';
+@import './sections/blockquote.css.scss';
+@import './interactives/accordion.css.scss';
+@import './interactives/carousel.css.scss';
+@import './interactives/tabs.css.scss';
+@import './lists/changelog.css.scss';
+@import './lists/dl.css.scss';
+@import './lists/index.css.scss';
+@import './lists/ul.css.scss';
+@import './lists/ul-links.css.scss';
+@import './lists/ul-media-list.css.scss';
+@import './medias/float.css.scss';
+@import './medias/image-media.css.scss';
+@import './utils/p.css.scss';
+@import './utils/responsive.css.scss';
+@import './utils/viewport-fit.css.scss';
