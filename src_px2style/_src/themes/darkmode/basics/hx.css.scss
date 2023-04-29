@@ -1,12 +1,33 @@
+h1, .px2-h1,
+h2, .px2-h2,
+h3, .px2-h3,
+h4, .px2-h4,
+h5, .px2-h5,
+h6, .px2-h6
+{
+	small {
+		color: #a9b1b9;
+	}
+}
+
 .px2-h2,
 .px2-h3,
 .px2-h4,
 .px2-h5,
 .px2-h6 {
 	.px2-linklist {
+		ul {
+			border-radius: 0;
+		}
 		ul.px2-horizontal-list > li > a {
 			color: var(--theme-keycolor);
 			font-weight: normal;
+			background-color: transparent;
+			text-decoration: none;
+			&:hover {
+				background-color: #0003;
+				text-decoration: underline;
+			}
 			&::before {
 				content: "";
 				width: 0;

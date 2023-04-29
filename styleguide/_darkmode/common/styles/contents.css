@@ -1890,6 +1890,9 @@ a .px2-linklist__description {
 .px2-linklist ul.px2-linklist__horizontal--right {
   justify-content: flex-end;
 }
+.px2-linklist ul.px2-linklist__horizontal--left a, .px2-linklist ul.px2-linklist__horizontal--center a, .px2-linklist ul.px2-linklist__horizontal--right a {
+  padding: 0.4em 1em;
+}
 h1 .px2-linklist, .px2-h1 .px2-linklist, h2 .px2-linklist, .px2-h2 .px2-linklist, h3 .px2-linklist, .px2-h3 .px2-linklist, h4 .px2-linklist, .px2-h4 .px2-linklist, h5 .px2-linklist, .px2-h5 .px2-linklist, h6 .px2-linklist, .px2-h6 .px2-linklist {
   padding: 0;
   margin: 0;
