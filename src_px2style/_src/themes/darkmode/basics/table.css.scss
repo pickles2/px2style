@@ -3,29 +3,31 @@ table.px2-table {
 	border-collapse: collapse;
 	margin: 0;
 	text-align: left;
-	border: 1px solid #dee2e6;
+	border: 1px solid #666;
+
+	color: $darkmode-text-color;
 
 	th,
 	td {
-		border: 1px solid #dee2e6;
-		background: #fff;
+		border: 1px solid #666;
+		background: $darkmode-background-color;
 		padding: 0.6em 1em;
 		word-wrap: break-word;
 	}
 
 	th {
-		background: #f9f9f9;
+		background: #191919;
 	}
 
 	thead th,
 	tfoot th {
-		background: #eee;
+		background: #111;
 		text-align: center;
 	}
 
 	thead td,
 	tfoot td {
-		background: #eee;
+		background: #111;
 	}
 
 	&--dl {
@@ -72,50 +74,5 @@ table.px2-table {
 	th > *:last-child,
 	td > *:last-child {
 		margin-bottom: 0;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Table
- */
-.px2-table{
-	color: $darkmode-text-color;
-
-	th,
-	td {
-		border-color: #666;
-		background: $darkmode-background-color;
-	}
-
-	th {
-		background: #191919;
-	}
-
-	thead th,
-	tfoot th {
-		background: #111;
-	}
-
-	thead td,
-	tfoot td {
-		background: #111;
 	}
 }
