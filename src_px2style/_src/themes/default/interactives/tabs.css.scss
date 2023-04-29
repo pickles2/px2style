@@ -40,6 +40,11 @@
 			padding: 0.5em 1em;
 			box-sizing: border-box;
 
+			&:hover {
+				border-color: #dee2e6;
+				background-color: #f5faff;
+			}
+
 			&.px2-tabs--active {
 				color: #666;
 				text-decoration: none;
@@ -48,10 +53,6 @@
 				&:hover {
 					border-bottom-color: #fff;
 				}
-			}
-			&:hover {
-				border-color: #dee2e6;
-				background-color: #f5faff;
 			}
 		}
 	}

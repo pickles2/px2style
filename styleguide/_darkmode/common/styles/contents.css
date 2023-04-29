@@ -1644,6 +1644,9 @@ table.px2-table--dl td {
   border-bottom: 1px solid #dee2e6;
   margin: 0 0 0 0 !important;
   padding: 5px 5px 0px 5px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: fit-content;
 }
 .px2-tabs__tabs > ul > li {
   list-style-type: none;
@@ -1667,6 +1670,10 @@ table.px2-table--dl td {
   padding: 0.5em 1em;
   box-sizing: border-box;
 }
+.px2-tabs__tabs > ul > li > a:hover {
+  border-color: #dee2e6;
+  background-color: #f5faff;
+}
 .px2-tabs__tabs > ul > li > a.px2-tabs--active {
   color: #666;
   text-decoration: none;
@@ -1675,10 +1682,6 @@ table.px2-table--dl td {
 }
 .px2-tabs__tabs > ul > li > a.px2-tabs--active:hover {
   border-bottom-color: #fff;
-}
-.px2-tabs__tabs > ul > li > a:hover {
-  border-color: #dee2e6;
-  background-color: #f5faff;
 }
 .px2-tabs__contents {
   border: 1px solid #dee2e6;
