@@ -2471,9 +2471,9 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
 }
 .px2-viewport-fit__inner {
   box-sizing: border-box;
-  width: calc(100vw - 50px);
+  width: calc(100vw);
   position: relative;
-  left: calc(-50vw + 25px);
+  left: calc(-50vw);
 }
 .px2-viewport-fit__contents {
   margin: 0 auto;

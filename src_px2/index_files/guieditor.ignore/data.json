@@ -5,21 +5,58 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:basics/text",
+                        "modId": "px2style:utils/viewport-fit",
                         "fields": {
-                            "main": {
-                                "src": "標準ドキュメントモジュールのレイアウトサンプルです。\n",
-                                "editor": "markdown"
+                            "text-color": {
+                                "src": "#FFFFFF"
                             },
-                            "paragraph": {
-                                "src": "px2-p"
+                            "background-color": {
+                                "src": "#7D5683E6"
                             },
-                            "text-align": {
+                            "background-image": {
+                                "resKey": "10cfea91a3dfb84787e3f8a2d6f6b350",
+                                "path": "./index_files/resources/10cfea91a3dfb84787e3f8a2d6f6b350.unknown",
+                                "resType": "none",
+                                "webUrl": ""
+                            },
+                            "min-height": {
                                 "src": ""
                             },
-                            "font-size": {
+                            "margin-padding": {
+                                "marginTop": "",
+                                "marginRight": "",
+                                "marginBottom": "",
+                                "marginLeft": "",
+                                "paddingTop": "80px",
+                                "paddingRight": "0px",
+                                "paddingBottom": "80px",
+                                "paddingLeft": "0px"
+                            },
+                            "fluid-contents": {
                                 "src": ""
-                            }
+                            },
+                            "main": [
+                                {
+                                    "modId": "px2style:basics/text",
+                                    "fields": {
+                                        "main": {
+                                            "src": "標準ドキュメントモジュールのレイアウトサンプルです。\n",
+                                            "editor": "markdown"
+                                        },
+                                        "paragraph": {
+                                            "src": "px2-p"
+                                        },
+                                        "text-align": {
+                                            "src": ""
+                                        },
+                                        "font-size": {
+                                            "src": ""
+                                        }
+                                    },
+                                    "anchor": "",
+                                    "dec": ""
+                                }
+                            ]
                         },
                         "anchor": "",
                         "dec": ""
