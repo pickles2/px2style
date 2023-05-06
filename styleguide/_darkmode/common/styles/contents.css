@@ -1048,6 +1048,7 @@ table.px2-table--dl td {
 .px2-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0rem;
   margin: 0 -0.5rem 0 -0.5rem;
   box-sizing: border-box;
