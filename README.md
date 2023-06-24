@@ -30,7 +30,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.2.1 (リリース日未定)
+### px2style v3.2.1 (2023/6/25)
 
 - `.px2-viewport-fit` の処理を改善した。
 - `.px2-grid` の内容が幅に満たない場合に、中央に揃えられるようになった。
