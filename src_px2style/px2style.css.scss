@@ -1,4 +1,43 @@
 @layer px2style {
-	// px2style
-	@import './_src/themes/default/default.css.scss';
+$px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+$px2-main-color: #00a0e6;
+$px2-text-color: #333;
+$px2-background-color: #f9f9f9;
+
+:root {
+	--px2-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", "Arial", sans-serif;
+	--px2-main-color: #00a0e6;
+	--px2-text-color: #333;
+	--px2-background-color: #f9f9f9;
+}
+
+// px2style
+@import './_src/form//_form.css.scss';
+@import './_src/modal/_modal.css.scss';
+@import './_src/loading/_loading.css.scss';
+
+// broccoli-module-px2style
+@import '../broccoli_modules/basics/basics/a/module.css.scss';
+@import '../broccoli_modules/basics/basics/banner/module.css.scss';
+@import '../broccoli_modules/basics/basics/hx/module.css.scss';
+@import '../broccoli_modules/basics/basics/image/module.css.scss';
+@import '../broccoli_modules/basics/basics/table/module.css.scss';
+@import '../broccoli_modules/basics/grids/grid/module.css.scss';
+@import '../broccoli_modules/basics/sections/section/module.css.scss';
+@import '../broccoli_modules/basics/sections/notice/module.css.scss';
+@import '../broccoli_modules/basics/sections/blockquote/module.css.scss';
+@import '../broccoli_modules/basics/interactives/accordion/module.css.scss';
+@import '../broccoli_modules/basics/interactives/carousel/module.css.scss';
+@import '../broccoli_modules/basics/interactives/tabs/module.css.scss';
+@import '../broccoli_modules/basics/lists/changelog/module.css.scss';
+@import '../broccoli_modules/basics/lists/dl/module.css.scss';
+@import '../broccoli_modules/basics/lists/index/module.css.scss';
+@import '../broccoli_modules/basics/lists/ul/module.css.scss';
+@import '../broccoli_modules/basics/lists/ul-links/module.css.scss';
+@import '../broccoli_modules/basics/lists/ul-media-list/module.css.scss';
+@import '../broccoli_modules/basics/medias/float/module.css.scss';
+@import '../broccoli_modules/basics/medias/image-media/module.css.scss';
+@import '../broccoli_modules/basics/utils/p/module.css.scss';
+@import '../broccoli_modules/basics/utils/responsive/module.css.scss';
+@import '../broccoli_modules/basics/utils/viewport-fit/module.css.scss';
 }

@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.2.2 (リリース日未定)
+
+- `px2style.css` に、いくつかのモジュールがビルドされていなかった不具合を修正。
+
 ### px2style v3.2.1 (2023/6/25)
 
 - `.px2-viewport-fit` の処理を改善した。
