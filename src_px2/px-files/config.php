@@ -47,7 +47,7 @@ return call_user_func( function(){
 	$conf->path_top = '/';
 
 	/** パブリッシュ先ディレクトリパス */
-	$conf->path_publish_dir = '../styleguide/';
+	$conf->path_publish_dir = '../docs/';
 
 	/** 公開キャッシュディレクトリ */
 	$conf->public_cache_dir = '/common/px_resources/';
@@ -253,7 +253,7 @@ return call_user_func( function(){
 			'params' => array(
 				'THEME' => $theme_id,
 			),
-			'path_publish_dir'=>'../styleguide/',
+			'path_publish_dir'=>'../docs/',
 			'path_rewrite_rule'=>'/_'.$theme_id.'{$dirname}/{$filename}.{$ext}',
 			'paths_target'=>array(
 				'/*',
@@ -368,7 +368,7 @@ return call_user_func( function(){
 		//       - null: そのまま (default)
 		'tomk79\pickles2\pathResolver\main::exec('.json_encode(array(
 			'to' => 'relate' ,
-			'supply_index_filename' => false
+			'supply_index_filename' => false,
 		)).')' ,
 
 		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
