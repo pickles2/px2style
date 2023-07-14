@@ -3,7 +3,7 @@
  */
 var px2style = new (function(){
     var px2style = this;
-    this.version = "3.2.1";
+    this.version = "3.2.2";
     this.$ = require('jquery');
 
     var initFunctions = {};
