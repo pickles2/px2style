@@ -250,6 +250,13 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 							it.next();
 							return;
 						}
+						if( fileInfo.type == 'image/gif' ){
+							// 元画像が GIF の場合はそのまま使う
+							// (アニメーションGIFだった場合に、スライドが失われるため)
+							it.next();
+							return;
+						}
+
 						imageResizer.resizeImage(
 							dataUri,
 							mod.format || {},

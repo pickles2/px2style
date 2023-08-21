@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.2.3 (リリース日未定)
+
+- imageフィールドの自動リサイズ機能で、GIFを登録された場合に変換しないように変更した。
+
 ### px2style v3.2.2 (2023/7/14)
 
 - `px2style.css` に、いくつかのモジュールがビルドされていなかった不具合を修正。
