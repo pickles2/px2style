@@ -7,5 +7,5 @@
 <?= $px->get_contents_manifesto(); ?>
 
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/modules.css') ); ?>" />
-		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/px2style_themes/darkmode.css') ); ?>">
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/theme.css') ); ?>">
+		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/px2style-theme-darkmode.css') ); ?>">
