@@ -4,7 +4,7 @@
   "description": "Pickles 2 CSS Components.",
   "private": false,
   "scripts": {
-    "build": "npm run prod && php src_px2/.px_execute.php \"/?PX=publish.run\"",
+    "build": "composer run-script build",
     "dev": "npm run development",
     "development": "mix",
     "watch": "mix watch",

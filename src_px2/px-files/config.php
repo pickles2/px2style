@@ -302,7 +302,9 @@ return call_user_func( function(){
 
 	$conf->funcs->processor->html = array(
 		// ページ内目次を自動生成する
-		'picklesFramework2\processors\autoindex\autoindex::exec' ,
+		\picklesFramework2\processors\autoindex\autoindex::exec(array(
+			'class' => 'px2-index-list',
+		)),
 
 		// テーマ
 		'theme'=>'tomk79\pickles2\multitheme\theme::exec('.json_encode(array(
