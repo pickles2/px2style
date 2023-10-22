@@ -39,7 +39,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 			};
 		}
 		return rtn;
-	}// normalizeData()
+	}
 
 	/**
 	 * プレビュー用の簡易なHTMLを生成する
@@ -58,7 +58,9 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 						.attr({'src': fieldData.webUrl})
 						.css({
 							'max-width': '80px',
-							'max-height': '80px'
+							'max-height': '80px',
+							'display': 'block',
+							'margin': '0 auto',
 						})
 					;
 					rtn = $img.prop("outerHTML");
@@ -84,7 +86,9 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 									.attr({'src': imagePath})
 									.css({
 										'max-width': '80px',
-										'max-height': '80px'
+										'max-height': '80px',
+										'display': 'block',
+										'margin': '0 auto',
 									})
 								;
 								rtn = $img.prop("outerHTML");
@@ -96,7 +100,9 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 								.attr({'src': _imgDummy})
 								.css({
 									'max-width': '80px',
-									'max-height': '80px'
+									'max-height': '80px',
+									'display': 'block',
+									'margin': '0 auto',
 								})
 							;
 							rtn = $img.prop("outerHTML");
@@ -108,12 +114,17 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				return;
 			}); })
 			.then(function(){ return new Promise(function(rlv, rjt){
+				rtn = '<div style="margin: 1em auto; padding: 10px; border: 1px solid #888; border-radius: 5px;">'+rtn+'</div>';
+				rlv();
+				return;
+			}); })
+			.then(function(){ return new Promise(function(rlv, rjt){
 				callback( rtn );
 				return;
 			}); })
 		;
 		return;
-	}// mkPreviewHtml()
+	}
 
 	/**
 	 * エディタUIを生成
@@ -238,6 +249,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 					$inputImageName.val(fname);
 				}
 			}
+
 			// mod.filename
 			readSelectedLocalFile(fileInfo, function(dataUri){
 				var fileSize = fileInfo.size;

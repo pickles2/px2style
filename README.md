@@ -34,6 +34,7 @@ $ composer require pickles2/px2style
 
 - `.px2-index-list` を追加。
 - `darkmode` テーマを更新した。
+- その他、いくつかの細かい改善。
 
 ### px2style v3.2.3 (2023/8/29)
 
