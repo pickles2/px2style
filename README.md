@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.2.5 (リリース日未定)
+
+- `px2-modal`: ダークモードでのスタイリングに関する修正。
+
 ### px2style v3.2.4 (2023年11月13日)
 
 - `.px2-index-list` を追加。
