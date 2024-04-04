@@ -1,14 +1,14 @@
 .px2-btn{
 	background-color: $darkmode-background-color;
 	color: $darkmode-text-color;
-	border: 1px solid $darkmode-text-color;
+	border: 1px solid #999;
 	box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
 
 	&:focus,
 	&:hover{
 		color: #eee;
 		background-color: #222;
-		border-color: #eee;
+		border-color: #bbb;
 	}
 	&:focus{
 		box-shadow: 0 0 0 .2rem rgba(123,230,255,.25);
@@ -52,7 +52,7 @@
 		&:active{
 			border-color: #444;
 			background-color: rgba(153, 153, 153, 0.05);
-			color: #444;
+			color: #666;
 			box-shadow: 0 2px 0px rgba(255, 255, 255, 0.1);
 		}
 	}
