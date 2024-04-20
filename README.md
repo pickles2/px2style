@@ -33,6 +33,7 @@ $ composer require pickles2/px2style
 ### px2style v3.2.5 (リリース日未定)
 
 - `px2-modal`: ダークモードでのスタイリングに関する修正。
+- `auto` テーマを追加した。
 - その他、いくつかの細かい改善。
 
 ### px2style v3.2.4 (2023年11月13日)
