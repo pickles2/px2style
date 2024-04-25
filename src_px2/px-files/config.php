@@ -281,7 +281,8 @@ return call_user_func( function(){
 
 		// PX=publish (px2-publish-ex)
 		'tomk79\pickles2\publishEx\publish::register('.json_encode(array(
-			'devices'=>$devices,
+			'devices' => $devices,
+			'enable_cache_buster' => true,
 		)).')' ,
 
 		// PX=px2dthelper
