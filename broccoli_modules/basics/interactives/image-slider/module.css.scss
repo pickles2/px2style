@@ -1,0 +1,26 @@
+.px2-image-slider {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    &__contents{
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+        img{
+            line-height: 1;
+            vertical-align: bottom;
+            width: 100%;
+            line-height: 1;
+        }
+        > *{
+            width: 100%;
+            vertical-align: middle;
+        }
+        *[data-broccoli-is-appender]{
+            width: 10%;
+            max-height: 100%;
+            overflow: hidden;
+            word-wrap: normal;
+            white-space: normal !important;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": ":interactives/image-slider",
+    "name": "イメージスライダー - Image Slider",
+    "interface": {
+        "fields": {
+            "image-list": {
+                "fieldType": "input",
+                "type": "px2style__image-list",
+                "label": "画像スライダー"
+            }
+        },
+        "subModule": {
+        }
+    }
+}

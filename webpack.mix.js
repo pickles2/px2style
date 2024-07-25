@@ -52,9 +52,9 @@ mix
 	.sass('src_broccoli/fields/image/image.css.scss', './fields/image/frontend/image.css')
 
 	// --------------------------------------
-	// fields: imageSlider
-	.js('./src_broccoli/fields/imageSlider/image-slider.js', './fields/imageSlider/frontend/')
-	.sass('src_broccoli/fields/imageSlider/image-slider.css.scss', './fields/imageSlider/frontend/image-slider.css')
+	// fields: imageList
+	.js('./src_broccoli/fields/imageList/image-list.js', './fields/imageList/frontend/')
+	.sass('src_broccoli/fields/imageList/image-list.css.scss', './fields/imageList/frontend/image-list.css')
 
 	// --------------------------------------
 	// modules: basics/_

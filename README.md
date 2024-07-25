@@ -32,7 +32,8 @@ $ composer require pickles2/px2style
 
 ### px2style v3.3.0 (リリース日未定)
 
-- Image Slider フィールドを追加。
+- Image List フィールドを追加。
+- Image Slider モジュールを追加。
 
 ### px2style v3.2.5 (2024年4月30日)
 
