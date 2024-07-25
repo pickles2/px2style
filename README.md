@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.3.0 (リリース日未定)
+
+- Image Slider フィールドを追加。
+
 ### px2style v3.2.5 (2024年4月30日)
 
 - `px2-modal`: ダークモードでのスタイリングに関する修正。
@@ -43,27 +47,27 @@ $ composer require pickles2/px2style
 - `darkmode` テーマを更新した。
 - その他、いくつかの細かい改善。
 
-### px2style v3.2.3 (2023/8/29)
+### px2style v3.2.3 (2023年8月29日)
 
 - imageフィールドの自動リサイズ機能で、GIFを登録された場合に変換しないように変更した。
 
-### px2style v3.2.2 (2023/7/14)
+### px2style v3.2.2 (2023年7月14日)
 
 - `px2style.css` に、いくつかのモジュールがビルドされていなかった不具合を修正。
 - `px2style.css` とテーマの分離に関する不具合の修正。
 
-### px2style v3.2.1 (2023/6/25)
+### px2style v3.2.1 (2023年6月25日)
 
 - `.px2-viewport-fit` の処理を改善した。
 - `.px2-grid` の内容が幅に満たない場合に、中央に揃えられるようになった。
 
-### px2style v3.2.0 (2023/5/1)
+### px2style v3.2.0 (2023年5月1日)
 
 - `.px2-p`、 `.px2-section`、 `.px2-notice`、 `.px2-tabs` のスタイルの修正。
 - ベーススタイルシートと defaultテーマ が切り離された。
 - `darkmode` テーマを更新した。
 
-### px2style v3.1.2 (2023/4/22)
+### px2style v3.1.2 (2023年4月22日)
 
 - `px2style.form()` を追加。
 - `.px2-table.px2-table--dl` を追加。
@@ -73,11 +77,11 @@ $ composer require pickles2/px2style
 - imageフィールドに、`format` オプションを追加した。
 - その他、いくつかの細かい改善。
 
-### px2style v3.1.1 (2023/3/11)
+### px2style v3.1.1 (2023年3月11日)
 
 - `.px2-a` のスタイリングを改善。
 
-### px2style v3.1.0 (2023/2/11)
+### px2style v3.1.0 (2023年2月11日)
 
 - モジュールのカテゴリ分けを改善した。
 - `px2style__image` フィールドを追加。
@@ -90,7 +94,7 @@ $ composer require pickles2/px2style
 - 各Broccoliモジュールに、モジュールIDを明示した。
 - その他、いくつかの細かい改善。
 
-### px2style v3.0.2 (2022/12/28)
+### px2style v3.0.2 (2022年12月28日)
 
 - `px2style.modal()` が重ねて開かれたとき、背景色が重なりすぎる問題を修正した。
 - `px2style.modal()` について、要素への自動フォーカス機能を改善した。

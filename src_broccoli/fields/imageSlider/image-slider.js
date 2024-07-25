@@ -1,4 +1,4 @@
-window.broccoliModulePx2StyleImage = function(broccoli){
+window.broccoliModulePx2StyleImageResizer = function(broccoli){
 
 	var $ = require('jquery');
 	var Promise = require('es6-promise').Promise;
