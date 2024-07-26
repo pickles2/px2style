@@ -5,6 +5,10 @@
         <li><label><input type="radio" name="{{mod.name}}-resourceType" value="none" {{ data.resType=='none' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.none') }}</label></li>
     </ul>
     <div class="broccoli-module-px2style-image__ui-image-resource">
+        <div class="broccoli-module-px2style-image__image-preview-area broccoli__user-selectable" tabindex="1">
+            <img class="broccoli-module-px2style-image__image-preview" />
+            <div class="broccoli-module-px2style-image__no-image-preview">{{ res.ext }}</div>
+        </div>
     </div>
     <div class="broccoli-module-px2style-image__ui-web-resource">
     </div>

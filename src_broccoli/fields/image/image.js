@@ -130,6 +130,8 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 	 * エディタUIを生成
 	 */
 	this.mkEditor = function( mod, data, elm, callback ){
+		var _this = this;
+
 		var $rtn = $(broccoli.bindTwig(
 			require('-!text-loader!./modules/templates/mkEditor.twig'),
 			{
@@ -142,8 +144,13 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		var $uiImageResource = $rtn.find('.broccoli-module-px2style-image__ui-image-resource');
 		var $uiWebResource = $rtn.find('.broccoli-module-px2style-image__ui-web-resource');
 		var $uiNoImage = $rtn.find('.broccoli-module-px2style-image__ui-no-image');
-		var $imagePreviewArea = $('<div>');
-		var _this = this;
+		var $imagePreviewArea = $rtn.find('.broccoli-module-px2style-image__image-preview-area');
+		var $img = $rtn.find('.broccoli-module-px2style-image__image-preview');
+		var $imgNotImage = $rtn.find('.broccoli-module-px2style-image__no-image-preview');
+		var $inputImageName = $('<input class="px2-input px2-input--block" style="margin: 0 5px;">');
+		var $displayExtension = $('<span>');
+		var $inputWebUrl = $('<input class="px2-input px2-input--block">');
+
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
 			data.resKey = '';
@@ -154,17 +161,6 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		if( typeof(data.webUrl) !== typeof('') ){
 			data.webUrl = '';
 		}
-
-		var $img = $('<img>');
-		var $imgNotImage = $('<div>').css({
-			'padding': '3em',
-			'font-weight': 'bold',
-			'font-size': '24px',
-			'color': '#aaa',
-		});
-		var $inputImageName = $('<input class="px2-input px2-input--block" style="margin: 0 5px;">');
-		var $displayExtension = $('<span>');
-		var $inputWebUrl = $('<input class="px2-input px2-input--block">');
 		var confFilenameAutoSetter = mod.filenameAutoSetter || 'ifEmpty';
 
 		function selectResourceType(){
@@ -350,17 +346,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 
 			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]').on('change', selectResourceType);
 
-			$uiImageResource.append( $imagePreviewArea
-				.css({
-					'border':'1px solid #999',
-					'padding': 10,
-					'margin': '10px auto',
-					'background': '#fff',
-					'outline': 'none',
-					'border-radius': 5,
-					'text-align': 'center',
-				})
-				.addClass('broccoli__user-selectable')
+			$imagePreviewArea
 				.on('paste', function(e){
 					var items = e.originalEvent.clipboardData.items;
 					for (var i = 0 ; i < items.length ; i++) {
@@ -379,35 +365,12 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 						}
 					}
 				})
-				.attr({'tabindex': '1'})
 				.on('focus', function(e){
 					$(this).css({'background': '#eee'});
 				})
 				.on('blur', function(e){
 					$(this).css({'background': '#fff'});
 				})
-				.append( $img
-					.attr({
-						"src": path ,
-						"data-size": res.size ,
-						"data-extension": res.ext,
-						"data-mime-type": res.type,
-						"data-base64": res.base64,
-						"data-is-updated": 'no'
-					})
-					.css({
-						'min-width':'10%',
-						'max-width':'100%',
-						'min-height':'1px',
-						'max-height':'200px',
-						'user-select': 'none',
-						'pointer-events': 'none',
-					})
-				)
-				.append( $imgNotImage
-					.text(res.ext)
-					.hide()
-				)
 				.on('dragleave', function(e){
 					e.stopPropagation();
 					e.preventDefault();
@@ -424,8 +387,17 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 					var event = e.originalEvent;
 					var fileInfo = event.dataTransfer.files[0];
 					applyFile(fileInfo);
-				})
-			);
+				});
+
+			$img.attr({
+				"src": path ,
+				"data-size": res.size ,
+				"data-extension": res.ext,
+				"data-mime-type": res.type,
+				"data-base64": res.base64,
+				"data-is-updated": 'no'
+			});
+			$imgNotImage.hide();
 
 			setImagePreview({
 				'src': path,
