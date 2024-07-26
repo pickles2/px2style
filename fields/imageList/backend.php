@@ -1,5 +1,5 @@
 <?php
-namespace pickles2\px2style\fields\imageSlider;
+namespace pickles2\px2style\fields\imageList;
 class backend extends \broccoliHtmlEditor\fieldBase{
 
 	/** $broccoli */
