@@ -130,12 +130,32 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 	 * エディタUIを生成
 	 */
 	this.mkEditor = function( mod, data, elm, callback ){
-		var rtn = $(broccoli.bindTwig( require('-!text-loader!./modules/templates/mkEditor.twig'), {} ));
-		var $uiImageResource = $('<div>');
-		var $imagePreviewArea = $('<div>');
-		var $uiNoImage = $('<div>');
-		var $uiWebResource = $('<div>');
 		var _this = this;
+
+		var $rtn = $(broccoli.bindTwig(
+			require('-!text-loader!./modules/templates/mkEditor.twig'),
+			{
+				broccoli: broccoli,
+				mod: mod,
+				data: data,
+				lb: broccoli.lb,
+				fncTypeOf: function(val){
+					return typeof(val);
+				},
+			}
+		));
+		var $uiImageResource = $rtn.find('.broccoli-module-px2style-image__ui-image-resource');
+		var $uiWebResource = $rtn.find('.broccoli-module-px2style-image__ui-web-resource');
+		var $uiNoImage = $rtn.find('.broccoli-module-px2style-image__ui-no-image');
+		var $imagePreviewArea = $rtn.find('.broccoli-module-px2style-image__image-preview-area');
+		var $img = $rtn.find('.broccoli-module-px2style-image__image-preview');
+		var $imgNotImage = $rtn.find('.broccoli-module-px2style-image__no-image-preview');
+		var $inputImageName = $rtn.find('input[name='+mod.name+'-publicFilename]');
+
+		var $displayExtension = $rtn.find('.broccoli-module-px2style-image__ui-image-resource-display-extension');
+		var $inputWebUrl = $rtn.find('input.px2-input[name="'+mod.name+'-webUrl"]');
+		var $fileNameDisplay = $rtn.find('.broccoli-module-px2style-image__file-name-display');
+
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
 			data.resKey = '';
@@ -146,21 +166,10 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		if( typeof(data.webUrl) !== typeof('') ){
 			data.webUrl = '';
 		}
-
-		var $img = $('<img>');
-		var $imgNotImage = $('<div>').css({
-			'padding': '3em',
-			'font-weight': 'bold',
-			'font-size': '24px',
-			'color': '#aaa',
-		});
-		var $inputImageName = $('<input class="px2-input px2-input--block" style="margin: 0 5px;">');
-		var $displayExtension = $('<span>');
-		var $inputWebUrl = $('<input class="px2-input px2-input--block">');
 		var confFilenameAutoSetter = mod.filenameAutoSetter || 'ifEmpty';
 
 		function selectResourceType(){
-			var val = rtn.find('[name='+mod.name+'-resourceType]:checked').val();
+			var val = $rtn.find('[name='+mod.name+'-resourceType]:checked').val();
 			$uiWebResource.hide();
 			$uiNoImage.hide();
 			$uiImageResource.hide();
@@ -340,69 +349,10 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 				path = _imgDummy;
 			}
 
-			var tmpListStyle = {
-				'list-style-type': 'none',
-				'display': 'inline-block',
-				'padding': '0.2em 1em',
-				'margin': '0'
-			}
-			rtn.append( $('<ul>')
-				.css({'padding': 0})
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"",
-								"checked": (data.resType=='')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.upload_image') ) )
-					)
-				)
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"web",
-								"checked": (data.resType=='web')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.web_resource') ) )
-					)
-				)
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"none",
-								"checked": (data.resType=='none')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.none') ) )
-					)
-				)
-			);
+			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
+				.on('change', selectResourceType);
 
-			$uiImageResource.append( $imagePreviewArea
-				.css({
-					'border':'1px solid #999',
-					'padding': 10,
-					'margin': '10px auto',
-					'background': '#fff',
-					'outline': 'none',
-					'border-radius': 5,
-					'text-align': 'center',
-				})
-				.addClass('broccoli__user-selectable')
+			$imagePreviewArea
 				.on('paste', function(e){
 					var items = e.originalEvent.clipboardData.items;
 					for (var i = 0 ; i < items.length ; i++) {
@@ -421,35 +371,12 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 						}
 					}
 				})
-				.attr({'tabindex': '1'})
 				.on('focus', function(e){
 					$(this).css({'background': '#eee'});
 				})
 				.on('blur', function(e){
 					$(this).css({'background': '#fff'});
 				})
-				.append( $img
-					.attr({
-						"src": path ,
-						"data-size": res.size ,
-						"data-extension": res.ext,
-						"data-mime-type": res.type,
-						"data-base64": res.base64,
-						"data-is-updated": 'no'
-					})
-					.css({
-						'min-width':'10%',
-						'max-width':'100%',
-						'min-height':'1px',
-						'max-height':'200px',
-						'user-select': 'none',
-						'pointer-events': 'none',
-					})
-				)
-				.append( $imgNotImage
-					.text(res.ext)
-					.hide()
-				)
 				.on('dragleave', function(e){
 					e.stopPropagation();
 					e.preventDefault();
@@ -466,8 +393,17 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 					var event = e.originalEvent;
 					var fileInfo = event.dataTransfer.files[0];
 					applyFile(fileInfo);
-				})
-			);
+				});
+
+			$img.attr({
+				"src": path ,
+				"data-size": res.size ,
+				"data-extension": res.ext,
+				"data-mime-type": res.type,
+				"data-base64": res.base64,
+				"data-is-updated": 'no'
+			});
+			$imgNotImage.hide();
 
 			setImagePreview({
 				'src': path,
@@ -477,175 +413,110 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 				'base64': res.base64,
 			});
 
-			$uiImageResource.append(
-				$('<p>')
-					.append( $('<label>')
-						.text( broccoli.lb.get('ui_label.select_image_file') )
-						.addClass('px2-btn')
-						.append( $('<input>')
-							.attr({
-								"name":mod.name ,
-								"type":"file",
-								"webkitfile":"webkitfile"
-							})
-							.css({'display': 'none'})
-							.on('change', function(e){
-								var fileInfo = e.target.files[0];
-								var realpathSelected = $(this).val();
+			$uiImageResource.find('input[type=file][name='+mod.name+']')
+				.on('change', function(e){
+					var fileInfo = e.target.files[0];
+					var realpathSelected = $(this).val();
 
-								if( realpathSelected ){
-									applyFile(fileInfo);
-								}
+					if( realpathSelected ){
+						applyFile(fileInfo);
+					}
+				});
 
-							})
-						)
-					)
-					.append( $('<button>')
-						.text( broccoli.lb.get('ui_label.get_from_url') )
-						.attr({'type': 'button'})
-						.addClass('px2-btn')
-						.on('click', function(){
-							var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
-							if( !url ){
-								return;
+			$uiImageResource.find('.broccoli-module-px2style-image__trg-get-image-from-url')
+				.on('click', function(){
+					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+					if( !url ){
+						return;
+					}
+					var params = {
+						'url': url
+					}
+					_this.callGpi(
+						{
+							'api': 'getImageByUrl',
+							'data': params
+						} ,
+						function(result){
+							var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
+							switch(result.status){
+								case 200:
+								case 301:
+								case 302:
+								case 304:
+									// 成功
+									break;
+								case 404:
+									alert('画像が見つかりません。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 400:
+								case 405:
+									alert('不正なリクエストです。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 401:
+								case 402:
+								case 403:
+									alert('アクセスが許可されていません。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 0:
+									// おそらくURLの形式としてリクエストできない値が送られた。
+									alert('画像の取得に失敗しました。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								default:
+									alert('画像の取得に失敗しました。 ('+result.status+')');
+									// とれたデータが画像ではないとも限らないので、
+									// 失敗を伝えるが、反映はしてみることにする。
+									break;
 							}
-							var params = {
-								'url': url
+
+							setImagePreview({
+								'src': dataUri,
+								'size': result.responseHeaders['content-length'],
+								'ext': getExtension( params.url ),
+								'mimeType': result.responseHeaders['content-type'],
+								'base64': (function(dataUri){
+									dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
+									return dataUri;
+								})(dataUri),
+							});
+
+							if( !$inputImageName.val() ){
+								// アップした画像名をプリセット
+								// ただし、既に名前がセットされている場合は変更しない
+								var fname = utils79.basename( params.url );
+								fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
+								$inputImageName.val(fname);
 							}
-							_this.callGpi(
-								{
-									'api': 'getImageByUrl',
-									'data': params
-								} ,
-								function(result){
-									var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
-									switch(result.status){
-										case 200:
-										case 301:
-										case 302:
-										case 304:
-											// 成功
-											break;
-										case 404:
-											alert('画像が見つかりません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 400:
-										case 405:
-											alert('不正なリクエストです。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 401:
-										case 402:
-										case 403:
-											alert('アクセスが許可されていません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 0:
-											// おそらくURLの形式としてリクエストできない値が送られた。
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										default:
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											// とれたデータが画像ではないとも限らないので、
-											// 失敗を伝えるが、反映はしてみることにする。
-											break;
-									}
 
-									setImagePreview({
-										'src': dataUri,
-										'size': result.responseHeaders['content-length'],
-										'ext': getExtension( params.url ),
-										'mimeType': result.responseHeaders['content-type'],
-										'base64': (function(dataUri){
-											dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
-											return dataUri;
-										})(dataUri),
-									});
-
-									if( !$inputImageName.val() ){
-										// アップした画像名をプリセット
-										// ただし、既に名前がセットされている場合は変更しない
-										var fname = utils79.basename( params.url );
-										fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
-										$inputImageName.val(fname);
-									}
-
-									return;
-								}
-							);
-						})
-					)
-					.append( $('<button>')
-						.text( broccoli.lb.get('ui_label.save_file_as') )
-						.attr({'type': 'button'})
-						.addClass('px2-btn')
-						.on('click', function(){
-							var base64 = $img.attr('data-base64');
-							var ext = $img.attr('data-extension');
-							if( !base64 || !ext ){
-								alert( broccoli.lb.get('ui_message.file_is_not_set') );
-								return;
-							}
-							var anchor = document.createElement("a");
-							anchor.href = 'data:application/octet-stream;base64,'+base64;
-							anchor.download = "bin."+ext;
-							anchor.click();
 							return;
-						})
-					)
-			);
-			var $fileNameDisplay = $('<div>')
-				.append( $('<span>')
-					.text(broccoli.lb.get('ui_label.output_filename')+':')
-				)
-				.append( $inputImageName
-					.attr({
-						"name":mod.name+'-publicFilename' ,
-						"type":"text",
-						"placeholder": "output file name"
-					})
-					.css({
-						'display': 'inline-block',
-						'width': 210,
-						'max-width': '70%'
-					})
-					.val( (typeof(res.publicFilename)==typeof('') ? res.publicFilename : '') )
-				)
-				.append( $displayExtension )
-			;
-			$uiImageResource.append( $fileNameDisplay );
+						}
+					);
+				});
+
+			$uiImageResource.find('.broccoli-module-px2style-image__trg-save-file-as')
+				.on('click', function(){
+					var base64 = $img.attr('data-base64');
+					var ext = $img.attr('data-extension');
+					if( !base64 || !ext ){
+						alert( broccoli.lb.get('ui_message.file_is_not_set') );
+						return;
+					}
+					var anchor = document.createElement("a");
+					anchor.href = 'data:application/octet-stream;base64,'+base64;
+					anchor.download = "bin."+ext;
+					anchor.click();
+					return;
+				});
+
 			if( confFilenameAutoSetter == 'random' ){
 				$fileNameDisplay.css({'display': 'none'});
 			}
-			$uiWebResource.append(
-				$('<p>').text( broccoli.lb.get('ui_message.in_this_mode_you_specify_the_image_resource_by_url') )
-			);
-			$uiWebResource.append(
-				$('<div>')
-					.append( $('<span>')
-						.text('URL: ')
-					)
-					.append( $inputWebUrl
-						.attr({
-							"name":mod.name+'-webUrl' ,
-							"type":"text",
-							"placeholder": "https://example.com/example.png"
-						})
-						.val( (typeof(data.webUrl)==typeof('') ? data.webUrl : '') )
-					)
-			);
 
-			rtn.append($uiImageResource).append($uiWebResource).append($uiNoImage);
-			rtn.append( $('<input>')
-				.attr({
-					'type': 'hidden',
-					'name': mod.name+'-resKey',
-					'value': data.resKey
-				})
-			);
-			$(elm).html(rtn);
+			$(elm).html($rtn);
 			selectResourceType();
 		} );
 
