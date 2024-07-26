@@ -139,6 +139,9 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				mod: mod,
 				data: data,
 				lb: broccoli.lb,
+				fncTypeOf: function(val){
+					return typeof(val);
+				},
 			}
 		));
 		var $uiImageResource = $rtn.find('.broccoli-module-px2style-image__ui-image-resource');
@@ -149,7 +152,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		var $imgNotImage = $rtn.find('.broccoli-module-px2style-image__no-image-preview');
 		var $inputImageName = $('<input class="px2-input px2-input--block" style="margin: 0 5px;">');
 		var $displayExtension = $('<span>');
-		var $inputWebUrl = $('<input class="px2-input px2-input--block">');
+		var $inputWebUrl = $rtn.find('input.px2-input[name="'+mod.name+'-webUrl"]');
 
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
@@ -549,23 +552,6 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 			if( confFilenameAutoSetter == 'random' ){
 				$fileNameDisplay.css({'display': 'none'});
 			}
-			$uiWebResource.append(
-				$('<p>').text( broccoli.lb.get('ui_message.in_this_mode_you_specify_the_image_resource_by_url') )
-			);
-			$uiWebResource.append(
-				$('<div>')
-					.append( $('<span>')
-						.text('URL: ')
-					)
-					.append( $inputWebUrl
-						.attr({
-							"name":mod.name+'-webUrl' ,
-							"type":"text",
-							"placeholder": "https://example.com/example.png"
-						})
-						.val( (typeof(data.webUrl)==typeof('') ? data.webUrl : '') )
-					)
-			);
 
 			$(elm).html($rtn);
 			selectResourceType();

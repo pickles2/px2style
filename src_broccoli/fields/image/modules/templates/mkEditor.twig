@@ -11,6 +11,11 @@
         </div>
     </div>
     <div class="broccoli-module-px2style-image__ui-web-resource">
+        <p>{{ broccoli.lb.get('ui_message.in_this_mode_you_specify_the_image_resource_by_url') }}</p>
+        <div>
+            <span>URL: </span>
+            <input class="px2-input px2-input--block" type="text" name="{{mod.name}}-webUrl" value="{{ (fncTypeOf(data.webUrl)==fncTypeOf('') ? data.webUrl : '') }}" placeholder="https://example.com/example.png" />
+        </div>
     </div>
     <div class="broccoli-module-px2style-image__ui-no-image">
     </div>
