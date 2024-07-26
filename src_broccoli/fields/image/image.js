@@ -349,7 +349,8 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				path = _imgDummy;
 			}
 
-			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]').on('change', selectResourceType);
+			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
+				.on('change', selectResourceType);
 
 			$imagePreviewArea
 				.on('paste', function(e){
@@ -422,7 +423,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 					}
 				});
 
-			$uiImageResource.find('button.broccoli-module-px2style-image__trg-get-image-from-url')
+			$uiImageResource.find('.broccoli-module-px2style-image__trg-get-image-from-url')
 				.on('click', function(){
 					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
 					if( !url ){
@@ -496,7 +497,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 					);
 				});
 
-			$uiImageResource.find('broccoli-module-px2style-image__trg-save-file-as')
+			$uiImageResource.find('.broccoli-module-px2style-image__trg-save-file-as')
 				.on('click', function(){
 					var base64 = $img.attr('data-base64');
 					var ext = $img.attr('data-extension');
