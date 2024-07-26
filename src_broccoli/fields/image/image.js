@@ -130,11 +130,19 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 	 * エディタUIを生成
 	 */
 	this.mkEditor = function( mod, data, elm, callback ){
-		var rtn = $(broccoli.bindTwig( require('-!text-loader!./modules/templates/mkEditor.twig'), {} ));
-		var $uiImageResource = $('<div>');
+		var $rtn = $(broccoli.bindTwig(
+			require('-!text-loader!./modules/templates/mkEditor.twig'),
+			{
+				broccoli: broccoli,
+				mod: mod,
+				data: data,
+				lb: broccoli.lb,
+			}
+		));
+		var $uiImageResource = $rtn.find('.broccoli-module-px2style-image__ui-image-resource');
+		var $uiWebResource = $rtn.find('.broccoli-module-px2style-image__ui-web-resource');
+		var $uiNoImage = $rtn.find('.broccoli-module-px2style-image__ui-no-image');
 		var $imagePreviewArea = $('<div>');
-		var $uiNoImage = $('<div>');
-		var $uiWebResource = $('<div>');
 		var _this = this;
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
@@ -160,7 +168,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		var confFilenameAutoSetter = mod.filenameAutoSetter || 'ifEmpty';
 
 		function selectResourceType(){
-			var val = rtn.find('[name='+mod.name+'-resourceType]:checked').val();
+			var val = $rtn.find('[name='+mod.name+'-resourceType]:checked').val();
 			$uiWebResource.hide();
 			$uiNoImage.hide();
 			$uiImageResource.hide();
@@ -340,57 +348,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				path = _imgDummy;
 			}
 
-			var tmpListStyle = {
-				'list-style-type': 'none',
-				'display': 'inline-block',
-				'padding': '0.2em 1em',
-				'margin': '0'
-			}
-			rtn.append( $('<ul>')
-				.css({'padding': 0})
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"",
-								"checked": (data.resType=='')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.upload_image') ) )
-					)
-				)
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"web",
-								"checked": (data.resType=='web')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.web_resource') ) )
-					)
-				)
-				.append( $( '<li>' )
-					.css(tmpListStyle)
-					.append( $( '<label>' )
-						.append( $( '<input type="radio">' )
-							.change(selectResourceType)
-							.attr({
-								"name":mod.name+'-resourceType',
-								"value":"none",
-								"checked": (data.resType=='none')
-							})
-						)
-						.append( $( '<span>' ).text( broccoli.lb.get('ui_label.none') ) )
-					)
-				)
-			);
+			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]').on('change', selectResourceType);
 
 			$uiImageResource.append( $imagePreviewArea
 				.css({
@@ -637,15 +595,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 					)
 			);
 
-			rtn.append($uiImageResource).append($uiWebResource).append($uiNoImage);
-			rtn.append( $('<input>')
-				.attr({
-					'type': 'hidden',
-					'name': mod.name+'-resKey',
-					'value': data.resKey
-				})
-			);
-			$(elm).html(rtn);
+			$(elm).html($rtn);
 			selectResourceType();
 		} );
 

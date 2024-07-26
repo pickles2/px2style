@@ -1,1 +1,14 @@
-<div class="broccoli-module-px2style-image"></div>
+<div class="broccoli-module-px2style-image">
+    <ul class="broccoli-module-px2style-image__resource-type">
+        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="" {{ data.resType=='' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.upload_image')}}</label></li>
+        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="web" {{ data.resType=='web' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.web_resource') }}</label></li>
+        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="none" {{ data.resType=='none' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.none') }}</label></li>
+    </ul>
+    <div class="broccoli-module-px2style-image__ui-image-resource">
+    </div>
+    <div class="broccoli-module-px2style-image__ui-web-resource">
+    </div>
+    <div class="broccoli-module-px2style-image__ui-no-image">
+    </div>
+    <input type="hidden" name="{{mod.name}}-resKey" value="{{ data.resKey }}" />
+</div>

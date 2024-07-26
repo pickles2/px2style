@@ -1,2 +1,11 @@
 .broccoli-module-px2style-image {
+    &__resource-type {
+        padding: 0;
+        > li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0.2em 1em;
+            margin: 0;
+        }
+    }
 }
