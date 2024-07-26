@@ -150,9 +150,11 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		var $imagePreviewArea = $rtn.find('.broccoli-module-px2style-image__image-preview-area');
 		var $img = $rtn.find('.broccoli-module-px2style-image__image-preview');
 		var $imgNotImage = $rtn.find('.broccoli-module-px2style-image__no-image-preview');
-		var $inputImageName = $('<input class="px2-input px2-input--block" style="margin: 0 5px;">');
-		var $displayExtension = $('<span>');
+		var $inputImageName = $rtn.find('input[name='+mod.name+'-publicFilename]');
+
+		var $displayExtension = $rtn.find('.broccoli-module-px2style-image__ui-image-resource-display-extension');
 		var $inputWebUrl = $rtn.find('input.px2-input[name="'+mod.name+'-webUrl"]');
+		var $fileNameDisplay = $rtn.find('.broccoli-module-px2style-image__file-name-display');
 
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
@@ -410,145 +412,105 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				'base64': res.base64,
 			});
 
-			$uiImageResource.append(
-				$('<p>')
-					.append( $('<label>')
-						.text( broccoli.lb.get('ui_label.select_image_file') )
-						.addClass('px2-btn')
-						.append( $('<input>')
-							.attr({
-								"name":mod.name ,
-								"type":"file",
-								"webkitfile":"webkitfile"
-							})
-							.css({'display': 'none'})
-							.on('change', function(e){
-								var fileInfo = e.target.files[0];
-								var realpathSelected = $(this).val();
+			$uiImageResource.find('input[type=file][name='+mod.name+']')
+				.on('change', function(e){
+					var fileInfo = e.target.files[0];
+					var realpathSelected = $(this).val();
 
-								if( realpathSelected ){
-									applyFile(fileInfo);
-								}
+					if( realpathSelected ){
+						applyFile(fileInfo);
+					}
+				});
 
-							})
-						)
-					)
-					.append( $('<button>')
-						.text( broccoli.lb.get('ui_label.get_from_url') )
-						.attr({'type': 'button'})
-						.addClass('px2-btn')
-						.on('click', function(){
-							var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
-							if( !url ){
-								return;
+			$uiImageResource.find('button.broccoli-module-px2style-image__trg-get-image-from-url')
+				.on('click', function(){
+					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+					if( !url ){
+						return;
+					}
+					var params = {
+						'url': url
+					}
+					_this.callGpi(
+						{
+							'api': 'getImageByUrl',
+							'data': params
+						} ,
+						function(result){
+							var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
+							switch(result.status){
+								case 200:
+								case 301:
+								case 302:
+								case 304:
+									// 成功
+									break;
+								case 404:
+									alert('画像が見つかりません。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 400:
+								case 405:
+									alert('不正なリクエストです。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 401:
+								case 402:
+								case 403:
+									alert('アクセスが許可されていません。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								case 0:
+									// おそらくURLの形式としてリクエストできない値が送られた。
+									alert('画像の取得に失敗しました。 ('+result.status+')');
+									return; // この場合は反映させない
+									break;
+								default:
+									alert('画像の取得に失敗しました。 ('+result.status+')');
+									// とれたデータが画像ではないとも限らないので、
+									// 失敗を伝えるが、反映はしてみることにする。
+									break;
 							}
-							var params = {
-								'url': url
+
+							setImagePreview({
+								'src': dataUri,
+								'size': result.responseHeaders['content-length'],
+								'ext': getExtension( params.url ),
+								'mimeType': result.responseHeaders['content-type'],
+								'base64': (function(dataUri){
+									dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
+									return dataUri;
+								})(dataUri),
+							});
+
+							if( !$inputImageName.val() ){
+								// アップした画像名をプリセット
+								// ただし、既に名前がセットされている場合は変更しない
+								var fname = utils79.basename( params.url );
+								fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
+								$inputImageName.val(fname);
 							}
-							_this.callGpi(
-								{
-									'api': 'getImageByUrl',
-									'data': params
-								} ,
-								function(result){
-									var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
-									switch(result.status){
-										case 200:
-										case 301:
-										case 302:
-										case 304:
-											// 成功
-											break;
-										case 404:
-											alert('画像が見つかりません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 400:
-										case 405:
-											alert('不正なリクエストです。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 401:
-										case 402:
-										case 403:
-											alert('アクセスが許可されていません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 0:
-											// おそらくURLの形式としてリクエストできない値が送られた。
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										default:
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											// とれたデータが画像ではないとも限らないので、
-											// 失敗を伝えるが、反映はしてみることにする。
-											break;
-									}
 
-									setImagePreview({
-										'src': dataUri,
-										'size': result.responseHeaders['content-length'],
-										'ext': getExtension( params.url ),
-										'mimeType': result.responseHeaders['content-type'],
-										'base64': (function(dataUri){
-											dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
-											return dataUri;
-										})(dataUri),
-									});
-
-									if( !$inputImageName.val() ){
-										// アップした画像名をプリセット
-										// ただし、既に名前がセットされている場合は変更しない
-										var fname = utils79.basename( params.url );
-										fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
-										$inputImageName.val(fname);
-									}
-
-									return;
-								}
-							);
-						})
-					)
-					.append( $('<button>')
-						.text( broccoli.lb.get('ui_label.save_file_as') )
-						.attr({'type': 'button'})
-						.addClass('px2-btn')
-						.on('click', function(){
-							var base64 = $img.attr('data-base64');
-							var ext = $img.attr('data-extension');
-							if( !base64 || !ext ){
-								alert( broccoli.lb.get('ui_message.file_is_not_set') );
-								return;
-							}
-							var anchor = document.createElement("a");
-							anchor.href = 'data:application/octet-stream;base64,'+base64;
-							anchor.download = "bin."+ext;
-							anchor.click();
 							return;
-						})
-					)
-			);
-			var $fileNameDisplay = $('<div>')
-				.append( $('<span>')
-					.text(broccoli.lb.get('ui_label.output_filename')+':')
-				)
-				.append( $inputImageName
-					.attr({
-						"name":mod.name+'-publicFilename' ,
-						"type":"text",
-						"placeholder": "output file name"
-					})
-					.css({
-						'display': 'inline-block',
-						'width': 210,
-						'max-width': '70%'
-					})
-					.val( (typeof(res.publicFilename)==typeof('') ? res.publicFilename : '') )
-				)
-				.append( $displayExtension )
-			;
-			$uiImageResource.append( $fileNameDisplay );
+						}
+					);
+				});
+
+			$uiImageResource.find('broccoli-module-px2style-image__trg-save-file-as')
+				.on('click', function(){
+					var base64 = $img.attr('data-base64');
+					var ext = $img.attr('data-extension');
+					if( !base64 || !ext ){
+						alert( broccoli.lb.get('ui_message.file_is_not_set') );
+						return;
+					}
+					var anchor = document.createElement("a");
+					anchor.href = 'data:application/octet-stream;base64,'+base64;
+					anchor.download = "bin."+ext;
+					anchor.click();
+					return;
+				});
+
 			if( confFilenameAutoSetter == 'random' ){
 				$fileNameDisplay.css({'display': 'none'});
 			}
