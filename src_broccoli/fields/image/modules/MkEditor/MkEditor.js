@@ -7,7 +7,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	const utils79 = require('utils79');
 	const urlParse = require('url-parse');
 	const md5 = require('md5');
-	const ImageResizer = require('../ImageResizer.js');
+	const ImageResizer = require('../../../_shared/ImageResizer.js');
 	const imageResizer = new ImageResizer();
 
 	/**
