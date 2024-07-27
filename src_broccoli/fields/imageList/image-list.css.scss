@@ -1,6 +1,22 @@
-@use "../../../node_modules/keen-slider/keen-slider.min.css";
+@import "../../../node_modules/keen-slider/keen-slider.min.css";
 
 .broccoli-module-px2style-image-list {
+
+    &__slider {
+        // color: #000;
+        // ul {
+        //     margin: 0px;
+        //     padding: 0px;
+        //     display: flex;
+        //     gap: 10px;
+        // }
+        // li {
+        //     list-style-type: none;
+        //     margin: 0px;
+        //     padding: 0px;
+        // }
+    }
+
     &__resource-type {
         padding: 0;
         > li {

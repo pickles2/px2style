@@ -8,7 +8,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	const urlParse = require('url-parse');
 	const md5 = require('md5');
 
-	const KeenSlider = require('keen-slider');
+	const KeenSlider = require('keen-slider').default;
 
 	const ImageResizer = require('../../../_shared/ImageResizer.js');
 	const imageResizer = new ImageResizer();
@@ -363,6 +363,19 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 			$(elm).html($rtn);
 			refleshSelectedResourceType();
+
+			const slider = new KeenSlider(
+				$rtn.find('.broccoli-module-px2style-image-list__slider .keen-slider').get(0),
+				{
+					loop: false,
+					created: () => {
+						console.log('created')
+					},
+				},
+				[
+					// add plugins here
+				]
+			);
 		} );
 
 		new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){

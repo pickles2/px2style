@@ -5,6 +5,25 @@
             "fields": {
                 "main": [
                     {
+                        "modId": "px2style:interactives/image-slider",
+                        "fields": {
+                            "image-list": {
+                                "resKey": "4132443d05caa7b24e375b710a2f121a",
+                                "resType": "none",
+                                "webUrl": "",
+                                "path": "./index_files/resources/4132443d05caa7b24e375b710a2f121a.txt"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": "",
+                        "locked": {
+                            "contents": false,
+                            "children": false,
+                            "move": false,
+                            "delete": false
+                        }
+                    },
+                    {
                         "modId": "px2style:interactives/carousel",
                         "fields": {
                             "loop": [

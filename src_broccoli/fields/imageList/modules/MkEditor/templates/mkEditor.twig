@@ -1,4 +1,13 @@
 <div class="broccoli-module-px2style-image-list">
+    <div class="broccoli-module-px2style-image-list__slider">
+        <ul ref="container" class="keen-slider">
+            <li class="keen-slider__slide">slide 1</li>
+            <li class="keen-slider__slide">slide 2</li>
+            <li class="keen-slider__slide">slide 3</li>
+            <li class="keen-slider__slide">slide 4</li>
+        </ul>
+    </div>
+
     <ul class="broccoli-module-px2style-image-list__resource-type">
         <li><label><input type="radio" name="{{mod.name}}-resourceType" value="" {{ data.resType=='' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.upload_image')}}</label></li>
         <li><label><input type="radio" name="{{mod.name}}-resourceType" value="web" {{ data.resType=='web' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.web_resource') }}</label></li>

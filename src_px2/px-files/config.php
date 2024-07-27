@@ -476,6 +476,20 @@ return call_user_func( function(){
 				'function' => 'window.broccoliModulePx2StyleImage',
 			),
 		),
+		'px2style__image-list'=>array(
+			'backend'=>array(
+				'class' => 'pickles2\\px2style\\fields\\imageList\\backend',
+				'require' => '../fields/imageList/backend.js',
+			),
+			'frontend'=>array(
+				'dir' => '../fields/imageList/frontend/',
+				'file' => array(
+					'image-list.css',
+					'image-list.js',
+				),
+				'function' => 'window.broccoliModulePx2StyleImageList',
+			),
+		),
 	);
 
 	$droppedImageOperator = \pickles2\px2style\utils::droppedFileOperator('image');

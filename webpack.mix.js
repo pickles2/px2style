@@ -62,6 +62,11 @@ mix
 	.sass('./src_broccoli/modules/basics/basics/_/module.css.scss', './broccoli_modules/basics/basics/_/module.css')
 
 	// --------------------------------------
+	// modules: interactives/image-slider
+	.js('./src_broccoli/modules/basics/interactives/image-slider/module.js', './broccoli_modules/basics/interactives/image-slider/module.js')
+	.sass('./src_broccoli/modules/basics/interactives/image-slider/module.css.scss', './broccoli_modules/basics/interactives/image-slider/module.css')
+
+	// --------------------------------------
 	// px2style
 	.js('./src_px2style/px2style.js', './dist/px2style.js')
 	.sass('./src_px2style/px2style.css.scss', './dist/px2style.css')
