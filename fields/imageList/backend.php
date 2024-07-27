@@ -24,24 +24,30 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 		if( is_array($fieldData) ){
 			$rtn = $fieldData;
 		}
-		if( !array_key_exists('resKey', $rtn) ){
-			$rtn['resKey'] = null;
+		if( !array_key_exists('slides', $rtn) ){
+			$rtn['slides'] = array();
 		}
-		if( !array_key_exists('path', $rtn) ){
-			$rtn['path'] = null;
+		if( !count($rtn['slides']) ){
+			array_push($rtn['slides'], array());
 		}
-		if( !array_key_exists('resType', $rtn) ){
-			$rtn['resType'] = null;
+		if( !array_key_exists('resKey', $rtn['slides'][0]) ){
+			$rtn['slides'][0]['resKey'] = null;
+		}
+		if( !array_key_exists('path', $rtn['slides'][0]) ){
+			$rtn['slides'][0]['path'] = null;
+		}
+		if( !array_key_exists('resType', $rtn['slides'][0]) ){
+			$rtn['slides'][0]['resType'] = null;
 		}
 
-		if( $rtn['resType'] == 'web' ){
-			return $rtn['webUrl'];
-		}elseif( $rtn['resType'] == 'none' ){
+		if( $rtn['slides'][0]['resType'] == 'web' ){
+			return '<li><img src="'.htmlspecialchars($rtn['slides'][0]['webUrl']).'" alt="" /></li>';
+		}elseif( $rtn['slides'][0]['resType'] == 'none' ){
 			return '';
 		}else{
 			$data = json_decode('{}');
 			$resMgr = $this->broccoli->resourceMgr();
-			$data->resourceInfo = $resMgr->getResource( $rtn['resKey'] );
+			$data->resourceInfo = $resMgr->getResource( $rtn['slides'][0]['resKey'] );
 
 			$is_image_uploaded = true;
 			if( $data->resourceInfo === false ){
@@ -57,16 +63,16 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 				return '';
 			}
 
-			$realpath = $resMgr->getResourcePublicRealpath( $rtn['resKey'] );
+			$realpath = $resMgr->getResourcePublicRealpath( $rtn['slides'][0]['resKey'] );
 			$data->publicRealpath = $realpath;
 
-			$publicPath = $resMgr->getResourcePublicPath( $rtn['resKey'] );
+			$publicPath = $resMgr->getResourcePublicPath( $rtn['slides'][0]['resKey'] );
 			if( $data->resourceInfo ?? null ){
 				$publicPath = '<'.'?= $px->h( $px->path_files("/resources/'.basename($publicPath).'") ) ?'.'>';
 			}else{
 				$publicPath = '';
 			}
-			$rtn['path'] = $publicPath;
+			$rtn['slides'][0]['path'] = $publicPath;
 			$data->path = $publicPath;
 
 			if( $mode == 'canvas' ){
@@ -78,14 +84,14 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 					if( property_exists($data, 'resourceInfo') && property_exists($data->resourceInfo, 'type') ){
 						$resourceType = $data->resourceInfo->type;
 					}
-					$data->path = 'data:'.$resourceType.';base64,'.'{broccoli-html-editor-resource-baser64:{'.$rtn['resKey'].'}}';
+					$data->path = 'data:'.$resourceType.';base64,'.'{broccoli-html-editor-resource-baser64:{'.$rtn['slides'][0]['resKey'].'}}';
 				}
 			}
 			if( !$data->path && $data->resourceInfo && $data->resourceInfo->base64 ){
 				$data->path = 'data:'.$data->resourceInfo->type.';base64,'.$data->resourceInfo->base64;
 			}
 
-			return $data->path;
+			return '<li><img src="'.$data->path.'" alt="" /></li>';
 		}
 
 		return '';

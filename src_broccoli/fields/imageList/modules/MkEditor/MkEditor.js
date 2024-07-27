@@ -24,7 +24,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			{
 				broccoli: broccoli,
 				mod: mod,
-				data: data,
+				data: data.slides[0],
 				lb: broccoli.lb,
 				fncTypeOf: function(val){
 					return typeof(val);
@@ -32,29 +32,29 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			}
 		));
 
-		const $uiImageResource = $rtn.find('.broccoli-module-px2style-image__ui-image-resource');
-		const $uiWebResource = $rtn.find('.broccoli-module-px2style-image__ui-web-resource');
-		const $uiNoImage = $rtn.find('.broccoli-module-px2style-image__ui-no-image');
-		const $imagePreviewArea = $rtn.find('.broccoli-module-px2style-image__image-preview-area');
-		const $img = $rtn.find('.broccoli-module-px2style-image__image-preview');
-		const $imgNotImage = $rtn.find('.broccoli-module-px2style-image__no-image-preview');
+		const $uiImageResource = $rtn.find('.broccoli-module-px2style-image-list__ui-image-resource');
+		const $uiWebResource = $rtn.find('.broccoli-module-px2style-image-list__ui-web-resource');
+		const $uiNoImage = $rtn.find('.broccoli-module-px2style-image-list__ui-no-image');
+		const $imagePreviewArea = $rtn.find('.broccoli-module-px2style-image-list__image-preview-area');
+		const $img = $rtn.find('.broccoli-module-px2style-image-list__image-preview');
+		const $imgNotImage = $rtn.find('.broccoli-module-px2style-image-list__no-image-preview');
 		const $inputImageName = $rtn.find('input[name='+mod.name+'-publicFilename]');
 
-		const $displayExtension = $rtn.find('.broccoli-module-px2style-image__ui-image-resource-display-extension');
+		const $displayExtension = $rtn.find('.broccoli-module-px2style-image-list__ui-image-resource-display-extension');
 		const $inputWebUrl = $rtn.find('input.px2-input[name="'+mod.name+'-webUrl"]');
-		const $fileNameDisplay = $rtn.find('.broccoli-module-px2style-image__file-name-display');
+		const $fileNameDisplay = $rtn.find('.broccoli-module-px2style-image-list__file-name-display');
 
 		const confFilenameAutoSetter = mod.filenameAutoSetter || 'ifEmpty';
 
-		if( typeof(data) !== typeof({}) ){ data = {}; }
-		if( typeof(data.resKey) !== typeof('') ){
-			data.resKey = '';
+		if( typeof(data.slides[0]) !== typeof({}) ){ data.slides[0] = {}; }
+		if( typeof(data.slides[0].resKey) !== typeof('') ){
+			data.slides[0].resKey = '';
 		}
-		if( typeof(data.resType) !== typeof('') ){
-			data.resType = '';
+		if( typeof(data.slides[0].resType) !== typeof('') ){
+			data.slides[0].resType = '';
 		}
-		if( typeof(data.webUrl) !== typeof('') ){
-			data.webUrl = '';
+		if( typeof(data.slides[0].webUrl) !== typeof('') ){
+			data.slides[0].webUrl = '';
 		}
 
 		/**
@@ -184,7 +184,8 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			return;
 		}
 
-		_resMgr.getResource( data.resKey, function(res){
+		_resMgr.getResource( data.slides[0].resKey, function(res){
+console.log('=-=-=-=-=-=-= res', res);
 			if(res.ext){
 				$displayExtension.text( '.'+res.ext );
 			}
@@ -268,7 +269,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					}
 				});
 
-			$uiImageResource.find('.broccoli-module-px2style-image__trg-get-image-from-url')
+			$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
 				.on('click', function(){
 					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
 					if( !url ){
@@ -342,7 +343,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					);
 				});
 
-			$uiImageResource.find('.broccoli-module-px2style-image__trg-save-file-as')
+			$uiImageResource.find('.broccoli-module-px2style-image-list__trg-save-file-as')
 				.on('click', function(){
 					var base64 = $img.attr('data-base64');
 					var ext = $img.attr('data-extension');
@@ -365,7 +366,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			refleshSelectedResourceType();
 
 			const slider = new KeenSlider(
-				$rtn.find('.broccoli-module-px2style-image-list__slider .keen-slider').get(0),
+				$rtn.find('.broccoli-module-px2style-image-list-list__slider .keen-slider').get(0),
 				{
 					loop: false,
 					created: () => {

@@ -8,10 +8,14 @@
                         "modId": "px2style:interactives/image-slider",
                         "fields": {
                             "image-list": {
-                                "resKey": "4132443d05caa7b24e375b710a2f121a",
-                                "resType": "none",
-                                "webUrl": "",
-                                "path": "./index_files/resources/4132443d05caa7b24e375b710a2f121a.txt"
+                                "slides": [
+                                    {
+                                        "resKey": "c70bd47d8e6e16e11a60b3803873aa74",
+                                        "path": "./index_files/resources/c70bd47d8e6e16e11a60b3803873aa74.jpg",
+                                        "resType": "",
+                                        "webUrl": ""
+                                    }
+                                ]
                             }
                         },
                         "anchor": "",

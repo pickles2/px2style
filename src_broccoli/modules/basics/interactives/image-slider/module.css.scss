@@ -7,22 +7,24 @@
         display: flex;
         align-items: stretch;
         overflow: hidden;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            li {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
         img{
             line-height: 1;
             vertical-align: bottom;
             width: 100%;
             line-height: 1;
-        }
-        > *{
-            width: 100%;
-            vertical-align: middle;
-        }
-        *[data-broccoli-is-appender]{
-            width: 10%;
-            max-height: 100%;
-            overflow: hidden;
-            word-wrap: normal;
-            white-space: normal !important;
         }
     }
 }

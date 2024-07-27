@@ -22,10 +22,10 @@ module.exports = function(broccoli){
 
 		new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
 
-			if( rtn.resType == 'web' ){
-				callback(rtn.webUrl);
+			if( rtn.slides[0].resType == 'web' ){
+				callback('<li><img src="'+rtn.slides[0].webUrl+'" alt="" /></li>');
 				return;
-			}else if( rtn.resType == 'none' ){
+			}else if( rtn.slides[0].resType == 'none' ){
 				callback('');
 				return;
 			}else{
@@ -33,7 +33,7 @@ module.exports = function(broccoli){
 					{},
 					[
 						function(it1, data){
-							_resMgr.getResource( rtn.resKey, function(res){
+							_resMgr.getResource( rtn.slides[0].resKey, function(res){
 								data.resourceInfo = res;
 								if( !data.resourceInfo ){
 									is_image_uploaded = false;
@@ -53,7 +53,7 @@ module.exports = function(broccoli){
 							return;
 						},
 						function(it1, data){
-							_resMgr.getResourcePublicRealpath( rtn.resKey, function(realpath){
+							_resMgr.getResourcePublicRealpath( rtn.slides[0].resKey, function(realpath){
 								// console.log(realpath);
 								data.publicRealpath = realpath;
 								it1.next(data);
@@ -61,11 +61,11 @@ module.exports = function(broccoli){
 							return;
 						},
 						function(it1, data){
-							_resMgr.getResourcePublicPath( rtn.resKey, function(publicPath){
+							_resMgr.getResourcePublicPath( rtn.slides[0].resKey, function(publicPath){
 								if( !data.resourceInfo ){
 									publicPath = '';
 								}
-								rtn.path = publicPath;
+								rtn.slides[0].path = publicPath;
 								data.path = publicPath;
 								it1.next(data);
 							} );
@@ -78,7 +78,7 @@ module.exports = function(broccoli){
 									data.path = _imgDummy;
 								}else{
 									try {
-										data.path = 'data:'+data.resourceInfo.type+';base64,' + '{broccoli-html-editor-resource-baser64:{'+rtn.resKey+'}}';
+										data.path = 'data:'+data.resourceInfo.type+';base64,' + '{broccoli-html-editor-resource-baser64:{'+rtn.slides[0].resKey+'}}';
 										// var imageBin = fs.readFileSync(data.publicRealpath);
 										// data.path = 'data:'+data.resourceInfo.type+';base64,' + utils79.base64_encode( imageBin );
 									} catch (e) {
@@ -92,8 +92,7 @@ module.exports = function(broccoli){
 							it1.next(data);
 						},
 						function(it1, data){
-							// console.log(data.path);
-							callback(data.path);
+							callback('<li><img src="'+data.path+'" alt="" /></li>');
 							it1.next();
 						}
 					]

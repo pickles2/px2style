@@ -1,11 +1,5 @@
 <div class="px2-image-slider"{% if _ENV.mode == 'canvas' %} style="padding-top: 12px;"{% endif %}>
 	<div class="px2-image-slider__contents">
-		<ul rel="container" class="keen-slider">
-            <li class="keen-slider__slide">slide 1</li>
-            <li class="keen-slider__slide">slide 2</li>
-            <li class="keen-slider__slide">slide 3</li>
-            <li class="keen-slider__slide">slide 4</li>
-			{{ _context["image-list"] }}
-		</ul>
+		<ul rel="container" class="keen-slider">{{ _context["image-list"] }}</ul>
 	</div>
 </div>

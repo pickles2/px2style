@@ -26,10 +26,14 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		var rtn = fieldData;
 		if( typeof(fieldData) !== typeof({}) ){
 			rtn = {
-				"resKey":'',
-				"path":'about:blank',
-				"resType":'',
-				"webUrl":''
+				"slides": [
+					{
+						"resKey":'',
+						"path":'about:blank',
+						"resType":'',
+						"webUrl":'',
+					}
+				],
 			};
 		}
 		return rtn;
@@ -220,27 +224,29 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		var resInfo;
 		var $dom = $(elm);
 		if( typeof(data) !== typeof({}) ){
-			data = {};
+			data = {
+				"slides": [],
+			};
 		}
 		if( typeof(data.resKey) !== typeof('') ){
-			data.resKey = '';
+			data.slides[0].resKey = '';
 		}
 
 		it79.fnc(
 			data,
 			[
 				function(it1, data){
-					data.resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
-					data.webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
+					data.slides[0].resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
+					data.slides[0].webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
 					it1.next(data);
 					return;
 				} ,
 				function(it1, data){
 					options.message( broccoli.lb.get('ui_message.initializing_resource_storage') );
-					_resMgr.getResource(data.resKey, function(result){
+					_resMgr.getResource(data.slides[0].resKey, function(result){
 						if( result === false ){
 							_resMgr.addResource(function(newResKey){
-								data.resKey = newResKey;
+								data.slides[0].resKey = newResKey;
 								it1.next(data);
 							});
 							return;
@@ -250,8 +256,8 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 					});
 				} ,
 				function(it1, data){
-					options.message( broccoli.lb.get('ui_message.initializing_resource_storage') + ' '+data.resKey);
-					_resMgr.getResource(data.resKey, function(res){
+					options.message( broccoli.lb.get('ui_message.initializing_resource_storage') + ' '+data.slides[0].resKey);
+					_resMgr.getResource(data.slides[0].resKey, function(res){
 						resInfo = res;
 						it1.next(data);
 					});
@@ -271,14 +277,14 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 						resInfo.field = mod.type;
 						resInfo.fieldNote = {}; // <= フィールド記録欄をクリア
 					}
-					resInfo.isPrivateMaterial = (data.resType == 'web' ? true : false);
+					resInfo.isPrivateMaterial = (data.slides[0].resType == 'web' ? true : false);
 					resInfo.publicFilename = $dom.find('input[name='+mod.name+'-publicFilename]').val();
 
 					options.message( broccoli.lb.get('ui_message.updating_resources') );
-					_resMgr.updateResource( data.resKey, resInfo, function(result){
+					_resMgr.updateResource( data.slides[0].resKey, resInfo, function(result){
 						options.message( broccoli.lb.get('ui_message.getting_public_path_for_resource') );
-						_resMgr.getResourcePublicPath( data.resKey, function(publicPath){
-							data.path = publicPath;
+						_resMgr.getResourcePublicPath( data.slides[0].resKey, function(publicPath){
+							data.slides[0].path = publicPath;
 							it1.next(data);
 						} );
 					} );
