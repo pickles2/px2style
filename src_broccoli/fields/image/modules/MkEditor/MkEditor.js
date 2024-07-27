@@ -17,7 +17,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		const _this = this;
 
 		const $rtn = $(broccoli.bindTwig(
-			require('-!text-loader!../templates/mkEditor.twig'),
+			require('-!text-loader!./templates/mkEditor.twig'),
 			{
 				broccoli: broccoli,
 				mod: mod,
