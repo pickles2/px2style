@@ -10,6 +10,7 @@
 		overflow: hidden;
 
 		&-slide {
+			position: relative;
 			list-style-type: none;
 			margin: 0px;
 			padding: 0px;
@@ -18,7 +19,7 @@
 			flex-grow: 0;
 			width: 70%;
 
-			button {
+			.broccoli-module-px2style-image-list__slider-btn-edit-slide {
 				width: 100%;
 				img {
 					width: 100%;
@@ -35,6 +36,13 @@
 		font-size: 40px;
 		width: 100%;
 		height: 100%;
+	}
+	&__slider-btn-delete-slide {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 50px;
+		height: 50px;
 	}
 
 	&__resource-type {

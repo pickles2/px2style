@@ -1,5 +1,8 @@
 <li class="broccoli-module-px2style-image-list__slider-slide">
-    <button type="button">
-        <img src="data:{{ resourceInfo.type }};base64,{{ resourceInfo.base64 }}" />
-    </button>
+	<button type="button" class="broccoli-module-px2style-image-list__slider-btn-edit-slide" data-index="{{ index }}">
+		<img src="data:{{ resourceInfo.type }};base64,{{ resourceInfo.base64 }}" />
+	</button>
+	<button type="button" class="broccoli-module-px2style-image-list__slider-btn-delete-slide" data-index="{{ index }}">
+		削除
+	</button>
 </li>
