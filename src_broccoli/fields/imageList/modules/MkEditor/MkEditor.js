@@ -16,7 +16,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	/**
 	 * エディタUIを生成
 	 */
-	this.mkEditor = function( mod, data, elm, callback ){
+	this.mkEditor = async function( mod, data, elm, callback ){
 		const _this = this;
 
 		const $rtn = $(broccoli.bindTwig(
@@ -184,204 +184,244 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			return;
 		}
 
-		_resMgr.getResource( data.slides[0].resKey, function(res){
-console.log('=-=-=-=-=-=-= res', res);
-			if(res.ext){
-				$displayExtension.text( '.'+res.ext );
-			}
-			var path = 'data:'+res.type+';base64,' + res.base64;
-			if( !res.base64 ){
-				// ↓ ダミーの Sample Image
-				path = _imgDummy;
-			}
+		new Promise((resolve, reject)=>{
+			it79.ary(
+				data.slides,
+				function(it, item, index){
+					const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
 
-			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
-				.on('change', refleshSelectedResourceType);
-
-			$imagePreviewArea
-				.on('paste', function(e){
-					var items = e.originalEvent.clipboardData.items;
-					for (var i = 0 ; i < items.length ; i++) {
-						var item = items[i];
-						if(item.type.indexOf("image") != -1){
-							var file = item.getAsFile();
-							file.name = file.name||'clipboard.'+(function(type){
-								if(type.match(/png$/i)){return 'png';}
-								if(type.match(/gif$/i)){return 'gif';}
-								if(type.match(/(?:jpeg|jpg|jpe)$/i)){return 'jpg';}
-								if(type.match(/webp$/i)){return 'webp';}
-								if(type.match(/svg/i)){return 'svg';}
-								return 'txt';
-							})(file.type);
-							applyFile(file);
-						}
-					}
-				})
-				.on('focus', function(e){
-					$(this).css({'background': '#eee'});
-				})
-				.on('blur', function(e){
-					$(this).css({'background': '#fff'});
-				})
-				.on('dragleave', function(e){
-					e.stopPropagation();
-					e.preventDefault();
-					$(this).css({'background': '#fff'});
-				})
-				.on('dragover', function(e){
-					e.stopPropagation();
-					e.preventDefault();
-					$(this).css({'background': '#eee'});
-				})
-				.on('drop', function(e){
-					e.stopPropagation();
-					e.preventDefault();
-					var event = e.originalEvent;
-					var fileInfo = event.dataTransfer.files[0];
-					applyFile(fileInfo);
-				});
-
-			$img.attr({
-				"src": path ,
-				"data-size": res.size ,
-				"data-extension": res.ext,
-				"data-mime-type": res.type,
-				"data-base64": res.base64,
-				"data-is-updated": 'no'
-			});
-			$imgNotImage.hide();
-
-			setImagePreview({
-				'src': path,
-				'size': res.size,
-				'ext': res.ext,
-				'mimeType': res.type,
-				'base64': res.base64,
-			});
-
-			$uiImageResource.find('input[type=file][name='+mod.name+']')
-				.on('change', function(e){
-					var fileInfo = e.target.files[0];
-					var realpathSelected = $(this).val();
-
-					if( realpathSelected ){
-						applyFile(fileInfo);
-					}
-				});
-
-			$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
-				.on('click', function(){
-					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
-					if( !url ){
-						return;
-					}
-					var params = {
-						'url': url
-					}
-					_this.callGpi(
-						{
-							'api': 'getImageByUrl',
-							'data': params
-						} ,
-						function(result){
-							var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
-							switch(result.status){
-								case 200:
-								case 301:
-								case 302:
-								case 304:
-									// 成功
-									break;
-								case 404:
-									alert('画像が見つかりません。 ('+result.status+')');
-									return; // この場合は反映させない
-									break;
-								case 400:
-								case 405:
-									alert('不正なリクエストです。 ('+result.status+')');
-									return; // この場合は反映させない
-									break;
-								case 401:
-								case 402:
-								case 403:
-									alert('アクセスが許可されていません。 ('+result.status+')');
-									return; // この場合は反映させない
-									break;
-								case 0:
-									// おそらくURLの形式としてリクエストできない値が送られた。
-									alert('画像の取得に失敗しました。 ('+result.status+')');
-									return; // この場合は反映させない
-									break;
-								default:
-									alert('画像の取得に失敗しました。 ('+result.status+')');
-									// とれたデータが画像ではないとも限らないので、
-									// 失敗を伝えるが、反映はしてみることにする。
-									break;
+					_resMgr.getResource( item.resKey, function(resourceInfo){
+						const $slideRow = $(broccoli.bindTwig(
+							require('-!text-loader!./templates/mkEditor_slideRow.twig'),
+							{
+								broccoli: broccoli,
+								mod: mod,
+								item: item,
+								index: index,
+								resourceInfo: resourceInfo,
+								lb: broccoli.lb,
+								fncTypeOf: function(val){
+									return typeof(val);
+								},
 							}
+						));
+						$slider.find('.broccoli-module-px2style-image-list__slider-slide:last-child').before($slideRow);
 
-							setImagePreview({
-								'src': dataUri,
-								'size': result.responseHeaders['content-length'],
-								'ext': getExtension( params.url ),
-								'mimeType': result.responseHeaders['content-type'],
-								'base64': (function(dataUri){
-									dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
-									return dataUri;
-								})(dataUri),
-							});
+						it.next();
+					});
 
-							if( !$inputImageName.val() ){
-								// アップした画像名をプリセット
-								// ただし、既に名前がセットされている場合は変更しない
-								var fname = utils79.basename( params.url );
-								fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
-								$inputImageName.val(fname);
-							}
-
-							return;
-						}
-					);
-				});
-
-			$uiImageResource.find('.broccoli-module-px2style-image-list__trg-save-file-as')
-				.on('click', function(){
-					var base64 = $img.attr('data-base64');
-					var ext = $img.attr('data-extension');
-					if( !base64 || !ext ){
-						alert( broccoli.lb.get('ui_message.file_is_not_set') );
-						return;
-					}
-					var anchor = document.createElement("a");
-					anchor.href = 'data:application/octet-stream;base64,'+base64;
-					anchor.download = "bin."+ext;
-					anchor.click();
-					return;
-				});
-
-			if( confFilenameAutoSetter == 'random' ){
-				$fileNameDisplay.css({'display': 'none'});
-			}
-
-			$(elm).html($rtn);
-			refleshSelectedResourceType();
-
-			const slider = new KeenSlider(
-				$rtn.find('.broccoli-module-px2style-image-list-list__slider .keen-slider').get(0),
-				{
-					loop: false,
-					created: () => {
-						console.log('created')
-					},
 				},
-				[
-					// add plugins here
-				]
+				function(){
+					resolve();
+				}
 			);
-		} );
+		}).then(()=>{
+			return new Promise((resolve, reject)=>{
 
-		new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
+				_resMgr.getResource( data.slides[0].resKey, function(res){
+					if(res.ext){
+						$displayExtension.text( '.'+res.ext );
+					}
+					var path = 'data:'+res.type+';base64,' + res.base64;
+					if( !res.base64 ){
+						// ↓ ダミーの Sample Image
+						path = _imgDummy;
+					}
+
+					$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
+						.on('change', refleshSelectedResourceType);
+
+					$imagePreviewArea
+						.on('paste', function(e){
+							var items = e.originalEvent.clipboardData.items;
+							for (var i = 0 ; i < items.length ; i++) {
+								var item = items[i];
+								if(item.type.indexOf("image") != -1){
+									var file = item.getAsFile();
+									file.name = file.name||'clipboard.'+(function(type){
+										if(type.match(/png$/i)){return 'png';}
+										if(type.match(/gif$/i)){return 'gif';}
+										if(type.match(/(?:jpeg|jpg|jpe)$/i)){return 'jpg';}
+										if(type.match(/webp$/i)){return 'webp';}
+										if(type.match(/svg/i)){return 'svg';}
+										return 'txt';
+									})(file.type);
+									applyFile(file);
+								}
+							}
+						})
+						.on('focus', function(e){
+							$(this).css({'background': '#eee'});
+						})
+						.on('blur', function(e){
+							$(this).css({'background': '#fff'});
+						})
+						.on('dragleave', function(e){
+							e.stopPropagation();
+							e.preventDefault();
+							$(this).css({'background': '#fff'});
+						})
+						.on('dragover', function(e){
+							e.stopPropagation();
+							e.preventDefault();
+							$(this).css({'background': '#eee'});
+						})
+						.on('drop', function(e){
+							e.stopPropagation();
+							e.preventDefault();
+							var event = e.originalEvent;
+							var fileInfo = event.dataTransfer.files[0];
+							applyFile(fileInfo);
+						});
+
+					$img.attr({
+						"src": path ,
+						"data-size": res.size ,
+						"data-extension": res.ext,
+						"data-mime-type": res.type,
+						"data-base64": res.base64,
+						"data-is-updated": 'no'
+					});
+					$imgNotImage.hide();
+
+					setImagePreview({
+						'src': path,
+						'size': res.size,
+						'ext': res.ext,
+						'mimeType': res.type,
+						'base64': res.base64,
+					});
+
+					$uiImageResource.find('input[type=file][name='+mod.name+']')
+						.on('change', function(e){
+							var fileInfo = e.target.files[0];
+							var realpathSelected = $(this).val();
+
+							if( realpathSelected ){
+								applyFile(fileInfo);
+							}
+						});
+
+					$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
+						.on('click', function(){
+							var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+							if( !url ){
+								return;
+							}
+							var params = {
+								'url': url
+							}
+							_this.callGpi(
+								{
+									'api': 'getImageByUrl',
+									'data': params
+								} ,
+								function(result){
+									var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
+									switch(result.status){
+										case 200:
+										case 301:
+										case 302:
+										case 304:
+											// 成功
+											break;
+										case 404:
+											alert('画像が見つかりません。 ('+result.status+')');
+											return; // この場合は反映させない
+											break;
+										case 400:
+										case 405:
+											alert('不正なリクエストです。 ('+result.status+')');
+											return; // この場合は反映させない
+											break;
+										case 401:
+										case 402:
+										case 403:
+											alert('アクセスが許可されていません。 ('+result.status+')');
+											return; // この場合は反映させない
+											break;
+										case 0:
+											// おそらくURLの形式としてリクエストできない値が送られた。
+											alert('画像の取得に失敗しました。 ('+result.status+')');
+											return; // この場合は反映させない
+											break;
+										default:
+											alert('画像の取得に失敗しました。 ('+result.status+')');
+											// とれたデータが画像ではないとも限らないので、
+											// 失敗を伝えるが、反映はしてみることにする。
+											break;
+									}
+
+									setImagePreview({
+										'src': dataUri,
+										'size': result.responseHeaders['content-length'],
+										'ext': getExtension( params.url ),
+										'mimeType': result.responseHeaders['content-type'],
+										'base64': (function(dataUri){
+											dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
+											return dataUri;
+										})(dataUri),
+									});
+
+									if( !$inputImageName.val() ){
+										// アップした画像名をプリセット
+										// ただし、既に名前がセットされている場合は変更しない
+										var fname = utils79.basename( params.url );
+										fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
+										$inputImageName.val(fname);
+									}
+
+									return;
+								}
+							);
+						});
+
+					$uiImageResource.find('.broccoli-module-px2style-image-list__trg-save-file-as')
+						.on('click', function(){
+							var base64 = $img.attr('data-base64');
+							var ext = $img.attr('data-extension');
+							if( !base64 || !ext ){
+								alert( broccoli.lb.get('ui_message.file_is_not_set') );
+								return;
+							}
+							var anchor = document.createElement("a");
+							anchor.href = 'data:application/octet-stream;base64,'+base64;
+							anchor.download = "bin."+ext;
+							anchor.click();
+							return;
+						});
+
+					if( confFilenameAutoSetter == 'random' ){
+						$fileNameDisplay.css({'display': 'none'});
+					}
+
+					$(elm).html($rtn);
+					refleshSelectedResourceType();
+
+					const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
+					const slider = new KeenSlider(
+						$slider.get(0),
+						{
+							loop: false,
+							mode: "free",
+							selector: ".broccoli-module-px2style-image-list__slider-slide",
+							slides: {
+								perView: "auto",
+							},
+							created: () => {
+								console.log('Keen slider: created');
+							},
+						},
+						[
+							// add plugins here
+						]
+					);
+					resolve();
+				} );
+			});
+		}).then(()=>{
 			callback();
-		}); });
+		});
 		return;
 	}
 
