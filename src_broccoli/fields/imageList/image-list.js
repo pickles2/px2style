@@ -228,7 +228,28 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 				"slides": [],
 			};
 		}
-		if( typeof(data.resKey) !== typeof('') ){
+
+		const $slides = $dom.find('.broccoli-module-px2style-image-list__slider keen-slider .broccoli-module-px2style-image-list__slider-slide');
+		$slides.each((item, index)=>{
+			const $item = $(item);
+			if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add') ){
+				return;
+			}
+			const row = {
+				path: $item.attr('data-path'),
+				resKey: $item.attr('data-res-key'),
+				resType: $item.attr('data-res-type'),
+				webUrl: $item.attr('data-web-url'),
+			};
+			data.slides.push(row);
+
+		});
+		options.message( broccoli.lb.get('ui_message.completed_resource_processing') );
+		callback(data);
+		return;
+
+
+		if( typeof(data.slides[0].resKey) !== typeof('') ){
 			data.slides[0].resKey = '';
 		}
 
