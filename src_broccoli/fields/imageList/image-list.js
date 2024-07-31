@@ -26,14 +26,7 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		var rtn = fieldData;
 		if( typeof(fieldData) !== typeof({}) ){
 			rtn = {
-				"slides": [
-					{
-						"resKey":'',
-						"path":'about:blank',
-						"resType":'',
-						"webUrl":'',
-					}
-				],
+				"slides": [],
 			};
 		}
 		return rtn;
@@ -228,11 +221,12 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 				"slides": [],
 			};
 		}
+		data.slides = [];
 
-		const $slides = $dom.find('.broccoli-module-px2style-image-list__slider keen-slider .broccoli-module-px2style-image-list__slider-slide');
-		$slides.each((item, index)=>{
+		const $slides = $dom.find('.broccoli-module-px2style-image-list__slider .broccoli-module-px2style-image-list__slider-slide');
+		$slides.each((index, item)=>{
 			const $item = $(item);
-			if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add') ){
+			if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
 				return;
 			}
 			const row = {

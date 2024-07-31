@@ -217,6 +217,33 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			);
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{
+				const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
+				$slider.find('.broccoli-module-px2style-image-list__slider-btn-add').on('click', function(event){
+					const $btn = $(this);
+					px2style.modal({
+						"title": "Add new slide",
+						"body": "TODO: "+$btn.attr('data-trig'),
+					});
+				});
+
+				$slider.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide').on('click', function(event){
+					const $btn = $(this);
+					px2style.modal({
+						"title": "Add new slide",
+						"body": 'TODO: edit: ' + $btn.attr('data-index'),
+					});
+				});
+
+				$slider.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide').on('click', function(event){
+					const $btn = $(this);
+					const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
+					$li.remove();
+				});
+
+				resolve();
+			});
+		}).then(()=>{
+			return new Promise((resolve, reject)=>{
 
 				_resMgr.getResource( data.slides[0].resKey, function(res){
 					if(res.ext){
@@ -418,32 +445,6 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					);
 					resolve();
 				} );
-			});
-		}).then(()=>{
-			return new Promise((resolve, reject)=>{
-				const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-add').on('click', function(event){
-					const $btn = $(this);
-					px2style.modal({
-						"title": "Add new slide",
-						"body": "TODO: "+$btn.attr('data-trig'),
-					});
-				});
-
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide').on('click', function(event){
-					const $btn = $(this);
-					px2style.modal({
-						"title": "Add new slide",
-						"body": 'TODO: edit: ' + $btn.attr('data-index'),
-					});
-				});
-
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide').on('click', function(event){
-					const $btn = $(this);
-					alert('TODO: delete: ' + $btn.attr('data-index'));
-				});
-
-				resolve();
 			});
 		}).then(()=>{
 			callback();
