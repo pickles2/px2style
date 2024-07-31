@@ -216,6 +216,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						item: item ,
 						resourceInfo: resourceInfo,
 						lb: broccoli.lb,
+						dummyImage: _imgDummy,
 						fncTypeOf: function(val){
 							return typeof(val);
 						},
@@ -260,7 +261,12 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						.on('click', async function(event){
 							const $btn = $(this);
 							const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
-							const $slideRow = await mkSlide({}, {});
+							const $slideRow = await mkSlide({
+                                "resKey": "",
+                                "path": "about:blank",
+                                "resType": "",
+                                "webUrl": ""
+							}, {});
 
 							switch($btn.attr('data-trig')){
 								case 'slide-suppend':

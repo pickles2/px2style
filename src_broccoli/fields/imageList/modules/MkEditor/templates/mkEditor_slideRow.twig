@@ -1,6 +1,6 @@
 <li class="broccoli-module-px2style-image-list__slider-slide" data-path="{{ item.path }}" data-res-key="{{ item.resKey }}" data-res-type="{{ item.resType }}" data-web-url="{{ item.webUrl }}">
 	<button type="button" class="broccoli-module-px2style-image-list__slider-btn-edit-slide">
-		<img src="data:{{ resourceInfo.type }};base64,{{ resourceInfo.base64 }}" />
+		<img src="{% if (resourceInfo.base64) %}data:{{ resourceInfo.type }};base64,{{ resourceInfo.base64 }}{% else %}{{ dummyImage }}{% endif %}" />
 	</button>
 	<button type="button" class="broccoli-module-px2style-image-list__slider-btn-delete-slide">
 		削除
