@@ -27,74 +27,78 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 		if( !array_key_exists('slides', $rtn) ){
 			$rtn['slides'] = array();
 		}
-		if( !count($rtn['slides']) ){
-			array_push($rtn['slides'], array());
-		}
-		if( !array_key_exists('resKey', $rtn['slides'][0]) ){
-			$rtn['slides'][0]['resKey'] = null;
-		}
-		if( !array_key_exists('path', $rtn['slides'][0]) ){
-			$rtn['slides'][0]['path'] = null;
-		}
-		if( !array_key_exists('resType', $rtn['slides'][0]) ){
-			$rtn['slides'][0]['resType'] = null;
-		}
 
-		if( $rtn['slides'][0]['resType'] == 'web' ){
-			return '<li><img src="'.htmlspecialchars($rtn['slides'][0]['webUrl']).'" alt="" /></li>';
-		}elseif( $rtn['slides'][0]['resType'] == 'none' ){
-			return '';
-		}else{
-			$data = json_decode('{}');
-			$resMgr = $this->broccoli->resourceMgr();
-			$data->resourceInfo = $resMgr->getResource( $rtn['slides'][0]['resKey'] );
+		$slideHtmlList = array();
+		foreach( $rtn['slides'] as $slideRow ){
 
-			$is_image_uploaded = true;
-			if( $data->resourceInfo === false ){
-				$is_image_uploaded = false;
-			}elseif( is_object($data->resourceInfo) ){
-				if( !property_exists($data->resourceInfo, 'base64') || !strlen(''.$data->resourceInfo->base64) ){
-					$is_image_uploaded = false;
-				}elseif( property_exists($data->resourceInfo, 'size') && !$data->resourceInfo->size ){
-					$is_image_uploaded = false;
-				}
+			if( !array_key_exists('resKey', $slideRow) ){
+				$slideRow['resKey'] = null;
 			}
-			if( $mode != 'canvas' && !$is_image_uploaded ){
-				return '';
+			if( !array_key_exists('path', $slideRow) ){
+				$slideRow['path'] = null;
+			}
+			if( !array_key_exists('resType', $slideRow) ){
+				$slideRow['resType'] = null;
 			}
 
-			$realpath = $resMgr->getResourcePublicRealpath( $rtn['slides'][0]['resKey'] );
-			$data->publicRealpath = $realpath;
-
-			$publicPath = $resMgr->getResourcePublicPath( $rtn['slides'][0]['resKey'] );
-			if( $data->resourceInfo ?? null ){
-				$publicPath = '<'.'?= $px->h( $px->path_files("/resources/'.basename($publicPath).'") ) ?'.'>';
+			if( $slideRow['resType'] == 'web' ){
+				array_push($slideHtmlList, '<li><img src="'.htmlspecialchars($slideRow['webUrl']).'" alt="" /></li>');
+				continue;
+			}elseif( $slideRow['resType'] == 'none' ){
+				continue;
 			}else{
-				$publicPath = '';
-			}
-			$rtn['slides'][0]['path'] = $publicPath;
-			$data->path = $publicPath;
+				$data = json_decode('{}');
+				$resMgr = $this->broccoli->resourceMgr();
+				$data->resourceInfo = $resMgr->getResource( $slideRow['resKey'] );
 
-			if( $mode == 'canvas' ){
-				if( !is_file($data->publicRealpath) ){
-					// ↓ ダミーの Sample Image
-					$data->path = $this->_imgDummy;
-				}else{
-					$resourceType = 'image/png';
-					if( property_exists($data, 'resourceInfo') && property_exists($data->resourceInfo, 'type') ){
-						$resourceType = $data->resourceInfo->type;
+				$is_image_uploaded = true;
+				if( $data->resourceInfo === false ){
+					$is_image_uploaded = false;
+				}elseif( is_object($data->resourceInfo) ){
+					if( !property_exists($data->resourceInfo, 'base64') || !strlen(''.$data->resourceInfo->base64) ){
+						$is_image_uploaded = false;
+					}elseif( property_exists($data->resourceInfo, 'size') && !$data->resourceInfo->size ){
+						$is_image_uploaded = false;
 					}
-					$data->path = 'data:'.$resourceType.';base64,'.'{broccoli-html-editor-resource-baser64:{'.$rtn['slides'][0]['resKey'].'}}';
 				}
-			}
-			if( !$data->path && $data->resourceInfo && $data->resourceInfo->base64 ){
-				$data->path = 'data:'.$data->resourceInfo->type.';base64,'.$data->resourceInfo->base64;
-			}
+				if( $mode != 'canvas' && !$is_image_uploaded ){
+					continue;
+				}
 
-			return '<li><img src="'.$data->path.'" alt="" /></li>';
+				$realpath = $resMgr->getResourcePublicRealpath( $slideRow['resKey'] );
+				$data->publicRealpath = $realpath;
+
+				$publicPath = $resMgr->getResourcePublicPath( $slideRow['resKey'] );
+				if( $data->resourceInfo ?? null ){
+					$publicPath = '<'.'?= $px->h( $px->path_files("/resources/'.basename($publicPath).'") ) ?'.'>';
+				}else{
+					$publicPath = '';
+				}
+				$slideRow['path'] = $publicPath;
+				$data->path = $publicPath;
+
+				if( $mode == 'canvas' ){
+					if( !is_file($data->publicRealpath) ){
+						// ↓ ダミーの Sample Image
+						$data->path = $this->_imgDummy;
+					}else{
+						$resourceType = 'image/png';
+						if( property_exists($data, 'resourceInfo') && property_exists($data->resourceInfo, 'type') ){
+							$resourceType = $data->resourceInfo->type;
+						}
+						$data->path = 'data:'.$resourceType.';base64,'.'{broccoli-html-editor-resource-baser64:{'.$slideRow['resKey'].'}}';
+					}
+				}
+				if( !$data->path && $data->resourceInfo && $data->resourceInfo->base64 ){
+					$data->path = 'data:'.$data->resourceInfo->type.';base64,'.$data->resourceInfo->base64;
+				}
+
+				array_push($slideHtmlList, '<li><img src="'.$data->path.'" alt="" /></li>');
+				continue;
+			}
 		}
 
-		return '';
+		return implode('', $slideHtmlList);
 	}
 
 	// /**

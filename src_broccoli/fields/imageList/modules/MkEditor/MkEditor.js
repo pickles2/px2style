@@ -32,6 +32,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			}
 		));
 
+		const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
 		const $uiImageResource = $rtn.find('.broccoli-module-px2style-image-list__ui-image-resource');
 		const $uiWebResource = $rtn.find('.broccoli-module-px2style-image-list__ui-web-resource');
 		const $uiNoImage = $rtn.find('.broccoli-module-px2style-image-list__ui-no-image');
@@ -56,6 +57,24 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		if( typeof(data.slides[0].webUrl) !== typeof('') ){
 			data.slides[0].webUrl = '';
 		}
+
+		const keenslider = new KeenSlider(
+			$slider.get(0),
+			{
+				loop: false,
+				mode: "free",
+				selector: ".broccoli-module-px2style-image-list__slider-slide",
+				slides: {
+					perView: "auto",
+				},
+				created: () => {
+					console.log('Keen slider: created');
+				},
+			},
+			[
+				// add plugins here
+			]
+		);
 
 		/**
 		 * リソースタイプの選択を反映する
@@ -217,31 +236,13 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						$li.remove();
+						keenslider.update();
 					});
 				resolve($slideRow);
 			});
 		}
 
 		new Promise((resolve, reject)=>{
-			const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
-
-			const slider = new KeenSlider(
-				$slider.get(0),
-				{
-					loop: false,
-					mode: "free",
-					selector: ".broccoli-module-px2style-image-list__slider-slide",
-					slides: {
-						perView: "auto",
-					},
-					created: () => {
-						console.log('Keen slider: created');
-					},
-				},
-				[
-					// add plugins here
-				]
-			);
 
 			it79.ary(
 				data.slides,
@@ -269,9 +270,8 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 									$li.before($slideRow);
 									break;
 							}
-							slider.update();
+							keenslider.update();
 						});
-
 					resolve();
 				}
 			);
@@ -461,6 +461,13 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 					resolve();
 				} );
+			});
+		}).then(()=>{
+			return new Promise((resolve, reject)=>{
+				setTimeout(()=>{
+					keenslider.update();
+					resolve();
+				}, 10);
 			});
 		}).then(()=>{
 			callback();
