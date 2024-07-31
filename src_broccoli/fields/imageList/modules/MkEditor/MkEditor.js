@@ -184,64 +184,98 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			return;
 		}
 
+		/**
+		 * スライドを作成する
+		 */
+		async function mkSlide(item, resourceInfo){
+			return new Promise((resolve, reject)=>{
+				const $slideRow = $(broccoli.bindTwig(
+					require('-!text-loader!./templates/mkEditor_slideRow.twig'),
+					{
+						broccoli: broccoli,
+						mod: mod,
+						item: item ,
+						resourceInfo: resourceInfo,
+						lb: broccoli.lb,
+						fncTypeOf: function(val){
+							return typeof(val);
+						},
+					}
+				));
+
+				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide')
+					.on('click', function(event){
+						const $btn = $(this);
+						px2style.modal({
+							"title": "Add new slide",
+							"body": 'TODO: edit: ' + $btn.attr('data-index'),
+						});
+					});
+
+				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide')
+					.on('click', function(event){
+						const $btn = $(this);
+						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
+						$li.remove();
+					});
+				resolve($slideRow);
+			});
+		}
+
 		new Promise((resolve, reject)=>{
+			const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
+
+			const slider = new KeenSlider(
+				$slider.get(0),
+				{
+					loop: false,
+					mode: "free",
+					selector: ".broccoli-module-px2style-image-list__slider-slide",
+					slides: {
+						perView: "auto",
+					},
+					created: () => {
+						console.log('Keen slider: created');
+					},
+				},
+				[
+					// add plugins here
+				]
+			);
+
 			it79.ary(
 				data.slides,
 				function(it, item, index){
-					const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
 
-					_resMgr.getResource( item.resKey, function(resourceInfo){
-						const $slideRow = $(broccoli.bindTwig(
-							require('-!text-loader!./templates/mkEditor_slideRow.twig'),
-							{
-								broccoli: broccoli,
-								mod: mod,
-								item: item,
-								index: index,
-								resourceInfo: resourceInfo,
-								lb: broccoli.lb,
-								fncTypeOf: function(val){
-									return typeof(val);
-								},
-							}
-						));
+					_resMgr.getResource( item.resKey, async function(resourceInfo){
+						const $slideRow = await mkSlide(item, resourceInfo);
 						$slider.find('.broccoli-module-px2style-image-list__slider-slide:last-child').before($slideRow);
-
 						it.next();
 					});
 
 				},
 				function(){
+					$slider.find('.broccoli-module-px2style-image-list__slider-btn-add')
+						.on('click', async function(event){
+							const $btn = $(this);
+							const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
+							const $slideRow = await mkSlide({}, {});
+
+							switch($btn.attr('data-trig')){
+								case 'slide-suppend':
+									$li.after($slideRow);
+									break;
+								case 'slide-append':
+									$li.before($slideRow);
+									break;
+							}
+							slider.update();
+						});
+
 					resolve();
 				}
 			);
-		}).then(()=>{
-			return new Promise((resolve, reject)=>{
-				const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-add').on('click', function(event){
-					const $btn = $(this);
-					px2style.modal({
-						"title": "Add new slide",
-						"body": "TODO: "+$btn.attr('data-trig'),
-					});
-				});
 
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide').on('click', function(event){
-					const $btn = $(this);
-					px2style.modal({
-						"title": "Add new slide",
-						"body": 'TODO: edit: ' + $btn.attr('data-index'),
-					});
-				});
-
-				$slider.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide').on('click', function(event){
-					const $btn = $(this);
-					const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
-					$li.remove();
-				});
-
-				resolve();
-			});
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{
 
@@ -425,24 +459,6 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					$(elm).html($rtn);
 					refleshSelectedResourceType();
 
-					const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
-					const slider = new KeenSlider(
-						$slider.get(0),
-						{
-							loop: false,
-							mode: "free",
-							selector: ".broccoli-module-px2style-image-list__slider-slide",
-							slides: {
-								perView: "auto",
-							},
-							created: () => {
-								console.log('Keen slider: created');
-							},
-						},
-						[
-							// add plugins here
-						]
-					);
 					resolve();
 				} );
 			});
