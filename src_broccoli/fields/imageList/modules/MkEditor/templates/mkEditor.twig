@@ -3,39 +3,4 @@
         <li class="broccoli-module-px2style-image-list__slider-slide"><button type="button" class="broccoli-module-px2style-image-list__slider-btn-add" data-trig="slide-suppend">+</button></li>
         <li class="broccoli-module-px2style-image-list__slider-slide"><button type="button" class="broccoli-module-px2style-image-list__slider-btn-add" data-trig="slide-append">+</button></li>
     </ul>
-
-    <ul class="broccoli-module-px2style-image-list__resource-type">
-        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="" {{ data.resType=='' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.upload_image')}}</label></li>
-        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="web" {{ data.resType=='web' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.web_resource') }}</label></li>
-        <li><label><input type="radio" name="{{mod.name}}-resourceType" value="none" {{ data.resType=='none' ? 'checked="checked"' : "" }} />{{ broccoli.lb.get('ui_label.none') }}</label></li>
-    </ul>
-
-    <div class="broccoli-module-px2style-image-list__ui-image-resource">
-        <div class="broccoli-module-px2style-image-list__image-preview-area broccoli__user-selectable" tabindex="1">
-            <img class="broccoli-module-px2style-image-list__image-preview" />
-            <div class="broccoli-module-px2style-image-list__no-image-preview">{{ res.ext }}</div>
-        </div>
-        <p>
-            <label class="px2-btn">{{ broccoli.lb.get('ui_label.select_image_file') }}<input type="file" name="{{ mod.name }}" webkitfile="webkitfile" style="display: none;" /></label>
-            <button type="button" class="px2-btn broccoli-module-px2style-image-list__trg-get-image-from-url">{{ broccoli.lb.get('ui_label.get_from_url') }}</button>
-            <button type="button" class="px2-btn broccoli-module-px2style-image-list__trg-save-file-as">{{ broccoli.lb.get('ui_label.save_file_as') }}</button>
-        </p>
-        <div class="broccoli-module-px2style-image-list__file-name-display">
-            <span>{{ broccoli.lb.get('ui_label.output_filename') }}:</span>
-            <input class="px2-input px2-input--block" type="text" name="{{ mod.name }}-publicFilename" value="{{ (fncTypeOf(res.publicFilename)==fncTypeOf('') ? res.publicFilename : '') }}" placeholder="output file name" style="margin: 0 5px; display: inline-block; width: 210px; max-width: 70%;" />
-            <span class="broccoli-module-px2style-image-list__ui-image-resource-display-extension"></span>
-        </div>
-    </div>
-
-    <div class="broccoli-module-px2style-image-list__ui-web-resource">
-        <p>{{ broccoli.lb.get('ui_message.in_this_mode_you_specify_the_image_resource_by_url') }}</p>
-        <div>
-            <span>URL: </span>
-            <input class="px2-input px2-input--block" type="text" name="{{mod.name}}-webUrl" value="{{ (fncTypeOf(data.webUrl)==fncTypeOf('') ? data.webUrl : '') }}" placeholder="https://example.com/example.png" />
-        </div>
-    </div>
-
-    <div class="broccoli-module-px2style-image-list__ui-no-image"></div>
-
-    <input type="hidden" name="{{mod.name}}-resKey" value="{{ data.resKey }}" />
 </div>
