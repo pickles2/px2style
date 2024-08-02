@@ -237,22 +237,16 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					applyFile(fileInfo);
 				});
 
-			$img.attr({
-				"src": path ,
-				"data-size": res.size ,
-				"data-extension": res.ext,
-				"data-mime-type": res.type,
-				"data-base64": res.base64,
-				"data-is-updated": 'no'
-			});
-			$imgNotImage.hide();
-
 			setImagePreview({
 				'src': path,
 				'size': res.size,
 				'ext': res.ext,
 				'mimeType': res.type,
 				'base64': res.base64,
+			});
+
+			$img.attr({
+				"data-is-updated": 'no'
 			});
 
 			$uiImageResource.find('input[type=file][name='+mod.name+']')
