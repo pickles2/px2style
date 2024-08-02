@@ -15,7 +15,7 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 	/**
 	 * エディタを開く
 	 */
-	this.openSlideEditor = async function(data){
+	this.openSlideEditor = async function(data, callback){
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
 			data.resKey = '';
@@ -182,9 +182,23 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 		}
 
 		return new Promise((resolve, reject)=>{
-			px2style.modal({
+			const $modal = px2style.modal({
 				"title": "Edit slide",
 				"body": $rtn,
+				"buttons": [
+					$('<button type="submit" class="px2-btn px2-btn--primary">Save</button>'),
+				],
+				"form": {
+					"action": "javascript:void(0);",
+					"method": "post",
+					"submit": function(e){
+						e.preventDefault();
+						saveEditorContent( $rtn, {}, function(data, resInfo){
+							$modal.close();
+							callback(data, resInfo);
+						} );
+					},
+				},
 			});
 			resolve();
 		}).then(()=>{
@@ -245,22 +259,16 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 							applyFile(fileInfo);
 						});
 
-					$img.attr({
-						"src": path ,
-						"data-size": res.size ,
-						"data-extension": res.ext,
-						"data-mime-type": res.type,
-						"data-base64": res.base64,
-						"data-is-updated": 'no'
-					});
-					$imgNotImage.hide();
-
 					setImagePreview({
 						'src': path,
 						'size': res.size,
 						'ext': res.ext,
 						'mimeType': res.type,
 						'base64': res.base64,
+					});
+
+					$img.attr({
+						"data-is-updated": 'no'
 					});
 
 					$uiImageResource.find('input[type=file][name='+mod.name+']')
@@ -437,6 +445,53 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * エディタUIで編集した内容を保存
+	 */
+	function saveEditorContent( $dom, data, callback ){
+
+		if( typeof(data.resKey) !== typeof('') ){
+			data.resKey = '';
+		}
+		var resInfo = {};
+
+		it79.fnc({},
+			[
+				function(it1){
+					data.resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
+					data.webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
+					it1.next(data);
+					return;
+				} ,
+				function(it1){
+					var $img = $dom.find('img');
+
+					resInfo.field = resInfo.field || mod.type; // フィールド名をセット
+					resInfo.fieldNote = resInfo.fieldNote || {}; // <= フィールド記録欄を初期化
+
+					if( $img.attr('data-is-updated') == 'yes' ){
+						resInfo.ext = $img.attr('data-extension');
+						resInfo.type = $img.attr('data-mime-type');
+						resInfo.size = parseInt($img.attr('data-size'));
+						resInfo.base64 = $img.attr('data-base64');
+						resInfo.field = mod.type;
+						resInfo.fieldNote = {}; // <= フィールド記録欄をクリア
+					}
+					resInfo.isPrivateMaterial = (data.resType == 'web' ? true : false);
+					resInfo.publicFilename = $dom.find('input[name='+mod.name+'-publicFilename]').val();
+
+					it1.next(data);
+					return;
+
+				} ,
+				function(it1){
+					callback(data, resInfo);
+				}
+			]
+		);
+		return;
 	}
 
 }

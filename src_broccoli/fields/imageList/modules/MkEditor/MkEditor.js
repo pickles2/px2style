@@ -81,6 +81,8 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							resKey: $li.attr('data-res-key'),
 							resType: $li.attr('data-res-type'),
 							webUrl: $li.attr('data-web-url'),
+						}, function(data, resInfo){
+							console.log('=-=-=-=-=-= result data:', data, resInfo); // TODO: 受け取った値をスライドに保存する
 						});
 					});
 
