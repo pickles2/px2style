@@ -82,7 +82,19 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							resType: $li.attr('data-res-type'),
 							webUrl: $li.attr('data-web-url'),
 						}, function(data, resInfo){
-							console.log('=-=-=-=-=-= result data:', data, resInfo); // TODO: 受け取った値をスライドに保存する
+							// $li.attr('data-path', data.path);
+							// $li.attr('data-res-key', data.resKey);
+							$li.attr('data-res-type', data.resType);
+							$li.attr('data-web-url', data.webUrl);
+							if(resInfo.base64){
+								const $img = $li.find('img');
+								$img.attr('src', (resInfo.base64 ? `data:${resInfo.type};base64,${resInfo.base64}` : `${_imgDummy}`));
+								$img.attr('data-mime-type', resInfo.type);
+								$img.attr('data-size', resInfo.size);
+								$img.attr('data-base64', resInfo.base64);
+								$img.attr('data-extension', resInfo.ext);
+								$img.attr('data-is-updated', 'yes');
+							}
 						});
 					});
 
