@@ -214,7 +214,6 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		options = options || {};
 		options.message = options.message || function(msg){}; // ユーザーへのメッセージテキストを送信
 
-		var resInfo;
 		var $dom = $(elm);
 		if( typeof(data) !== typeof({}) ){
 			data = {
@@ -223,23 +222,87 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		}
 		data.slides = [];
 
-		const $slides = $dom.find('.broccoli-module-px2style-image-list__slider .broccoli-module-px2style-image-list__slider-slide');
-		$slides.each((index, item)=>{
-			const $item = $(item);
-			if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
-				return;
-			}
-			const row = {
-				path: $item.attr('data-path'),
-				resKey: $item.attr('data-res-key'),
-				resType: $item.attr('data-res-type'),
-				webUrl: $item.attr('data-web-url'),
-			};
-			data.slides.push(row);
-
+		const $tmp_slides = $dom.find('.broccoli-module-px2style-image-list__slider .broccoli-module-px2style-image-list__slider-slide');
+		const $slides = [];
+		$tmp_slides.each((index, item)=>{
+			$slides.push(item);
 		});
-		options.message( broccoli.lb.get('ui_message.completed_resource_processing') );
-		callback(data);
+
+		it79.ary(
+			$slides,
+			async function(it, $slide, index){
+				const $item = $($slide);
+				if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+					it.next();
+					return;
+				}
+
+				var resInfo;
+				const rowData = {
+					path: $item.attr('data-path'),
+					resKey: $item.attr('data-res-key'),
+					resType: $item.attr('data-res-type'),
+					webUrl: $item.attr('data-web-url'),
+				};
+
+				it79.fnc({}, [
+					function(it1){
+						_resMgr.getResource(rowData.resKey, function(result){
+							if( result === false ){
+								_resMgr.addResource(function(newResKey){
+									rowData.resKey = newResKey;
+									it1.next();
+								});
+								return;
+							}
+							it1.next();
+							return;
+						});
+					} ,
+					function(it1){
+						_resMgr.getResource(rowData.resKey, function(res){
+							resInfo = res;
+							it1.next();
+						});
+						return;
+					} ,
+					function(it1){
+						var $img = $item.find('img');
+
+						resInfo.field = resInfo.field || mod.type; // フィールド名をセット
+						resInfo.fieldNote = resInfo.fieldNote || {}; // <= フィールド記録欄を初期化
+
+						if( $img.attr('data-is-updated') == 'yes' ){
+							resInfo.ext = $img.attr('data-extension');
+							resInfo.type = $img.attr('data-mime-type');
+							resInfo.size = parseInt($img.attr('data-size'));
+							resInfo.base64 = $img.attr('data-base64');
+							resInfo.field = mod.type;
+							resInfo.fieldNote = {}; // <= フィールド記録欄をクリア
+						}
+						resInfo.isPrivateMaterial = (rowData.resType == 'web' ? true : false);
+						resInfo.publicFilename = $img.attr('data-public-filename]');
+
+						_resMgr.updateResource( rowData.resKey, resInfo, function(result){
+							_resMgr.getResourcePublicPath( rowData.resKey, function(publicPath){
+								rowData.path = publicPath;
+								it1.next();
+							} );
+						} );
+						return;
+
+					} ,
+					function(){
+						data.slides.push(rowData);
+						it.next();
+					}
+				]);
+			},
+			function(){
+				options.message( broccoli.lb.get('ui_message.completed_resource_processing') );
+				callback(data);
+			}
+		);
 		return;
 	}
 }
