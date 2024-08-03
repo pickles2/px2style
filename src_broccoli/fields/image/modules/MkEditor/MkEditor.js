@@ -191,6 +191,9 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				path = _imgDummy;
 			}
 
+			$rtn.find('input[name='+mod.name+'-publicFilename]')
+				.val(res.publicFilename);
+
 			$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
 				.on('change', refleshSelectedResourceType);
 
