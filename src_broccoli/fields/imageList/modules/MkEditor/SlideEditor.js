@@ -1,7 +1,7 @@
 /**
  * mkEditor
  */
-module.exports = function(broccoli, mod, _resMgr, _imgDummy){
+module.exports = function(broccoli, mod, _imgDummy){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
 	const utils79 = require('utils79');
@@ -15,7 +15,9 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 	/**
 	 * エディタを開く
 	 */
-	this.openSlideEditor = async function(data, callback){
+	this.openSlideEditor = async function(presetData, callback){
+		let data = presetData.data;
+		const res = presetData.resourceInfo;
 		if( typeof(data) !== typeof({}) ){ data = {}; }
 		if( typeof(data.resKey) !== typeof('') ){
 			data.resKey = '';
@@ -33,6 +35,7 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 				broccoli: broccoli,
 				mod: mod,
 				data: data,
+				res: res,
 				lb: broccoli.lb,
 				fncTypeOf: function(val){
 					return typeof(val);
@@ -203,181 +206,179 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 			resolve();
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{
-				_resMgr.getResource( data.resKey, function(res){
-					if(res.ext){
-						$displayExtension.text( '.'+res.ext );
-					}
-					var path = 'data:'+res.type+';base64,' + res.base64;
-					if( !res.base64 ){
-						// ↓ ダミーの Sample Image
-						path = _imgDummy;
-					}
+				if(res.ext){
+					$displayExtension.text( '.'+res.ext );
+				}
+				var path = 'data:'+res.type+';base64,' + res.base64;
+				if( !res.base64 ){
+					// ↓ ダミーの Sample Image
+					path = _imgDummy;
+				}
 
-					$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
-						.on('change', refleshSelectedResourceType);
+				$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
+					.on('change', refleshSelectedResourceType);
 
-					$imagePreviewArea
-						.on('paste', function(e){
-							var items = e.originalEvent.clipboardData.items;
-							for (var i = 0 ; i < items.length ; i++) {
-								var item = items[i];
-								if(item.type.indexOf("image") != -1){
-									var file = item.getAsFile();
-									file.name = file.name||'clipboard.'+(function(type){
-										if(type.match(/png$/i)){return 'png';}
-										if(type.match(/gif$/i)){return 'gif';}
-										if(type.match(/(?:jpeg|jpg|jpe)$/i)){return 'jpg';}
-										if(type.match(/webp$/i)){return 'webp';}
-										if(type.match(/svg/i)){return 'svg';}
-										return 'txt';
-									})(file.type);
-									applyFile(file);
-								}
+				$imagePreviewArea
+					.on('paste', function(e){
+						var items = e.originalEvent.clipboardData.items;
+						for (var i = 0 ; i < items.length ; i++) {
+							var item = items[i];
+							if(item.type.indexOf("image") != -1){
+								var file = item.getAsFile();
+								file.name = file.name||'clipboard.'+(function(type){
+									if(type.match(/png$/i)){return 'png';}
+									if(type.match(/gif$/i)){return 'gif';}
+									if(type.match(/(?:jpeg|jpg|jpe)$/i)){return 'jpg';}
+									if(type.match(/webp$/i)){return 'webp';}
+									if(type.match(/svg/i)){return 'svg';}
+									return 'txt';
+								})(file.type);
+								applyFile(file);
 							}
-						})
-						.on('focus', function(e){
-							$(this).css({'background': '#eee'});
-						})
-						.on('blur', function(e){
-							$(this).css({'background': '#fff'});
-						})
-						.on('dragleave', function(e){
-							e.stopPropagation();
-							e.preventDefault();
-							$(this).css({'background': '#fff'});
-						})
-						.on('dragover', function(e){
-							e.stopPropagation();
-							e.preventDefault();
-							$(this).css({'background': '#eee'});
-						})
-						.on('drop', function(e){
-							e.stopPropagation();
-							e.preventDefault();
-							var event = e.originalEvent;
-							var fileInfo = event.dataTransfer.files[0];
+						}
+					})
+					.on('focus', function(e){
+						$(this).css({'background': '#eee'});
+					})
+					.on('blur', function(e){
+						$(this).css({'background': '#fff'});
+					})
+					.on('dragleave', function(e){
+						e.stopPropagation();
+						e.preventDefault();
+						$(this).css({'background': '#fff'});
+					})
+					.on('dragover', function(e){
+						e.stopPropagation();
+						e.preventDefault();
+						$(this).css({'background': '#eee'});
+					})
+					.on('drop', function(e){
+						e.stopPropagation();
+						e.preventDefault();
+						var event = e.originalEvent;
+						var fileInfo = event.dataTransfer.files[0];
+						applyFile(fileInfo);
+					});
+
+				setImagePreview({
+					'src': path,
+					'size': res.size,
+					'ext': res.ext,
+					'mimeType': res.type,
+					'base64': res.base64,
+				});
+
+				$img.attr({
+					"data-is-updated": 'no'
+				});
+
+				$uiImageResource.find('input[type=file][name='+mod.name+']')
+					.on('change', function(e){
+						var fileInfo = e.target.files[0];
+						var realpathSelected = $(this).val();
+
+						if( realpathSelected ){
 							applyFile(fileInfo);
-						});
-
-					setImagePreview({
-						'src': path,
-						'size': res.size,
-						'ext': res.ext,
-						'mimeType': res.type,
-						'base64': res.base64,
+						}
 					});
 
-					$img.attr({
-						"data-is-updated": 'no'
-					});
-
-					$uiImageResource.find('input[type=file][name='+mod.name+']')
-						.on('change', function(e){
-							var fileInfo = e.target.files[0];
-							var realpathSelected = $(this).val();
-
-							if( realpathSelected ){
-								applyFile(fileInfo);
-							}
-						});
-
-					$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
-						.on('click', function(){
-							var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
-							if( !url ){
-								return;
-							}
-							var params = {
-								'url': url
-							}
-							_this.callGpi(
-								{
-									'api': 'getImageByUrl',
-									'data': params
-								} ,
-								function(result){
-									var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
-									switch(result.status){
-										case 200:
-										case 301:
-										case 302:
-										case 304:
-											// 成功
-											break;
-										case 404:
-											alert('画像が見つかりません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 400:
-										case 405:
-											alert('不正なリクエストです。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 401:
-										case 402:
-										case 403:
-											alert('アクセスが許可されていません。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										case 0:
-											// おそらくURLの形式としてリクエストできない値が送られた。
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											return; // この場合は反映させない
-											break;
-										default:
-											alert('画像の取得に失敗しました。 ('+result.status+')');
-											// とれたデータが画像ではないとも限らないので、
-											// 失敗を伝えるが、反映はしてみることにする。
-											break;
-									}
-
-									setImagePreview({
-										'src': dataUri,
-										'size': result.responseHeaders['content-length'],
-										'ext': getExtension( params.url ),
-										'mimeType': result.responseHeaders['content-type'],
-										'base64': (function(dataUri){
-											dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
-											return dataUri;
-										})(dataUri),
-									});
-
-									if( !$inputImageName.val() ){
-										// アップした画像名をプリセット
-										// ただし、既に名前がセットされている場合は変更しない
-										var fname = utils79.basename( params.url );
-										fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
-										$inputImageName.val(fname);
-									}
-
-									return;
-								}
-							);
-						});
-
-					$uiImageResource.find('.broccoli-module-px2style-image-list__trg-save-file-as')
-						.on('click', function(){
-							var base64 = $img.attr('data-base64');
-							var ext = $img.attr('data-extension');
-							if( !base64 || !ext ){
-								alert( broccoli.lb.get('ui_message.file_is_not_set') );
-								return;
-							}
-							var anchor = document.createElement("a");
-							anchor.href = 'data:application/octet-stream;base64,'+base64;
-							anchor.download = "bin."+ext;
-							anchor.click();
+				$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
+					.on('click', function(){
+						var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+						if( !url ){
 							return;
-						});
+						}
+						var params = {
+							'url': url
+						}
+						_this.callGpi(
+							{
+								'api': 'getImageByUrl',
+								'data': params
+							} ,
+							function(result){
+								var dataUri = 'data:'+result.responseHeaders['content-type']+';base64,' + result.base64;
+								switch(result.status){
+									case 200:
+									case 301:
+									case 302:
+									case 304:
+										// 成功
+										break;
+									case 404:
+										alert('画像が見つかりません。 ('+result.status+')');
+										return; // この場合は反映させない
+										break;
+									case 400:
+									case 405:
+										alert('不正なリクエストです。 ('+result.status+')');
+										return; // この場合は反映させない
+										break;
+									case 401:
+									case 402:
+									case 403:
+										alert('アクセスが許可されていません。 ('+result.status+')');
+										return; // この場合は反映させない
+										break;
+									case 0:
+										// おそらくURLの形式としてリクエストできない値が送られた。
+										alert('画像の取得に失敗しました。 ('+result.status+')');
+										return; // この場合は反映させない
+										break;
+									default:
+										alert('画像の取得に失敗しました。 ('+result.status+')');
+										// とれたデータが画像ではないとも限らないので、
+										// 失敗を伝えるが、反映はしてみることにする。
+										break;
+								}
 
-					if( confFilenameAutoSetter == 'random' ){
-						$fileNameDisplay.css({'display': 'none'});
-					}
+								setImagePreview({
+									'src': dataUri,
+									'size': result.responseHeaders['content-length'],
+									'ext': getExtension( params.url ),
+									'mimeType': result.responseHeaders['content-type'],
+									'base64': (function(dataUri){
+										dataUri = dataUri.replace(new RegExp('^data\\:[^\\;]*\\;base64\\,'), '');
+										return dataUri;
+									})(dataUri),
+								});
 
-					refleshSelectedResourceType();
+								if( !$inputImageName.val() ){
+									// アップした画像名をプリセット
+									// ただし、既に名前がセットされている場合は変更しない
+									var fname = utils79.basename( params.url );
+									fname = fname.replace(new RegExp('\\.[a-zA-Z0-9]*$'), '');
+									$inputImageName.val(fname);
+								}
 
-					resolve();
-				} );
+								return;
+							}
+						);
+					});
+
+				$uiImageResource.find('.broccoli-module-px2style-image-list__trg-save-file-as')
+					.on('click', function(){
+						var base64 = $img.attr('data-base64');
+						var ext = $img.attr('data-extension');
+						if( !base64 || !ext ){
+							alert( broccoli.lb.get('ui_message.file_is_not_set') );
+							return;
+						}
+						var anchor = document.createElement("a");
+						anchor.href = 'data:application/octet-stream;base64,'+base64;
+						anchor.download = "bin."+ext;
+						anchor.click();
+						return;
+					});
+
+				if( confFilenameAutoSetter == 'random' ){
+					$fileNameDisplay.css({'display': 'none'});
+				}
+
+				refleshSelectedResourceType();
+
+				resolve();
 			});
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{

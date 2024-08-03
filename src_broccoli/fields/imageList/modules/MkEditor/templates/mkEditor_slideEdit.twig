@@ -17,7 +17,7 @@
 		</p>
 		<div class="broccoli-module-px2style-image-list__file-name-display">
 			<span>{{ broccoli.lb.get('ui_label.output_filename') }}:</span>
-			<input class="px2-input px2-input--block" type="text" name="{{ mod.name }}-publicFilename" value="{{ (fncTypeOf(res.publicFilename)==fncTypeOf('') ? res.publicFilename : '') }}" placeholder="output file name" style="margin: 0 5px; display: inline-block; width: 210px; max-width: 70%;" />
+			<input class="px2-input px2-input--block" type="text" name="{{ mod.name }}-publicFilename" value="{{ (fncTypeOf(res.publicFilename)==fncTypeOf('string') ? res.publicFilename : '') }}" placeholder="output file name" style="margin: 0 5px; display: inline-block; width: 210px; max-width: 70%;" />
 			<span class="broccoli-module-px2style-image-list__ui-image-resource-display-extension"></span>
 		</div>
 	</div>
@@ -26,7 +26,7 @@
 		<p>{{ broccoli.lb.get('ui_message.in_this_mode_you_specify_the_image_resource_by_url') }}</p>
 		<div>
 			<span>URL: </span>
-			<input class="px2-input px2-input--block" type="text" name="{{mod.name}}-webUrl" value="{{ (fncTypeOf(data.webUrl)==fncTypeOf('') ? data.webUrl : '') }}" placeholder="https://example.com/example.png" />
+			<input class="px2-input px2-input--block" type="text" name="{{mod.name}}-webUrl" value="{{ (fncTypeOf(data.webUrl)==fncTypeOf('string') ? data.webUrl : '') }}" placeholder="https://example.com/example.png" />
 		</div>
 	</div>
 

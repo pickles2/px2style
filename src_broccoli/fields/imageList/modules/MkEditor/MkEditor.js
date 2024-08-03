@@ -75,12 +75,22 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					.on('click', function(event){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
-						const slideEditor = new SlideEditor(broccoli, mod, _resMgr, _imgDummy);
+						const $img = $li.find('img');
+						const slideEditor = new SlideEditor(broccoli, mod, _imgDummy);
 						slideEditor.openSlideEditor({
-							path: $li.attr('data-path'),
-							resKey: $li.attr('data-res-key'),
-							resType: $li.attr('data-res-type'),
-							webUrl: $li.attr('data-web-url'),
+							data: {
+								path: $li.attr('data-path'),
+								resKey: $li.attr('data-res-key'),
+								resType: $li.attr('data-res-type'),
+								webUrl: $li.attr('data-web-url'),
+							},
+							resourceInfo: {
+								type: $img.attr('data-mime-type'),
+								size: $img.attr('data-size'),
+								base64: $img.attr('data-base64'),
+								ext: $img.attr('data-extension'),
+								publicFilename: $img.attr('data-public-filename'),
+							},
 						}, function(data, resInfo){
 							// $li.attr('data-path', data.path);
 							// $li.attr('data-res-key', data.resKey);
@@ -88,7 +98,6 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							$li.attr('data-web-url', data.webUrl);
 
 							if(resInfo.base64){
-								const $img = $li.find('img');
 								$img.attr('src', (resInfo.base64 ? `data:${resInfo.type};base64,${resInfo.base64}` : `${_imgDummy}`));
 								$img.attr('data-mime-type', resInfo.type);
 								$img.attr('data-size', resInfo.size);

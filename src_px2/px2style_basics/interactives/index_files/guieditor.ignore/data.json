@@ -5,29 +5,6 @@
             "fields": {
                 "main": [
                     {
-                        "modId": "px2style:interactives/image-slider",
-                        "fields": {
-                            "image-list": {
-                                "slides": [
-                                    {
-                                        "resKey": "c70bd47d8e6e16e11a60b3803873aa74",
-                                        "path": "./index_files/resources/c70bd47d8e6e16e11a60b3803873aa74.jpg",
-                                        "resType": "",
-                                        "webUrl": ""
-                                    }
-                                ]
-                            }
-                        },
-                        "anchor": "",
-                        "dec": "",
-                        "locked": {
-                            "contents": false,
-                            "children": false,
-                            "move": false,
-                            "delete": false
-                        }
-                    },
-                    {
                         "modId": "px2style:interactives/carousel",
                         "fields": {
                             "loop": [
