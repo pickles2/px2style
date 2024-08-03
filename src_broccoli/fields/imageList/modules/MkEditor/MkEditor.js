@@ -46,10 +46,17 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					console.log('Keen slider: created');
 				},
 			},
-			[
-				// add plugins here
-			]
+			[]
 		);
+
+
+		/**
+		 * スライダーを更新する
+		 */
+		function sliderUpdate(){
+			keenslider.update();
+			return;
+		}
 
 		/**
 		 * スライドを作成する
@@ -109,12 +116,36 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						});
 					});
 
+				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-move-slide-prev')
+					.on('click', function(event){
+						const $btn = $(this);
+						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
+						const $prev = $li.prev();
+						if( $prev.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+							return;
+						}
+						$prev.before($li);
+						sliderUpdate();
+					});
+
+				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-move-slide-next')
+					.on('click', function(event){
+						const $btn = $(this);
+						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
+						const $next = $li.next();
+						if( $next.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+							return;
+						}
+						$next.after($li);
+						sliderUpdate();
+					});
+
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide')
 					.on('click', function(event){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						$li.remove();
-						keenslider.update();
+						sliderUpdate();
 					});
 				resolve($slideRow);
 			});
@@ -151,7 +182,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 									$li.before($slideRow);
 									break;
 							}
-							keenslider.update();
+							sliderUpdate();
 						});
 					resolve();
 				}
@@ -160,7 +191,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{
 				setTimeout(()=>{
-					keenslider.update();
+					sliderUpdate();
 					resolve();
 				}, 10);
 			});
