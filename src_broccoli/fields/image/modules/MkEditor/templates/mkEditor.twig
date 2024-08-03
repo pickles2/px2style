@@ -8,7 +8,7 @@
     <div class="broccoli-module-px2style-image__ui-image-resource">
         <div class="broccoli-module-px2style-image__image-preview-area broccoli__user-selectable" tabindex="1">
             <img class="broccoli-module-px2style-image__image-preview" />
-            <div class="broccoli-module-px2style-image__no-image-preview">{{ res.ext }}</div>
+            <div class="broccoli-module-px2style-image__no-image-preview"></div>
         </div>
         <p>
             <label class="px2-btn">{{ broccoli.lb.get('ui_label.select_image_file') }}<input type="file" name="{{ mod.name }}" webkitfile="webkitfile" style="display: none;" /></label>
@@ -17,7 +17,7 @@
         </p>
         <div class="broccoli-module-px2style-image__file-name-display">
             <span>{{ broccoli.lb.get('ui_label.output_filename') }}:</span>
-            <input class="px2-input px2-input--block" type="text" name="{{ mod.name }}-publicFilename" value="{{ (fncTypeOf(res.publicFilename)==fncTypeOf('') ? res.publicFilename : '') }}" placeholder="output file name" style="margin: 0 5px; display: inline-block; width: 210px; max-width: 70%;" />
+            <input class="px2-input px2-input--block" type="text" name="{{ mod.name }}-publicFilename" value="" placeholder="output file name" style="margin: 0 5px; display: inline-block; width: 210px; max-width: 70%;" />
             <span class="broccoli-module-px2style-image__ui-image-resource-display-extension"></span>
         </div>
     </div>
