@@ -281,7 +281,7 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 							resInfo.fieldNote = {}; // <= フィールド記録欄をクリア
 						}
 						resInfo.isPrivateMaterial = (rowData.resType == 'web' ? true : false);
-						resInfo.publicFilename = $img.attr('data-public-filename]');
+						resInfo.publicFilename = $img.attr('data-public-filename') || "";
 
 						_resMgr.updateResource( rowData.resKey, resInfo, function(result){
 							_resMgr.getResourcePublicPath( rowData.resKey, function(publicPath){

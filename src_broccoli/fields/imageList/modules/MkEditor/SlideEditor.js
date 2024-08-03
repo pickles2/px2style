@@ -462,9 +462,9 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 				function(it1){
 					data.resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
 					data.webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
-					it1.next(data);
+					it1.next();
 					return;
-				} ,
+				},
 				function(it1){
 					var $img = $dom.find('img');
 
@@ -482,13 +482,13 @@ module.exports = function(broccoli, mod, _resMgr, _imgDummy){
 					resInfo.isPrivateMaterial = (data.resType == 'web' ? true : false);
 					resInfo.publicFilename = $dom.find('input[name='+mod.name+'-publicFilename]').val();
 
-					it1.next(data);
+					it1.next();
 					return;
 
-				} ,
-				function(it1){
+				},
+				function(){
 					callback(data, resInfo);
-				}
+				},
 			]
 		);
 		return;

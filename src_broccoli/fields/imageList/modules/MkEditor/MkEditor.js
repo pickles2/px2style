@@ -86,6 +86,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							// $li.attr('data-res-key', data.resKey);
 							$li.attr('data-res-type', data.resType);
 							$li.attr('data-web-url', data.webUrl);
+
 							if(resInfo.base64){
 								const $img = $li.find('img');
 								$img.attr('src', (resInfo.base64 ? `data:${resInfo.type};base64,${resInfo.base64}` : `${_imgDummy}`));
@@ -93,6 +94,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 								$img.attr('data-size', resInfo.size);
 								$img.attr('data-base64', resInfo.base64);
 								$img.attr('data-extension', resInfo.ext);
+								$img.attr('data-public-filename', resInfo.publicFilename);
 								$img.attr('data-is-updated', 'yes');
 							}
 						});
