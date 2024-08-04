@@ -64,7 +64,6 @@ mix
 	// --------------------------------------
 	// modules: interactives/image-slider
 	.js('./src_broccoli/modules/basics/interactives/image-slider/module.js', './broccoli_modules/basics/interactives/image-slider/module.js')
-	.sass('./src_broccoli/modules/basics/interactives/image-slider/module.css.scss', './broccoli_modules/basics/interactives/image-slider/module.css')
 
 	// --------------------------------------
 	// px2style
