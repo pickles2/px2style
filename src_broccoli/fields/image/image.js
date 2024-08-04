@@ -76,13 +76,14 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 	 * エディタUIで編集した内容を検証する (Client Side)
 	 */
 	this.validateEditorContent = function( elm, mod, callback ){
+		var $dom = $(elm);
 		var errorMsgs = [];
 		var resourceDb = null;
-		var $img = $(elm).find('img');
-		var resType = $(elm).find('[name='+mod.name+'-resourceType]:checked').val();
-		var resKey = $(elm).find('[name='+mod.name+'-resKey]').val();
-		var filename = $(elm).find('[name='+mod.name+'-publicFilename]').val();
-		var webUrl = $(elm).find('[name='+mod.name+'-webUrl]').val();
+		var $img = $dom.find('img');
+		var resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
+		var resKey = $dom.find('[name='+mod.name+'-resKey]').val();
+		var filename = $dom.find('[name='+mod.name+'-publicFilename]').val();
+		var webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
 		var rules = mod.validate || [];
 		if(typeof(rules) == typeof('')){rules = [rules];}
 		var rulesIsRequired = false;
