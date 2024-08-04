@@ -75,7 +75,6 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 	this.validateEditorContent = function( elm, mod, callback ){
 		var $dom = $(elm);
 		var errorMsgs = [];
-		var resourceDb = null;
 
 		const $tmp_slides = $dom.find('.broccoli-module-px2style-image-list__slider .broccoli-module-px2style-image-list__slider-slide');
 		const $slides = [];
@@ -83,67 +82,89 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 			$slides.push(item);
 		});
 
-		it79.ary(
-			$slides,
-			function(it, row, index){
-				const $item = $(row);
-				if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
-					it.next();
-					return;
-				}
+		_resMgr.getResourceDb(function(resourceDb){
 
-				new Promise(function(rlv){rlv();})
-					.then(function(){ return new Promise(function(rlv, rjt){
-						_resMgr.getResourceDb(function(res){
-							resourceDb = res;
-							rlv();
-						});
-					}); })
-					.then(function(){ return new Promise(function(rlv, rjt){
-						var $img = $item.find('img');
-						var resType = $item.attr('data-res-type');
-						var resKey = $item.attr('data-res-key');
-						var webUrl = $item.attr('data-web-url');
-						var filename = $img.attr('data-public-filename');
-						var isUpdated = $img.attr('data-is-updated');
+			let duplicatedFilename = {};
 
-						var isImageUpdated = false;
-						if( isUpdated == 'yes' ){
-							isImageUpdated = true;
-						}
-						var isFilenameChanged = false;
-						if( !resourceDb[resKey] || resourceDb[resKey].publicFilename !== filename ){
-							isFilenameChanged = true;
-						}
-						for( var idx in resourceDb ){
-							if( resourceDb[idx].isPrivateMaterial ){
-								// 非公開リソースにファイル名は与えられない
-								continue;
-							}
-							if( idx == resKey ){
-								// 自分
-								continue;
-							}
-							if( !isImageUpdated && !isFilenameChanged ){
-								// 画像もファイル名も変更されていなければ、重複チェックをスキップ
-								continue;
-							}
-							if( resType === '' && filename !== '' && resourceDb[idx].publicFilename == filename ){
-								errorMsgs.push( broccoli.lb.get('ui_message.duplicate_image_file_name') );
-								continue;
-							}
-						}
-						rlv();
-					}); })
-					.then(function(){
+			it79.ary(
+				$slides,
+				function(it, row, index){
+					const $item = $(row);
+					if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+						// スライドではない
 						it.next();
-					})
-				;
-			},
-			function(){
-				callback( errorMsgs );
-			}
-		);
+						return;
+					}
+
+					var $img = $item.find('img');
+					var resType = $item.attr('data-res-type');
+					var resKey = $item.attr('data-res-key');
+					var webUrl = $item.attr('data-web-url');
+					var filename = $img.attr('data-public-filename');
+					var isUpdated = $img.attr('data-is-updated');
+
+					var isImageUpdated = false;
+					if( isUpdated == 'yes' ){
+						isImageUpdated = true;
+					}
+					var isFilenameChanged = false;
+					if( !resourceDb[resKey] || resourceDb[resKey].publicFilename !== filename ){
+						isFilenameChanged = true;
+					}
+					for( var idx in resourceDb ){
+						if( resourceDb[idx].isPrivateMaterial ){
+							// 非公開リソースにファイル名は与えられない
+							continue;
+						}
+						if( idx == resKey ){
+							// 自分
+							continue;
+						}
+						if( !isImageUpdated && !isFilenameChanged ){
+							// 画像もファイル名も変更されていなければ、重複チェックをスキップ
+							continue;
+						}
+						if( duplicatedFilename[filename] ){
+							// すでにチェック済みエラー報告済みの場合はスキップ
+							continue;
+						}
+						if( resType === '' && filename !== '' && resourceDb[idx].publicFilename == filename ){
+							errorMsgs.push( broccoli.lb.get('ui_message.duplicate_image_file_name') );
+							duplicatedFilename[filename] = true;
+							continue;
+						}
+					}
+
+					for( var idx in $slides ){
+						const $slide = $($slides[idx]);
+						if( $slide.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+							// スライドではない
+							continue;
+						}
+						if( idx == index ){
+							// 自分
+							continue;
+						}
+						if( duplicatedFilename[filename] ){
+							// すでにチェック済みエラー報告済みの場合はスキップ
+							continue;
+						}
+
+						var $targetImg = $slide.find('img');
+						var targetFilename = $targetImg.attr('data-public-filename');
+						if( resType === '' && filename !== '' && targetFilename == filename ){
+							errorMsgs.push( broccoli.lb.get('ui_message.duplicate_image_file_name') );
+							duplicatedFilename[filename] = true;
+							continue;
+						}
+					}
+					it.next();
+				},
+				function(){
+					callback( errorMsgs );
+				}
+			);
+		});
 
 		return;
 	}
