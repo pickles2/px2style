@@ -196,9 +196,15 @@ module.exports = function(broccoli, mod, _imgDummy){
 					"method": "post",
 					"submit": function(e){
 						e.preventDefault();
-						saveEditorContent( $rtn, {}, function(data, resInfo){
-							$modal.close();
-							callback(data, resInfo);
+						validateEditorContent( $rtn, function(errorMsgs){
+							if( errorMsgs.length ){
+								alert('入力エラーがあります。');
+								return;
+							}
+							saveEditorContent( $rtn, function(data, resInfo){
+								$modal.close();
+								callback(data, resInfo);
+							} );
 						} );
 					},
 				},
@@ -449,9 +455,110 @@ module.exports = function(broccoli, mod, _imgDummy){
 	}
 
 	/**
-	 * エディタUIで編集した内容を保存
+	 * エディタUIで編集した内容をバリデーションする
 	 */
-	function saveEditorContent( $dom, data, callback ){
+	function validateEditorContent( $dom, callback ){
+		var errorMsgs = [];
+		var $img = $dom.find('img');
+		var resType = $dom.find('[name='+mod.name+'-resourceType]:checked').val();
+		var webUrl = $dom.find('[name='+mod.name+'-webUrl]').val();
+		var rules = mod.validate || [];
+		if(typeof(rules) == typeof('')){rules = [rules];}
+		var rulesIsRequired = false;
+		var rulesMaxHeight = null;
+		var rulesMinHeight = 0;
+		var rulesMaxWidth = null;
+		var rulesMinWidth = 0;
+		var rulesMaxFileSize = null;
+		var rulesMinFileSize = 0;
+		for(var idx in rules){
+			if(rules[idx] == 'required'){
+				rulesIsRequired = true;
+			}else if(rules[idx].match(/^max\-height\:([0-9]*)?$/)){
+				rulesMaxHeight = Number(RegExp.$1);
+			}else if(rules[idx].match(/^min\-height\:([0-9]*)?$/)){
+				rulesMinHeight = Number(RegExp.$1);
+			}else if(rules[idx].match(/^max\-width\:([0-9]*)?$/)){
+				rulesMaxWidth = Number(RegExp.$1);
+			}else if(rules[idx].match(/^min\-width\:([0-9]*)?$/)){
+				rulesMinWidth = Number(RegExp.$1);
+			}else if(rules[idx].match(/^max\-filesize\:([0-9]*)?$/)){
+				rulesMaxFileSize = Number(RegExp.$1);
+			}else if(rules[idx].match(/^min\-filesize\:([0-9]*)?$/)){
+				rulesMinFileSize = Number(RegExp.$1);
+			}
+		}
+
+		new Promise(function(rlv){rlv();})
+			.then(function(){ return new Promise(function(rlv, rjt){
+				// Validate required
+				var msgRequired = '画像を必ず選択してください。';
+				if(rulesIsRequired){
+					if(resType == 'none'){
+						errorMsgs.push(msgRequired);
+					}else if(resType == 'web'){
+						if(!webUrl){
+							errorMsgs.push(msgRequired);
+						}
+					}else{
+						if($img.get(0).src == _imgDummy){
+							errorMsgs.push(msgRequired);
+						}
+					}
+				}
+				rlv();
+			}); })
+			.then(function(){ return new Promise(function(rlv, rjt){
+				// Validate image src
+				if(!$img.get(0)){
+					errorMsgs.push('[FATAL] イメージを取得できませんでした。');
+					rlv();
+					return;
+				}
+				if(resType == 'none' || resType == 'web'){
+					// 画像を登録しない場合、またはURL指定の場合は、画像の内容をバリデートできない。
+					rlv();
+					return;
+				}
+
+				var nH, nW;
+				var filesize = Number($img.attr('data-size'));
+				nH = $img.get(0).naturalHeight;
+				nW = $img.get(0).naturalWidth;
+
+				if( rulesMaxHeight && nH > rulesMaxHeight ){
+					errorMsgs.push('高さが '+rulesMaxHeight+'px より小さい画像を選択してください。');
+				}
+				if( rulesMinHeight && nH < rulesMinHeight ){
+					errorMsgs.push('高さが '+rulesMinHeight+'px より大きい画像を選択してください。');
+				}
+				if( rulesMaxWidth && nW > rulesMaxWidth ){
+					errorMsgs.push('幅が '+rulesMaxWidth+'px より小さい画像を選択してください。');
+				}
+				if( rulesMinWidth && nW < rulesMinWidth ){
+					errorMsgs.push('幅が '+rulesMinWidth+'px より大きい画像を選択してください。');
+				}
+				if( rulesMaxFileSize && filesize > rulesMaxFileSize ){
+					errorMsgs.push('ファイルサイズが '+rulesMaxFileSize+'バイト より小さい画像を選択してください。');
+				}
+				if( rulesMinFileSize && filesize < rulesMinFileSize ){
+					errorMsgs.push('ファイルサイズが '+rulesMinFileSize+'バイト より大きい画像を選択してください。');
+				}
+
+				rlv();
+			}); })
+			.then(function(){
+				callback( errorMsgs );
+			})
+		;
+		return;
+	}
+
+	/**
+	 * エディタUIで編集した内容を保存する
+	 */
+	function saveEditorContent( $dom, callback ){
+		let data = {};
 
 		if( typeof(data.resKey) !== typeof('') ){
 			data.resKey = '';
