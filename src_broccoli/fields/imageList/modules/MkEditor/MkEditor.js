@@ -110,6 +110,9 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 								$img.attr('data-size', resInfo.size);
 								$img.attr('data-base64', resInfo.base64);
 								$img.attr('data-extension', resInfo.ext);
+								$img.attr('data-is-updated', 'yes');
+							}
+							if($img.attr('data-public-filename') != resInfo.publicFilename){
 								$img.attr('data-public-filename', resInfo.publicFilename);
 								$img.attr('data-is-updated', 'yes');
 							}
