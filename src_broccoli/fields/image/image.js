@@ -69,7 +69,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 		new Promise(function(rlv){rlv();}).then(function(){ return new Promise(function(rlv, rjt){
 			callback(resourceIdList);
 		}); });
-		return this;
+		return;
 	}
 
 	/**
@@ -207,7 +207,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 				callback( errorMsgs );
 			}); })
 		;
-		return this;
+		return;
 	}
 
 	/**
