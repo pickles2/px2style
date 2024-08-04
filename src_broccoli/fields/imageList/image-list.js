@@ -73,54 +73,78 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 	 * エディタUIで編集した内容を検証する (Client Side)
 	 */
 	this.validateEditorContent = function( elm, mod, callback ){
+		var $dom = $(elm);
 		var errorMsgs = [];
 		var resourceDb = null;
-		var $img = $(elm).find('img');
-		var resType = $(elm).find('[name='+mod.name+'-resourceType]:checked').val();
-		var resKey = $(elm).find('[name='+mod.name+'-resKey]').val();
-		var filename = $(elm).find('[name='+mod.name+'-publicFilename]').val();
-		var webUrl = $(elm).find('[name='+mod.name+'-webUrl]').val();
 
-		new Promise(function(rlv){rlv();})
-			.then(function(){ return new Promise(function(rlv, rjt){
-				_resMgr.getResourceDb(function(res){
-					resourceDb = res;
-					rlv();
-				});
-			}); })
-			.then(function(){ return new Promise(function(rlv, rjt){
-				var isImageUpdated = false;
-				if( $img.attr('data-is-updated') == 'yes' ){
-					isImageUpdated = true;
+		const $tmp_slides = $dom.find('.broccoli-module-px2style-image-list__slider .broccoli-module-px2style-image-list__slider-slide');
+		const $slides = [];
+		$tmp_slides.each((index, item)=>{
+			$slides.push(item);
+		});
+
+		it79.ary(
+			$slides,
+			function(it, row, index){
+				const $item = $(row);
+				if( $item.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+					it.next();
+					return;
 				}
-				var isFilenameChanged = false;
-				if( !resourceDb[resKey] || resourceDb[resKey].publicFilename !== filename ){
-					isFilenameChanged = true;
-				}
-				for( var idx in resourceDb ){
-					if( resourceDb[idx].isPrivateMaterial ){
-						// 非公開リソースにファイル名は与えられない
-						continue;
-					}
-					if( idx == resKey ){
-						// 自分
-						continue;
-					}
-					if( !isImageUpdated && !isFilenameChanged ){
-						// 画像もファイル名も変更されていなければ、重複チェックをスキップ
-						continue;
-					}
-					if( resType === '' && filename !== '' && resourceDb[idx].publicFilename == filename ){
-						errorMsgs.push( broccoli.lb.get('ui_message.duplicate_image_file_name') );
-						continue;
-					}
-				}
-				rlv();
-			}); })
-			.then(function(){ return new Promise(function(rlv, rjt){
+
+				new Promise(function(rlv){rlv();})
+					.then(function(){ return new Promise(function(rlv, rjt){
+						_resMgr.getResourceDb(function(res){
+							resourceDb = res;
+							rlv();
+						});
+					}); })
+					.then(function(){ return new Promise(function(rlv, rjt){
+						var $img = $item.find('img');
+						var resType = $item.attr('data-res-type');
+						var resKey = $item.attr('data-res-key');
+						var webUrl = $item.attr('data-web-url');
+						var filename = $img.attr('data-public-filename');
+						var isUpdated = $img.attr('data-is-updated');
+
+						var isImageUpdated = false;
+						if( isUpdated == 'yes' ){
+							isImageUpdated = true;
+						}
+						var isFilenameChanged = false;
+						if( !resourceDb[resKey] || resourceDb[resKey].publicFilename !== filename ){
+							isFilenameChanged = true;
+						}
+						for( var idx in resourceDb ){
+							if( resourceDb[idx].isPrivateMaterial ){
+								// 非公開リソースにファイル名は与えられない
+								continue;
+							}
+							if( idx == resKey ){
+								// 自分
+								continue;
+							}
+							if( !isImageUpdated && !isFilenameChanged ){
+								// 画像もファイル名も変更されていなければ、重複チェックをスキップ
+								continue;
+							}
+							if( resType === '' && filename !== '' && resourceDb[idx].publicFilename == filename ){
+								errorMsgs.push( broccoli.lb.get('ui_message.duplicate_image_file_name') );
+								continue;
+							}
+						}
+						rlv();
+					}); })
+					.then(function(){
+						it.next();
+					})
+				;
+			},
+			function(){
 				callback( errorMsgs );
-			}); })
-		;
+			}
+		);
+
 		return;
 	}
 
