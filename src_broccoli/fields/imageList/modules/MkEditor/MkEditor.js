@@ -184,6 +184,19 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							}
 							sliderUpdate();
 						});
+
+					$rtn.find('.broccoli-module-px2style-image-list__slider-btn-prev')
+						.on('click', function(){
+							keenslider.prev();
+							return;
+						});
+
+					$rtn.find('.broccoli-module-px2style-image-list__slider-btn-next')
+						.on('click', function(){
+							keenslider.next();
+							return;
+						});
+
 					resolve();
 				}
 			);
