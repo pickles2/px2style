@@ -40,6 +40,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				mode: "free",
 				selector: ".broccoli-module-px2style-image-list__slider-slide",
 				slides: {
+					origin: "center",
 					perView: "auto",
 				},
 				created: () => {

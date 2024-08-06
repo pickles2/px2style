@@ -19,6 +19,7 @@
                     loop: true,
                     selector: "li",
                     slides: {
+                        origin: "center",
                         perView: "auto",
                     },
                     created: () => {
