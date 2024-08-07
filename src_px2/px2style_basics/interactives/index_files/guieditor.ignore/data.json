@@ -34,6 +34,15 @@
                                         "webUrl": ""
                                     }
                                 ]
+                            },
+                            "is-loop": {
+                                "src": "1"
+                            },
+                            "show-prevnext": {
+                                "src": "1"
+                            },
+                            "show-slide-numbers": {
+                                "src": "1"
                             }
                         },
                         "anchor": "",

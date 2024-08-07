@@ -13,17 +13,18 @@
             const $container = $module.find('.px2-image-slider__container');
             $container.find('>li').addClass('px2-image-slider__slide');
 
+            const isLoop = !!$module.hasClass('px2-image-slider--is-loop');
+
             const slider = new KeenSlider(
                 $container.get(0),
                 {
-                    loop: true,
+                    loop: isLoop,
                     selector: "li",
                     slides: {
                         origin: "center",
                         perView: "auto",
                     },
                     created: () => {
-                        console.log('created')
                     },
                 },
                 [
