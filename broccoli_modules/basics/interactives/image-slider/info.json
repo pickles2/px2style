@@ -11,7 +11,7 @@
             "is-loop": {
                 "fieldType": "input",
                 "type": "select",
-                "label": "ループするか？",
+                "label": "ループしますか？",
                 "display": "radio",
                 "options": [
                     {
@@ -27,7 +27,7 @@
             "show-prevnext": {
                 "fieldType": "input",
                 "type": "select",
-                "label": "前と次のスライドを少しだけ見せるか？",
+                "label": "前と次のスライドを少しだけ見せますか？",
                 "display": "radio",
                 "options": [
                     {
@@ -43,7 +43,7 @@
             "show-slide-numbers": {
                 "fieldType": "input",
                 "type": "select",
-                "label": "スライド番号を表示するか？",
+                "label": "スライド番号を表示しますか？",
                 "display": "radio",
                 "options": [
                     {

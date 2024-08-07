@@ -1,6 +1,7 @@
 .px2-image-slider {
 	margin-top: 1em;
 	margin-bottom: 1em;
+	position: relative;
 
 	&__contents {
 		position: relative;
@@ -50,6 +51,7 @@
 			border: none;
 			border-radius: 12px;
 			background-color: #9998;
+			color: #fff;
 			cursor: pointer;
 
 			&::before {
@@ -87,6 +89,22 @@
 			li {
 				width: 80%;
 			}
+		}
+	}
+
+
+	&__slide-number {
+		display: none;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		background-color: #9998;
+		color: #fff;
+		padding: 0.3em 1em;
+	}
+	&--show-slide-numbers {
+		.px2-image-slider__slide-number {
+			display: block;
 		}
 	}
 }
