@@ -23,6 +23,7 @@
                     slides: {
                         origin: "center",
                         perView: "auto",
+                        spacing: 10,
                     },
                     created: () => {
                     },

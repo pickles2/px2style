@@ -81,4 +81,12 @@
 			transform: rotate(-45deg);
 		}
 	}
+
+	&--show-prevnext {
+		.px2-image-slider__container {
+			li {
+				width: 80%;
+			}
+		}
+	}
 }
