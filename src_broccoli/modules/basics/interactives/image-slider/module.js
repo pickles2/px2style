@@ -31,7 +31,7 @@
                         spacing: 10,
                     },
                     slideChanged: (slide) => {
-                        updateSlideInfo(slide.track.details.abs, slide.slides.length);
+                        updateSlideInfo(slide.track.details.rel, slide.slides.length);
                     },
                     created: () => {
                     },
