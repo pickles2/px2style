@@ -205,6 +205,9 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 					resKey: $item.attr('data-res-key'),
 					resType: $item.attr('data-res-type'),
 					webUrl: $item.attr('data-web-url'),
+					href: $item.attr('data-href'),
+					captionTitle: $item.attr('data-caption-title'),
+					captionBody: $item.attr('data-caption-body'),
 				};
 
 				it79.fnc({}, [

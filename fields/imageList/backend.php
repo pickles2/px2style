@@ -41,8 +41,15 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 				$slideRow['resType'] = null;
 			}
 
+			$html_caption = '';
+			$html_caption .= '<div>';
+			$html_caption .= '<div>'.htmlspecialchars($slideRow['href'] ?? '').'</div>';
+			$html_caption .= '<div>'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>';
+			$html_caption .= '<div>'.htmlspecialchars($slideRow['captionBody'] ?? '').'</div>';
+			$html_caption .= '</div>';
+
 			if( $slideRow['resType'] == 'web' ){
-				array_push($slideHtmlList, '<li><img src="'.htmlspecialchars($slideRow['webUrl']).'" alt="" /></li>');
+				array_push($slideHtmlList, '<li><img src="'.htmlspecialchars($slideRow['webUrl']).'" alt="" />'.$html_caption.'</li>');
 				continue;
 			}elseif( $slideRow['resType'] == 'none' ){
 				continue;
@@ -93,7 +100,7 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 					$data->path = 'data:'.$data->resourceInfo->type.';base64,'.$data->resourceInfo->base64;
 				}
 
-				array_push($slideHtmlList, '<li><img src="'.$data->path.'" alt="" /></li>');
+				array_push($slideHtmlList, '<li><img src="'.$data->path.'" alt="" />'.$html_caption.'</li>');
 				continue;
 			}
 		}

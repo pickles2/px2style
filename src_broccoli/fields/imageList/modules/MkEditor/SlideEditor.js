@@ -594,6 +594,13 @@ module.exports = function(broccoli, mod, _imgDummy){
 					return;
 
 				},
+				function(it1){
+					data.href = $dom.find('[name='+mod.name+'-href]').val();
+					data.captionTitle = $dom.find('[name='+mod.name+'-caption-title]').val();
+					data.captionBody = $dom.find('[name='+mod.name+'-caption-body]').val();
+					it1.next();
+					return;
+				},
 				function(){
 					callback(data, resInfo);
 				},

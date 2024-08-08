@@ -13,25 +13,37 @@
                                         "path": "./index_files/resources/photo005.jpg",
                                         "resKey": "6c3e52b46c880d26dd3837610fe0dfea",
                                         "resType": "",
-                                        "webUrl": ""
+                                        "webUrl": "",
+                                        "href": "test href",
+                                        "captionTitle": "test caption title",
+                                        "captionBody": "test caption title"
                                     },
                                     {
                                         "path": "./index_files/resources/9ce63e9e25c42e61f780fafe2a1d7a2b.jpg",
                                         "resKey": "9ce63e9e25c42e61f780fafe2a1d7a2b",
                                         "resType": "",
-                                        "webUrl": ""
+                                        "webUrl": "",
+                                        "href": "",
+                                        "captionTitle": "",
+                                        "captionBody": ""
                                     },
                                     {
                                         "path": "./index_files/resources/photo003.jpg",
                                         "resKey": "9061a6d0b2c6644e21be21dc8b599cee",
                                         "resType": "",
-                                        "webUrl": ""
+                                        "webUrl": "",
+                                        "href": "",
+                                        "captionTitle": "",
+                                        "captionBody": ""
                                     },
                                     {
                                         "path": "./index_files/resources/9ffa2e2f0ff561fb1a558b011a1c2d09.jpg",
                                         "resKey": "9ffa2e2f0ff561fb1a558b011a1c2d09",
                                         "resType": "",
-                                        "webUrl": ""
+                                        "webUrl": "",
+                                        "href": "",
+                                        "captionTitle": "",
+                                        "captionBody": ""
                                     }
                                 ]
                             },
