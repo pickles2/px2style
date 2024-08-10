@@ -42,11 +42,19 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 			}
 
 			$html_caption = '';
-			$html_caption .= '<div>';
-			$html_caption .= '<div>'.htmlspecialchars($slideRow['href'] ?? '').'</div>';
-			$html_caption .= '<div>'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>';
-			$html_caption .= '<div>'.htmlspecialchars($slideRow['captionBody'] ?? '').'</div>';
-			$html_caption .= '</div>';
+			if( strlen($slideRow['href'] ?? '') || strlen($slideRow['captionTitle'] ?? '') || strlen($slideRow['captionBody'] ?? '') ){
+				$html_caption .= '<div data-px2-slider-rel="caption">';
+				if( strlen($slideRow['captionTitle'] ?? '') ){
+					$html_caption .= '<div data-px2-slider-rel="caption-title">'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>';
+				}
+				if( strlen($slideRow['captionBody'] ?? '') ){
+					$html_caption .= '<div data-px2-slider-rel="caption-body">'.htmlspecialchars($slideRow['captionBody'] ?? '').'</div>';
+				}
+				if( strlen($slideRow['href'] ?? '') ){
+					$html_caption .= '<div data-px2-slider-rel="caption-link"><a href="'.htmlspecialchars($slideRow['href'] ?? '').'"></a></div>';
+				}
+				$html_caption .= '</div>';
+			}
 
 			if( $slideRow['resType'] == 'web' ){
 				array_push($slideHtmlList, '<li><img src="'.htmlspecialchars($slideRow['webUrl']).'" alt="" />'.$html_caption.'</li>');
