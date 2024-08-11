@@ -34,9 +34,27 @@
 
 	<input type="hidden" name="{{mod.name}}-resKey" value="{{ data.resKey }}" />
 
-	<div>
-		<div>URL: <input type="text" name="{{mod.name}}-href" value="{{ data.href }}" /></div>
-		<div>Caption Title: <input type="text" name="{{mod.name}}-caption-title" value="{{ data.captionTitle }}" /></div>
-		<div>Caption Body: <textarea type="text" name="{{mod.name}}-caption-body">{{ data.captionTitle }}</textarea></div>
+	<div class="px2-form-input-list">
+		<ul class="px2-form-input-list__ul">
+			<li class="px2-form-input-list__li px2-form-input-list__li--required" data-name="{{mod.name}}-href">
+				<div class="px2-form-input-list__label"><label for="{{mod.name}}-href">URL</label></div>
+				<div class="px2-form-input-list__input">
+					<input type="text" id="{{mod.name}}-href" name="{{mod.name}}-href" value="{{ data.href }}" class="px2-input px2-input--block" />
+				</div>
+			</li>
+			<li class="px2-form-input-list__li" data-name="{{mod.name}}-caption-title">
+				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-title">Caption Title</label></div>
+				<div class="px2-form-input-list__input">
+					<input type="text" id="{{mod.name}}-caption-title" name="{{mod.name}}-caption-title" value="{{ data.captionTitle }}" class="px2-input px2-input--block" />
+				</div>
+			</li>
+			<li class="px2-form-input-list__li" data-name="{{mod.name}}-caption-body">
+				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-body">Caption Body</label></div>
+				<div class="px2-form-input-list__input">
+					<textarea type="text" id="{{mod.name}}-caption-body" name="{{mod.name}}-caption-body" class="px2-input px2-input--block">{{ data.captionBody }}</textarea>
+				</div>
+			</li>
+		</ul>
 	</div>
+
 </div>

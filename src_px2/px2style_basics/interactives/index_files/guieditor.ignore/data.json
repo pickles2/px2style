@@ -14,7 +14,7 @@
                                         "resKey": "6c3e52b46c880d26dd3837610fe0dfea",
                                         "resType": "",
                                         "webUrl": "",
-                                        "href": "javascript: alert(",
+                                        "href": "javascript: alert(\"first slide clicked\");",
                                         "captionTitle": "test caption title",
                                         "captionBody": "test caption body."
                                     },
@@ -32,9 +32,9 @@
                                         "resKey": "9061a6d0b2c6644e21be21dc8b599cee",
                                         "resType": "",
                                         "webUrl": "",
-                                        "href": "javascript: alert(",
+                                        "href": "javascript: alert(\"3rd slide clicked.\");",
                                         "captionTitle": "",
-                                        "captionBody": "これはキャプションを挿入するテストです。"
+                                        "captionBody": "これはキャプションを挿入するテストです。\n\n改行を含む長文は有効です。\n\n<b class=\"bold\">HTMLタグ</b> は無効化されます。"
                                     },
                                     {
                                         "path": "./index_files/resources/9ffa2e2f0ff561fb1a558b011a1c2d09.jpg",

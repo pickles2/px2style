@@ -208,6 +208,7 @@ module.exports = function(broccoli, mod, _imgDummy){
 						} );
 					},
 				},
+				"width": 650,
 			});
 			resolve();
 		}).then(()=>{
