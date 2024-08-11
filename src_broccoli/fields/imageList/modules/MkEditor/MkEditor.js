@@ -131,7 +131,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						const $prev = $li.prev();
-						if( $prev.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+						if( !$prev.length ){
 							return;
 						}
 						$prev.before($li);
@@ -143,7 +143,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						const $next = $li.next();
-						if( $next.find('.broccoli-module-px2style-image-list__slider-btn-add').length ){
+						if( !$next.length ){
 							return;
 						}
 						$next.after($li);
@@ -168,15 +168,14 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				function(it, item, index){
 					_resMgr.getResource( item.resKey, async function(resourceInfo){
 						const $slideRow = await mkSlide(item, resourceInfo);
-						$slider.find('.broccoli-module-px2style-image-list__slider-slide:last-child').before($slideRow);
+						$slider.append($slideRow);
 						it.next();
 					});
 				},
 				function(){
-					$slider.find('.broccoli-module-px2style-image-list__slider-btn-add')
+					$rtn.find('.broccoli-module-px2style-image-list__btn-add')
 						.on('click', async function(event){
 							const $btn = $(this);
-							const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 							const $slideRow = await mkSlide({
                                 "resKey": "",
                                 "path": "about:blank",
@@ -185,11 +184,11 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							}, {});
 
 							switch($btn.attr('data-trig')){
-								case 'slide-suppend':
-									$li.after($slideRow);
+								case 'slide-prepend':
+									$slider.prepend($slideRow);
 									break;
 								case 'slide-append':
-									$li.before($slideRow);
+									$slider.append($slideRow);
 									break;
 							}
 							sliderUpdate();
