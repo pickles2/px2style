@@ -114,6 +114,7 @@
 		}
 	}
 
+	// Image Caption
 	[data-px2-slider-rel="caption"] {
 		display: block;
 		padding: 1em 1.5em;
@@ -125,6 +126,7 @@
 		color: #ddd;
 		width: 100%;
 		max-height: 45%;
+		overflow: auto;
 
 		[data-px2-slider-rel="caption-title"] {
 			font-weight: bold;

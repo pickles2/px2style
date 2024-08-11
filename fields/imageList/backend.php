@@ -48,7 +48,10 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 					$html_caption .= '<div data-px2-slider-rel="caption-title">'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>'."\n";
 				}
 				if( strlen($slideRow['captionBody'] ?? '') ){
-					$html_caption .= '<div data-px2-slider-rel="caption-body">'.htmlspecialchars($slideRow['captionBody'] ?? '').'</div>'."\n";
+					$captionBody = $slideRow['captionBody'];
+					$captionBody = htmlspecialchars($captionBody);
+					$captionBody = preg_replace('/\r\n|\r|\n/s', '<br />', $captionBody);
+					$html_caption .= '<div data-px2-slider-rel="caption-body">'.$captionBody.'</div>'."\n";
 				}
 				if( strlen($slideRow['href'] ?? '') ){
 					$html_caption .= '<div data-px2-slider-rel="caption-link"><a href="'.htmlspecialchars($slideRow['href'] ?? '').'"></a></div>'."\n";
@@ -108,7 +111,7 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 					$data->path = 'data:'.$data->resourceInfo->type.';base64,'.$data->resourceInfo->base64;
 				}
 
-				array_push($slideHtmlList, '<li><img src="'.$data->path.'" alt="" />'.$html_caption.'</li>'."\n");
+				array_push($slideHtmlList, '<li><img src="'.htmlspecialchars($data->path ?? '').'" alt="" />'.$html_caption.'</li>'."\n");
 				continue;
 			}
 		}
