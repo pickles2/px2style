@@ -42,6 +42,10 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				slides: {
 					origin: "center",
 					perView: "auto",
+					spacing: 10,
+				},
+				slideChanged: (slide) => {
+					updateSlideCtrlStatus(slide.track.details.rel, slide.slides.length);
 				},
 				created: () => {
 					console.log('Keen slider: created');
@@ -57,6 +61,30 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		function sliderUpdate(){
 			keenslider.update();
 			return;
+		}
+
+		/**
+		 * スライダーの状態を更新する
+		 */
+		function updateSlideCtrlStatus(currentSlide, totalSlides) {
+			const $btnPrev = $rtn.find('.broccoli-module-px2style-image-list__slider-btn-prev');
+			const $btnNext = $rtn.find('.broccoli-module-px2style-image-list__slider-btn-next');
+			const $btnPrepend = $rtn.find('.broccoli-module-px2style-image-list__btn-add[data-trig="slide-prepend"]');
+			const $btnAppend = $rtn.find('.broccoli-module-px2style-image-list__btn-add[data-trig="slide-append"]');
+
+			$btnPrev.prop('disabled', false);
+			$btnNext.prop('disabled', false);
+			$btnPrepend.prop('disabled', true);
+			$btnAppend.prop('disabled', true);
+
+			if(currentSlide <= 0){
+				$btnPrev.prop('disabled', true);
+				$btnPrepend.prop('disabled', false);
+			}
+			if(currentSlide+1 >= totalSlides){
+				$btnNext.prop('disabled', true);
+				$btnAppend.prop('disabled', false);
+			}
 		}
 
 		/**
@@ -186,12 +214,15 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							switch($btn.attr('data-trig')){
 								case 'slide-prepend':
 									$slider.prepend($slideRow);
+									sliderUpdate();
+									keenslider.prev();
 									break;
 								case 'slide-append':
 									$slider.append($slideRow);
+									sliderUpdate();
+									keenslider.next();
 									break;
 							}
-							sliderUpdate();
 						});
 
 					$rtn.find('.broccoli-module-px2style-image-list__slider-btn-prev')
@@ -213,6 +244,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		}).then(()=>{
 			return new Promise((resolve, reject)=>{
 				setTimeout(()=>{
+					updateSlideCtrlStatus(0, data.slides.length);
 					sliderUpdate();
 					resolve();
 				}, 10);
