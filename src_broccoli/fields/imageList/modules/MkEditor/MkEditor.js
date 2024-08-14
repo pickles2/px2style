@@ -180,10 +180,15 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide')
 					.on('click', function(event){
+						if( !confirm('本当に削除してもよろしいですか？') ){
+							return;
+						}
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
-						$li.remove();
-						sliderUpdate();
+						$li.animate({opacity: 0}, 400, function(){
+							$li.remove();
+							sliderUpdate();
+						});
 					});
 				resolve($slideRow);
 			});
