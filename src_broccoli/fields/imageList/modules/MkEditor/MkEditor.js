@@ -71,11 +71,20 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			const $btnNext = $rtn.find('.broccoli-module-px2style-image-list__slider-btn-next');
 			const $btnPrepend = $rtn.find('.broccoli-module-px2style-image-list__btn-add[data-trig="slide-prepend"]');
 			const $btnAppend = $rtn.find('.broccoli-module-px2style-image-list__btn-add[data-trig="slide-append"]');
+			const $slides = $slider.find('> li');
 
 			$btnPrev.prop('disabled', false);
 			$btnNext.prop('disabled', false);
 			$btnPrepend.prop('disabled', true);
 			$btnAppend.prop('disabled', true);
+
+			if($slides.length){
+				$slides.find('.broccoli-module-px2style-image-list__slider-btn-move-slide-prev').prop('disabled', false);
+				$slides.find('.broccoli-module-px2style-image-list__slider-btn-move-slide-next').prop('disabled', false);
+				$slides.eq(0).find('.broccoli-module-px2style-image-list__slider-btn-move-slide-prev').prop('disabled', true);
+				$slides.eq($slides.length-1).find('.broccoli-module-px2style-image-list__slider-btn-move-slide-next').prop('disabled', true);
+
+			}
 
 			if(currentSlide <= 0){
 				$btnPrev.prop('disabled', true);
@@ -164,6 +173,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						}
 						$prev.before($li);
 						sliderUpdate();
+						keenslider.prev();
 					});
 
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-move-slide-next')
@@ -176,6 +186,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						}
 						$next.after($li);
 						sliderUpdate();
+						keenslider.next();
 					});
 
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide')
