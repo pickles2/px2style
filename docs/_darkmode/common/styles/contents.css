@@ -1693,6 +1693,9 @@ table.px2-table--dl td {
 .px2-image-slider__ctrls-btn-prev button:hover, .px2-image-slider__ctrls-btn-next button:hover {
   background-color: #fffa;
 }
+.px2-image-slider__ctrls-btn-prev button[disabled], .px2-image-slider__ctrls-btn-next button[disabled] {
+  display: none;
+}
 .px2-image-slider__ctrls-btn-prev {
   left: 5px;
 }

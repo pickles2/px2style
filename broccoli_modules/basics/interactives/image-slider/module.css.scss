@@ -70,6 +70,10 @@
 			&:hover {
 				background-color: #fffa;
 			}
+
+			&[disabled] {
+				display: none;
+			}
 		}
 	}
 	&__ctrls-btn-prev {
