@@ -11,6 +11,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	const KeenSlider = require('keen-slider').default;
 
 	const SlideEditor = require('./SlideEditor.js');
+	let currentSlideNumber = 0;
 
 	/**
 	 * エディタUIを生成
@@ -33,27 +34,34 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		const $slider = $rtn.find('.broccoli-module-px2style-image-list__slider');
 		$(elm).html($rtn);
 
-		const keenslider = new KeenSlider(
-			$slider.get(0),
-			{
-				loop: false,
-				mode: "free",
-				selector: ".broccoli-module-px2style-image-list__slider-slide",
-				slides: {
-					origin: "center",
-					perView: "auto",
-					spacing: 10,
-				},
-				slideChanged: (slide) => {
-					updateSlideCtrlStatus(slide.track.details.rel, slide.slides.length);
-				},
-				created: () => {
-					console.log('Keen slider: created');
-				},
-			},
-			[]
-		);
+		let keenslider = initializeSlider();
 
+		/**
+		 * スライダーを初期化する
+		 */
+		function initializeSlider(){
+			return new KeenSlider(
+				$slider.get(0),
+				{
+					loop: false,
+					// mode: "free",
+					selector: ".broccoli-module-px2style-image-list__slider-slide",
+					slides: {
+						origin: "center",
+						perView: "auto",
+						spacing: 10,
+					},
+					initial: currentSlideNumber,
+					slideChanged: (slide) => {
+						currentSlideNumber = slide.track.details.rel;
+						updateSlideCtrlStatus(slide.track.details.rel, slide.slides.length);
+					},
+					created: () => {
+					},
+				},
+				[]
+			);
+		}
 
 		/**
 		 * スライダーを更新する
@@ -140,8 +148,6 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 								publicFilename: $img.attr('data-public-filename'),
 							},
 						}, function(data, resInfo){
-							// $li.attr('data-path', data.path);
-							// $li.attr('data-res-key', data.resKey);
 							$li.attr('data-res-type', data.resType);
 							$li.attr('data-web-url', data.webUrl);
 							$li.attr('data-href', data.href);
@@ -172,7 +178,8 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							return;
 						}
 						$prev.before($li);
-						sliderUpdate();
+						keenslider.destroy();
+						keenslider = initializeSlider();
 						keenslider.prev();
 					});
 
@@ -185,7 +192,8 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							return;
 						}
 						$next.after($li);
-						sliderUpdate();
+						keenslider.destroy();
+						keenslider = initializeSlider();
 						keenslider.next();
 					});
 
