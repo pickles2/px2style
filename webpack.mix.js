@@ -20,6 +20,15 @@ mix
 					use: ['raw-loader'],
 				},
 				{
+					test: /\.csv$/i,
+					loader: 'csv-loader',
+					options: {
+						dynamicTyping: true,
+						header: false,
+						skipEmptyLines: false,
+					},
+				},
+				{
 					test:/\.twig$/,
 					use:['twig-loader']
 				},
