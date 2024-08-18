@@ -186,10 +186,11 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 
 		return new Promise((resolve, reject)=>{
 			const $modal = px2style.modal({
-				"title": "Edit slide",
+				"title": lb.get('ui_label.edit_slide'),
 				"body": $rtn,
 				"buttons": [
-					$('<button type="submit" class="px2-btn px2-btn--primary">Save</button>'),
+					$('<button type="submit" class="px2-btn px2-btn--primary"></button>')
+						.text(lb.get('ui_label.save')),
 				],
 				"form": {
 					"action": "javascript:void(0);",

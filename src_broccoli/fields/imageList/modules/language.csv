@@ -1,3 +1,6 @@
 ,en,ja,zh,zh-TW
+ui_label.edit_slide,"Edit slide","スライドを編集",,
+ui_label.save,"Save","保存",,
+ui_label.delete,"Delete","削除",,
 ui_label.caption_title,"Caption Title","キャプションタイトル",,
 ui_label.caption_body,"Caption Body","キャプション本文",,
