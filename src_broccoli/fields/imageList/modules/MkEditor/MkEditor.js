@@ -129,7 +129,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						const $btn = $(this);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						const $img = $li.find('img');
-						const slideEditor = new SlideEditor(broccoli, mod, _imgDummy);
+						const slideEditor = new SlideEditor(broccoli, mod, _imgDummy, lb);
 						slideEditor.openSlideEditor({
 							data: {
 								path: $li.attr('data-path'),

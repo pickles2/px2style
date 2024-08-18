@@ -12,7 +12,6 @@ module.exports = function(broccoli){
 		return new Promise((resolve, reject)=>{
 			const lb = new LangBank(languageCsv, ()=>{
 				lb.setLang( broccoli.lb.getLang() );
-console.log('=-=-=-=-=-= lb', lb, languageCsv);
 				resolve(lb);
 			});
 		});

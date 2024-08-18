@@ -1,7 +1,7 @@
 /**
  * mkEditor
  */
-module.exports = function(broccoli, mod, _imgDummy){
+module.exports = function(broccoli, mod, _imgDummy, lb){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
 	const utils79 = require('utils79');
@@ -15,7 +15,7 @@ module.exports = function(broccoli, mod, _imgDummy){
 	/**
 	 * エディタを開く
 	 */
-	this.openSlideEditor = async function(presetData, callback, lb){
+	this.openSlideEditor = async function(presetData, callback){
 		let data = presetData.data;
 		const res = presetData.resourceInfo;
 		if( typeof(data) !== typeof({}) ){ data = {}; }
