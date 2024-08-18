@@ -43,13 +43,13 @@
 				</div>
 			</li>
 			<li class="px2-form-input-list__li" data-name="{{mod.name}}-caption-title">
-				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-title">Caption Title</label></div>
+				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-title">{{ lb.get('ui_label.caption_title') }}</label></div>
 				<div class="px2-form-input-list__input">
 					<input type="text" id="{{mod.name}}-caption-title" name="{{mod.name}}-caption-title" value="{{ data.captionTitle }}" class="px2-input px2-input--block" />
 				</div>
 			</li>
 			<li class="px2-form-input-list__li" data-name="{{mod.name}}-caption-body">
-				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-body">Caption Body</label></div>
+				<div class="px2-form-input-list__label"><label for="{{mod.name}}-caption-body">{{ lb.get('ui_label.caption_body') }}</label></div>
 				<div class="px2-form-input-list__input">
 					<textarea type="text" id="{{mod.name}}-caption-body" name="{{mod.name}}-caption-body" class="px2-input px2-input--block">{{ data.captionBody }}</textarea>
 				</div>

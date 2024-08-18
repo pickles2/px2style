@@ -16,7 +16,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	/**
 	 * エディタUIを生成
 	 */
-	this.mkEditor = async function( mod, data, elm, callback ){
+	this.mkEditor = async function( mod, data, elm, callback, lb ){
 		const _this = this;
 
 		const $rtn = $(broccoli.bindTwig(
@@ -24,7 +24,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			{
 				broccoli: broccoli,
 				mod: mod,
-				lb: broccoli.lb,
+				lb: lb,
 				fncTypeOf: function(val){
 					return typeof(val);
 				},
@@ -116,7 +116,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						mod: mod,
 						item: item ,
 						resourceInfo: resourceInfo,
-						lb: broccoli.lb,
+						lb: lb,
 						dummyImage: _imgDummy,
 						fncTypeOf: function(val){
 							return typeof(val);

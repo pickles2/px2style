@@ -15,7 +15,7 @@ module.exports = function(broccoli, mod, _imgDummy){
 	/**
 	 * エディタを開く
 	 */
-	this.openSlideEditor = async function(presetData, callback){
+	this.openSlideEditor = async function(presetData, callback, lb){
 		let data = presetData.data;
 		const res = presetData.resourceInfo;
 		if( typeof(data) !== typeof({}) ){ data = {}; }
@@ -36,7 +36,7 @@ module.exports = function(broccoli, mod, _imgDummy){
 				mod: mod,
 				data: data,
 				res: res,
-				lb: broccoli.lb,
+				lb: lb,
 				fncTypeOf: function(val){
 					return typeof(val);
 				},
