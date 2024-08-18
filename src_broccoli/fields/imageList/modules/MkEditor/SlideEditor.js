@@ -293,7 +293,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 
 				$uiImageResource.find('.broccoli-module-px2style-image-list__trg-get-image-from-url')
 					.on('click', function(){
-						var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+						var url = prompt(lb.get('ui_message.get_from_url'));
 						if( !url ){
 							return;
 						}

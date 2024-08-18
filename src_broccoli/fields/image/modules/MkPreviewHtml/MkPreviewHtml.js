@@ -7,7 +7,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	/**
 	 * プレビュー用の簡易なHTMLを生成する
 	 */
-	this.mkPreviewHtml = function( fieldData, mod, callback ){
+	this.mkPreviewHtml = function( fieldData, mod, callback, lb ){
 		var rtn = '';
 		if( typeof(fieldData) !== typeof({}) ){
 			fieldData = {};

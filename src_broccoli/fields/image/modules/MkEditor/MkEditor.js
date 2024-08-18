@@ -13,7 +13,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	/**
 	 * エディタUIを生成
 	 */
-	this.mkEditor = function( mod, data, elm, callback ){
+	this.mkEditor = function( mod, data, elm, callback, lb ){
 		const _this = this;
 
 		const $rtn = $(broccoli.bindTwig(
@@ -264,7 +264,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 			$uiImageResource.find('.broccoli-module-px2style-image__trg-get-image-from-url')
 				.on('click', function(){
-					var url = prompt('指定のURLから画像ファイルを取得して保存します。'+"\n"+'画像ファイルのURLを入力してください。');
+					var url = prompt(lb.get('ui_message.get_from_url'));
 					if( !url ){
 						return;
 					}
