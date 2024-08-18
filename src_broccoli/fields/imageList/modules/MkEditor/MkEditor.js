@@ -4,9 +4,6 @@
 module.exports = function(broccoli, _resMgr, _imgDummy){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
-	const utils79 = require('utils79');
-	const urlParse = require('url-parse');
-	const md5 = require('md5');
 
 	const KeenSlider = require('keen-slider').default;
 

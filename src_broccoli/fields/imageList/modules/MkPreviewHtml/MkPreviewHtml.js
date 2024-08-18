@@ -7,8 +7,18 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	/**
 	 * プレビュー用の簡易なHTMLを生成する
 	 */
-	this.mkPreviewHtml = function( fieldData, mod, callback ){
+	this.mkPreviewHtml = function( fieldData, mod, callback, lb ){
 		var rtn = '';
+		if( typeof(fieldData) !== typeof({}) ){
+			fieldData = {};
+		}
+		fieldData.slides = fieldData.slides || [];
+
+		drawOneSlide(fieldData.slides[0], callback);
+		return;
+	}
+
+	function drawOneSlide(fieldData, callback){
 		if( typeof(fieldData) !== typeof({}) ){
 			fieldData = {};
 		}
@@ -86,6 +96,5 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				return;
 			}); })
 		;
-		return;
 	}
 }
