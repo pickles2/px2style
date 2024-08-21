@@ -196,7 +196,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-delete-slide')
 					.on('click', function(event){
-						if( !confirm('本当に削除してもよろしいですか？') ){
+						if( !confirm(lb.get('ui_message.are_you_sure_you_want_to_delete_it')) ){
 							return;
 						}
 						const $btn = $(this);
