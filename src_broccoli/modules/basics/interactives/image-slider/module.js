@@ -28,7 +28,12 @@
 
 		const isLoop = !!$module.hasClass('px2-image-slider--is-loop');
 
-		$sliderContainer.find('>li').addClass('px2-image-slider__slide');
+		const $slides = $sliderContainer.find('>li');
+		if( !$slides.length ){
+			$sliderContainer.append('<li><div class="px2-image-slider__no-image">NO IMAGE</div></li>');
+		}
+
+		$slides.addClass('px2-image-slider__slide');
 
 		const slider = new KeenSlider(
 			$sliderContainer.get(0),
