@@ -24,7 +24,7 @@ var px2style = new (function(){
     // DOMの変更を監視する
     var observer = new MutationObserver(function(records){
         px2style.init();
-    })
+    });
     observer.observe(window.document, {
         "childList": true,
         "subtree": true,

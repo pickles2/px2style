@@ -1660,6 +1660,7 @@ table.px2-table--dl td {
   vertical-align: bottom;
   object-fit: contain;
   margin: auto;
+  max-width: 100%;
 }
 .px2-image-slider__slide--clickable {
   cursor: pointer;
