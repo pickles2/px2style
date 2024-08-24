@@ -15,8 +15,8 @@
                                         "resType": "",
                                         "webUrl": "",
                                         "href": "javascript: alert(\"first slide clicked\");",
-                                        "captionTitle": "test caption title",
-                                        "captionBody": "test caption body."
+                                        "captionTitle": "test caption title <b>tag</b>",
+                                        "captionBody": "test caption body.\n<b>tag</b>"
                                     },
                                     {
                                         "path": "./index_files/resources/9ce63e9e25c42e61f780fafe2a1d7a2b.jpg",
