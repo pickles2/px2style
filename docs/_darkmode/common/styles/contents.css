@@ -1662,8 +1662,15 @@ table.px2-table--dl td {
   margin: auto;
   max-width: 100%;
 }
+.px2-image-slider__slide {
+  z-index: 1001;
+}
 .px2-image-slider__slide--clickable {
   cursor: pointer;
+}
+.px2-image-slider__slide--inactive {
+  pointer-events: none;
+  z-index: 1000;
 }
 .px2-image-slider__ctrls-btn-prev, .px2-image-slider__ctrls-btn-next {
   position: absolute;
@@ -1673,6 +1680,7 @@ table.px2-table--dl td {
   max-height: 60px;
   overflow: hidden;
   list-style-type: none;
+  z-index: 1100;
 }
 .px2-image-slider__ctrls-btn-prev button, .px2-image-slider__ctrls-btn-next button {
   width: 100%;
@@ -1723,6 +1731,7 @@ table.px2-table--dl td {
   background-color: #9998;
   color: #fff;
   padding: 0.3em 1em;
+  z-index: 1100;
 }
 .px2-image-slider--show-slide-numbers .px2-image-slider__slide-number {
   display: block;

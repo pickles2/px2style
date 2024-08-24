@@ -46,7 +46,7 @@
 					spacing: 10,
 				},
 				slideChanged: (slide) => {
-					updateSlideInfo(slide.track.details.rel, slide.slides.length);
+					updateSlideCondition(slide);
 				},
 				created: () => {
 				},
@@ -69,8 +69,10 @@
 				window.open($link.prop('href'), $link.prop('target') || '_self');
 			});
 
-		function updateSlideInfo(currentSlide, totalSlides) {
-			const content = `${currentSlide%totalSlides + 1} / ${totalSlides}`;
+		function updateSlideCondition(slide) {
+			const currentSlide = slide.track.details.rel;
+			const totalSlides = slide.slides.length;
+			const content = `${currentSlide % totalSlides + 1} / ${totalSlides}`;
 			$slideNumber.text(content);
 
 			if( !isLoop ){
@@ -85,6 +87,14 @@
 					$btnNext.prop('disabled', false);
 				}
 			}
+
+			slider.slides.forEach((slide, idx) => {
+				if (idx === slider.track.details.rel) {
+					slide.classList.remove("px2-image-slider__slide--inactive");
+				} else {
+					slide.classList.add("px2-image-slider__slide--inactive");
+				}
+			});
 		}
 
 		slider.emit('slideChanged');
