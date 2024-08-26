@@ -29,7 +29,6 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 			data.webUrl = '';
 		}
 
-console.log('=-=-=-= data:', data);
 		const $rtn = $(broccoli.bindTwig(
 			require('-!text-loader!./templates/mkEditor_slideEdit.twig'),
 			{
