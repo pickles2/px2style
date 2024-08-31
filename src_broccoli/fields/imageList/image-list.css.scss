@@ -2,6 +2,11 @@
 
 .broccoli-module-px2style-image-list {
 
+	svg {
+		display: block;
+		margin: 0 auto;
+	}
+
 	&__inner {
 		position: relative;
 		min-height: 200px;
@@ -31,6 +36,7 @@
 				padding: 0;
 				border: none;
 				display: block;
+				background-color: #9993;
 				cursor: pointer;
 				img {
 					display: block;
@@ -58,7 +64,6 @@
 			width: 50px;
 			height: 60px;
 			padding: 0;
-			border: none;
 			border-radius: 4px;
 			cursor: pointer;
 			&[disabled] {
@@ -76,24 +81,24 @@
 				position: relative;
 				width: 1em;
 				height: 1em;
-				border-right: 3px solid #191e23;
-				border-bottom: 3px solid #191e23;
+				border-right: 3px solid currentColor;
+				border-bottom: 3px solid currentColor;
 				transition: transform 0.1s ease-in;
 			}
 		}
 	}
 	&__slider-ctrls-prev {
-		left: 0;
+		left: 10px;
 	}
 	&__slider-ctrls-next {
-		right: 0;
+		right: 10px;
 	}
 	&__slider-ctrls-prepend {
-		left: 0;
+		left: 10px;
 		top: 10px;
 	}
 	&__slider-ctrls-append {
-		right: 0;
+		right: 10px;
 		top: 10px;
 	}
 	&__slider-btn-prev::before {
@@ -106,8 +111,9 @@
 	}
 	&__btn-add {
 		font-size: 30px;
-		&::before {
-			content: "+";
+		svg {
+			width: 32px;
+			height: 32px;
 		}
 	}
 
