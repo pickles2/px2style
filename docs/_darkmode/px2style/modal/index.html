@@ -15,7 +15,7 @@
 
 <!-- Contents Styles -->
 <link rel="stylesheet" href="../../common/styles/contents.css?_0a7cbcf=1" type="text/css" />
-<script src="../../common/scripts/contents.js?_c14912a=1"></script>
+<script src="../../common/scripts/contents.js?_41ee689=1"></script>
 
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/modules.css?_3b46a2f=1" />
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/styles/theme.css?_ac4cb76=1">
@@ -54,6 +54,7 @@
 <li><a href="#hash_ボタンがたくさんあるサンプル">ボタンがたくさんあるサンプル</a></li>
 <li><a href="#hash_ドロワーのサンプル">ドロワーのサンプル</a></li>
 <li><a href="#hash_多重に開くサンプル">多重に開くサンプル</a></li>
+<li><a href="#hash_あとからtabindexされる新しい要素を追加するサンプル">あとからtabindexされる新しい要素を追加するサンプル</a></li>
 <li><a href="#hash_その他のサンプル">その他のサンプル</a></li></ul>
 </li></ul>
 </div>
@@ -479,6 +480,39 @@ function contOpenNestableDialog(){
 	);
 }
 </script>
+
+</div>
+<div class="px2-h3">
+<h3 id="hash_あとからtabindexされる新しい要素を追加するサンプル">あとからtabindexされる新しい要素を追加するサンプル</h3>
+</div>
+<div class="px2-p">
+<button onclick="(()=&gt;{
+const $body = $(&#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;);
+px2style.modal(
+	{
+		body: $body,
+		buttons: [],
+	},
+	function(){
+		$body.append(&#039;&lt;div class=&quot;px2-p&quot;&gt;INPUT: &lt;input type=&quot;text&quot; /&gt;&lt;/div&gt;&#039;);
+	}
+);
+})();" type="button" class="px2-btn">開かれたモーダルにtabindexされる要素を追加する</button>
+</div>
+<div class="px2-p">
+<pre><code class="js">(()=&gt;{
+const $body = $('&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;');
+px2style.modal(
+    {
+        body: $body,
+        buttons: [],
+    },
+    function(){
+        $body.append('&lt;div class="px2-p"&gt;INPUT: &lt;input type="text" /&gt;&lt;/div&gt;');
+    }
+);
+})();
+</code></pre>
 
 </div>
 <div class="px2-h3">

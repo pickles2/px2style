@@ -423,6 +423,39 @@ function contOpenNestableDialog(){
 
 </div>
 <div class="px2-h3">
+<h3>あとからtabindexされる新しい要素を追加するサンプル</h3>
+</div>
+<div class="px2-p">
+<button onclick="(()=&gt;{
+const $body = $(&#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;);
+px2style.modal(
+	{
+		body: $body,
+		buttons: [],
+	},
+	function(){
+		$body.append(&#039;&lt;div class=&quot;px2-p&quot;&gt;INPUT: &lt;input type=&quot;text&quot; /&gt;&lt;/div&gt;&#039;);
+	}
+);
+})();" type="button" class="px2-btn">開かれたモーダルにtabindexされる要素を追加する</button>
+</div>
+<div class="px2-p">
+<pre><code class="js">(()=&gt;{
+const $body = $('&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;');
+px2style.modal(
+    {
+        body: $body,
+        buttons: [],
+    },
+    function(){
+        $body.append('&lt;div class="px2-p"&gt;INPUT: &lt;input type="text" /&gt;&lt;/div&gt;');
+    }
+);
+})();
+</code></pre>
+
+</div>
+<div class="px2-h3">
 <h3>その他のサンプル</h3>
 </div>
 <div class="px2-p">

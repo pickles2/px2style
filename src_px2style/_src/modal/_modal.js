@@ -340,11 +340,11 @@
 		var $title = $targetModal.find('.px2-modal__title');
 
 		$targetModal.off('keydown.px2-modal');
+		$tabTargets.off('keydown.px2-modal');
 		$modalFrame.off('click.px2-modal').off('keydown.px2-modal');
 		$start.off('keydown.px2-modal');
 		$end.off('keydown.px2-modal');
 		$title.off('keydown.px2-modal');
-
 
 		$targetModal
 			.on('click.px2-modal', function(e){
@@ -355,6 +355,36 @@
 			})
 		;
 		if( !isLocked ){
+			function onTabKeyDown(e){
+				if( e.keyCode != 9 ){
+					return;
+				}
+				$tabTargets.off('keydown.px2-modal');
+				$tabTargets = $targetModal.find('a, input:not([type=hidden]), textarea, select, button');
+				$tabTargets.on('keydown.px2-modal', onTabKeyDown);
+
+				const $eventTarget = $(this);
+				const targetIndex = $tabTargets.index($eventTarget);
+
+				if( !targetIndex ){
+					if (e.originalEvent.shiftKey) {
+						$tabTargets.eq($tabTargets.length - 1).focus();
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				}else if( targetIndex == $tabTargets.length - 1 ){
+					if (!e.originalEvent.shiftKey) {
+						$tabTargets.eq(0).focus();
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}
+				}
+			}
+
+			$tabTargets.on('keydown.px2-modal', onTabKeyDown);
+
 			// --------------------------------------
 			// 基本動作
 			$modalFrame
@@ -373,26 +403,6 @@
 				})
 			;
 
-			$start
-				.on('keydown.px2-modal', function(e){
-					if (e.keyCode == 9 && e.originalEvent.shiftKey) {
-						$end.focus();
-						e.preventDefault();
-						e.stopPropagation();
-						return false;
-					}
-				})
-			;
-			$end
-				.on('keydown.px2-modal', function(e){
-					if (e.keyCode == 9 && !e.originalEvent.shiftKey) {
-						$start.focus();
-						e.preventDefault();
-						e.stopPropagation();
-						return false;
-					}
-				})
-			;
 			$title
 				.on('keydown.px2-modal', function(e){
 					if (e.keyCode == 9 ) {

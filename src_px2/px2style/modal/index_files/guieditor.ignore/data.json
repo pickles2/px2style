@@ -618,6 +618,92 @@
                                 "src": "3"
                             },
                             "main": {
+                                "src": "あとからtabindexされる新しい要素を追加するサンプル"
+                            },
+                            "sub": {
+                                "src": ""
+                            }
+                        },
+                        "anchor": "",
+                        "dec": "",
+                        "locked": {
+                            "contents": false,
+                            "children": false,
+                            "move": false,
+                            "delete": false
+                        }
+                    },
+                    {
+                        "modId": "px2style:basics/button",
+                        "fields": {
+                            "label": {
+                                "src": "開かれたモーダルにtabindexされる要素を追加する"
+                            },
+                            "intention": {
+                                "src": ""
+                            },
+                            "sizing": {
+                                "src": ""
+                            },
+                            "display": {
+                                "src": ""
+                            },
+                            "btntype": {
+                                "src": "button"
+                            },
+                            "onclick": {
+                                "src": "(()=>{\nconst $body = $('<div><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\tbody: $body,\n\t\tbuttons: [],\n\t},\n\tfunction(){\n\t\t$body.append('<div class=\"px2-p\">INPUT: <input type=\"text\" /></div>');\n\t}\n);\n})();",
+                                "lang": "javascript"
+                            },
+                            "align": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": "",
+                        "locked": {
+                            "contents": false,
+                            "children": false,
+                            "move": false,
+                            "delete": false
+                        }
+                    },
+                    {
+                        "modId": "px2style:basics/text",
+                        "fields": {
+                            "main": {
+                                "src": "```js\n(()=>{\nconst $body = $('<div><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\tbody: $body,\n\t\tbuttons: [],\n\t},\n\tfunction(){\n\t\t$body.append('<div class=\"px2-p\">INPUT: <input type=\"text\" /></div>');\n\t}\n);\n})();\n```\n",
+                                "editor": "markdown"
+                            },
+                            "text-align": {
+                                "src": ""
+                            },
+                            "font-size": {
+                                "src": ""
+                            },
+                            "paragraph": {
+                                "src": "px2-p"
+                            }
+                        },
+                        "anchor": "",
+                        "dec": "",
+                        "locked": {
+                            "contents": false,
+                            "children": false,
+                            "move": false,
+                            "delete": false
+                        }
+                    },
+                    {
+                        "modId": "px2style:sections/hx",
+                        "fields": {
+                            "hx": {
+                                "src": "3"
+                            },
+                            "main": {
                                 "src": "その他のサンプル"
                             },
                             "sub": {
