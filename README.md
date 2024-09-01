@@ -35,6 +35,7 @@ $ composer require pickles2/px2style
 - Image List フィールドを追加。
 - Image Slider モジュールを追加。
 - 従来のカルーセルモジュールに非推奨フラグを追加。
+- `px2-modal`: タブキー操作に関する動作の改善。
 - その他、いくつかの細かい改善。
 
 ### px2style v3.2.5 (2024年4月30日)
