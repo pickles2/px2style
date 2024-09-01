@@ -1736,7 +1736,7 @@ table.px2-table--dl td {
 .px2-image-slider--show-slide-numbers .px2-image-slider__slide-number {
   display: block;
 }
-.px2-image-slider [data-px2-slider-rel="caption"] {
+.px2-image-slider [data-px2-image-list-rel="caption"] {
   display: block;
   padding: 1em 1.5em;
   box-sizing: border-box;
@@ -1749,18 +1749,18 @@ table.px2-table--dl td {
   max-height: 45%;
   overflow: auto;
 }
-.px2-image-slider [data-px2-slider-rel="caption"] [data-px2-slider-rel="caption-title"] {
+.px2-image-slider [data-px2-image-list-rel="caption"] [data-px2-image-list-rel="caption-title"] {
   font-weight: bold;
 }
-.px2-image-slider [data-px2-slider-rel="caption"] [data-px2-slider-rel="caption-link"] {
+.px2-image-slider [data-px2-image-list-rel="caption"] [data-px2-image-list-rel="caption-link"] {
   text-align: right;
 }
-.px2-image-slider [data-px2-slider-rel="caption"] [data-px2-slider-rel="caption-link"] a {
+.px2-image-slider [data-px2-image-list-rel="caption"] [data-px2-image-list-rel="caption-link"] a {
   position: relative;
   width: fit-content;
   display: inline-block;
 }
-.px2-image-slider [data-px2-slider-rel="caption"] [data-px2-slider-rel="caption-link"] a::before {
+.px2-image-slider [data-px2-image-list-rel="caption"] [data-px2-image-list-rel="caption-link"] a::before {
   content: "";
   display: inline-block;
   position: relative;

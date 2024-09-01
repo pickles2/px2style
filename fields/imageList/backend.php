@@ -43,18 +43,18 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 
 			$html_caption = '';
 			if( strlen($slideRow['href'] ?? '') || strlen($slideRow['captionTitle'] ?? '') || strlen($slideRow['captionBody'] ?? '') ){
-				$html_caption .= '<div data-px2-slider-rel="caption">'."\n";
+				$html_caption .= '<div data-px2-image-list-rel="caption">'."\n";
 				if( strlen($slideRow['captionTitle'] ?? '') ){
-					$html_caption .= '<div data-px2-slider-rel="caption-title">'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>'."\n";
+					$html_caption .= '<div data-px2-image-list-rel="caption-title">'.htmlspecialchars($slideRow['captionTitle'] ?? '').'</div>'."\n";
 				}
 				if( strlen($slideRow['captionBody'] ?? '') ){
 					$captionBody = $slideRow['captionBody'];
 					$captionBody = htmlspecialchars($captionBody);
 					$captionBody = preg_replace('/\r\n|\r|\n/s', '<br />', $captionBody);
-					$html_caption .= '<div data-px2-slider-rel="caption-body">'.$captionBody.'</div>'."\n";
+					$html_caption .= '<div data-px2-image-list-rel="caption-body">'.$captionBody.'</div>'."\n";
 				}
 				if( strlen($slideRow['href'] ?? '') ){
-					$html_caption .= '<div data-px2-slider-rel="caption-link"><a href="'.htmlspecialchars($slideRow['href'] ?? '').'"></a></div>'."\n";
+					$html_caption .= '<div data-px2-image-list-rel="caption-link"><a href="'.htmlspecialchars($slideRow['href'] ?? '').'"></a></div>'."\n";
 				}
 				$html_caption .= '</div>';
 			}
@@ -118,46 +118,6 @@ class backend extends \broccoliHtmlEditor\fieldBase{
 
 		return implode('', $slideHtmlList);
 	}
-
-	// /**
-	//  * リソースを加工する (Server Side)
-	//  */
-	// public function resourceProcessor( $path_orig, $path_public, $resInfo ){
-
-	// 	$resInfo->fieldNote = (@$resInfo->fieldNote ? $resInfo->fieldNote : json_decode('{}'));
-
-	// 	if( @$resInfo->fieldNote->origMd5 == @$resInfo->md5 && $resInfo->fieldNote->base64 ){
-	// 		// console.log('変更されていないファイル =-=-=-=-=-=-=-=-=-=-=-=-=');
-	// 		$result = $this->broccoli->fs()->save_file(
-	// 			$path_public,
-	// 			base64_decode($resInfo->fieldNote->base64)
-	// 		);
-	// 		return $result;
-	// 	}
-
-	// 	// 公開ディレクトリに複製
-	// 	copy( $path_orig, $path_public );
-
-
-	// 	// オリジナルのMD5ハッシュを記録
-	// 	if( $resInfo->md5 ){
-	// 		$resInfo->fieldNote->origMd5 = $resInfo->md5;
-	// 	}else{
-	// 		$resInfo->fieldNote->origMd5 = md5_file($path_orig);
-	// 	}
-
-	// 	// 加工後のファイルの情報を記録
-	// 	$bin = file_get_contents( $path_public );
-	// 	// base64
-	// 	$resInfo->fieldNote->base64 = base64_encode($bin);
-	// 	// MD5
-	// 	$resInfo->fieldNote->md5 = md5($bin);
-	// 	// size
-	// 	$resInfo->fieldNote->size = strlen(''.$bin);
-
-
-	// 	return true;
-	// }
 
 	/**
 	 * GPI (Server Side)

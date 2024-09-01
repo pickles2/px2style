@@ -36,12 +36,6 @@
 
 	<div class="px2-form-input-list">
 		<ul class="px2-form-input-list__ul">
-			<li class="px2-form-input-list__li" data-name="{{mod.name | e}}-href">
-				<div class="px2-form-input-list__label"><label for="{{mod.name | e}}-href">{{ lb.get('ui_label.href') | e }}</label></div>
-				<div class="px2-form-input-list__input">
-					<input type="text" id="{{mod.name | e}}-href" name="{{mod.name | e}}-href" value="{{ data.href | e }}" class="px2-input px2-input--block" />
-				</div>
-			</li>
 			<li class="px2-form-input-list__li" data-name="{{mod.name | e}}-caption-title">
 				<div class="px2-form-input-list__label"><label for="{{mod.name | e}}-caption-title">{{ lb.get('ui_label.caption_title') | e }}</label></div>
 				<div class="px2-form-input-list__input">
@@ -52,6 +46,12 @@
 				<div class="px2-form-input-list__label"><label for="{{mod.name | e}}-caption-body">{{ lb.get('ui_label.caption_body') | e }}</label></div>
 				<div class="px2-form-input-list__input">
 					<textarea type="text" id="{{mod.name | e}}-caption-body" name="{{mod.name | e}}-caption-body" class="px2-input px2-input--block">{{ data.captionBody | e }}</textarea>
+				</div>
+			</li>
+			<li class="px2-form-input-list__li" data-name="{{mod.name | e}}-href">
+				<div class="px2-form-input-list__label"><label for="{{mod.name | e}}-href">{{ lb.get('ui_label.href') | e }}</label></div>
+				<div class="px2-form-input-list__input">
+					<input type="text" id="{{mod.name | e}}-href" name="{{mod.name | e}}-href" value="{{ data.href | e }}" class="px2-input px2-input--block" />
 				</div>
 			</li>
 		</ul>

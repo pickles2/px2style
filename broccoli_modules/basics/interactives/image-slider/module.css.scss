@@ -127,7 +127,7 @@
 	}
 
 	// Image Caption
-	[data-px2-slider-rel="caption"] {
+	[data-px2-image-list-rel="caption"] {
 		display: block;
 		padding: 1em 1.5em;
 		box-sizing: border-box;
@@ -140,11 +140,11 @@
 		max-height: 45%;
 		overflow: auto;
 
-		[data-px2-slider-rel="caption-title"] {
+		[data-px2-image-list-rel="caption-title"] {
 			font-weight: bold;
 		}
 
-		[data-px2-slider-rel="caption-link"] {
+		[data-px2-image-list-rel="caption-link"] {
 			text-align: right;
 			a {
 				position: relative;

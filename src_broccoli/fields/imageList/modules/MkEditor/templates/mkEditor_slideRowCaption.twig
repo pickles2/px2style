@@ -1,0 +1,9 @@
+{% if item.captionTitle %}
+	<div data-px2-image-list-rel="caption-title">{{ item.captionTitle | e }}</div>
+{% endif %}
+{% if item.captionBody %}
+	<div data-px2-image-list-rel="caption-body">{{ item.captionBody | e }}</div>
+{% endif %}
+{% if item.href %}
+	<div data-px2-image-list-rel="caption-link">{{ item.href | e }}</div>
+{% endif %}

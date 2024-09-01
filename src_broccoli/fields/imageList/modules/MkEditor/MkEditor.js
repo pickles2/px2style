@@ -105,13 +105,13 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 		 * スライドを作成する
 		 */
 		async function mkSlide(item, resourceInfo){
-			return new Promise((resolve, reject)=>{
+			return new Promise(async (resolve, reject)=>{
 				const $slideRow = $(broccoli.bindTwig(
 					require('-!text-loader!./templates/mkEditor_slideRow.twig'),
 					{
 						broccoli: broccoli,
 						mod: mod,
-						item: item ,
+						item: item,
 						resourceInfo: resourceInfo,
 						lb: lb,
 						dummyImage: _imgDummy,
@@ -120,6 +120,13 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						},
 					}
 				));
+
+				const $slideRowCaption = await mkSlideCaption(item);
+				if( $slideRowCaption.length ){
+					$slideRow.find('[data-px2-image-list-rel="caption"]').html('').append($slideRowCaption).show();
+				}else{
+					$slideRow.find('[data-px2-image-list-rel="caption"]').html('').hide();
+				}
 
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide')
 					.on('click', function(event){
@@ -144,7 +151,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 								ext: $img.attr('data-extension'),
 								publicFilename: $img.attr('data-public-filename'),
 							},
-						}, function(data, resInfo){
+						}, async function(data, resInfo){
 							$li.attr('data-res-type', data.resType);
 							$li.attr('data-web-url', data.webUrl);
 							$li.attr('data-href', data.href);
@@ -162,6 +169,13 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							if($img.attr('data-public-filename') != resInfo.publicFilename){
 								$img.attr('data-public-filename', resInfo.publicFilename);
 								$img.attr('data-is-updated', 'yes');
+							}
+
+							const $slideRowCaption = await mkSlideCaption(data);
+							if( $slideRowCaption.length ){
+								$li.find('[data-px2-image-list-rel="caption"]').html('').append($slideRowCaption).show();
+							}else{
+								$li.find('[data-px2-image-list-rel="caption"]').html('').hide();
 							}
 						});
 					});
@@ -207,6 +221,22 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						});
 					});
 				resolve($slideRow);
+			});
+		}
+
+		/**
+		 * スライドを作成する
+		 */
+		async function mkSlideCaption(item){
+			return new Promise((resolve, reject)=>{
+				const $slideRowCaption = $(broccoli.bindTwig(
+					require('-!text-loader!./templates/mkEditor_slideRowCaption.twig'),
+					{
+						item: item,
+					}
+				));
+
+				resolve($slideRowCaption);
 			});
 		}
 
