@@ -1130,6 +1130,14 @@
                         "dec": ""
                     }
                 ]
+            },
+            "anchor": "",
+            "dec": "",
+            "locked": {
+                "contents": false,
+                "children": false,
+                "move": false,
+                "delete": false
             }
         }
     }

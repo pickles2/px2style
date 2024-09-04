@@ -8,7 +8,6 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	 * プレビュー用の簡易なHTMLを生成する
 	 */
 	this.mkPreviewHtml = function( fieldData, mod, callback, lb ){
-		var rtn = '';
 		if( typeof(fieldData) !== typeof({}) ){
 			fieldData = {};
 		}
@@ -19,10 +18,12 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 	}
 
 	function drawOneSlide(fieldData, callback){
-		if( typeof(fieldData) !== typeof({}) ){
-			fieldData = {};
-		}
+		var rtn = '';
 
+		if( typeof(fieldData) !== typeof({}) ){
+			callback('');
+			return;
+		}
 		new Promise(function(rlv){rlv();})
 			.then(function(){ return new Promise(function(rlv, rjt){
 
@@ -87,7 +88,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				return;
 			}); })
 			.then(function(){ return new Promise(function(rlv, rjt){
-				rtn = '<div style="margin: 1em auto; padding: 10px; border: 1px solid #888; border-radius: 5px;">'+rtn+'</div>';
+				rtn = '<div style="display: block; max-height: none;margin: 1em auto; padding: 10px; border: 1px solid #888; border-radius: 5px;">'+rtn+'</div>';
 				rlv();
 				return;
 			}); })
