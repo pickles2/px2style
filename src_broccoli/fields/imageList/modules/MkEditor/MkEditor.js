@@ -131,6 +131,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide')
 					.on('click', function(event){
 						const $btn = $(this);
+						$btn.prop('disabled', true);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						const $img = $li.find('img');
 						const slideEditor = new SlideEditor(broccoli, mod, _imgDummy, lb);
@@ -152,6 +153,11 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 								publicFilename: $img.attr('data-public-filename'),
 							},
 						}, async function(data, resInfo){
+							$btn.prop('disabled', false);
+							if( data === false ){
+								return;
+							}
+
 							$li.attr('data-res-type', data.resType);
 							$li.attr('data-web-url', data.webUrl);
 							$li.attr('data-href', data.href);

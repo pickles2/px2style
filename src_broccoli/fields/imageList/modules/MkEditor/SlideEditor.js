@@ -185,6 +185,8 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 		}
 
 		return new Promise((resolve, reject)=>{
+			let data = false;
+			let resInfo = false;
 			const $modal = px2style.modal({
 				"title": lb.get('ui_label.edit_slide'),
 				"body": $rtn,
@@ -202,14 +204,18 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 								alert('入力エラーがあります。');
 								return;
 							}
-							saveEditorContent( $rtn, function(data, resInfo){
+							saveEditorContent( $rtn, function(_data, _resInfo){
+								data = _data;
+								resInfo = _resInfo;
 								$modal.close();
-								callback(data, resInfo);
 							} );
 						} );
 					},
 				},
 				"width": 650,
+				"onclose": function(){
+					callback(data, resInfo);
+				},
 			});
 			resolve();
 		}).then(()=>{
