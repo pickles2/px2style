@@ -30,7 +30,7 @@
 			flex-grow: 0;
 			width: 70%;
 
-			.broccoli-module-px2style-image-list__slider-btn-edit-slide {
+			.broccoli-module-px2style-image-list__slider-btn-slide {
 				width: 100%;
 				height: 100%;
 				padding: 0;
@@ -126,13 +126,15 @@
 		cursor: pointer;
 	}
 
-	&__slider-btn-delete-slide {
+	&__slider-btn-edit-slide-group {
 		position: absolute;
 		right: 5px;
 		top: 5px;
 		width: auto;
 		height: auto;
-		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
 	}
 
 	&__resource-type {

@@ -121,6 +121,11 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 					$slideRow.find('[data-px2-image-list-rel="caption"]').html('').hide();
 				}
 
+				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-slide')
+					.on('click', function(event){
+						$(this).closest('.broccoli-module-px2style-image-list__slider-slide').find('.broccoli-module-px2style-image-list__slider-btn-edit-slide').trigger('click');
+					});
+
 				$slideRow.find('.broccoli-module-px2style-image-list__slider-btn-edit-slide')
 					.on('click', function(event){
 						const $btn = $(this);
