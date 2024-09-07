@@ -49,9 +49,7 @@
 	}
 
 	&__slider-ctrls-prev,
-	&__slider-ctrls-next,
-	&__slider-ctrls-prepend,
-	&__slider-ctrls-append {
+	&__slider-ctrls-next {
 		position: absolute;
 		top: calc(100%/2 - 60px/2);
 		padding: 0;
@@ -93,14 +91,6 @@
 	&__slider-ctrls-next {
 		right: 10px;
 	}
-	&__slider-ctrls-prepend {
-		left: 10px;
-		top: 10px;
-	}
-	&__slider-ctrls-append {
-		right: 10px;
-		top: 10px;
-	}
 	&__slider-btn-prev::before {
 		left: calc(((1em + 3px) * 1.414) / 8);
 		transform: rotate(135deg);
@@ -110,10 +100,12 @@
 		transform: rotate(-45deg);
 	}
 	&__btn-add {
-		font-size: 30px;
 		svg {
-			width: 32px;
-			height: 32px;
+			width: 1em;
+			height: 1em;
+			display: inline-block;
+			position: relative;
+			top: 2px;
 		}
 	}
 

@@ -73,6 +73,7 @@
 				transform: rotate(-45deg);
 			}
 			&:hover {
+				border: none;
 				&::before,
 				&::after {
 					border-bottom: 1px solid #666;
