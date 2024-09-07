@@ -36,7 +36,26 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		var rtn = fieldData;
 		if( typeof(fieldData) !== typeof({}) ){
 			rtn = {
-				"slides": [],
+				"slides": [
+					{
+						"resKey": "",
+						"path": "about:blank",
+						"resType": "",
+						"webUrl": ""
+					},
+					{
+						"resKey": "",
+						"path": "about:blank",
+						"resType": "",
+						"webUrl": ""
+					},
+					{
+						"resKey": "",
+						"path": "about:blank",
+						"resType": "",
+						"webUrl": ""
+					},
+				],
 			};
 		}
 		return rtn;
