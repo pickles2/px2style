@@ -55,7 +55,14 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 		const $inputWebUrl = $rtn.find('input.px2-input[name="'+mod.name+'-webUrl"]');
 		const $fileNameDisplay = $rtn.find('.broccoli-module-px2style-image-list__file-name-display');
 
-		const confFilenameAutoSetter = mod.filenameAutoSetter || 'ifEmpty';
+		/**
+		 * ファイル名自動設定の設定
+		 * - `random` : ランダムなファイル名を生成する (デフォルト)
+		 * - `always` : 選択したファイル名でファイル名を更新する
+		 * - `ifEmpty` : 画像名が空の場合のみ、選択したファイル名でファイル名を更新する
+		 * @type {string}
+		 */
+		const confFilenameAutoSetter = mod.filenameAutoSetter || 'random';
 
 		/**
 		 * リソースタイプの選択を反映する
