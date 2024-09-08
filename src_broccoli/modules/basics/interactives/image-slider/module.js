@@ -6,7 +6,7 @@
 	const $ = require('jquery');
 	const KeenSlider = require('keen-slider').default;
 	const prefix = 'px2-image-slider';
-	const dataPrefix = 'data-px2-slider';
+	const dataPrefix = 'data-px2-image-list';
 
 	window.px2style.registerInitFunction(`${prefix}`, function(){
 		const $imageSlider = $(`.${prefix}`);
