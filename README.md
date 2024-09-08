@@ -37,6 +37,8 @@ $ composer require pickles2/px2style
 - 従来のカルーセルモジュールに非推奨フラグを追加。
 - `px2-modal`: タブキー操作に関する動作の改善。
 - 画像フィールドの `filenameAutoSetter` オプションのデフォルトを、 従来の `ifEmpty` から `random` に変更した。
+- 画像フィールドの `format` オプションが、デフォルトで `image/webp` に変換されるようにした。
+- 画像フィールドの `format` オプションに、フォーマット変換を行わない Boolean `false` または String `pass` の設定を追加した。
 - その他、いくつかの細かい改善。
 
 ### px2style v3.2.5 (2024年4月30日)

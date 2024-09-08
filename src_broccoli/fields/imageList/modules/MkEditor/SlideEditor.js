@@ -65,6 +65,28 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 		const confFilenameAutoSetter = mod.filenameAutoSetter || 'random';
 
 		/**
+		 * 画像のフォーマット変換設定
+		 * - Boolean `false` または String `pass` : フォーマット変換を行わない
+		 * - `{object}` : フォーマット変換の設定
+		 *  - `maxWidth` : 最大幅
+		 *  - `maxHeight` : 最大高さ
+		 *  - `mimeType` : MIME Type
+		 *  - `quality` : 画質
+		 * @type {object}
+		 */
+		const confFormat = (function(){
+			if( mod.format === false || mod.format === 'pass' ){
+				return false;
+			}
+			return mod.format || {
+				maxWidth: 1600,
+				maxHeight: 1600,
+				mimeType: 'image/webp',
+				quality: 0.5,
+			};
+		})();
+
+		/**
 		 * リソースタイプの選択を反映する
 		 */
 		function refleshSelectedResourceType(){
@@ -117,7 +139,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 				var fileExt = getExtension( fileInfo.name );
 				it79.fnc({}, [
 					function(it){
-						if( !mod.format ){
+						if( !confFormat ){
 							// formatオプションの指定がなければ、
 							// リサイズを通さずそのまま使う
 							it.next();
@@ -132,7 +154,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 
 						imageResizer.resizeImage(
 							dataUri,
-							mod.format || {},
+							confFormat,
 							function(result){
 								dataUri = result.dataUri;
 								fileSize = result.size;
@@ -143,7 +165,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 					},
 					function(it){
 						$displayExtension.text('.'+fileExt);
-						var mimeType = (mod.format && mod.format.mimeType ? mod.format.mimeType : fileInfo.type);
+						var mimeType = (confFormat && confFormat.mimeType ? confFormat.mimeType : fileInfo.type);
 						setImagePreview({
 							'src': dataUri,
 							'size': fileSize,
