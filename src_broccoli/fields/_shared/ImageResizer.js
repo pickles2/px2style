@@ -26,6 +26,11 @@ module.exports = function(){
 			// img要素をcanvasに転写する
 			ctx.drawImage(img, 0, 0, calcedImageSize.w, calcedImageSize.h);
 
+			// ブラウザでサポートされていないフォーマットの場合、JPEGにフォールバック
+			if( !canvas.toDataURL(conditions.mimeType).startsWith('data:'+conditions.mimeType) ){
+				conditions.mimeType = 'image/jpeg';
+			}
+
 			var newDataUri = canvas.toDataURL(conditions.mimeType, conditions.quality);
 
 			// fetch して リサイズ後の画像容量を取得する
