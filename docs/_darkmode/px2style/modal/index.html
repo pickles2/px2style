@@ -14,12 +14,12 @@
 <script src="../../common/scripts/jquery-3.6.4.min.js?_641dd14=1" type="text/javascript"></script>
 
 <!-- Contents Styles -->
-<link rel="stylesheet" href="../../common/styles/contents.css?_32c3778=1" type="text/css" />
-<script src="../../common/scripts/contents.js?_8187d3b=1"></script>
+<link rel="stylesheet" href="../../common/styles/contents.css?_dd84024=1" type="text/css" />
+<script src="../../common/scripts/contents.js?_ab4aaee=1"></script>
 
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/modules.css?_3b46a2f=1" />
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/styles/theme.css?_ac4cb76=1">
-		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/styles/px2style-theme-darkmode.css?_1ee9436=1">
+		<link rel="stylesheet" href="../../common/px_resources/p/theme/darkmode/styles/px2style-theme-darkmode.css?_a55fcad=1">
 
 	</head>
 	<body id="pagetop">
@@ -521,13 +521,14 @@ px2style.modal(
 </div>
 <div class="px2-p">
 <button onclick="(()=&gt;{
-const $body = $(&#039;&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;);
+const $body = $(&#039;&lt;div style=&quot;background-color: #eef;&quot;&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;&#039;);
 px2style.modal(
 	{
+		title: &quot;ウィンドウにフィットするダイアログ&quot;,
 		body: $body,
-		buttons: [],
 		width: &quot;100%&quot;,
 		height: &quot;100%&quot;,
+		contentFill: true,
 	},
 	function(){
 	}
@@ -536,13 +537,14 @@ px2style.modal(
 </div>
 <div class="px2-p">
 <pre><code class="js">(()=&gt;{
-const $body = $('&lt;div&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;');
+const $body = $('&lt;div style="background-color: #eef;"&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;p&gt;Sample Content.&lt;/p&gt;&lt;/div&gt;');
 px2style.modal(
     {
+        title: "ウィンドウにフィットするダイアログ",
         body: $body,
-        buttons: [],
         width: "100%",
         height: "100%",
+        contentFill: true,
     },
     function(){
     }

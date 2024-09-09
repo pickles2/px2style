@@ -69,7 +69,7 @@
 		}
 
 		if( options.contentFill ){
-			$modal.find('.px2-modal__body-inner').addClass('px2-modal__body-inner--flex');
+			$modal.addClass('px2-modal--content-fill');
 		}
 
 		if(options.form){

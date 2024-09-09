@@ -142,7 +142,7 @@
 		box-sizing: border-box;
 	}
 	&__body,
-	&__body-inner--flex {
+	&--content-fill &__body-inner {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -150,6 +150,9 @@
 		> * {
 			flex-grow: 100;
 		}
+	}
+	&--content-fill &__body {
+		padding: 0;
 	}
 
 	&__title {

@@ -738,7 +738,7 @@
                                 "src": "button"
                             },
                             "onclick": {
-                                "src": "(()=>{\nconst $body = $('<div><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\tbody: $body,\n\t\tbuttons: [],\n\t\twidth: \"100%\",\n\t\theight: \"100%\",\n\t},\n\tfunction(){\n\t}\n);\n})();",
+                                "src": "(()=>{\nconst $body = $('<div style=\"background-color: #eef;\"><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\ttitle: \"ウィンドウにフィットするダイアログ\",\n\t\tbody: $body,\n\t\twidth: \"100%\",\n\t\theight: \"100%\",\n\t\tcontentFill: true,\n\t},\n\tfunction(){\n\t}\n);\n})();",
                                 "lang": "javascript"
                             },
                             "align": {
@@ -761,7 +761,7 @@
                         "modId": "px2style:basics/text",
                         "fields": {
                             "main": {
-                                "src": "```js\n(()=>{\nconst $body = $('<div><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\tbody: $body,\n\t\tbuttons: [],\n\t\twidth: \"100%\",\n\t\theight: \"100%\",\n\t},\n\tfunction(){\n\t}\n);\n})();\n```\n",
+                                "src": "```js\n(()=>{\nconst $body = $('<div style=\"background-color: #eef;\"><p>Sample Content.</p><p>Sample Content.</p></div>');\npx2style.modal(\n\t{\n\t\ttitle: \"ウィンドウにフィットするダイアログ\",\n\t\tbody: $body,\n\t\twidth: \"100%\",\n\t\theight: \"100%\",\n\t\tcontentFill: true,\n\t},\n\tfunction(){\n\t}\n);\n})();\n```\n",
                                 "editor": "markdown"
                             },
                             "text-align": {

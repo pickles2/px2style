@@ -358,14 +358,17 @@ input[type=search].px2-input {
   box-sizing: border-box;
   display: block;
 }
-.px2-modal__body, .px2-modal__body-inner--flex {
+.px2-modal--content-fill .px2-modal__body-inner, .px2-modal__body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   overflow: auto;
 }
-.px2-modal__body-inner--flex > *, .px2-modal__body > * {
+.px2-modal--content-fill .px2-modal__body-inner > *, .px2-modal__body > * {
   flex-grow: 100;
+}
+.px2-modal--content-fill .px2-modal__body {
+  padding: 0;
 }
 .px2-modal__title {
   font-weight: 700;
