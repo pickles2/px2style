@@ -151,7 +151,7 @@
 
 	&__footer {
 		margin: 0 0 -10px 0;
-		padding: 10px 20px 12px 20px;
+		padding: 10px 0 12px 0;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
@@ -161,6 +161,13 @@
 		overflow: auto;
 		max-height: 30vh;
 		z-index: 1100;
+
+		&-primary,
+		&-secondary {
+			box-sizing: content-box;
+			width: fit-content;
+			padding: 0 20px;
+		}
 
 		&-primary>ul,
 		&-secondary>ul,
