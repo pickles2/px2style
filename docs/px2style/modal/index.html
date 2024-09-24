@@ -15,7 +15,7 @@
 
 <!-- Contents Styles -->
 <link rel="stylesheet" href="../../common/styles/contents.css?_dd84024=1" type="text/css" />
-<script src="../../common/scripts/contents.js?_c041f84=1"></script>
+<script src="../../common/scripts/contents.js?_811c868=1"></script>
 
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/default/modules.css?_879b195=1" />
 		<link rel="stylesheet" href="../../common/px_resources/p/theme/default/styles/theme.css?_e86fc6b=1">
@@ -443,10 +443,12 @@
 </div>
 <div>
 <script type="text/javascript">
-function contOpenNestableDialog(){
+function contOpenNestableDialog(onclose){
+	onclose = onclose || function(){};
 	var $body = $('<div>').html(
 		'<p>Sample Content. <button type="button" class="px2-btn cont-btn-open-new-layer">open new layer</button></p>'
 		+'<p>Modal Counter: <span class="cont-opened-modal-counter"></span></p>'
+		+'<p>SubModal Returned Value: <span class="cont-opened-modal-returned-value"></span></p>'
 		+'<p><button type="button" class="px2-btn cont-btn-lock-modal-2sec">Lock modal 3 seconds.</button></p>'
 	);
 	var modal = px2style.modal(
@@ -454,19 +456,30 @@ function contOpenNestableDialog(){
 			title: 'Nestable Dialog Sample.',
 			body: $body,
 			buttons: [
-				'<button type="submit" class="px2-btn px2-btn--primary" onclick="px2style.closeModal();">OK</button>'
+				$('<button type="submit" class="px2-btn px2-btn--primary">OK</button>')
+					.on('click', function(){
+						px2style.closeModal('OK was clicked.');
+					})
 			],
 			buttonsSecondary: [
-				document.createElement('button')
+				$('<button type="submit">button</button>')
+					.on('click', function(){
+						px2style.closeModal('button was clicked.');
+					})
 			],
 			onbgclick: function(){
 				px2style.closeModal();
+			},
+			onclose: function(returnValue){
+				onclose(returnValue);
 			},
 		},
 		function(){
 			console.log('done.');
 			$body.find('.cont-btn-open-new-layer').on('click', function(){
-				contOpenNestableDialog();
+				contOpenNestableDialog(function(returnValue){
+					$body.find('.cont-opened-modal-returned-value').text(returnValue || 'no value');
+				});
 			});
 			$body.find('.cont-btn-lock-modal-2sec').on('click', function(){
 				modal.closable(false);

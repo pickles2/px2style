@@ -183,7 +183,7 @@
 		if( !modalLayers.length ){
 			$(window).on('keydown.px2-modal', function(e){
 				if( e.keyCode == 27 ){ // ESC
-					px2style.closeModal(function(){});
+					px2style.closeModal();
 				}
 			});
 		}
@@ -267,9 +267,8 @@
 		/**
 		 * モーダルを閉じる
 		 */
-		this.close = function( callback ){
+		this.close = function( returnValue ){
 			var self = this;
-			callback = callback||function(){};
 			self.$modal.find('.px2-modal__dialog').addClass('px2-modal__dialog--closed');
 
 			if( !presetOverflow.hasClass ){
@@ -292,8 +291,7 @@
 				if(!modalLayers.length){
 					$(window).off('keydown.px2-modal');
 				}
-				callback(true);
-				self.options.onclose();
+				self.options.onclose(returnValue);
 
 				optimizeOverlappingModalStyles();
 
@@ -306,18 +304,14 @@
 	/**
 	 * Close modal dialog.
 	 */
-	window.px2style.closeModal = function(callback){
-		callback = callback||function(){};
+	window.px2style.closeModal = function( returnValue ){
 		var lastModal = modalLayers.pop();
 		if( !lastModal.isClosable() ){
 			modalLayers.push(lastModal);
-			callback(false);
-			return;
+			return false;
 		}
-		lastModal.close(function(res){
-			callback(res);
-			lastModal = undefined;
-		});
+		lastModal.close( returnValue );
+		lastModal = undefined;
 		return;
 	}
 

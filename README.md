@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.4.0 (リリース日未定)
+
+- `px2style.closeModal()`、 `modal.close()` の第一引数が、 `onclose()` の引数として呼び出し側に返されるようになった。
+
 ### px2style v3.3.0 (2024年9月10日)
 
 - Image List フィールドを追加。
