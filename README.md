@@ -33,6 +33,7 @@ $ composer require pickles2/px2style
 ### px2style v3.4.0 (リリース日未定)
 
 - `px2style.closeModal()`、 `modal.close()` の第一引数が、 `onclose()` の引数として呼び出し側に返されるようになった。
+- 目次モジュール `:lists/index` の編集中の表示を英語化した。
 
 ### px2style v3.3.0 (2024年9月10日)
 
