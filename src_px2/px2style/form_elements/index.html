@@ -2,10 +2,13 @@
 <h2>フォーム要素</h2>
 </div>
 <div class="px2-p">
-<p><input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
-<button class="px2-btn px2-btn--primary">OK</button></p>
+<form>
+<input type="text" name="input-text" value="Form Element: text input" class="px2-input" />
+<button class="px2-btn px2-btn--primary">OK</button>
+
 <p>様々な入力欄</p>
-<p><input type="password" name="password" value="password" class="px2-input" />
+
+<input type="password" name="password" value="password" class="px2-input" />
 <input type="number" name="input-number" value="200" class="px2-input" />
 <input type="search" name="input-search" value="Search Keyword" class="px2-input" />
 <input type="tel" name="input-tel" value="090-0000-0000" class="px2-input" />
@@ -24,22 +27,34 @@
     <option value="2">Select Option 2</option>
     <option value="3">Select Option 3</option>
 </select>
-<textarea name="input-textarea" class="px2-input">Text Area</textarea></p>
+<input type="text" list="cont-input-datalist" name="input-datalist" class="px2-input" />
+<datalist id="cont-input-datalist">
+    <option value="Select Option 1"></option>
+    <option value="Select Option 2"></option>
+    <option value="Select Option 3"></option>
+</datalist>
+<textarea name="input-textarea" class="px2-input">Text Area</textarea>
+
 <p>Readonly:</p>
-<p><input type="text" name="input-text" value="Form Element: text input" class="px2-input" readonly /></p>
+<input type="text" name="input-text" value="Form Element: text input" class="px2-input" readonly />
+
 <p>Disabled:</p>
-<p><input type="text" name="input-text" value="Form Element: text input" class="px2-input" disabled /></p>
+<input type="text" name="input-text" value="Form Element: text input" class="px2-input" disabled />
+
 <p>Block:</p>
 <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--block" /></p>
 <p><textarea name="input-text" class="px2-input px2-input--block">Form Element: text input</textarea></p>
 <p><select name="input-select" class="px2-input px2-input--block"><option value="1">Select Option 1</option></select></p>
+
 <p>Errored:</p>
 <p><input type="text" name="input-text" value="Form Element: text input" class="px2-input px2-input--error" /></p>
 <p><textarea name="input-text" class="px2-input px2-input--error">Form Element: text input</textarea></p>
 <p><select name="input-select" class="px2-input px2-input--error"><option value="1">Select Option 1</option></select></p>
 <p class="px2-error">Error message.</p>
+
 <p>Note:</p>
 <p class="px2-note">Note message.</p>
+</form>
 
 </div>
 <div class="px2-h2">
@@ -52,6 +67,7 @@
         <button class="px2-btn">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <div class="px2-input-group">
         <span class="px2-input-group__text">#</span>
@@ -59,6 +75,7 @@
         <button class="px2-btn">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <div class="px2-input-group">
         <input type="number" name="input-number" value="Form Element: number input" class="px2-input" />
@@ -66,6 +83,7 @@
         <button class="px2-btn">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <div class="px2-input-group">
         <button class="px2-btn">Button 1</button>
@@ -75,11 +93,13 @@
         <button class="px2-btn px2-btn--primary">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <div class="px2-input-group">
         <button class="px2-btn px2-btn--primary">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <p>Fluid</p>
     <div class="px2-input-group px2-input-group--fluid">
@@ -88,6 +108,7 @@
         <button class="px2-btn px2-btn--primary">OK</button>
     </div>
 </div>
+
 <div class="px2-p">
     <div class="px2-input-group px2-input-group--fluid">
         <button class="px2-btn">Button 1</button>
@@ -167,10 +188,12 @@
         <button type="button" class="px2-btn" data-btn-has-error>hasValidationError</button>
     </div>
 </div>
+
 <script>
 $(function(){
     var form = px2style.form(`#form-control-sample`);
     console.log('form:', form);
+
     $('[data-btn-error-report]').on('click', function(){
         form.reportValidationError({
             errors: {
@@ -182,6 +205,7 @@ $(function(){
     $('[data-btn-has-error]').on('click', function(){
         alert(form.hasValidationError());
     });
+
 });
 </script>
 
