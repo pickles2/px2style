@@ -228,7 +228,7 @@ window.broccoliModulePx2StyleImage = function(broccoli){
 
 		var resInfo;
 		var $dom = $(elm);
-		if( typeof(data) !== typeof({}) ){
+		if( typeof(data) !== typeof({}) || typeof(data.length) !== typeof({}.length) ){
 			data = {};
 		}
 		if( typeof(data.resKey) !== typeof('') ){

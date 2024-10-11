@@ -206,7 +206,7 @@ window.broccoliModulePx2StyleImageList = function(broccoli){
 		options.message = options.message || function(msg){}; // ユーザーへのメッセージテキストを送信
 
 		var $dom = $(elm);
-		if( typeof(data) !== typeof({}) ){
+		if( typeof(data) !== typeof({}) || typeof(data.length) !== typeof({}.length)  ){
 			data = {
 				"slides": [],
 			};
