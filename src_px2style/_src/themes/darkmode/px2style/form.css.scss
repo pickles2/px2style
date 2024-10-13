@@ -162,6 +162,7 @@ input[type=search].px2-input {
 	margin-bottom: 1em;
 	margin-left: -15px;
 	margin-right: -15px;
+	container-type: inline-size;
 
 	ul.px2-form-input-list__ul {
 		display: table;
@@ -227,7 +228,7 @@ input[type=search].px2-input {
 		}
 	}
 
-	@media all and (max-width: 544px){
+	@container (max-width: 544px){
 		ul.px2-form-input-list__ul {
 			display: block;
 
@@ -257,9 +258,13 @@ input[type=search].px2-input {
 .px2-form-submit-area {
 	margin: 1em 0;
 	padding: 0;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
+	container-type: inline-size;
+
+	&__inner {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
 
 	&__btns,
 	&__backward-btns {
@@ -275,8 +280,10 @@ input[type=search].px2-input {
 		}
 	}
 
-	@media all and (max-width: 544px){
-		flex-direction: column;
+	@container (max-width: 544px){
+		&__inner {
+			flex-direction: column;
+		}
 
 		&__btns,
 		&__backward-btns {

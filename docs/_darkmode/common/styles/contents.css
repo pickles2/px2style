@@ -131,6 +131,7 @@ input[type=search].px2-input {
   flex-grow: 1;
 }
 .px2-form-input-list {
+  container-type: inline-size;
   margin: 1em -15px;
 }
 .px2-form-input-list ul.px2-form-input-list__ul {
@@ -183,7 +184,7 @@ input[type=search].px2-input {
   background-color: #fee7e7;
   color: #e11;
 }
-@media (max-width: 544px) {
+@container (max-width: 544px) {
   .px2-form-input-list ul.px2-form-input-list__ul, .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li {
     display: block;
   }
@@ -202,11 +203,14 @@ input[type=search].px2-input {
   }
 }
 .px2-form-submit-area {
+  container-type: inline-size;
+  margin: 1em 0;
+  padding: 0;
+}
+.px2-form-submit-area__inner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin: 1em 0;
-  padding: 0;
 }
 .px2-form-submit-area__backward-btns, .px2-form-submit-area__btns {
   display: flex;
@@ -220,8 +224,8 @@ input[type=search].px2-input {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 544px) {
-  .px2-form-submit-area {
+@container (max-width: 544px) {
+  .px2-form-submit-area__inner {
     flex-direction: column;
   }
   .px2-form-submit-area__backward-btns, .px2-form-submit-area__btns {
