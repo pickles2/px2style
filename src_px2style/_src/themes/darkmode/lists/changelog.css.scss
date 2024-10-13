@@ -4,6 +4,7 @@
 	border-top: 1px solid #666;
 	border-bottom: 1px solid #666;
 	padding: 1rem 0;
+	container-type: inline-size;
 
 	&__header {
 		margin-bottom: 0.5em;
@@ -42,7 +43,7 @@
 			margin-bottom: 0;
 		}
 	}
-	@media all and (max-width: 544px) {
+	@container (max-width: 544px) {
 		&__row{
 			display: block;
 		}

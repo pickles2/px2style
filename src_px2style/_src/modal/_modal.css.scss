@@ -15,6 +15,7 @@
 	padding: 0;
 	margin: 0;
 	border: none;
+	container-type: inline-size;
 
 	&--no-title .px2-modal__header {
 		display: none;
@@ -108,6 +109,9 @@
 
 		animation: px2-modal--initial .3s ease 0s 1 normal none running;
 		transition: transform .3s, opacity .3s;
+
+		container-type: inline-size;
+
 		&--closed {
 			transform: translateY(-10px);
 			opacity: 0;
@@ -132,6 +136,7 @@
 	&__body-inner {
 		display: block;
 		box-sizing: border-box;
+		container-type: inline-size;
 	}
 	&__body,
 	&--content-fill &__body-inner {

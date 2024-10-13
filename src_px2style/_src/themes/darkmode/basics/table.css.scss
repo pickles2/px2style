@@ -4,6 +4,7 @@ table.px2-table {
 	margin: 0;
 	text-align: left;
 	border: 1px solid #666;
+	container-type: inline-size;
 
 	color: $darkmode-text-color;
 
@@ -44,7 +45,7 @@ table.px2-table {
 			border-right: none;
 			border-left: none;
 		}
-		@media all and (max-width: 544px) {
+		@container (max-width: 544px) {
 			display: block;
 			box-sizing: border-box;
 			border-bottom: none;

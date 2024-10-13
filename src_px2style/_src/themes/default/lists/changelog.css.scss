@@ -1,9 +1,10 @@
-.px2-changelog{
+.px2-changelog {
 	margin-top: 3em;
 	margin-bottom: 3em;
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	padding: 1rem 0;
+	container-type: inline-size;
 
 	&__header {
 		margin-bottom: 0.5em;
@@ -17,11 +18,11 @@
 			margin-bottom: 0;
 		}
 	}
-	&__row{
+	&__row {
 		display: flex;
 		margin-bottom: 0.5em;
 	}
-	&__date{
+	&__date {
 		font-weight: bold;
 		padding-right: 1em;
 		width: 10em;
@@ -32,7 +33,7 @@
 			margin: 0 0.5em;
 		}
 	}
-	&__contents{
+	&__contents {
 		width: 100%;
 		box-sizing: border-box;
 		> p,
@@ -42,18 +43,18 @@
 			margin-bottom: 0;
 		}
 	}
-	@media all and (max-width: 544px) {
-		&__row{
+	@container (max-width: 544px) {
+		&__row {
 			display: block;
 		}
-		&__date{
+		&__date {
 			width: auto;
 			min-width: 0;
 			max-width: auto;
 			margin-top: 0.5em;
 			margin-bottom: 0.5em;
 		}
-		&__contents{
+		&__contents {
 			margin-top: 0.5em;
 			margin-bottom: 0.5em;
 			padding-left: 1em;
