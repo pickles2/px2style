@@ -2642,6 +2642,7 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
 .px2-p {
   margin-top: 1em;
   margin-bottom: 1em;
+  container-type: inline-size;
 }
 .px2-text-align-left {
   text-align: left;
