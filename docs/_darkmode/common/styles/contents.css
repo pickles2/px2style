@@ -1030,7 +1030,6 @@ table.px2-table {
   margin: 0;
   text-align: left;
   border: 1px solid #dee2e6;
-  container-type: inline-size;
 }
 table.px2-table th, table.px2-table td {
   border: 1px solid #dee2e6;
