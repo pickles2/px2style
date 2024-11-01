@@ -260,6 +260,9 @@ input[type=search].px2-input {
 
 // Form submit buttons
 .px2-form-submit-area {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
 	margin: 1em 0;
 	padding: 0;
 	container-type: inline-size;
@@ -275,6 +278,7 @@ input[type=search].px2-input {
 		display: flex;
 		gap: 5px;
 		flex-direction: row-reverse;
+		flex-wrap: wrap;
 		margin: 0;
 		padding: 0;
 		> li {
@@ -284,6 +288,23 @@ input[type=search].px2-input {
 		}
 	}
 
+	@media all and (max-width: 544px){
+		flex-direction: column;
+
+		&__inner {
+			flex-direction: column;
+		}
+
+		&__btns,
+		&__backward-btns {
+			justify-content: center;
+		}
+
+		&__backward-btns {
+			margin-top: 1em;
+			justify-content: left;
+		}
+	}
 	@container (max-width: 544px){
 		&__inner {
 			flex-direction: column;

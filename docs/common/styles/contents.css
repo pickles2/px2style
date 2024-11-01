@@ -207,14 +207,18 @@ input[type=search].px2-input {
   margin: 1em 0;
   padding: 0;
 }
-.px2-form-submit-area__inner {
+.px2-form-submit-area, .px2-form-submit-area__inner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+.px2-form-submit-area__inner {
+  flex-grow: 1;
+}
 .px2-form-submit-area__backward-btns, .px2-form-submit-area__btns {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
   gap: 5px;
   margin: 0;
   padding: 0;
@@ -223,6 +227,18 @@ input[type=search].px2-input {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 544px) {
+  .px2-form-submit-area, .px2-form-submit-area__inner {
+    flex-direction: column;
+  }
+  .px2-form-submit-area__backward-btns, .px2-form-submit-area__btns {
+    justify-content: center;
+  }
+  .px2-form-submit-area__backward-btns {
+    justify-content: left;
+    margin-top: 1em;
+  }
 }
 @container (max-width: 544px) {
   .px2-form-submit-area__inner {
@@ -1054,6 +1070,18 @@ table.px2-table--dl th {
 }
 table.px2-table--dl td {
   width: 70%;
+}
+@media (max-width: 544px) {
+  table.px2-table--dl {
+    display: block;
+    box-sizing: border-box;
+    border-bottom: none;
+  }
+  table.px2-table--dl tbody, table.px2-table--dl thead, table.px2-table--dl tr, table.px2-table--dl th, table.px2-table--dl td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 @container (max-width: 544px) {
   table.px2-table--dl {
