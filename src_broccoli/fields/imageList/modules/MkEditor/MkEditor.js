@@ -1,7 +1,7 @@
 /**
  * mkEditor
  */
-module.exports = function(broccoli, _resMgr, _imgDummy){
+module.exports = function(broccoli, _resMgr, imgDummy){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
 
@@ -107,7 +107,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						item: item,
 						resourceInfo: resourceInfo,
 						lb: lb,
-						dummyImage: _imgDummy,
+						dummyImage: imgDummy(),
 						fncTypeOf: function(val){
 							return typeof(val);
 						},
@@ -135,7 +135,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 						$btnSlide.prop('disabled', true);
 						const $li = $btn.closest('.broccoli-module-px2style-image-list__slider-slide');
 						const $img = $li.find('img');
-						const slideEditor = new SlideEditor(broccoli, mod, _imgDummy, lb);
+						const slideEditor = new SlideEditor(broccoli, mod, imgDummy, lb);
 						slideEditor.openSlideEditor({
 							data: {
 								path: $li.attr('data-path'),
@@ -167,7 +167,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							$li.attr('data-caption-body', data.captionBody);
 
 							if(resInfo.base64){
-								$img.attr('src', (resInfo.base64 ? `data:${resInfo.type};base64,${resInfo.base64}` : `${_imgDummy}`));
+								$img.attr('src', (resInfo.base64 ? `data:${resInfo.type};base64,${resInfo.base64}` : `${imgDummy()}`));
 								$img.attr('data-mime-type', resInfo.type);
 								$img.attr('data-size', resInfo.size);
 								$img.attr('data-base64', resInfo.base64);

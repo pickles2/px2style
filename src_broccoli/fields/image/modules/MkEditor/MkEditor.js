@@ -1,7 +1,7 @@
 /**
  * mkEditor
  */
-module.exports = function(broccoli, _resMgr, _imgDummy){
+module.exports = function(broccoli, _resMgr, imgDummy){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
 	const utils79 = require('utils79');
@@ -186,7 +186,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			var fileSrc = fileInfo.src;
 			var fileMimeType = fileInfo.mimeType;
 			if( !fileInfo.src || !fileInfo.ext || !fileInfo.size){
-				fileSrc = _imgDummy;
+				fileSrc = imgDummy();
 				fileMimeType = 'image/png';
 			}
 			$img
@@ -217,7 +217,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 			var path = 'data:'+res.type+';base64,' + res.base64;
 			if( !res.base64 ){
 				// ↓ ダミーの Sample Image
-				path = _imgDummy;
+				path = imgDummy();
 			}
 
 			$rtn.find('input[name='+mod.name+'-publicFilename]')

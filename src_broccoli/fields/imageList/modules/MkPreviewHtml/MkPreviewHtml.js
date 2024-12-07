@@ -1,7 +1,7 @@
 /**
  * mkPreviewHtml
  */
-module.exports = function(broccoli, _resMgr, _imgDummy){
+module.exports = function(broccoli, _resMgr, imgDummy){
 	const $ = require('jquery');
 
 	/**
@@ -54,7 +54,7 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 
 								if( !imagePath || !res.base64 ){
 									// ↓ ダミーの Sample Image
-									imagePath = _imgDummy;
+									imagePath = imgDummy();
 								}
 								var $img = $('<img>')
 									.attr({'src': imagePath})
@@ -71,7 +71,9 @@ module.exports = function(broccoli, _resMgr, _imgDummy){
 							}
 						} catch (e) {
 							var $img = $('<img>')
-								.attr({'src': _imgDummy})
+								.attr({
+									'src': imgDummy(),
+								})
 								.css({
 									'max-width': '80px',
 									'max-height': '80px',

@@ -1,7 +1,7 @@
 /**
  * mkEditor
  */
-module.exports = function(broccoli, mod, _imgDummy, lb){
+module.exports = function(broccoli, mod, imgDummy, lb){
 	const $ = require('jquery');
 	const it79 = require('iterate79');
 	const utils79 = require('utils79');
@@ -189,7 +189,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 			var fileSrc = fileInfo.src;
 			var fileMimeType = fileInfo.mimeType;
 			if( !fileInfo.src || !fileInfo.ext || !fileInfo.size){
-				fileSrc = _imgDummy;
+				fileSrc = imgDummy();
 				fileMimeType = 'image/png';
 			}
 			$img
@@ -255,7 +255,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 				var path = 'data:'+res.type+';base64,' + res.base64;
 				if( !res.base64 ){
 					// ↓ ダミーの Sample Image
-					path = _imgDummy;
+					path = imgDummy();
 				}
 
 				$rtn.find('input[type=radio][name='+mod.name+'-resourceType]')
@@ -538,7 +538,7 @@ module.exports = function(broccoli, mod, _imgDummy, lb){
 							errorMsgs.push(msgRequired);
 						}
 					}else{
-						if($img.get(0).src == _imgDummy){
+						if($img.get(0).src == imgDummy()){
 							errorMsgs.push(msgRequired);
 						}
 					}

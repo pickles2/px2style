@@ -32,7 +32,7 @@ $ composer require pickles2/px2style
 
 ### px2style v3.4.1 (リリース日未定)
 
-- 画像フィールドのプレースホルダ画像を更新した。
+- プレースホルダ画像を `broccoli.getNoimagePlaceholder()` から取得するようになった。
 
 ### px2style v3.4.0 (2024年11月1日)
 
