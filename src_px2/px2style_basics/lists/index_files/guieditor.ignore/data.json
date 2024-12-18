@@ -220,16 +220,36 @@
                                             {
                                                 "modId": "px2style:basics/a",
                                                 "fields": {
-                                                    "href": "javascript:alert('Clicked');",
-                                                    "label": "リンク",
-                                                    "class": "px2-a",
-                                                    "target": "",
-                                                    "align": "",
-                                                    "display": "",
-                                                    "paragraph": "px2-p"
+                                                    "href": {
+                                                        "src": "javascript:alert('Clicked');"
+                                                    },
+                                                    "label": {
+                                                        "src": "リンク"
+                                                    },
+                                                    "class": {
+                                                        "src": "px2-a"
+                                                    },
+                                                    "target": {
+                                                        "src": ""
+                                                    },
+                                                    "align": {
+                                                        "src": ""
+                                                    },
+                                                    "display": {
+                                                        "src": ""
+                                                    },
+                                                    "paragraph": {
+                                                        "src": "px2-p"
+                                                    }
                                                 },
                                                 "anchor": "",
-                                                "dec": ""
+                                                "dec": "",
+                                                "locked": {
+                                                    "contents": false,
+                                                    "children": false,
+                                                    "move": false,
+                                                    "delete": false
+                                                }
                                             }
                                         ]
                                     },
