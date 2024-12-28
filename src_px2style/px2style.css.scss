@@ -12,7 +12,8 @@ $px2-background-color: #f9f9f9;
 }
 
 // px2style
-@import './_src/form//_form.css.scss';
+@import './_src/utils/_utils.css.scss';
+@import './_src/form/_form.css.scss';
 @import './_src/modal/_modal.css.scss';
 @import './_src/loading/_loading.css.scss';
 
