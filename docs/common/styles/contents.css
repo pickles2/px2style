@@ -545,12 +545,9 @@ input[type=search].px2-input {
   background-color: var(--px2-main-color, #00a0e6);
   border-radius: 100%;
   content: "";
-  display: block;
   display: inline-block;
-  height: 15px;
   height: 60px;
   margin: 2px;
-  width: 15px;
   width: 60px;
 }
 .px2-loading__message {

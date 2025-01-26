@@ -46,13 +46,10 @@
 		height: 100%;
 
 		&::before {
-			display: block;
 			content: "";
 
 			background-color: $px2-main-color; // fallback
 			background-color: var(--px2-main-color, $px2-main-color);
-			width: 15px;
-			height: 15px;
 			border-radius: 100%;
 			margin: 2px;
 			animation-fill-mode: both;
