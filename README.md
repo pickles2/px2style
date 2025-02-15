@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.4.3 (リリース日未定)
+
+- `px2-btn`, `px2-a` について、デバイスによるスタイリングの差異を修正。
+
 ### px2style v3.4.2 (2024年12月28日)
 
 - `px2-modal`: スクロールロックが無効になっていた不具合を修正。

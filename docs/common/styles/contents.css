@@ -560,6 +560,11 @@ input[type=search].px2-input {
 /**
  * module: px2style:basics/a
  */
+.px2-a {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .px2-a::before {
   content: " ";
   width: 0;
@@ -587,6 +592,9 @@ input[type=search].px2-input {
   margin-left: 0.3em;
 }
 .px2-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
   border-radius: 4px;
   background-color: #fff;
