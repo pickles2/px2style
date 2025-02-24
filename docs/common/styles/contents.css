@@ -952,6 +952,7 @@ h1 small, .px2-h1 small, h2 small, .px2-h2 small, h3 small, .px2-h3 small, h4 sm
   float: right;
   margin-left: 1em;
   text-align: left;
+  max-width: 50%;
 }
 .px2-h1 .px2-h1__shoulder ul, .px2-h1 .px2-h1__shoulder p, .px2-h2 .px2-h2__shoulder ul, .px2-h2 .px2-h2__shoulder p, .px2-h3 .px2-h3__shoulder ul, .px2-h3 .px2-h3__shoulder p, .px2-h4 .px2-h4__shoulder ul, .px2-h4 .px2-h4__shoulder p, .px2-h5 .px2-h5__shoulder ul, .px2-h5 .px2-h5__shoulder p, .px2-h6 .px2-h6__shoulder ul, .px2-h6 .px2-h6__shoulder p {
   margin: 0;
@@ -1994,7 +1995,6 @@ table.px2-table--dl td {
   padding: 0;
   margin: 1em 0;
   position: relative;
-  container-type: inline-size;
 }
 .px2-linklist ul {
   padding: 0;

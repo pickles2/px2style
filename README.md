@@ -33,6 +33,7 @@ $ composer require pickles2/px2style
 ### px2style v3.4.3 (リリース日未定)
 
 - `px2-btn`, `px2-a` について、デバイスによるスタイリングの差異を修正。
+- `px2-linklist` と ショルダーメニュー付き見出し の組み合わせで、ショルダーメニューが表示されない不具合を修正。
 
 ### px2style v3.4.2 (2024年12月28日)
 
