@@ -2713,20 +2713,16 @@ h1 .px2-linklist > ul > li a, .px2-h1 .px2-linklist > ul > li a, h2 .px2-linklis
  */
 .px2-viewport-fit {
   box-sizing: border-box;
-  width: 0;
   margin: 0 auto;
   position: relative;
 }
 .px2-viewport-fit__inner {
   box-sizing: border-box;
-  width: calc(100vw);
+  margin: 0;
   position: relative;
-  left: calc(-50vw);
 }
 .px2-viewport-fit__contents {
-  margin: 0 auto;
-  width: 1024px;
-  max-width: calc(100% - 40px);
+  margin: 0;
 }
 .px2-viewport-fit__contents--fluid {
   width: 100%;
