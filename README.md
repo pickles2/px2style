@@ -30,7 +30,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.5.0 (リリース日未定)
+### px2style v3.5.0 (2025年4月3日)
 
 - `.px2-viewport-fit` のポリシーを変更: フィットさせる処理はテーマによる拡張に委ねることにした。
 
