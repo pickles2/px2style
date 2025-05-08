@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.5.1 (2025年5月9日)
+
+- `.px2-viewport-fit` のレイアウトが崩れる場合がある問題を修正。
+
 ### px2style v3.5.0 (2025年4月3日)
 
 - `.px2-viewport-fit` のポリシーを変更: フィットさせる処理はテーマによる拡張に委ねることにした。

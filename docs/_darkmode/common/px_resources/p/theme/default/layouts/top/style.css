@@ -6,9 +6,9 @@
 }
 .px2-viewport-fit__inner {
   box-sizing: border-box;
-  width: calc(100vw);
+  width: 100vw;
   position: relative;
-  left: calc(-50vw);
+  left: -50vw;
 }
 .px2-viewport-fit__contents {
   margin: 0 auto;
