@@ -2884,7 +2884,8 @@ h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
  * module: px2style:lists/ul
  */
 .px2-vertical-list,
-.px2-vertical-list > ul {
+.px2-vertical-list > ul,
+.px2-vertical-list > ol {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -2894,15 +2895,21 @@ h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
 }
 
 .px2-vertical-list > ul > li,
+.px2-vertical-list > ol > li,
 .px2-vertical-list > li,
 .px2-vertical-list > ul > ul > li,
-.px2-vertical-list > ul > li {
+.px2-vertical-list > ul > ol > li,
+.px2-vertical-list > ul > li,
+.px2-vertical-list > ol > ul > li,
+.px2-vertical-list > ol > ol > li,
+.px2-vertical-list > ol > li {
   list-style-type: none;
   padding-left: 0;
 }
 
 .px2-horizontal-list,
-.px2-horizontal-list > ul {
+.px2-horizontal-list > ul,
+.px2-horizontal-list > ol {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1em;
@@ -2912,9 +2919,14 @@ h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
 }
 
 .px2-horizontal-list > ul > li,
+.px2-horizontal-list > ol > li,
 .px2-horizontal-list > li,
 .px2-horizontal-list > ul > ul > li,
-.px2-horizontal-list > ul > li {
+.px2-horizontal-list > ul > ol > li,
+.px2-horizontal-list > ul > li,
+.px2-horizontal-list > ol > ul > li,
+.px2-horizontal-list > ol > ol > li,
+.px2-horizontal-list > ol > li {
   list-style-type: none;
   padding: 0;
   margin: 0 2px;
@@ -2933,16 +2945,22 @@ h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
 }
 
 .px2-note-list,
-.px2-note-list > ul {
+.px2-note-list > ul,
+.px2-note-list > ol {
   margin-top: 1em;
   margin-bottom: 1em;
   padding-left: 1.5em;
 }
 
 .px2-note-list > ul > li,
+.px2-note-list > ol > li,
 .px2-note-list > li,
 .px2-note-list > ul > ul > li,
-.px2-note-list > ul > li {
+.px2-note-list > ul > ol > li,
+.px2-note-list > ul > li,
+.px2-note-list > ol > ul > li,
+.px2-note-list > ol > ol > li,
+.px2-note-list > ol > li {
   list-style-type: none;
   color: #999;
   font-size: 86%;
@@ -2950,9 +2968,14 @@ h6 .px2-linklist > ul > li a, .px2-h6 .px2-linklist > ul > li a {
 }
 
 .px2-note-list > ul > li::before,
+.px2-note-list > ol > li::before,
 .px2-note-list > li::before,
 .px2-note-list > ul > ul > li::before,
-.px2-note-list > ul > li::before {
+.px2-note-list > ul > ol > li::before,
+.px2-note-list > ul > li::before,
+.px2-note-list > ol > ul > li::before,
+.px2-note-list > ol > ol > li::before,
+.px2-note-list > ol > li::before {
   content: "※";
   position: absolute;
   left: -1.5em;
