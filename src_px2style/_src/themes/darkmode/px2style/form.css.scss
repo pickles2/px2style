@@ -183,8 +183,7 @@ input[type=search].px2-input {
 				vertical-align: top;
 				font-weight: bold;
 				padding: 1em 15px;
-				width: 140px;
-				max-width: 140px;
+				width: 30%;
 				box-sizing: border-box;
 				word-wrap: break-word;
 			}
@@ -192,8 +191,7 @@ input[type=search].px2-input {
 				display: table-cell;
 				vertical-align: top;
 				padding: 1em 15px;
-				width: calc(100% - 140px);
-				max-width: calc(100% - 140px);
+				width: 70%;
 				box-sizing: border-box;
 				word-wrap: break-word;
 				> *:first-child {

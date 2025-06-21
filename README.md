@@ -30,6 +30,10 @@ $ composer require pickles2/px2style
 
 ## Change log
 
+### px2style v3.5.2 (リリース日未定)
+
+- `.px2-form-input-list` の微調整。
+
 ### px2style v3.5.1 (2025年5月9日)
 
 - `.px2-viewport-fit` のレイアウトが崩れる場合がある問題を修正。
