@@ -225,7 +225,7 @@ input[type=search].px2-input {
     width: calc(100% - 160px);
   }
 }
-@container (max-width: 544px) {
+@container (max-width: calc(544px + 30px)) {
   .px2-form-input-list ul.px2-form-input-list__ul, .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li {
     display: block;
   }

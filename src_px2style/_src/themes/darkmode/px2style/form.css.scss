@@ -239,7 +239,7 @@ input[type=search].px2-input {
 		}
 	}
 
-	@container (max-width: 544px){
+	@container (max-width: calc(544px + 30px)){
 		ul.px2-form-input-list__ul {
 			display: block;
 
