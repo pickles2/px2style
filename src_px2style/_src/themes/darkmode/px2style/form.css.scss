@@ -183,7 +183,7 @@ input[type=search].px2-input {
 				vertical-align: top;
 				font-weight: bold;
 				padding: 1em 15px;
-				width: 30%;
+				width: 220px;
 				box-sizing: border-box;
 				word-wrap: break-word;
 			}
@@ -191,7 +191,7 @@ input[type=search].px2-input {
 				display: table-cell;
 				vertical-align: top;
 				padding: 1em 15px;
-				width: 70%;
+				width: calc(100% - 220px);
 				box-sizing: border-box;
 				word-wrap: break-word;
 				> *:first-child {
@@ -221,6 +221,19 @@ input[type=search].px2-input {
 				.px2-form-input-list__input {
 					color: #e11;
                     background-color: #340a0a;
+				}
+			}
+		}
+	}
+
+	@container (max-width: 690px){
+		ul.px2-form-input-list__ul {
+			li.px2-form-input-list__li {
+				.px2-form-input-list__label {
+					width: 160px;
+				}
+				.px2-form-input-list__input {
+					width: calc(100% - 160px);
 				}
 			}
 		}
@@ -265,6 +278,7 @@ input[type=search].px2-input {
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
+		flex-grow: 1;
 	}
 
 	&__btns,
