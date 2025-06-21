@@ -32,7 +32,7 @@ $ composer require pickles2/px2style
 
 ### px2style v3.5.2 (リリース日未定)
 
-- `.px2-form-input-list`, `.px2-vertical-list`, `.px2-horizontal-list`, `.px2-note-list` の微修正。
+- `.px2-form-input-list`, `.px2-vertical-list`, `.px2-horizontal-list`, `.px2-note-list`, および テーマスタイル の微修正。
 
 ### px2style v3.5.1 (2025年5月9日)
 
