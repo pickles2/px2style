@@ -217,12 +217,12 @@ input[type=search].px2-input {
   color: #e11;
 }
 
-@container (max-width: 690px) {
+@container (max-width: calc(697px + 30px)) {
   .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__label {
-    width: 160px;
+    width: 30%;
   }
   .px2-form-input-list ul.px2-form-input-list__ul li.px2-form-input-list__li .px2-form-input-list__input {
-    width: calc(100% - 160px);
+    width: 70%;
   }
 }
 @container (max-width: calc(544px + 30px)) {
