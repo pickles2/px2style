@@ -2095,6 +2095,7 @@ table.px2-table--dl td {
   margin-top: 1em;
   margin-bottom: 1em;
   position: relative;
+  z-index: 1;
   container-type: inline-size;
 }
 
