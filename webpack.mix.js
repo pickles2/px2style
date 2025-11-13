@@ -82,8 +82,10 @@ mix
 	// px2style - Theme
 	.sass('./src_px2style/_src/themes/auto/auto.css.scss', './dist/themes/auto.css')
 	.copy('./dist/themes/auto.css', './src_px2/px-files/themes/auto/theme_files/styles/px2style-theme-auto.css')
-	.sass('./src_px2style/_src/themes/default/default.css.scss', './dist/themes/default.css')
+	.copy('./dist/themes/auto.css', './dist/themes/default.css')
 	.copy('./dist/themes/default.css', './src_px2/px-files/themes/default/theme_files/styles/px2style-theme-default.css')
+	.sass('./src_px2style/_src/themes/lightmode/lightmode.css.scss', './dist/themes/lightmode.css')
+	.copy('./dist/themes/lightmode.css', './src_px2/px-files/themes/lightmode/theme_files/styles/px2style-theme-lightmode.css')
 	.sass('./src_px2style/_src/themes/darkmode/darkmode.css.scss', './dist/themes/darkmode.css')
 	.copy('./dist/themes/darkmode.css', './src_px2/px-files/themes/darkmode/theme_files/styles/px2style-theme-darkmode.css')
 ;
