@@ -39,10 +39,10 @@ jspm_packages
 # composer
 vendor
 composer.phar
-composer.lock
+# composer.lock
 
 # npm
-package-lock.json
+# package-lock.json
 
 # laravel
 mix-manifest.json
