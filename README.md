@@ -30,7 +30,7 @@ $ composer require pickles2/px2style
 
 ## Change log
 
-### px2style v3.6.0 (リリース日未定)
+### px2style v3.6.0 (2025年11月16日)
 
 - アピアランス用テーマファイルの構成を変更した。
 	- ライトモード: `dist/themes/lightmode.css`
