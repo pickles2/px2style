@@ -2643,12 +2643,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomk79/node-remote-finder.git",
-                "reference": "e20c7b294a11f8acae52058072f628e624874ef0"
+                "reference": "a365677db7ac3d9c0a03667dc4e4e309ee65f740"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomk79/node-remote-finder/zipball/e20c7b294a11f8acae52058072f628e624874ef0",
-                "reference": "e20c7b294a11f8acae52058072f628e624874ef0",
+                "url": "https://api.github.com/repos/tomk79/node-remote-finder/zipball/a365677db7ac3d9c0a03667dc4e4e309ee65f740",
+                "reference": "a365677db7ac3d9c0a03667dc4e4e309ee65f740",
                 "shasum": ""
             },
             "require": {
@@ -2680,9 +2680,9 @@
             "description": "Finder や Explorer のように、サーバー上のファイルとフォルダを操作するUIを提供します。",
             "support": {
                 "issues": "https://github.com/tomk79/node-remote-finder/issues",
-                "source": "https://github.com/tomk79/node-remote-finder/tree/0.5.x"
+                "source": "https://github.com/tomk79/node-remote-finder/tree/0.5.0"
             },
-            "time": "2025-11-13T13:27:13+00:00"
+            "time": "2025-11-16T06:08:44+00:00"
         },
         {
             "name": "tomk79/request",
